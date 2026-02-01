@@ -1,0 +1,29 @@
+// OpenClaw Gateway Security Config Template
+// Merge into ~/.openclaw/openclaw.json
+{
+  gateway: {
+    // CRITICAL: Only listen on localhost
+    bind: "loopback",
+    
+    // Auth: require token for all connections
+    auth: {
+      mode: "token",
+      // Generate: openssl rand -hex 32
+      // Set via env: OPENCLAW_GATEWAY_TOKEN=<your-token>
+    },
+    
+    // Tailscale: recommended for remote access
+    tailscale: {
+      mode: "serve",  // "serve" = tailnet only, "funnel" = public
+    },
+  },
+  
+  // Sandbox: isolate agent execution
+  agents: {
+    defaults: {
+      sandbox: {
+        mode: "all",  // sandbox all sessions
+      },
+    },
+  },
+}

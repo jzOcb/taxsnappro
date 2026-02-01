@@ -1,0 +1,10 @@
+{
+  "lastChecks": {
+    "kalshi_scan": 1769961853,
+    "email": null,
+    "calendar": null,
+    "weather": null
+  },
+  "moltbook_register_after": 1738496500,
+  "notes": "Kalshi scan working. Moltbook cooldown timestamp looks stale (Feb 2 2025?) - may need to retry."
+}

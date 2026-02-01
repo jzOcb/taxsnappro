@@ -6,7 +6,8 @@ OpenClaw supports multiple model providers. Configure via `openclaw configure` o
 
 ### Anthropic (Primary)
 - `anthropic/claude-opus-4-5` — Best reasoning, most expensive
-- `anthropic/claude-sonnet-4` — Great balance, 5x cheaper
+- `anthropic/claude-sonnet-4-5` — Great balance, 5x cheaper
+- `anthropic/claude-3-5-haiku-latest` — Fast and cheap, ~19x cheaper
 
 ### Chinese Models (Alternative)
 Tested and confirmed working by the community:
@@ -26,7 +27,7 @@ Tested and confirmed working by the community:
 
 2. **"no output" problem** — Output is going to a different environment (Web, Telegram, etc). Check other surfaces.
 
-3. **`agents.fallbacks`** — Must list models here for switching to work
+3. **`agents.fallbacks`** — ⚠️ Not supported in 2026.1.24-1 and earlier. Use `/model` command to switch manually.
 
 ## Setup via CLI
 
@@ -46,13 +47,11 @@ Edit `~/.openclaw/openclaw.json`:
       model: {
         primary: "anthropic/claude-opus-4-5"
       },
-      fallbacks: [
-        "anthropic/claude-sonnet-4",
-        // Add more fallbacks here
-      ],
       subagents: {
-        model: "anthropic/claude-sonnet-4"
-      }
+        model: "anthropic/claude-sonnet-4-5"
+      },
+      heartbeat: { every: "55m" },
+      contextPruning: { mode: "cache-ttl", ttl: "1h" }
     }
   }
 }
@@ -76,8 +75,8 @@ Coming soon (PR #5873): automatic routing based on rules:
 models: {
   routing: {
     rules: [
-      { match: { isCron: true }, model: "anthropic/claude-sonnet-4" },
-      { match: { sessionKeyPrefix: "subagent:" }, model: "anthropic/claude-sonnet-4" },
+      { match: { isCron: true }, model: "anthropic/claude-sonnet-4-5" },
+      { match: { sessionKeyPrefix: "subagent:" }, model: "anthropic/claude-sonnet-4-5" },
     ]
   }
 }

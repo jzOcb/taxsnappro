@@ -32,8 +32,8 @@ Use expensive models only where they matter. Route everything else to cheaper mo
   agents: {
     defaults: {
       model: { primary: "anthropic/claude-opus-4-5" },
-      subagents: { model: "anthropic/claude-sonnet-4" },
-      fallbacks: ["anthropic/claude-sonnet-4"],
+      subagents: { model: "anthropic/claude-sonnet-4-5" },
+      // NOTE: fallbacks not supported in current version
       heartbeat: { every: "55m" },
       contextPruning: { mode: "cache-ttl", ttl: "1h" },
     }

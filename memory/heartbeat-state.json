@@ -1,10 +1,11 @@
 {
   "lastChecks": {
-    "kalshi_scan": 1769961853,
+    "kalshi_scan": 1769975580,
+    "token_monitor": 1769975580,
     "email": null,
     "calendar": null,
     "weather": null
   },
   "moltbook_register_after": 1738496500,
-  "notes": "Kalshi scan working. Moltbook cooldown timestamp looks stale (Feb 2 2025?) - may need to retry."
+  "notes": "Kalshi: no notable opportunities this check. Token: 73% today, 69% week. Both healthy."
 }

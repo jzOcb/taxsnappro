@@ -52,8 +52,22 @@ Add whatever helps you do your job. This is your cheat sheet.
 - **路径**: `/usr/bin/google-chrome`
 - **模式**: Headless, noSandbox (服务器无GUI)
 - **CDP端口**: 18800
-- **Profile**: openclaw
+- **Profile**: openclaw (默认)
 - **控制服务**: http://127.0.0.1:18791
+
+### 重要配置提示 💡
+**问题：** 浏览器不自动打开/需要手动点击插件/权限报错
+
+**解决方案：** 在 `~/.clawdbot/clawdbot.json` 根节点添加：
+```json
+"browser": {
+  "defaultProfile": "openclaw"
+}
+```
+
+这样OpenClaw会用独立浏览器启动，只需在该浏览器登录一次各类会话，后续不会报错。
+
+**已设置：** ✅ 当前配置已正确
 
 ### 使用方法
 所有session和agent都可以使用 `browser` 工具：

@@ -1,0 +1,9 @@
+2026-02-02 18:19:31,741 - ERROR - 1Password CLI 命令失败: Command '['op', 'item', 'get', 'GitHub Personal Access Token', '--vault', 'Private', '--fields', 'password']' returned non-zero exit status 1.
+2026-02-02 18:19:31,741 - ERROR - 错误输出: No accounts configured for use with 1Password CLI.
+
+ - Turn on the 1Password desktop app integration to sign in with the accounts you've added to the app: https://developer.1password.com/docs/cli/app-integration/ for details.
+ - Add an account manually with 'op account add' and sign in by entering your password on the command line. See 'op account add --help' for details.
+ - Authenticate using a 1Password service account by setting the 'OP_SERVICE_ACCOUNT_TOKEN' environment variable to your service account token. Learn more: https://developer.1password.com/docs/service-accounts/ 
+ - Use 1Password CLI with a Connect server by setting the 'OP_CONNECT_HOST' and 'OP_CONNECT_TOKEN' environment variables to your Connect host and token, respectively. Learn more: https://developer.1password.com/docs/connect/
+
+2026-02-02 18:19:31,741 - ERROR - 获取 GitHub Token 失败: Command '['op', 'item', 'get', 'GitHub Personal Access Token', '--vault', 'Private', '--fields', 'password']' returned non-zero exit status 1.

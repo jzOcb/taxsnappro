@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Git 安全推送工具
+Git 安全推送工具 (1Password 集成版)
 
 特性：
 - 自动检测并屏蔽敏感 Token
-- 支持多种 Token 类型
+- 通过 1Password CLI 管理 GitHub 凭证
 - 安全过滤 Git 提交内容
 """
 
@@ -82,12 +82,31 @@ class GitSafePusher:
         
         return modified_files
 
+    def configure_github_token(self):
+        """
+        通过 1Password CLI 配置 GitHub Token
+        """
+        try:
+            subprocess.run([
+                'python3', 
+                '/home/clawdbot/clawd/scripts/github_token_manager.py'
+            ], check=True)
+            self.logger.info("GitHub Token 配置成功")
+            return True
+        except Exception as e:
+            self.logger.error(f"GitHub Token 配置失败: {e}")
+            return False
+
     def git_commit_and_push(self, message: str):
         """
         执行 Git 提交和推送
         """
         try:
             os.chdir(self.repo_path)
+            
+            # 配置 GitHub Token
+            if not self.configure_github_token():
+                raise Exception("GitHub Token 配置失败")
             
             # 扫描并屏蔽敏感信息
             modified_files = self.scan_repo()
@@ -96,7 +115,7 @@ class GitSafePusher:
                 self.logger.info("未发现敏感信息，直接推送")
                 subprocess.run(['git', 'add', '.'], check=True)
                 subprocess.run(['git', 'commit', '-m', message], check=True)
-                subprocess.run(['git', 'push'], check=True)
+                subprocess.run(['op', 'run', '--', 'git', 'push'], check=True)
                 return
             
             # 如果有修改，额外记录
@@ -104,7 +123,7 @@ class GitSafePusher:
             
             subprocess.run(['git', 'add', '.'], check=True)
             subprocess.run(['git', 'commit', '-m', modified_msg], check=True)
-            subprocess.run(['git', 'push'], check=True)
+            subprocess.run(['op', 'run', '--', 'git', 'push'], check=True)
             
             self.logger.info(f"成功推送，屏蔽了 {len(modified_files)} 个文件中的敏感信息")
         
@@ -117,7 +136,7 @@ class GitSafePusher:
 
 def main():
     pusher = GitSafePusher('/home/clawdbot/clawd')
-    pusher.git_commit_and_push("Heartbeat 系统重构：自动屏蔽敏感信息")
+    pusher.git_commit_and_push("Heartbeat 系统重构：自动屏蔽敏感信息 (1Password 集成)")
 
 if __name__ == '__main__':
     main()

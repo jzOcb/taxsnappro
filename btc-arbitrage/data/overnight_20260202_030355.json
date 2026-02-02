@@ -1,0 +1,65 @@
+{
+  "duration_min": 1,
+  "measurements": [
+    {
+      "time": "2026-02-02T03:02:54.819180",
+      "brti": 76420.88,
+      "brti_chg": null,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.38,
+        "yes_ask": 0.4
+      }
+    },
+    {
+      "time": "2026-02-02T03:03:05.028477",
+      "brti": 76420.88,
+      "brti_chg": 0.0,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.38,
+        "yes_ask": 0.4
+      }
+    },
+    {
+      "time": "2026-02-02T03:03:15.232853",
+      "brti": 76420.88,
+      "brti_chg": 0.0,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.39,
+        "yes_ask": 0.44
+      }
+    },
+    {
+      "time": "2026-02-02T03:03:25.405748",
+      "brti": 76442.04,
+      "brti_chg": 0.02768876778177501,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.39,
+        "yes_ask": 0.44
+      }
+    },
+    {
+      "time": "2026-02-02T03:03:35.599326",
+      "brti": 76507.69,
+      "brti_chg": 0.0858820617555585,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.39,
+        "yes_ask": 0.44
+      }
+    },
+    {
+      "time": "2026-02-02T03:03:45.788499",
+      "brti": 76507.69,
+      "brti_chg": 0.0,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.49,
+        "yes_ask": 0.54
+      }
+    }
+  ]
+}

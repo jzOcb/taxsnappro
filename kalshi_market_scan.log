@@ -1,0 +1,1 @@
+2026-02-02 17:58:38,732 - INFO - 市场扫描完成：{'timestamp': '2026-02-02T17:58:38.732862', 'markets_scanned': ['政治预测', '经济指标', '地缘政治'], 'interesting_events': ['美国总统大选预测市场', 'GDP增长率变动', '地缘冲突风险评估'], 'market_volatility': {'low_risk_markets': 3, 'medium_risk_markets': 2, 'high_risk_markets': 1}, 'risk_index': 10}

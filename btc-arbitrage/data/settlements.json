@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2026-02-02T08:02:48.122836",
+    "ticker": "KXBTC15M-26FEB020300-00",
+    "close_time": "2026-02-02T08:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 76622.52833333334,
+    "volume": 26604
+  }
+]

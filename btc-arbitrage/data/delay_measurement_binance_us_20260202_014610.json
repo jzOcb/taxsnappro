@@ -1,0 +1,99 @@
+{
+  "measurements": [
+    {
+      "timestamp": "2026-02-02T01:45:39.346730",
+      "binance": {
+        "price": 77706.54,
+        "latency_ms": 103.07574272155762,
+        "timestamp": "2026-02-02T01:45:39.239632"
+      },
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012100-00",
+        "yes_bid": 0.41,
+        "yes_ask": 0.44,
+        "latency_ms": 107.0704460144043,
+        "timestamp": "2026-02-02T01:45:39.346702"
+      }
+    },
+    {
+      "timestamp": "2026-02-02T01:45:44.556163",
+      "binance": {
+        "price": 77706.54,
+        "latency_ms": 112.29586601257324,
+        "timestamp": "2026-02-02T01:45:44.459317"
+      },
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012100-00",
+        "yes_bid": 0.41,
+        "yes_ask": 0.44,
+        "latency_ms": 96.81820869445801,
+        "timestamp": "2026-02-02T01:45:44.556141"
+      }
+    },
+    {
+      "timestamp": "2026-02-02T01:45:49.746367",
+      "binance": {
+        "price": 77656.32,
+        "latency_ms": 102.70404815673828,
+        "timestamp": "2026-02-02T01:45:49.659102"
+      },
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012100-00",
+        "yes_bid": 0.41,
+        "yes_ask": 0.44,
+        "latency_ms": 87.23688125610352,
+        "timestamp": "2026-02-02T01:45:49.746344"
+      }
+    },
+    {
+      "timestamp": "2026-02-02T01:45:54.948438",
+      "binance": {
+        "price": 77656.32,
+        "latency_ms": 96.61746025085449,
+        "timestamp": "2026-02-02T01:45:54.843262"
+      },
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012100-00",
+        "yes_bid": 0.41,
+        "yes_ask": 0.44,
+        "latency_ms": 105.14569282531738,
+        "timestamp": "2026-02-02T01:45:54.948414"
+      }
+    },
+    {
+      "timestamp": "2026-02-02T01:46:00.203696",
+      "binance": {
+        "price": 77656.32,
+        "latency_ms": 130.02848625183105,
+        "timestamp": "2026-02-02T01:46:00.078750"
+      },
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012100-00",
+        "yes_bid": 0.41,
+        "yes_ask": 0.44,
+        "latency_ms": 124.91273880004883,
+        "timestamp": "2026-02-02T01:46:00.203658"
+      }
+    },
+    {
+      "timestamp": "2026-02-02T01:46:05.409644",
+      "binance": {
+        "price": 77656.32,
+        "latency_ms": 108.80613327026367,
+        "timestamp": "2026-02-02T01:46:05.312776"
+      },
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012100-00",
+        "yes_bid": 0.41,
+        "yes_ask": 0.44,
+        "latency_ms": 96.81820869445801,
+        "timestamp": "2026-02-02T01:46:05.409619"
+      }
+    }
+  ],
+  "summary": {
+    "total_measurements": 6,
+    "duration_seconds": 30,
+    "interval_seconds": 5
+  }
+}

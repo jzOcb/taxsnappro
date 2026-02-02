@@ -1,139 +1,242 @@
-# BTC Price Arbitrage Bot
+# BTC Arbitrage Bot
 
-Binance ↔ Polymarket/Kalshi price delay arbitrage bot
+**Real-time arbitrage trading system for Kalshi KXBTC15M prediction markets**
 
-## 📋 Current Status: **Phase 1 - Research**
+## 📊 Project Overview
 
-### What We Know
+This project explores arbitrage opportunities in Kalshi's 15-minute Bitcoin price prediction markets (KXBTC15M) by monitoring the delay between real-time BTC price movements and market price updates.
 
-**Strategy Source:**
-- Twitter: [@xmayeth](https://x.com/xmayeth/status/2011460579500659030)
-- Reference trader: 0x8dxd (97% win rate, $614k profit/month)
-- Method: Monitor Binance BTC 5min candles → trade on Polymarket before price updates
+### Market Structure
 
-**Core Arbitrage Loop:**
-1. Binance BTC moves up/down
-2. Polymarket price updates with delay
-3. Bot trades in the delay window
-4. Exit when prices sync
+Kalshi KXBTC15M markets ask: **"Will BTC price go UP in the next 15 minutes?"**
+- New market every 15 minutes
+- Binary outcome: YES or NO
+- Settlement: Based on CF Benchmarks BRTI (Bitcoin Real-Time Index)
+- BRTI aggregates prices from: Coinbase, Kraken, Bitstamp, and others
 
-### What We Need to Find Out
+### The Opportunity
 
-#### 🔍 Priority 1: Does this market exist?
-- [ ] **Kalshi**: Do they have BTC price prediction markets?
-- [ ] **Polymarket**: What BTC markets are currently active?
-- [ ] Market structure: Binary (YES/NO) or range-based?
+**Hypothesis:** Market prices may lag behind real-time BTC movements, creating brief arbitrage windows.
 
-#### 📊 Priority 2: Is it profitable?
-- [ ] Measure actual delay: Binance → Polymarket price update
-- [ ] Check liquidity: Can we enter/exit without slippage?
-- [ ] Calculate fees: Trading costs + gas (if on-chain)
-- [ ] Estimate win rate: How often does delay window appear?
+**Two potential mechanisms:**
+1. **CF Benchmarks Delay** - BRTI might update slower than individual exchanges
+2. **Market Maker Lag** - Human traders may be slow to update orders after BTC moves
 
-#### ⚙️ Priority 3: Can we build it?
-- [ ] Binance WebSocket API documentation
-- [ ] Polymarket CLOB API speed test
-- [ ] Server latency requirements
-- [ ] Backtest with historical data
+## 🎯 Current Status: Phase 1 - Data Collection
 
-## 🛠️ Tech Stack (Planned)
+**What's Running:**
+- ✅ BRTI Proxy (aggregates Binance.US + Coinbase + Kraken)
+- 🔄 6-hour continuous monitor (started 2026-02-02 02:00 UTC)
+- 📊 Data collection for strategy validation
+
+**Completed:**
+- Binance.US API integration
+- CF Benchmarks BRTI research
+- BRTI proxy implementation (3-exchange aggregation)
+- Monitoring infrastructure
+- Backtesting framework
+
+**Next:**
+- Analyze collected monitoring data
+- Validate BRTI proxy accuracy vs actual settlements
+- Backtest potential strategies
+- **GO/NO-GO decision** on pursuing this opportunity
+
+## 🏗️ Architecture
 
 ```
-┌─────────────────┐
-│  Binance WS API │  ← Real-time BTC price feed
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Arbitrage Bot  │  ← Monitor delay, execute trades
-│   (Python)      │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Polymarket CLOB │  ← Place orders in delay window
-│       API       │
-└─────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                     Data Sources                            │
+├─────────────────────────────────────────────────────────────┤
+│  Binance.US    Coinbase    Kraken    │    Kalshi API      │
+│     REST         REST        REST     │       REST         │
+└─────┬──────────┬──────────┬──────────┴────────┬────────────┘
+      │          │          │                    │
+      └──────────┴──────────┴───────┐            │
+                                    ▼            ▼
+                            ┌─────────────────────────┐
+                            │   BRTI Proxy Engine     │
+                            │  (Weighted Average)     │
+                            └───────────┬─────────────┘
+                                        │
+                                        ▼
+                            ┌─────────────────────────┐
+                            │  Arbitrage Detection    │
+                            │  - Delay monitoring     │
+                            │  - Signal generation    │
+                            └───────────┬─────────────┘
+                                        │
+                                        ▼
+                            ┌─────────────────────────┐
+                            │  Strategy Engine        │
+                            │  - Delay arbitrage      │
+                            │  - Momentum trading     │
+                            └───────────┬─────────────┘
+                                        │
+                                        ▼
+                            ┌─────────────────────────┐
+                            │   Kalshi Trading API    │
+                            │  (Order Execution)      │
+                            └─────────────────────────┘
 ```
-
-**Languages:** Python (asyncio for concurrent monitoring)  
-**APIs:** Binance WebSocket, Polymarket CLOB  
-**Infrastructure:** Low-latency VPS (TBD)
-
-## 📚 Research Tasks
-
-### Today (Phase 1)
-```bash
-# Search for active BTC markets
-- [ ] Run: python3 scripts/search_polymarket_btc.py
-- [ ] Check Kalshi series for crypto markets
-- [ ] Study 0x8dxd's public trade history
-
-# Understand the delay mechanism
-- [ ] How often does Polymarket update prices?
-- [ ] What triggers price updates?
-- [ ] Average delay window size?
-```
-
-### This Week (Phase 2)
-```bash
-# Technical feasibility
-- [ ] Setup Binance WebSocket listener
-- [ ] Test Polymarket API response time
-- [ ] Backtest delay windows (last 30 days data)
-- [ ] Calculate minimum profitable delay
-
-# Risk assessment
-- [ ] Competition analysis (other bots?)
-- [ ] Slippage simulation
-- [ ] Max drawdown scenarios
-```
-
-## 🚨 Known Risks
-
-1. **No market exists** - If Kalshi/Polymarket don't have BTC price markets, strategy is DOA
-2. **Delay too small** - If window is <1 second, execution becomes impractical  
-3. **High competition** - Other bots may have already captured this alpha
-4. **Low liquidity** - Can't enter/exit at expected prices
-5. **Technical failure** - API downtime, network lag kills the edge
 
 ## 📁 Project Structure
 
 ```
 btc-arbitrage/
-├── README.md           # This file
-├── RESEARCH.md         # Detailed research findings
+├── README.md                   # This file
+├── STATUS.md                   # Current project status
+├── ROADMAP.md                  # Implementation phases
+├── FINDINGS.md                 # Research notes
+├── COMMUNITY_RESEARCH.md       # Strategy analysis
+├── PIVOT_ANALYSIS.md           # Strategy comparison
+│
 ├── scripts/
-│   ├── search_markets.py     # Find BTC markets
-│   ├── measure_delay.py      # Test delay windows
-│   └── backtest.py           # Historical simulation
+│   ├── brti_proxy.py           # BRTI price calculator
+│   ├── continuous_monitor.py   # Long-running data collector
+│   ├── settlement_tracker.py   # Settlement validation
+│   ├── backtest_framework.py   # Strategy testing
+│   ├── measure_delay_binance_us.py
+│   ├── test_binance_us.py      # API verification
+│   └── (other utilities)
+│
 ├── src/
-│   ├── binance_monitor.py    # WebSocket listener
-│   ├── polymarket_trader.py  # Order execution
-│   └── arbitrage_engine.py   # Core logic
+│   └── binance_monitor.py      # Binance.US price monitor
+│
 └── data/
-    ├── delays.csv            # Measured delays
-    └── backtest_results.json # Simulation output
+    ├── continuous_*.json       # Monitoring data
+    ├── settlements.json        # Settlement tracking
+    └── delay_measurement_*.json
 ```
 
-## 🎯 Success Criteria
+## 🔧 Setup
 
-**Minimum Viable Strategy:**
-- ✅ BTC market exists with >$10k daily volume
-- ✅ Average delay >3 seconds
-- ✅ Backtest shows >60% win rate
-- ✅ Expected profit >10% after fees
+### Prerequisites
+- Python 3.11+
+- Internet connection
+- No API keys required for data collection phase
 
-**Go/No-Go Decision:** End of Phase 2 (1 week)
+### Quick Start
 
-## 🔗 Resources
+1. **Clone & Navigate:**
+```bash
+cd btc-arbitrage
+```
 
-- [@xmayeth's thread](https://x.com/xmayeth/status/2011460579500659030)
-- [0x8dxd Polymarket profile](https://polymarket.com/@0x8dxd?via=maycrypto)
-- [Polymarket CLOB docs](https://docs.polymarket.com)
-- [Binance WebSocket docs](https://binance-docs.github.io/apidocs/spot/en/#websocket-market-streams)
+2. **Test BRTI Proxy:**
+```bash
+python3 scripts/brti_proxy.py
+```
+
+3. **Start Monitoring (1 hour):**
+```bash
+python3 scripts/continuous_monitor.py 60 15
+```
+
+4. **Track Settlements:**
+```bash
+python3 scripts/settlement_tracker.py
+```
+
+## 📊 Data Collection
+
+### BRTI Proxy
+
+Our proxy aggregates 3 major exchanges:
+- **Binance.US** (33.3% weight)
+- **Coinbase** (33.3% weight)
+- **Kraken** (33.4% weight)
+
+**Accuracy:** Exchange spread typically <0.1%, suggesting tight pricing.
+
+### Monitoring Metrics
+
+- BRTI Proxy price
+- Kalshi YES bid/ask
+- Price change percentages
+- Arbitrage window detection
+- Settlement outcomes
+
+## 🎯 Strategy Options
+
+### Option A: Delay Arbitrage
+- **Concept:** Trade when BRTI moves but Kalshi lags
+- **Requirement:** BRTI proxy must accurately predict settlements (>95%)
+- **Risk:** Competition, execution speed
+
+### Option B: Logic/Momentum Arbitrage
+- **Concept:** Use BTC momentum to predict direction
+- **Advantage:** Doesn't require perfect BRTI proxy
+- **Requirement:** Strong predictive model
+
+## 📈 Decision Criteria
+
+**Proceed with Delay Arbitrage if:**
+- ✅ BRTI proxy accuracy >95%
+- ✅ Windows appear >5 times/day
+- ✅ Windows last >10 seconds
+- ✅ Backtest win rate >60%
+
+**Pivot to Logic Arbitrage if:**
+- ❌ BRTI proxy insufficient
+- ❌ Delay windows too rare
+- ✅ Momentum signals show edge
+
+## ⚠️ Risk Management
+
+### Pre-Live Trading
+- Extensive backtesting required
+- Paper trading mandatory (7+ days)
+- Success criteria: Win rate >60%, Sharpe >1.5
+
+### Live Trading Limits
+- Start capital: $100-500
+- Max trade size: $10-20
+- Daily loss limit: $50
+- Kill switch: 5 consecutive losses
+
+## 📚 Key Resources
+
+- [Kalshi API Docs](https://trading-api.readme.io/reference/getting-started)
+- [CF Benchmarks BRTI](https://www.cfbenchmarks.com/data/indices/BRTI)
+- [Binance.US API](https://docs.binance.us/)
+- [Project Roadmap](ROADMAP.md)
+- [Research Findings](FINDINGS.md)
+
+## 🔬 Research Background
+
+This project originated from Twitter research into Kalshi arbitrage strategies:
+- [@xmayeth](https://x.com/xmayeth/status/2011460579500659030) - BTC delay arbitrage
+- [@w1nklerr](https://x.com/w1nklerr) - Logic arbitrage approach
+
+**Key Discovery:** Kalshi settles to CF Benchmarks BRTI, NOT raw exchange prices. This adds complexity but also opportunity if our proxy is accurate.
+
+## 📊 Performance Tracking
+
+*Will be updated once data collection completes*
+
+**Metrics to track:**
+- BRTI proxy accuracy vs settlements
+- Arbitrage window frequency
+- Average window duration
+- Backtest results
+- Paper trading P&L
+- Live trading performance
+
+## 🚀 Future Enhancements
+
+**Phase 1+:**
+- WebSocket integration for lower latency
+- Multi-asset support (ETH, SOL, etc.)
+- Advanced ML models for prediction
+- Co-location for execution speed
+
+## 📝 License & Disclaimer
+
+**Educational purposes only.** Trading carries risk. No guarantees of profitability. Always start small and test thoroughly.
 
 ---
 
-**Last updated:** 2026-02-02  
-**Status:** Research phase, no code yet
+**Status:** Active Development - Phase 1  
+**Last Updated:** 2026-02-02  
+**Maintainer:** JZ + AI Co-founder

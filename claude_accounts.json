@@ -1,0 +1,14 @@
+{
+  "primary": {
+    "api_key": "primary_api_key",
+    "token_limit": 100000,
+    "current_tokens": 0,
+    "last_reset": null
+  },
+  "secondary": {
+    "api_key": "secondary_api_key", 
+    "token_limit": 150000,
+    "current_tokens": 0,
+    "last_reset": null
+  }
+}

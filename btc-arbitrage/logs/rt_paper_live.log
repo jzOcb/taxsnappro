@@ -1,0 +1,24 @@
+
+======================================================================
+REAL-TIME PAPER TRADING ENGINE
+======================================================================
+Duration: 480 minutes
+Start: 17:05:37 UTC
+Strategy: Delay Arb + Flash Crash Detection
+Data: 4x WebSocket + Kalshi REST (5s)
+======================================================================
+
+[   60s] BRTI*: $78,879.31 (4ex, -0.051%/1m) | Kalshi: 0.92/0.93
+[  120s] BRTI*: $78,813.78 (4ex, -0.023%/1m) | Kalshi: 0.89/0.90
+[  180s] BRTI*: $78,903.54 (4ex, +0.063%/1m) | Kalshi: 0.96/0.97
+[  240s] BRTI*: $78,863.52 (4ex, -0.068%/1m) | Kalshi: 0.96/0.97
+[  300s] BRTI*: $78,801.51 (4ex, -0.006%/1m) | Kalshi: 0.92/0.94
+[  360s] BRTI*: $78,756.06 (4ex, -0.055%/1m) | Kalshi: 0.92/0.93
+[  420s] BRTI*: $78,820.55 (4ex, +0.039%/1m) | Kalshi: 0.98/0.99
+[  480s] BRTI*: $78,925.94 (4ex, -0.004%/1m) | Kalshi: 0.99/1.00
+[  540s] BRTI*: $78,913.97 (4ex, -0.004%/1m) | Kalshi: 0.99/1.00
+[  568s] ⚡ FLASH CRASH: Kalshi dropped -44.4% → YES @ $0.70
+[  568s] ❌ CLOSE (STOP LOSS): P&L $-1.50 [LOSS] | Total: $-1.50
+[  598s] ⚡ FLASH CRASH: Kalshi dropped -49.1% → YES @ $0.55
+[  598s] ❌ CLOSE (STOP LOSS): P&L $-2.70 [LOSS] | Total: $-4.20
+[  600s] BRTI*: $78,915.06 (4ex, -0.030%/1m) | Kalshi: 0.28/0.55 | P&L: $-4.20 (2 trades)

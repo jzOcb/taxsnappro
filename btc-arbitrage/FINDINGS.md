@@ -1,230 +1,194 @@
-# BTC Arbitrage Bot - Research Findings Report
+# BTC Arbitrage Research Findings
 
-**Date**: 2026-02-02  
-**Phase**: 1 - Market Research  
-**Time spent**: ~15 minutes  
-**Status**: ⚠️ MIXED RESULTS
+Last updated: 2026-02-02T01:48Z
+
+## Market Structure Discovery ✅
+
+### Kalshi KXBTC15M Markets
+
+**Format**: `KXBTC15M-[DATE][TIME]-[SEQUENCE]`
+- Example: `KXBTC15M-26FEB012100-00`
+- Means: "Will BTC price go UP in the 15 mins ending at 2026-02-02 01:21:00 (9:00 PM EST Feb 1)?"
+
+**Key Characteristics:**
+1. **Binary market**: YES (price up) or NO (price down/flat)
+2. **15-minute cycles**: New market opens every 15 minutes
+3. **Resolution source**: CF Benchmarks BRTI (NOT Binance!)
+4. **Settlement logic**:
+   - Take average of 60 BRTI prices in last minute before close
+   - Compare to average of 60 BRTI prices in last minute before open
+   - If close_avg >= open_avg → YES wins
+   - Otherwise → NO wins
+5. **Fast settlement**: 60 seconds after close time
+
+**Current Active Market (as of 01:48 UTC):**
+```json
+{
+  "ticker": "KXBTC15M-26FEB012100-00",
+  "title": "BTC price up in next 15 mins?",
+  "open_time": "2026-02-02T01:45:00Z",
+  "close_time": "2026-02-02T02:00:00Z",
+  "yes_bid": 0.40,
+  "yes_ask": 0.42,
+  "no_bid": 0.58,
+  "no_ask": 0.60,
+  "volume": 987,
+  "liquidity": "$10,759.28"
+}
+```
+
+## Price Sources Hierarchy
+
+### What We Discovered
+
+The arbitrage is NOT:
+```
+Binance price → Kalshi updates with delay
+```
+
+It's actually:
+```
+Binance price → CF Benchmarks BRTI → Kalshi settlement
+                 ↑
+                 Unknown delay here!
+```
+
+### CF Benchmarks BRTI
+
+**What it is:**
+- "Bitcoin Real-Time Index" by CF Benchmarks
+- Industry-standard BTC price reference
+- Used by CME Bitcoin futures and other regulated markets
+- Aggregates prices from multiple exchanges
+
+**Resolution rules (from Kalshi):**
+> "Not all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI)."
+
+**Critical question**: Can we access CF Benchmarks BRTI in real-time?
+- ❓ Public API available?
+- ❓ What exchanges feed into BRTI?
+- ❓ Binance.US included in BRTI calculation?
+
+## Delay Measurement Results
+
+### Test #1: Binance.US vs Kalshi (30 seconds, 5s interval)
+
+**Setup:**
+- Duration: 30 seconds
+- Interval: 5 seconds  
+- Measurements: 6 samples
+- Market: KXBTC15M-26FEB012100-00
+
+**Results:**
+
+| Time | Binance.US Price | Kalshi YES bid/ask | Kalshi Updated? |
+|------|------------------|-------------------|-----------------|
+| 01:45:39 | $77,706.54 | 0.41 / 0.44 | N/A |
+| 01:45:44 | $77,706.54 | 0.41 / 0.44 | ❌ No change |
+| 01:45:49 | $77,656.32 | 0.41 / 0.44 | ❌ No change ($50 drop ignored!) |
+| 01:45:54 | $77,656.32 | 0.41 / 0.44 | ❌ No change |
+| 01:45:59 | $77,656.32 | 0.41 / 0.44 | ❌ No change |
+| 01:46:05 | $77,656.32 | 0.41 / 0.44 | ❌ No change |
+
+**By 01:47 (checking market details):**
+- Binance.US: $77,656.32 (still)
+- Kalshi: YES 0.40 / 0.42 (SPREAD TIGHTENED)
+
+**Observations:**
+1. ✅ **Delay exists**: BTC dropped $50, Kalshi didn't react immediately
+2. ✅ **Low volume during test**: Only 29 contracts (market just opened)
+3. ⚠️ **Market DID update eventually**: Spread went from 3¢ to 2¢
+4. ❓ **Update trigger unclear**: Was it CF Benchmarks or just new orders?
+
+**API Latencies:**
+- Binance.US: ~109ms average
+- Kalshi: ~103ms average
+- **Difference: Only 6ms** (APIs are equally fast)
+
+## Revised Strategy Implications
+
+### Original Assumption (WRONG)
+"Binance price updates faster than Kalshi → trade before Kalshi updates"
+
+### Actual Reality
+Kalshi settlement is based on **CF Benchmarks BRTI**, not Binance directly.
+
+### New Arbitrage Opportunities
+
+**Option A: CF Benchmarks Delay Arbitrage** 
+- Monitor Binance.US (or other BRTI constituents)
+- Predict CF Benchmarks BRTI direction
+- Trade on Kalshi before BRTI fully reflects movement
+- **Blocker**: Need access to real-time BRTI data
+
+**Option B: Market Maker Delay Arbitrage**
+- Kalshi market prices are set by traders, not oracle
+- If market is slow to update (low volume/activity)
+- Fast BTC movement → stale Kalshi prices
+- Trade before human market makers update their orders
+- **Evidence**: We saw $50 drop with no immediate Kalshi update
+
+**Option C: Logic Arbitrage** (from @w1nklerr research)
+- Use Binance momentum/volatility to predict direction
+- Kalshi market may misprice due to information lag
+- Trade when we have better prediction than current odds
+- **Advantage**: Doesn't require price arbitrage window
+
+## Next Steps
+
+### Immediate (This Session)
+1. 🔄 **Research CF Benchmarks BRTI**
+   - Is there a public API?
+   - Which exchanges are included?
+   - Can we track it in real-time?
+
+2. 🔄 **Extended delay test**
+   - Run 5-10 minute test
+   - Capture market price updates
+   - See if updates correlate with BRTI or trader activity
+
+3. 🔄 **Volume analysis**
+   - Track volume during different times
+   - Higher volume = more efficient pricing
+   - Lower volume = more arbitrage opportunities?
+
+### This Week
+- [ ] Compare Binance vs other BRTI exchanges (Coinbase, Kraken, etc.)
+- [ ] Build BRTI proxy (aggregate Binance + Coinbase + Kraken)
+- [ ] Test if our proxy predicts Kalshi settlement
+- [ ] Decide which strategy to pursue
+
+## Open Questions
+
+1. **CF Benchmarks BRTI access**
+   - Can we get real-time BRTI data? (Likely paid)
+   - Can we build a good proxy using public exchange APIs?
+   - How accurate would a proxy be?
+
+2. **Kalshi pricing mechanism**
+   - How often do market prices update?
+   - Is it trader-driven or oracle-driven?
+   - What's the typical lag during high volatility?
+
+3. **Competition**
+   - How many other bots are doing this?
+   - What's the minimum viable edge?
+   - Can we be fast enough with REST APIs?
+
+4. **Settlement accuracy**
+   - How often does Kalshi settle correctly?
+   - Are there edge cases or delays in settlement?
+   - What happens during exchange outages?
+
+## Resources
+
+- [CF Benchmarks](https://www.cfbenchmarks.com/)
+- [CF Benchmarks BRTI Methodology](https://www.cfbenchmarks.com/indices/BRTI)
+- [Kalshi KXBTC15M series](https://kalshi.com/markets/kxbtc15m)
+- [Our delay measurement data](data/delay_measurement_binance_us_20260202_014610.json)
 
 ---
 
-## Executive Summary
+**Key Insight**: This is NOT simple price arbitrage. We need to understand CF Benchmarks BRTI to make this work.
 
-✅ **Good news**: Kalshi has 15-minute BTC price prediction markets (KXBTC15M)  
-⚠️ **Concerns**: Low liquidity ($687/market), large spread (3¢), API access issues  
-🔬 **Next**: Need US-based server or API access to continue testing  
-
----
-
-## Key Findings
-
-### 1. Market Discovery ✅
-
-**Kalshi KXBTC15M Series**:
-- **Question**: "Will BTC price go up in the next 15 minutes?"
-- **Frequency**: New market every 15 minutes
-- **Current market**: KXBTC15M-26FEB012030-30
-- **Pricing**: YES at 36¢ bid / 39¢ ask
-- **Volume**: $687 (very low)
-- **Closes**: 2026-02-02T01:30:00Z
-
-**Alternative markets found**:
-- KXETH15M: ETH 15-minute predictions (even lower volume: $235)
-- BTCD: Daily BTC above/below (no active markets currently)
-- KXBTC100: BTC hitting $100k (custom frequency, no active markets)
-
-### 2. Polymarket Comparison
-
-**Crypto markets on Polymarket**:
-- MicroStrategy Bitcoin sales: $19.7M volume
-- Trump crypto tax elimination: $89k volume
-- MegaETH launch markets: $8.8M volume
-
-**Problem**: These are long-term event markets, not suitable for short-term price arbitrage strategy.
-
-**Conclusion**: Kalshi KXBTC15M is better suited for this strategy despite lower volume.
-
-### 3. Liquidity Analysis ⚠️
-
-| Platform | Market | Volume | Spread |
-|----------|--------|--------|--------|
-| Kalshi BTC | 15min price | $687 | 3¢ |
-| Kalshi ETH | 15min price | $235 | 3¢ |
-| Polymarket | MicroStrategy | $19.7M | ? |
-
-**Concerns**:
-1. $687 volume is very low for profitable trading
-2. 3¢ spread eats into profit margins
-3. Large orders would cause significant slippage
-
-**Comparison**:
-- Polymarket BTC events have 28x more volume
-- But those are long-term events (weeks/months), not 15-minute windows
-
-### 4. Strategy Viability
-
-**Original plan** (from @xmayeth):
-```
-Binance BTC moves → Polymarket slow to update → Trade in delay window
-```
-
-**Adapted plan** (our finding):
-```
-Binance BTC moves → Kalshi KXBTC15M slow to update? → Trade in delay window
-```
-
-**Critical unknowns**:
-1. ❓ Does Kalshi actually have a price update delay?
-2. ❓ How correlated is KXBTC15M pricing with real BTC moves?
-3. ❓ Can we execute fast enough given liquidity constraints?
-
-### 5. Technical Blockers 🚨
-
-**API Access Issue**:
-- Kalshi API returns HTTP 451 (Unavailable For Legal Reasons)
-- Likely geographic restriction
-- Blocks our ability to:
-  - Measure real delay
-  - Test trading API
-  - Build automated system
-
-**Current workarounds**:
-1. Need US-based server or VPN
-2. Manual observation via Kalshi website
-3. Use public/archived data if available
-
-**What we CAN test now**:
-- ✅ Binance price monitoring (no restrictions)
-- ✅ Price movement detection logic
-- ❌ Kalshi API integration (blocked)
-- ❌ End-to-end arbitrage testing (blocked)
-
----
-
-## Profit Calculation (Theoretical)
-
-**Assumptions**:
-- Delay window: 5 seconds (unknown, need to measure)
-- Position size: $100
-- Spread cost: 3¢ ($3 on $100 position)
-- Win rate: 60% (typical for arbitrage)
-
-**Best case scenario**:
-```
-Entry: YES @ 39¢
-Correct prediction: Market settles YES
-Profit: $100 * (1 - 0.39) = $61
-Minus spread: $61 - $3 = $58
-ROI: 58%
-```
-
-**Average case** (60% win rate):
-```
-Wins (60%): $58 * 0.6 = $34.80
-Losses (40%): -$39 * 0.4 = -$15.60
-Net: $19.20 per trade
-ROI: 19.2%
-```
-
-**Problem**: With only $687 liquidity, we can only do 6-7 trades per 15-min window before moving the market.
-
----
-
-## Go / No-Go Decision Factors
-
-### ✅ GO Signals
-1. Market exists and is specific to our strategy
-2. Clear binary outcome (price up/down)
-3. High frequency (every 15 minutes = 96 opportunities/day)
-4. Binance monitoring is straightforward
-
-### ⚠️ YELLOW Flags
-1. Low liquidity limits position size
-2. Large spread reduces profit margin
-3. Need to verify delay actually exists
-4. API access restrictions
-
-### 🛑 NO-GO Signals
-1. If no measurable delay exists (Kalshi already tracks Binance real-time)
-2. If API access can't be resolved
-3. If liquidity doesn't improve
-4. If correlation is weak
-
----
-
-## Recommended Next Steps
-
-### Immediate (Can do now)
-1. ✅ Build Binance WebSocket monitor (in progress)
-2. ✅ Document findings for decision
-3. ⏳ Test from US-based server or with VPN
-
-### Short-term (This week)
-1. Get US server access or resolve API blocks
-2. Measure actual delay (Binance → Kalshi)
-3. Backtest correlation (BTC moves vs KXBTC15M outcomes)
-4. Test Kalshi trading API
-
-### Medium-term (If GO)
-1. Build automated monitoring system
-2. Implement risk management
-3. Paper trade for 1 week
-4. Evaluate profitability
-
----
-
-## Alternative Strategies to Consider
-
-If KXBTC15M doesn't work out:
-
-1. **Higher liquidity Polymarket events**
-   - Focus on high-volume crypto events
-   - Longer timeframes but better execution
-
-2. **Different assets**
-   - ETH, SOL if they have better Kalshi markets
-   - Stock index futures during market hours
-
-3. **Different arbitrage angles**
-   - Cross-exchange arbitrage (Kalshi vs Polymarket on same events)
-   - Statistical arbitrage (market inefficiencies)
-
-4. **Back to original Kalshi Trading System**
-   - Focus on official data-driven trades
-   - Lower frequency but higher conviction
-
----
-
-## Files Created
-
-```
-btc-arbitrage/
-├── README.md - Project overview
-├── RESEARCH.md - Detailed research plan
-├── STATUS.md - Live status tracking
-├── FINDINGS.md - This report
-├── scripts/
-│   ├── search_markets.py - Market discovery
-│   ├── analyze_kalshi_crypto.py - Deep dive on crypto markets
-│   ├── get_btc_markets.py - KXBTC15M details
-│   └── measure_delay.py - Delay measurement (blocked by API)
-├── src/
-│   └── binance_monitor.py - Price monitoring framework
-└── data/
-    └── delay_measurement.json (empty due to API block)
-```
-
----
-
-## Conclusion
-
-**TL;DR**: Kalshi KXBTC15M markets exist and match our strategy, BUT we hit API access issues and liquidity concerns. Need to resolve API access first before making final Go/No-Go decision.
-
-**Recommendation**: 
-1. Resolve API access (US server or Kalshi support)
-2. Measure real delay in production environment
-3. If delay >3 seconds: GO (build prototype)
-4. If delay <1 second or no delay: NO-GO (pivot to other strategies)
-
-**Risk level**: 🟡 MEDIUM - Viable but needs validation
-
-**Next review**: After API access is resolved
+**Decision Point**: Should we continue with delay arbitrage OR pivot to logic arbitrage?

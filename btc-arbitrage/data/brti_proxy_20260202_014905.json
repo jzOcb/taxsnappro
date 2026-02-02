@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-02-02T01:49:05.954903",
+  "prices": {
+    "binance_us": 77389.53,
+    "coinbase": 77367.865,
+    "kraken": 77335.1
+  },
+  "weights": {
+    "binance_us": 0.33,
+    "coinbase": 0.33,
+    "kraken": 0.34
+  },
+  "proxy_brti": 77363.87435000001
+}

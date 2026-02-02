@@ -1,0 +1,89 @@
+{
+  "duration_minutes": 1,
+  "measurements": [
+    {
+      "timestamp": "2026-02-02T03:01:34.789375",
+      "brti_proxy": 76465.98166666667,
+      "brti_change_pct": null,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.51,
+        "yes_ask": 0.56,
+        "volume": 538,
+        "close_time": "2026-02-02T03:15:00Z"
+      },
+      "kalshi_change_pct": null,
+      "signal": null
+    },
+    {
+      "timestamp": "2026-02-02T03:01:45.215441",
+      "brti_proxy": 76445.91166666667,
+      "brti_change_pct": -0.026246965725879083,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.51,
+        "yes_ask": 0.56,
+        "volume": 538,
+        "close_time": "2026-02-02T03:15:00Z"
+      },
+      "kalshi_change_pct": 0.0,
+      "signal": null
+    },
+    {
+      "timestamp": "2026-02-02T03:01:55.720635",
+      "brti_proxy": 76370.14333333333,
+      "brti_change_pct": -0.0991136500061894,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.36,
+        "yes_ask": 0.38,
+        "volume": 2352,
+        "close_time": "2026-02-02T03:15:00Z"
+      },
+      "kalshi_change_pct": -29.41176470588236,
+      "signal": null
+    },
+    {
+      "timestamp": "2026-02-02T03:02:06.269178",
+      "brti_proxy": 76355.29166666667,
+      "brti_change_pct": -0.01944695402996883,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.36,
+        "yes_ask": 0.38,
+        "volume": 2352,
+        "close_time": "2026-02-02T03:15:00Z"
+      },
+      "kalshi_change_pct": 0.0,
+      "signal": null
+    },
+    {
+      "timestamp": "2026-02-02T03:02:16.679315",
+      "brti_proxy": 76340.89,
+      "brti_change_pct": -0.018861386489810537,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.36,
+        "yes_ask": 0.38,
+        "volume": 2352,
+        "close_time": "2026-02-02T03:15:00Z"
+      },
+      "kalshi_change_pct": 0.0,
+      "signal": null
+    },
+    {
+      "timestamp": "2026-02-02T03:02:27.261189",
+      "brti_proxy": 76318.42166666668,
+      "brti_change_pct": -0.029431584218265264,
+      "kalshi": {
+        "ticker": "KXBTC15M-26FEB012215-15",
+        "yes_bid": 0.38,
+        "yes_ask": 0.39,
+        "volume": 3759,
+        "close_time": "2026-02-02T03:15:00Z"
+      },
+      "kalshi_change_pct": 5.555555555555561,
+      "signal": null
+    }
+  ]
+}

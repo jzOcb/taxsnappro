@@ -1,13 +1,14 @@
 {
   "lastChecks": {
-    "kalshi_scan": 1769994184,
-    "token_monitor": 1769992722,
-    "kanban_sync": 1769995854,
+    "kalshi_scan": 1770001497,
+    "token_monitor": 1770001497,
+    "kanban_sync": 1770001497,
     "email": null,
     "calendar": null,
-    "weather": null
+    "weather": null,
+    "btc_arbitrage": 1770005784
   },
   "moltbook_register_after": 1770079989,
   "moltbook_agent_name": "jzOcb_",
-  "notes": "Kanban synced. Kalshi & token monitor due in ~3-4h. Moltbook in ~23.5h."
+  "notes": "\u26a0\ufe0f Token critical: 11% today, 59% week. Kalshi clean. Kanban synced. Moltbook in ~21.8h."
 }

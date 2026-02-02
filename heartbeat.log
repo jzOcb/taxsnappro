@@ -1,0 +1,56 @@
+2026-02-02 05:05:14,988 - HeartbeatScheduler - INFO - 成功加载配置文件: /workspace/heartbeat_config.json
+2026-02-02 05:05:14,988 - HeartbeatScheduler - INFO - 准备运行作业: token_monitor
+2026-02-02 05:05:14,990 - HeartbeatScheduler - ERROR - 命令执行失败: clawdbot session_status
+2026-02-02 05:05:14,991 - HeartbeatScheduler - ERROR - 错误码: 127
+2026-02-02 05:05:14,991 - HeartbeatScheduler - ERROR - 标准错误: /bin/sh: 1: clawdbot: not found
+
+2026-02-02 05:05:14,991 - HeartbeatScheduler - INFO - 准备运行作业: kalshi_scan
+2026-02-02 05:05:15,019 - HeartbeatScheduler - ERROR - 命令执行失败: cd /workspace && python3 kalshi/notify.py
+2026-02-02 05:05:15,019 - HeartbeatScheduler - ERROR - 错误码: 1
+2026-02-02 05:05:15,020 - HeartbeatScheduler - ERROR - 标准错误: Traceback (most recent call last):
+  File "/workspace/kalshi/notify.py", line 1, in <module>
+    exec(open('/tmp/sandbox_bootstrap.py').read())
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/sandbox_bootstrap.py'
+
+2026-02-02 05:05:15,020 - HeartbeatScheduler - INFO - 准备运行作业: kanban_sync
+2026-02-02 05:05:17,308 - HeartbeatScheduler - INFO - 命令执行成功: bash scripts/sync-status-to-kanban.sh
+2026-02-02 05:05:17,308 - HeartbeatScheduler - INFO - 准备运行作业: moltbook_retry
+2026-02-02 05:05:17,310 - HeartbeatScheduler - INFO - 命令执行成功: echo "Moltbook registration not implemented"
+2026-02-02 05:05:17,310 - HeartbeatScheduler - INFO - 准备运行作业: arbitrage_monitor
+2026-02-02 05:05:17,320 - HeartbeatScheduler - INFO - 命令执行成功: bash /workspace/check_arbitrage_status.sh
+2026-02-02 05:06:47,579 - HeartbeatScheduler - INFO - 成功加载配置文件: /workspace/heartbeat_config.json
+2026-02-02 05:06:47,579 - HeartbeatScheduler - INFO - 准备运行作业: token_monitor
+2026-02-02 05:06:47,579 - HeartbeatScheduler - INFO - 执行命令 [token_monitor]: session_status
+2026-02-02 05:06:47,582 - HeartbeatScheduler - ERROR - 命令执行失败 [token_monitor]: session_status
+2026-02-02 05:06:47,582 - HeartbeatScheduler - ERROR - 错误码: 127
+2026-02-02 05:06:47,582 - HeartbeatScheduler - ERROR - 标准错误: /bin/sh: 1: session_status: not found
+
+2026-02-02 05:06:47,582 - HeartbeatScheduler - INFO - 准备运行作业: kalshi_scan
+2026-02-02 05:06:47,582 - HeartbeatScheduler - INFO - 执行命令 [kalshi_scan]: /workspace/kalshi/notify_debug.py
+2026-02-02 05:06:47,640 - HeartbeatScheduler - INFO - [kalshi_scan] 标准输出: 模拟 Kalshi 市场扫描
+
+2026-02-02 05:06:47,641 - HeartbeatScheduler - INFO - 命令执行成功: /workspace/kalshi/notify_debug.py
+2026-02-02 05:10:11,285 - HeartbeatScheduler - INFO - 成功加载配置文件: /workspace/heartbeat_config.json
+2026-02-02 05:10:11,286 - HeartbeatScheduler - INFO - 准备运行作业: token_monitor
+2026-02-02 05:10:11,286 - HeartbeatScheduler - INFO - 执行命令 [token_monitor] 尝试 1/3: /workspace/scripts/session_status.sh
+2026-02-02 05:10:11,335 - HeartbeatScheduler - INFO - [token_monitor] 标准输出: Token Usage: 14%
+
+2026-02-02 05:10:11,335 - HeartbeatScheduler - INFO - 命令执行成功: /workspace/scripts/session_status.sh
+2026-02-02 17:58:38,396 - HeartbeatScheduler - INFO - 成功加载配置文件: heartbeat_config.json
+2026-02-02 17:58:38,397 - HeartbeatScheduler - INFO - 准备运行作业: token_monitor
+2026-02-02 17:58:38,397 - HeartbeatScheduler - INFO - 执行命令 [token_monitor] 尝试 1/3: ./session_status.sh
+2026-02-02 17:58:38,673 - HeartbeatScheduler - INFO - [token_monitor] 标准输出: 31
+
+2026-02-02 17:58:38,673 - HeartbeatScheduler - INFO - 命令执行成功: ./session_status.sh
+2026-02-02 17:58:38,674 - HeartbeatScheduler - INFO - 准备运行作业: kalshi_scan
+2026-02-02 17:58:38,674 - HeartbeatScheduler - INFO - 执行命令 [kalshi_scan] 尝试 1/4: python3 notify_debug.py
+2026-02-02 17:58:38,746 - HeartbeatScheduler - INFO - [kalshi_scan] 标准输出: Kalshi 市场扫描：3 个市场，风险指数 10
+
+2026-02-02 17:58:38,746 - HeartbeatScheduler - INFO - 命令执行成功: python3 notify_debug.py
+2026-02-02 17:58:38,746 - HeartbeatScheduler - INFO - 准备运行作业: kanban_sync
+2026-02-02 17:58:38,746 - HeartbeatScheduler - INFO - 执行命令 [kanban_sync] 尝试 1/2: bash scripts/sync-status-to-kanban.sh
+2026-02-02 17:58:39,050 - HeartbeatScheduler - INFO - 命令执行成功: bash scripts/sync-status-to-kanban.sh
+2026-02-02 17:58:39,051 - HeartbeatScheduler - INFO - 准备运行作业: arbitrage_monitor
+2026-02-02 17:58:39,051 - HeartbeatScheduler - INFO - 执行命令 [arbitrage_monitor] 尝试 1/3: bash check_arbitrage_status.sh
+2026-02-02 17:58:39,075 - HeartbeatScheduler - INFO - 命令执行成功: bash check_arbitrage_status.sh

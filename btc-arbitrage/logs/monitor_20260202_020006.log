@@ -1,0 +1,4 @@
+  File "/workspace/btc-arbitrage/scripts/continuous_monitor.py", line 150
+    f"{arbitrage_signal if arbitrage_signal else ''}")
+                                                     ^
+SyntaxError: f-string: single '}' is not allowed

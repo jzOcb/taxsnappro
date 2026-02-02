@@ -1,0 +1,23 @@
+{
+  "parameters": {
+    "drop_threshold": 0.3,
+    "lookback_ticks": 5,
+    "take_profit": 0.1,
+    "stop_loss": 0.05
+  },
+  "results": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "breakeven": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "avg_pnl": 0,
+    "avg_win": 0,
+    "avg_loss": 0,
+    "take_profit_exits": 0,
+    "stop_loss_exits": 0,
+    "conclusion": "NO SIGNALS DETECTED"
+  },
+  "trades": []
+}

@@ -1,0 +1,12 @@
+{
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "headless": false,
+    "profiles": {
+      "openclaw": {
+        "cdpPort": 18800
+      }
+    }
+  }
+}

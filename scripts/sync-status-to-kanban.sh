@@ -1,126 +1,87 @@
 #!/bin/bash
-# sync-status-to-kanban.sh
-# 自动同步 STATUS.md 到 kanban board
+# sync-status-to-kanban.sh — Sync STATUS.md from project dirs to kanban board
+# Scans all project directories for STATUS.md, creates/updates kanban task cards
 
-set -euo pipefail
+set -uo pipefail
 
-WORKSPACE=${WORKSPACE:-/workspace}
+# Auto-detect workspace
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+WORKSPACE="$(dirname "$SCRIPT_DIR")"
 KANBAN_DIR="$WORKSPACE/kanban-tasks"
-PARSER="$WORKSPACE/scripts/parse-status.py"
 LOG_FILE="$WORKSPACE/memory/kanban-sync.log"
-TEMP_JSON="/tmp/kanban-sync-$$.json"
-
-mkdir -p "$WORKSPACE/memory"
-touch "$LOG_FILE"
 
 log() {
-    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] $*" | tee -a "$LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $*" >> "$LOG_FILE"
 }
 
-# 创建或更新kanban卡片
-update_kanban_card() {
-    local json="$1"
+# Lane names (English)
+LANES=("TODO" "In Progress" "Paused" "Done")
+
+# Ensure lane dirs exist
+for lane in "${LANES[@]}"; do
+    mkdir -p "$KANBAN_DIR/$lane"
+done
+
+# Map Chinese status to English lane
+status_to_lane() {
+    case "$1" in
+        *进行中*|*"In Progress"*) echo "In Progress" ;;
+        *暂停*|*Paused*|*卡住*|*Blocked*) echo "Paused" ;;
+        *完成*|*Done*|*Completed*) echo "Done" ;;
+        *规划中*|*TODO*|*Planning*) echo "TODO" ;;
+        *) echo "TODO" ;;
+    esac
+}
+
+CHANGED=0
+
+# Scan project dirs for STATUS.md
+for status_file in "$WORKSPACE"/*/STATUS.md; do
+    [ -f "$status_file" ] || continue
     
-    local project_name=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['project_name'])")
-    local project_dir=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['project_dir'])")
-    local column=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['kanban_column'])")
-    local last_work=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['last_work'])")
-    local blockers=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['blockers'])")
-    local next_steps=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['next_steps'])")
-    local last_updated=$(echo "$json" | python3 -c "import sys,json; print(json.load(sys.stdin)['last_updated'])")
+    project_dir="$(dirname "$status_file")"
+    project_name="$(basename "$project_dir")"
     
-    # 使用project_dir作为文件名（已经是安全的英文目录名）
-    local card_name="$project_dir"
+    # Parse status
+    current_status=$(grep -i "## 当前状态\|## Current Status" "$status_file" | head -1 | sed 's/.*: *//')
+    last_action=$(grep -A1 "## 最后做了什么\|## Last Action" "$status_file" | tail -1 | sed 's/^- //')
+    next_step=$(grep -A1 "## 下一步\|## Next Step" "$status_file" | tail -1 | sed 's/^- //')
+    last_updated=$(grep "Last updated:" "$status_file" | head -1 | sed 's/Last updated: *//')
     
-    # 确保column目录存在
-    mkdir -p "$KANBAN_DIR/$column"
+    lane=$(status_to_lane "$current_status")
     
-    # 查找卡片是否在其他列
-    local existing_card=""
-    local existing_col=""
-    for col in TODO 进行中 完成 暂停; do
-        if [ -f "$KANBAN_DIR/$col/$card_name.md" ]; then
-            existing_card="$KANBAN_DIR/$col/$card_name.md"
-            existing_col="$col"
-            break
+    # Remove from other lanes
+    for other_lane in "${LANES[@]}"; do
+        if [ "$other_lane" != "$lane" ] && [ -f "$KANBAN_DIR/$other_lane/$project_name.md" ]; then
+            rm "$KANBAN_DIR/$other_lane/$project_name.md"
+            CHANGED=1
         fi
     done
     
-    local target_card="$KANBAN_DIR/$column/$card_name.md"
+    # Build card content
+    card="# $project_name
+**Status:** $current_status
+**Updated:** $last_updated
+
+$last_action
+
+**Next:** $next_step"
     
-    # 如果卡片在不同列，移动它
-    if [ -n "$existing_card" ] && [ "$existing_card" != "$target_card" ]; then
-        log "移动卡片: $project_name ($existing_col → $column)"
-        mv "$existing_card" "$target_card"
-    elif [ -f "$target_card" ]; then
-        log "更新卡片: $project_name @ $column"
-    else
-        log "创建卡片: $project_name @ $column"
+    card_file="$KANBAN_DIR/$lane/$project_name.md"
+    
+    # Only write if changed (use checksum to handle multiline)
+    new_hash=$(echo "$card" | md5sum | cut -d' ' -f1)
+    old_hash=""
+    [ -f "$card_file" ] && old_hash=$(md5sum "$card_file" | cut -d' ' -f1)
+    if [ "$new_hash" != "$old_hash" ]; then
+        echo "$card" > "$card_file"
+        CHANGED=1
+        log "Updated: $project_name → $lane"
     fi
-    
-    # 生成卡片内容
-    cat > "$target_card" << EOFCARD
-# $project_name
+done
 
-**项目目录**: \`$project_dir/\`  
-**最后更新**: $last_updated  
-**同步时间**: $(date -u +%Y-%m-%dT%H:%M:%SZ)
-
----
-
-## 📝 最近进展
-
-$last_work
-
----
-
-## 🚧 当前Blockers
-
-$blockers
-
----
-
-## 🎯 下一步
-
-$next_steps
-
----
-
-*此卡片由 sync-status-to-kanban.sh 自动生成*  
-*数据源: \`$project_dir/STATUS.md\`*
-EOFCARD
-}
-
-main() {
-    log "开始同步 STATUS.md → kanban..."
-    
-    if [ ! -f "$PARSER" ]; then
-        log "❌ 错误: parse-status.py 不存在"
-        exit 1
-    fi
-    
-    python3 "$PARSER" > "$TEMP_JSON" 2>/dev/null || {
-        log "❌ 错误: 解析STATUS.md失败"
-        exit 1
-    }
-    
-    local count=$(python3 -c "import sys,json; print(len(json.load(open('$TEMP_JSON'))))")
-    
-    if [ "$count" -eq 0 ]; then
-        log "⚠️  未找到任何STATUS.md文件"
-        rm -f "$TEMP_JSON"
-        exit 0
-    fi
-    
-    for i in $(seq 0 $((count - 1))); do
-        local project_json=$(python3 -c "import sys,json; print(json.dumps(json.load(open('$TEMP_JSON'))[$i]))")
-        update_kanban_card "$project_json"
-    done
-    
-    log "✅ 同步完成，处理了 $count 个项目"
-    rm -f "$TEMP_JSON"
-}
-
-if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
-    main "$@"
+if [ "$CHANGED" -eq 1 ]; then
+    log "Sync complete — changes made"
+else
+    log "Sync complete — no changes"
 fi

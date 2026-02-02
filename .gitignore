@@ -3,3 +3,7 @@
 # 独立 Git repos (有自己的 .git)
 openclaw-hardening/
 kalshi/
+.local/
+.cache/
+.claude/
+__pycache__/

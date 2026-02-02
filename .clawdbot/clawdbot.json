@@ -1,0 +1,28 @@
+{
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "headless": false,
+    "profiles": {
+      "openclaw": {
+        "cdpPort": 18800
+      }
+    }
+  },
+  "tools": {
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "telegram": [
+          "6978208486",
+          "7952782207"
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "elevatedDefault": "full"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+# Kanban诊断信息
+
+## 当前状态（Sandbox视角）
+路径: /workspace/kanban-tasks/
+文件列表:
+kanban-tasks/进行中/btc-arbitrage.md
+kanban-tasks/进行中/Enhanced-Kalshi-Trading.md
+kanban-tasks/完成/chinese-social-scripts.md
+kanban-tasks/完成/video-editing.md
+kanban-tasks/完成/Kalshi-Trading-System.md
+kanban-tasks/完成/Git-Workflow-Setup.md
+kanban-tasks/完成/kalshi.md
+kanban-tasks/TODO/BTC-Price-Arbitrage-Bot.md
+kanban-tasks/TODO/btc-arbitrage.md
+kanban-tasks/TODO/video-repurpose.md
+
+## 容器挂载（从docker inspect）
+Source: /home/clawdbot/kanban/tasks
+Destination: /tasks （容器内部）
+
+## 软链接（Jason创建的）
+/home/clawdbot/kanban/tasks -> /home/clawdbot/clawd/kanban-tasks
+
+## 需要在host上验证
+1. ls -la /home/clawdbot/kanban/tasks （应该显示软链接）
+2. ls -la /home/clawdbot/clawd/kanban-tasks/ （应该显示实际文件）
+3. docker exec 808c0d52b2b2 ls /tasks/ （容器内应该能看到文件）
+
+## 如果以上都正常但看板还是空
+可能Tasks.md需要特定的文件结构或metadata格式。

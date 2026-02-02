@@ -1,0 +1,1 @@
+*/15 * * * * /bin/bash /workspace/heartbeat_monitor.sh >> /workspace/heartbeat_cron.log 2>&1

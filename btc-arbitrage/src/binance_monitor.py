@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Binance WebSocket Monitor - Real-time BTC price tracking
+Binance.US WebSocket Monitor - Real-time BTC price tracking
+
+Updated to use Binance.US API endpoints (for US servers)
 
 This will be the core of our arbitrage bot.
 Monitors BTC price changes and triggers trading signals.
@@ -18,7 +20,11 @@ from datetime import datetime
 from urllib import request
 
 class BinanceMonitor:
-    """Monitor Binance BTC price in real-time"""
+    """Monitor Binance.US BTC price in real-time"""
+    
+    # UPDATED: Binance.US endpoints
+    BASE_URL = "https://api.binance.us"
+    WS_URL = "wss://stream.binance.us:9443"
     
     def __init__(self, symbol='BTCUSDT'):
         self.symbol = symbol
@@ -26,11 +32,16 @@ class BinanceMonitor:
         self.price_history = []
         
     def get_current_price(self):
-        """Get current BTC price (REST API - to be replaced with WebSocket)"""
-        url = f"https://api.binance.com/api/v3/ticker/price?symbol={self.symbol}"
+        """Get current BTC price from Binance.US REST API"""
+        url = f"{self.BASE_URL}/api/v3/ticker/price?symbol={self.symbol}"
+        
+        # Add proper headers
+        req = request.Request(url)
+        req.add_header('User-Agent', 'Mozilla/5.0')
+        req.add_header('Accept', 'application/json')
         
         try:
-            with request.urlopen(url, timeout=5) as response:
+            with request.urlopen(req, timeout=5) as response:
                 data = json.loads(response.read())
             
             price = float(data['price'])
@@ -42,7 +53,7 @@ class BinanceMonitor:
                 'symbol': self.symbol
             }
         except Exception as e:
-            print(f"Error fetching price: {e}")
+            print(f"Error fetching price from Binance.US: {e}")
             return None
     
     def detect_move(self, threshold=0.001):
@@ -90,7 +101,7 @@ class BinanceMonitor:
             duration: How long to monitor (seconds)
             interval: Check interval (seconds)
         """
-        print(f"Monitoring {self.symbol} for {duration}s (checking every {interval}s)\n")
+        print(f"Monitoring {self.symbol} from Binance.US for {duration}s (checking every {interval}s)\n")
         print("Time     | Price      | Move")
         print("-" * 50)
         
@@ -114,7 +125,7 @@ class BinanceMonitor:
 # Simple test
 if __name__ == "__main__":
     print("=" * 60)
-    print("BINANCE BTC PRICE MONITOR - TEST")
+    print("BINANCE.US BTC PRICE MONITOR - TEST")
     print("=" * 60)
     print()
     
@@ -131,3 +142,4 @@ if __name__ == "__main__":
     print("1. Replace REST API with WebSocket for true real-time")
     print("2. Integrate with Kalshi API for trading signals")
     print("3. Add risk management logic")
+    print(f"\nUsing Binance.US: {BinanceMonitor.BASE_URL}")

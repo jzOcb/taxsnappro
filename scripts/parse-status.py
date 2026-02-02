@@ -32,6 +32,7 @@ def parse_status_file(file_path):
     # 映射状态到kanban列名
     status_mapping = {
         '进行中': '进行中',
+    '暂停': '暂停',
         '卡住': '暂停',
         '完成': '完成',
         '规划中': 'TODO',

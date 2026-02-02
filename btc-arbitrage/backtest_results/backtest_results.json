@@ -1,0 +1,817 @@
+{
+  "config": {
+    "lookback_rsi": 14,
+    "lookback_macd_fast": 12,
+    "lookback_macd_slow": 26,
+    "lookback_macd_signal": 9,
+    "roc_fast_period": 4,
+    "roc_medium_period": 10,
+    "min_time_remaining": 300,
+    "max_spread": 0.05,
+    "entry_threshold_roc": 0.15,
+    "profit_target": 0.1,
+    "stop_loss": 0.15,
+    "position_size": 100
+  },
+  "summary": {
+    "total_trades": 79,
+    "win_rate": 0.5189873417721519,
+    "total_pnl": -107.99999999999991,
+    "avg_roi": -0.05998528074282613,
+    "sharpe_ratio": -3.3043851428821607,
+    "max_drawdown_pct": -1.319999999999999,
+    "trades_per_day": 149.49360284530889
+  },
+  "trades": [
+    {
+      "entry_time": "2026-02-02T03:02:39.026850",
+      "exit_time": "2026-02-02T03:03:39.965475",
+      "entry_price": 0.62,
+      "exit_price": 0.45999999999999996,
+      "pnl": -16.000000000000004,
+      "roi": -0.2580645161290323,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T03:04:40.885479",
+      "exit_time": "2026-02-02T03:05:11.310710",
+      "entry_price": 0.44,
+      "exit_price": 0.32,
+      "pnl": -12.0,
+      "roi": -0.2727272727272727,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T03:16:21.459449",
+      "exit_time": "2026-02-02T03:17:22.295331",
+      "entry_price": 0.6599999999999999,
+      "exit_price": 0.54,
+      "pnl": -11.99999999999999,
+      "roi": -0.18181818181818166,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T03:18:53.606114",
+      "exit_time": "2026-02-02T03:22:26.624945",
+      "entry_price": 0.86,
+      "exit_price": 0.97,
+      "pnl": 10.999999999999998,
+      "roi": 0.12790697674418602,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T03:25:29.289990",
+      "exit_time": "2026-02-02T03:25:59.726627",
+      "entry_price": 0.06,
+      "exit_price": 0.01,
+      "pnl": -5.0,
+      "roi": -0.8333333333333333,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T03:32:05.529334",
+      "exit_time": "2026-02-02T03:33:36.771427",
+      "entry_price": 0.6799999999999999,
+      "exit_price": 0.75,
+      "pnl": 7.000000000000006,
+      "roi": 0.10294117647058834,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T03:47:18.787167",
+      "exit_time": "2026-02-02T03:48:19.764593",
+      "entry_price": 0.8,
+      "exit_price": 0.92,
+      "pnl": 12.0,
+      "roi": 0.15,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T03:52:23.359217",
+      "exit_time": "2026-02-02T03:52:53.754148",
+      "entry_price": 0.050000000000000044,
+      "exit_price": 0.010000000000000009,
+      "pnl": -4.0000000000000036,
+      "roi": -0.8,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T04:01:31.505073",
+      "exit_time": "2026-02-02T04:05:04.546641",
+      "entry_price": 0.75,
+      "exit_price": 0.85,
+      "pnl": 9.999999999999998,
+      "roi": 0.1333333333333333,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T04:10:08.637207",
+      "exit_time": "2026-02-02T04:10:39.141206",
+      "entry_price": 0.05,
+      "exit_price": 0.04,
+      "pnl": -1.0000000000000002,
+      "roi": -0.20000000000000004,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T04:16:44.792314",
+      "exit_time": "2026-02-02T04:17:45.565968",
+      "entry_price": 0.67,
+      "exit_price": 0.81,
+      "pnl": 14.000000000000002,
+      "roi": 0.20895522388059704,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T04:18:46.387777",
+      "exit_time": "2026-02-02T04:21:18.741744",
+      "entry_price": 0.84,
+      "exit_price": 0.94,
+      "pnl": 9.999999999999998,
+      "roi": 0.11904761904761903,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T04:31:27.767760",
+      "exit_time": "2026-02-02T04:31:58.289939",
+      "entry_price": 0.73,
+      "exit_price": 0.53,
+      "pnl": -19.999999999999996,
+      "roi": -0.27397260273972596,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T04:38:04.253727",
+      "exit_time": "2026-02-02T04:38:34.883630",
+      "entry_price": 0.6799999999999999,
+      "exit_price": 0.5,
+      "pnl": -17.999999999999993,
+      "roi": -0.2647058823529411,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T04:46:12.328644",
+      "exit_time": "2026-02-02T04:49:15.306289",
+      "entry_price": 0.72,
+      "exit_price": 0.8,
+      "pnl": 8.000000000000007,
+      "roi": 0.11111111111111122,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T05:03:59.169018",
+      "exit_time": "2026-02-02T05:04:29.602993",
+      "entry_price": 0.75,
+      "exit_price": 0.39,
+      "pnl": -36.0,
+      "roi": -0.48,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T05:06:31.697317",
+      "exit_time": "2026-02-02T05:07:02.200829",
+      "entry_price": 0.7,
+      "exit_price": 0.8,
+      "pnl": 10.000000000000009,
+      "roi": 0.142857142857143,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T05:16:11.289626",
+      "exit_time": "2026-02-02T05:17:12.289225",
+      "entry_price": 0.6799999999999999,
+      "exit_price": 0.86,
+      "pnl": 18.000000000000004,
+      "roi": 0.2647058823529413,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T05:18:13.181469",
+      "exit_time": "2026-02-02T05:18:43.643153",
+      "entry_price": 0.77,
+      "exit_price": 0.87,
+      "pnl": 9.999999999999998,
+      "roi": 0.12987012987012983,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T05:19:44.527948",
+      "exit_time": "2026-02-02T05:20:15.037503",
+      "entry_price": 0.15,
+      "exit_price": 0.17,
+      "pnl": 2.0000000000000018,
+      "roi": 0.13333333333333347,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T05:23:17.868739",
+      "exit_time": "2026-02-02T05:23:48.378845",
+      "entry_price": 0.25,
+      "exit_price": 0.14,
+      "pnl": -10.999999999999998,
+      "roi": -0.43999999999999995,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T05:24:49.301577",
+      "exit_time": "2026-02-02T05:25:19.758780",
+      "entry_price": 0.16,
+      "exit_price": 0.04,
+      "pnl": -12.0,
+      "roi": -0.75,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T05:33:28.065574",
+      "exit_time": "2026-02-02T05:34:28.964022",
+      "entry_price": 0.85,
+      "exit_price": 0.64,
+      "pnl": -20.999999999999996,
+      "roi": -0.24705882352941172,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T05:37:32.640309",
+      "exit_time": "2026-02-02T05:38:03.108013",
+      "entry_price": 0.6799999999999999,
+      "exit_price": 0.54,
+      "pnl": -13.99999999999999,
+      "roi": -0.20588235294117635,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T05:40:05.344181",
+      "exit_time": "2026-02-02T05:41:06.379224",
+      "entry_price": 0.81,
+      "exit_price": 0.92,
+      "pnl": 10.999999999999998,
+      "roi": 0.13580246913580243,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T05:48:43.650017",
+      "exit_time": "2026-02-02T05:49:14.126154",
+      "entry_price": 0.6799999999999999,
+      "exit_price": 0.56,
+      "pnl": -11.99999999999999,
+      "roi": -0.17647058823529396,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T05:50:45.636909",
+      "exit_time": "2026-02-02T05:53:49.372595",
+      "entry_price": 0.84,
+      "exit_price": 0.7,
+      "pnl": -14.000000000000002,
+      "roi": -0.16666666666666669,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T06:09:03.572074",
+      "exit_time": "2026-02-02T06:10:04.478192",
+      "entry_price": 0.45,
+      "exit_price": 0.53,
+      "pnl": 8.000000000000002,
+      "roi": 0.1777777777777778,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:16:10.232319",
+      "exit_time": "2026-02-02T06:17:11.201439",
+      "entry_price": 0.7,
+      "exit_price": 0.84,
+      "pnl": 14.000000000000002,
+      "roi": 0.20000000000000004,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:18:12.240833",
+      "exit_time": "2026-02-02T06:19:43.752672",
+      "entry_price": 0.8,
+      "exit_price": 0.89,
+      "pnl": 8.999999999999996,
+      "roi": 0.11249999999999996,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:23:47.146282",
+      "exit_time": "2026-02-02T06:24:17.595983",
+      "entry_price": 0.26,
+      "exit_price": 0.19999999999999996,
+      "pnl": -6.000000000000005,
+      "roi": -0.23076923076923098,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T06:25:18.599400",
+      "exit_time": "2026-02-02T06:25:49.169849",
+      "entry_price": 0.36,
+      "exit_price": 0.8200000000000001,
+      "pnl": 46.00000000000001,
+      "roi": 1.2777777777777781,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:26:50.158961",
+      "exit_time": "2026-02-02T06:27:20.586900",
+      "entry_price": 0.83,
+      "exit_price": 0.64,
+      "pnl": -18.999999999999993,
+      "roi": -0.22891566265060237,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T06:30:53.874110",
+      "exit_time": "2026-02-02T06:31:54.816992",
+      "entry_price": 0.61,
+      "exit_price": 0.68,
+      "pnl": 7.000000000000006,
+      "roi": 0.11475409836065584,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:33:57.072424",
+      "exit_time": "2026-02-02T06:34:27.534765",
+      "entry_price": 0.65,
+      "exit_price": 0.77,
+      "pnl": 12.0,
+      "roi": 0.1846153846153846,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:35:28.410437",
+      "exit_time": "2026-02-02T06:39:32.784398",
+      "entry_price": 0.89,
+      "exit_price": 0.98,
+      "pnl": 8.999999999999996,
+      "roi": 0.10112359550561795,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T06:41:04.227835",
+      "exit_time": "2026-02-02T06:41:34.782246",
+      "entry_price": 0.04,
+      "exit_price": 0.02,
+      "pnl": -2.0,
+      "roi": -0.5,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T06:47:41.120295",
+      "exit_time": "2026-02-02T06:48:11.673226",
+      "entry_price": 0.48,
+      "exit_price": 0.31,
+      "pnl": -17.0,
+      "roi": -0.35416666666666663,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T06:49:12.652116",
+      "exit_time": "2026-02-02T06:49:43.091887",
+      "entry_price": 0.7,
+      "exit_price": 0.78,
+      "pnl": 8.000000000000007,
+      "roi": 0.1142857142857144,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T07:07:28.881232",
+      "exit_time": "2026-02-02T07:12:03.337200",
+      "entry_price": 0.89,
+      "exit_price": 0.72,
+      "pnl": -17.000000000000004,
+      "roi": -0.19101123595505623,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T07:18:09.012669",
+      "exit_time": "2026-02-02T07:18:39.421201",
+      "entry_price": 0.63,
+      "exit_price": 0.48,
+      "pnl": -15.000000000000002,
+      "roi": -0.23809523809523814,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T07:19:40.409964",
+      "exit_time": "2026-02-02T07:21:11.862892",
+      "entry_price": 0.64,
+      "exit_price": 0.72,
+      "pnl": 7.9999999999999964,
+      "roi": 0.12499999999999993,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T07:38:58.356296",
+      "exit_time": "2026-02-02T07:44:02.783643",
+      "entry_price": 0.9,
+      "exit_price": 0.94,
+      "pnl": 3.9999999999999925,
+      "roi": 0.04444444444444436,
+      "win": true,
+      "exit_reason": "Momentum reversal"
+    },
+    {
+      "entry_time": "2026-02-02T07:46:34.897570",
+      "exit_time": "2026-02-02T07:47:35.930003",
+      "entry_price": 0.79,
+      "exit_price": 0.87,
+      "pnl": 7.9999999999999964,
+      "roi": 0.10126582278481007,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T08:27:12.625634",
+      "exit_time": "2026-02-02T08:29:14.419899",
+      "entry_price": 0.88,
+      "exit_price": 0.97,
+      "pnl": 8.999999999999996,
+      "roi": 0.10227272727272724,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T08:38:22.547850",
+      "exit_time": "2026-02-02T08:43:27.479006",
+      "entry_price": 0.89,
+      "exit_price": 0.99,
+      "pnl": 9.999999999999998,
+      "roi": 0.11235955056179772,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T09:02:14.117496",
+      "exit_time": "2026-02-02T09:03:45.439434",
+      "entry_price": 0.87,
+      "exit_price": 0.7,
+      "pnl": -17.000000000000004,
+      "roi": -0.19540229885057475,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T09:30:40.381464",
+      "exit_time": "2026-02-02T09:31:10.800191",
+      "entry_price": 0.58,
+      "exit_price": 0.45,
+      "pnl": -12.999999999999995,
+      "roi": -0.22413793103448268,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T09:37:16.642342",
+      "exit_time": "2026-02-02T09:38:48.015537",
+      "entry_price": 0.97,
+      "exit_price": 0.78,
+      "pnl": -18.999999999999993,
+      "roi": -0.19587628865979376,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T09:45:53.968886",
+      "exit_time": "2026-02-02T09:47:25.371931",
+      "entry_price": 0.76,
+      "exit_price": 0.84,
+      "pnl": 7.9999999999999964,
+      "roi": 0.1052631578947368,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T10:06:42.917236",
+      "exit_time": "2026-02-02T10:09:15.334755",
+      "entry_price": 0.81,
+      "exit_price": 0.68,
+      "pnl": -13.0,
+      "roi": -0.16049382716049382,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T10:31:05.544050",
+      "exit_time": "2026-02-02T10:33:07.268889",
+      "entry_price": 0.79,
+      "exit_price": 0.88,
+      "pnl": 8.999999999999996,
+      "roi": 0.11392405063291135,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T10:36:40.361935",
+      "exit_time": "2026-02-02T10:37:41.181696",
+      "entry_price": 0.38,
+      "exit_price": 0.45999999999999996,
+      "pnl": 7.9999999999999964,
+      "roi": 0.2105263157894736,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T11:06:37.030092",
+      "exit_time": "2026-02-02T11:10:40.805939",
+      "entry_price": 0.9,
+      "exit_price": 0.73,
+      "pnl": -17.000000000000004,
+      "roi": -0.18888888888888894,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T11:52:49.436192",
+      "exit_time": "2026-02-02T11:53:19.915712",
+      "entry_price": 0.85,
+      "exit_price": 0.68,
+      "pnl": -16.999999999999993,
+      "roi": -0.19999999999999993,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T12:04:30.357428",
+      "exit_time": "2026-02-02T12:06:01.920865",
+      "entry_price": 0.89,
+      "exit_price": 0.74,
+      "pnl": -15.000000000000002,
+      "roi": -0.16853932584269665,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T12:34:28.341313",
+      "exit_time": "2026-02-02T12:38:32.030169",
+      "entry_price": 0.85,
+      "exit_price": 0.94,
+      "pnl": 8.999999999999996,
+      "roi": 0.10588235294117644,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T13:02:25.148518",
+      "exit_time": "2026-02-02T13:09:01.142026",
+      "entry_price": 0.79,
+      "exit_price": 0.87,
+      "pnl": 7.9999999999999964,
+      "roi": 0.10126582278481007,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T13:22:45.081168",
+      "exit_time": "2026-02-02T13:29:52.662360",
+      "entry_price": 0.95,
+      "exit_price": 0.99,
+      "pnl": 4.0000000000000036,
+      "roi": 0.04210526315789478,
+      "win": true,
+      "exit_reason": "Momentum reversal"
+    },
+    {
+      "entry_time": "2026-02-02T13:54:15.837317",
+      "exit_time": "2026-02-02T13:55:47.211741",
+      "entry_price": 0.81,
+      "exit_price": 0.92,
+      "pnl": 10.999999999999998,
+      "roi": 0.13580246913580243,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T14:02:53.595540",
+      "exit_time": "2026-02-02T14:04:55.628279",
+      "entry_price": 0.81,
+      "exit_price": 0.91,
+      "pnl": 9.999999999999998,
+      "roi": 0.12345679012345676,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T14:20:10.809334",
+      "exit_time": "2026-02-02T14:20:41.279989",
+      "entry_price": 0.73,
+      "exit_price": 0.5900000000000001,
+      "pnl": -13.99999999999999,
+      "roi": -0.1917808219178081,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T14:22:13.114334",
+      "exit_time": "2026-02-02T14:24:15.284161",
+      "entry_price": 0.85,
+      "exit_price": 0.95,
+      "pnl": 9.999999999999998,
+      "roi": 0.11764705882352938,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T14:26:48.032873",
+      "exit_time": "2026-02-02T14:27:18.536543",
+      "entry_price": 0.10999999999999999,
+      "exit_price": 0.040000000000000036,
+      "pnl": -6.999999999999995,
+      "roi": -0.636363636363636,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T14:30:52.253581",
+      "exit_time": "2026-02-02T14:35:26.574597",
+      "entry_price": 0.83,
+      "exit_price": 0.93,
+      "pnl": 10.000000000000009,
+      "roi": 0.12048192771084348,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T14:36:28.880629",
+      "exit_time": "2026-02-02T14:43:36.237597",
+      "entry_price": 0.95,
+      "exit_price": 0.99,
+      "pnl": 4.0000000000000036,
+      "roi": 0.04210526315789478,
+      "win": true,
+      "exit_reason": "Momentum reversal"
+    },
+    {
+      "entry_time": "2026-02-02T14:47:40.362226",
+      "exit_time": "2026-02-02T14:48:10.977521",
+      "entry_price": 0.69,
+      "exit_price": 0.5,
+      "pnl": -18.999999999999993,
+      "roi": -0.27536231884057966,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T14:49:11.937101",
+      "exit_time": "2026-02-02T14:51:13.882406",
+      "entry_price": 0.65,
+      "exit_price": 0.47,
+      "pnl": -18.000000000000004,
+      "roi": -0.276923076923077,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T14:54:16.651559",
+      "exit_time": "2026-02-02T14:56:18.668057",
+      "entry_price": 0.81,
+      "exit_price": 0.9299999999999999,
+      "pnl": 11.99999999999999,
+      "roi": 0.148148148148148,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T15:00:53.367660",
+      "exit_time": "2026-02-02T15:01:54.460073",
+      "entry_price": 0.6599999999999999,
+      "exit_price": 0.55,
+      "pnl": -10.999999999999988,
+      "roi": -0.1666666666666665,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T15:02:55.341043",
+      "exit_time": "2026-02-02T15:03:25.883428",
+      "entry_price": 0.59,
+      "exit_price": 0.66,
+      "pnl": 7.000000000000006,
+      "roi": 0.11864406779661028,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T15:09:01.986323",
+      "exit_time": "2026-02-02T15:10:33.745002",
+      "entry_price": 0.83,
+      "exit_price": 0.95,
+      "pnl": 12.0,
+      "roi": 0.14457831325301204,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T15:16:09.493562",
+      "exit_time": "2026-02-02T15:16:40.128268",
+      "entry_price": 0.53,
+      "exit_price": 0.44,
+      "pnl": -9.000000000000002,
+      "roi": -0.16981132075471703,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T15:17:41.156339",
+      "exit_time": "2026-02-02T15:18:11.643772",
+      "entry_price": 0.68,
+      "exit_price": 0.54,
+      "pnl": -14.000000000000002,
+      "roi": -0.2058823529411765,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T15:21:14.816082",
+      "exit_time": "2026-02-02T15:22:46.298204",
+      "entry_price": 0.82,
+      "exit_price": 0.92,
+      "pnl": 10.000000000000009,
+      "roi": 0.12195121951219524,
+      "win": true,
+      "exit_reason": "Profit target"
+    },
+    {
+      "entry_time": "2026-02-02T15:31:24.648678",
+      "exit_time": "2026-02-02T15:31:55.202370",
+      "entry_price": 0.6599999999999999,
+      "exit_price": 0.49,
+      "pnl": -16.999999999999993,
+      "roi": -0.2575757575757575,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T15:32:56.088565",
+      "exit_time": "2026-02-02T15:33:57.072772",
+      "entry_price": 0.53,
+      "exit_price": 0.44,
+      "pnl": -9.000000000000002,
+      "roi": -0.16981132075471703,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T15:35:28.526631",
+      "exit_time": "2026-02-02T15:36:29.478091",
+      "entry_price": 0.78,
+      "exit_price": 0.6599999999999999,
+      "pnl": -12.00000000000001,
+      "roi": -0.15384615384615397,
+      "win": false,
+      "exit_reason": "Stop loss"
+    },
+    {
+      "entry_time": "2026-02-02T15:39:02.599275",
+      "exit_time": "2026-02-02T15:43:37.167868",
+      "entry_price": 0.89,
+      "exit_price": 0.99,
+      "pnl": 9.999999999999998,
+      "roi": 0.11235955056179772,
+      "win": true,
+      "exit_reason": "Profit target"
+    }
+  ]
+}

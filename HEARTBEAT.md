@@ -26,3 +26,26 @@
 - 运行: `bash scripts/sync-status-to-kanban.sh`
 - 如果有变化会自动记录到 memory/kanban-sync.log
 - 更新 heartbeat-state.json 的 lastChecks.kanban_sync 时间戳
+
+## BTC Arbitrage 自动重启通知 🔥
+- **每次heartbeat都检查**
+- 运行: `bash /workspace/check_restart_flag.sh`
+- 如果有重启标志 → 立刻用中文通知（包含重启时间和当前状态）
+- 没有就返回 HEARTBEAT_OK
+
+## Kanban文件同步（需要host cron）
+由于Docker不能follow symlinks，需要定期复制文件：
+
+**在host上设置cron（每5分钟）：**
+```bash
+crontab -e
+# 添加：
+*/5 * * * * rsync -a --delete /home/clawdbot/clawd/kanban-tasks/ /home/clawdbot/kanban/tasks/
+```
+
+或者手动运行一次测试：
+```bash
+rsync -a --delete /home/clawdbot/clawd/kanban-tasks/ /home/clawdbot/kanban/tasks/
+```
+
+这样Agent更新 `/workspace/kanban-tasks/` 后，文件会自动复制到容器能读取的位置。

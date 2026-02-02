@@ -40,14 +40,18 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
-## 项目状态 — 铁律
+## 项目管理 — 铁律
+
+**📋 完整流程文档: [PROJECT-WORKFLOW.md](./PROJECT-WORKFLOW.md)**
+
+### 快速规则
 
 每个项目目录下必须有 `STATUS.md`，格式固定：
 ```
 # STATUS.md — 项目名
 Last updated: YYYY-MM-DDTHH:MMZ
 
-## 当前状态: [进行中/卡住/完成/规划中]
+## 当前状态: [进行中/卡住/完成/规划中/暂停]
 ## 最后做了什么: ...
 ## Blockers: ...
 ## 下一步: ...
@@ -60,6 +64,16 @@ Last updated: YYYY-MM-DDTHH:MMZ
 - 不依赖记忆文件拼凑项目状态，STATUS.md 是唯一真相来源
 - 新建项目时，STATUS.md 和 README.md 一起建
 - **更新STATUS.md后立即同步到kanban** — 运行 `bash scripts/sync-status-to-kanban.sh`
+
+### ⚠️ 禁止事项
+
+❌ **绝对不要直接在 kanban-tasks/ 里手动创建.md文件**  
+✅ **必须创建项目目录 + STATUS.md，由sync脚本自动生成kanban卡片**
+
+**为什么？**
+- 之前有session直接在kanban文件夹创建卡片，导致项目没有代码目录、状态不同步
+- 正确流程：`创建项目目录 → 写STATUS.md → 运行sync脚本`
+- 详见 [PROJECT-WORKFLOW.md](./PROJECT-WORKFLOW.md)
 
 ## Memory
 

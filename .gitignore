@@ -8,3 +8,4 @@ kalshi/
 .claude/
 __pycache__/
 .local/
+notion.env

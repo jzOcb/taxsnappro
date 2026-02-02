@@ -129,6 +129,41 @@ sync脚本会自动把卡片从旧列移到新列。
 
 ## 自动同步机制
 
+### 🔄 双向同步（Bidirectional Sync）
+
+**核心原理：最新修改wins**
+
+Sync脚本自动检测变化方向：
+
+**场景A：手动拖拽看板卡片**
+```
+你在看板拖拽 → 卡片文件mtime更新
+Sync检测: Kanban更新时间 > STATUS.md
+动作: 自动更新对应的STATUS.md
+结果: ✅ 你的手动修改被保留
+```
+
+**场景B：代码/session更新STATUS.md**
+```
+更新STATUS.md → 文件mtime更新
+Sync检测: STATUS.md更新时间 > Kanban
+动作: 自动移动看板卡片到对应列
+结果: ✅ 状态变化同步到看板
+```
+
+**关键特性：**
+- ✅ 双向自动同步
+- ✅ 最新时间戳为准（无冲突）
+- ✅ 手动拖拽不会被覆盖
+- ✅ 代码更新会传播到看板
+- ✅ 清晰的日志（→ 或 ↩ 标明方向）
+
+**示例日志：**
+```
+2026-02-02 19:57:22 - ↩ Kanban → STATUS: btc-arbitrage → 完成 (手动拖拽)
+2026-02-02 19:57:33 - → STATUS → Kanban: kalshi → In Progress
+```
+
 ### Heartbeat自动检查
 
 在 `HEARTBEAT.md` 中已配置：
@@ -137,6 +172,7 @@ sync脚本会自动把卡片从旧列移到新列。
 ## Kanban 同步检查
 - 每2小时检查一次
 - 运行: bash scripts/sync-status-to-kanban.sh
+- 双向同步：检测手动拖拽和STATUS.md更新
 - 更新 heartbeat-state.json 时间戳
 ```
 
@@ -147,6 +183,16 @@ sync脚本会自动把卡片从旧列移到新列。
 ```bash
 # 每5分钟同步
 */5 * * * * rsync -a --delete /home/clawdbot/clawd/kanban-tasks/ /home/clawdbot/kanban/tasks/
+```
+
+**完整流程：**
+```
+00:00 - 你在看板拖拽项目
+00:00 - 卡片文件更新（rsync下次同步会生效）
+00:05 - Cron rsync同步到容器
+02:00 - Heartbeat运行sync脚本
+02:00 - 检测到Kanban更新 → 反向更新STATUS.md
+02:00 - 你的手动修改已同步 ✅
 ```
 
 ---

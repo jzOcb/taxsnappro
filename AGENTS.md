@@ -243,7 +243,7 @@ This is a starting point. Add your own conventions, style, and rules as you figu
    - What's the incentive structure?
 
 3. **Code review mandatory**
-   - Never run untrusted code
+   - Review code carefully before using
    - Check for data exfiltration
    - Verify all network requests
    - Review dependencies for malware
@@ -278,3 +278,28 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 - Popular ≠ profitable
 
 Always verify. Trust but verify. Better: verify then trust.
+
+### Correct Approach to Community Code
+
+**Jason's clarification (2026-02-02):**
+> "不是不用他们的code 是我们要检查验证 然后可以使用或借鉴"
+
+**Updated workflow:**
+1. ✅ Find community code/strategies
+2. ✅ **Review carefully** (check for malicious code)
+3. ✅ **Verify claims** (test with small scale)
+4. ✅ **Adapt and use** if verified
+5. ✅ **Learn from** even if not directly using
+
+**Not:** "Never use community code"  
+**But:** "Verify then use/adapt community code"
+
+**Benefits of using verified community code:**
+- Faster development
+- Learn from working examples
+- Build on proven foundations
+- Focus on improvement, not reinventing
+
+**Key: Verification ≠ Rejection**
+- Verify = Due diligence
+- Then use/adapt/learn from it

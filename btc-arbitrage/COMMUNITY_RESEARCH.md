@@ -225,7 +225,7 @@ Before using ANY community code:
 **DON'T:**
 - ❌ Blindly copy shared strategies
 - ❌ Trust profit claims without verification
-- ❌ Run unknown code
+- ⚠️ Review code before running
 - ❌ Expect same results as claimed
 
 **DO:**
@@ -239,7 +239,7 @@ Before using ANY community code:
 1. Official data sources (harder to arbitrage)
 2. News analysis (information edge)
 3. Logic we discover ourselves
-4. NOT copying public "secrets"
+4. Learn from community, verify then adapt
 
 ---
 

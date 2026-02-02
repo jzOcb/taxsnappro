@@ -1,0 +1,158 @@
+2026-02-02T01:09:56.474Z [ERROR] Failed to save config with lock: Error: ENOENT: no such file or directory, lstat '/workspace/.claude.json'
+2026-02-02T01:09:56.476Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596476
+2026-02-02T01:09:56.476Z [DEBUG] Setting permissions for new file: 600
+2026-02-02T01:09:56.482Z [DEBUG] Temp file written successfully, size: 82 bytes
+2026-02-02T01:09:56.482Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596476 to /workspace/.claude.json
+2026-02-02T01:09:56.482Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.493Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596493
+2026-02-02T01:09:56.493Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.498Z [DEBUG] Temp file written successfully, size: 130 bytes
+2026-02-02T01:09:56.498Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.498Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596493 to /workspace/.claude.json
+2026-02-02T01:09:56.498Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.498Z [DEBUG] [init] configureGlobalMTLS starting
+2026-02-02T01:09:56.499Z [DEBUG] [init] configureGlobalMTLS complete
+2026-02-02T01:09:56.499Z [DEBUG] [init] configureGlobalAgents starting
+2026-02-02T01:09:56.499Z [DEBUG] [init] configureGlobalAgents complete
+2026-02-02T01:09:56.502Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596502
+2026-02-02T01:09:56.502Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.507Z [DEBUG] Temp file written successfully, size: 167 bytes
+2026-02-02T01:09:56.507Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.507Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596502 to /workspace/.claude.json
+2026-02-02T01:09:56.507Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.509Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596509
+2026-02-02T01:09:56.509Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.513Z [DEBUG] Temp file written successfully, size: 202 bytes
+2026-02-02T01:09:56.513Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.513Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596509 to /workspace/.claude.json
+2026-02-02T01:09:56.513Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.515Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596515
+2026-02-02T01:09:56.515Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.519Z [DEBUG] Temp file written successfully, size: 238 bytes
+2026-02-02T01:09:56.519Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.519Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596515 to /workspace/.claude.json
+2026-02-02T01:09:56.520Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.522Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596522
+2026-02-02T01:09:56.522Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.527Z [DEBUG] Temp file written successfully, size: 275 bytes
+2026-02-02T01:09:56.527Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.527Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596522 to /workspace/.claude.json
+2026-02-02T01:09:56.527Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.557Z [DEBUG] Loading skills from: managed=/etc/claude-code/.claude/skills, user=/workspace/.claude/skills, project=[]
+2026-02-02T01:09:56.559Z [DEBUG] Error log sink initialized
+2026-02-02T01:09:56.564Z [DEBUG] [render] initLayout starting
+2026-02-02T01:09:56.564Z [DEBUG] Layout engine: yoga
+2026-02-02T01:09:56.567Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-02-02T01:09:56.567Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-02-02T01:09:56.567Z [DEBUG] Total plugin skills loaded: 0
+2026-02-02T01:09:56.567Z [DEBUG] Total plugin commands loaded: 0
+2026-02-02T01:09:56.567Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-02-02T01:09:56.572Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, legacy commands: 0)
+2026-02-02T01:09:56.573Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 1 bundled skills
+2026-02-02T01:09:56.593Z [DEBUG] [render] initLayout complete
+2026-02-02T01:09:56.600Z [DEBUG] [render] first ink render: 1214ms since process start
+2026-02-02T01:09:56.604Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596604
+2026-02-02T01:09:56.604Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.609Z [DEBUG] Temp file written successfully, size: 451 bytes
+2026-02-02T01:09:56.609Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.609Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596604 to /workspace/.claude.json
+2026-02-02T01:09:56.609Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.611Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596611
+2026-02-02T01:09:56.611Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.614Z [DEBUG] Temp file written successfully, size: 487 bytes
+2026-02-02T01:09:56.614Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.614Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596611 to /workspace/.claude.json
+2026-02-02T01:09:56.615Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.616Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596616
+2026-02-02T01:09:56.616Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.618Z [DEBUG] Temp file written successfully, size: 515 bytes
+2026-02-02T01:09:56.618Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.618Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596616 to /workspace/.claude.json
+2026-02-02T01:09:56.619Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.620Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596620
+2026-02-02T01:09:56.620Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.623Z [DEBUG] Temp file written successfully, size: 548 bytes
+2026-02-02T01:09:56.623Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.623Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596620 to /workspace/.claude.json
+2026-02-02T01:09:56.624Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.625Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596625
+2026-02-02T01:09:56.625Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.628Z [DEBUG] Temp file written successfully, size: 587 bytes
+2026-02-02T01:09:56.629Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.629Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596625 to /workspace/.claude.json
+2026-02-02T01:09:56.629Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.631Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596631
+2026-02-02T01:09:56.631Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.635Z [DEBUG] Temp file written successfully, size: 626 bytes
+2026-02-02T01:09:56.635Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.635Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596631 to /workspace/.claude.json
+2026-02-02T01:09:56.635Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.637Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596637
+2026-02-02T01:09:56.637Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.641Z [DEBUG] Temp file written successfully, size: 664 bytes
+2026-02-02T01:09:56.641Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.641Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596637 to /workspace/.claude.json
+2026-02-02T01:09:56.641Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.643Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596643
+2026-02-02T01:09:56.643Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.649Z [DEBUG] Temp file written successfully, size: 696 bytes
+2026-02-02T01:09:56.649Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.649Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596643 to /workspace/.claude.json
+2026-02-02T01:09:56.651Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.653Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596652
+2026-02-02T01:09:56.653Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.657Z [DEBUG] Temp file written successfully, size: 726 bytes
+2026-02-02T01:09:56.657Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.657Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596652 to /workspace/.claude.json
+2026-02-02T01:09:56.657Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.659Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596659
+2026-02-02T01:09:56.659Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.663Z [DEBUG] Temp file written successfully, size: 759 bytes
+2026-02-02T01:09:56.663Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.663Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596659 to /workspace/.claude.json
+2026-02-02T01:09:56.663Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.665Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596665
+2026-02-02T01:09:56.665Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.670Z [DEBUG] Temp file written successfully, size: 811 bytes
+2026-02-02T01:09:56.671Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.671Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596665 to /workspace/.claude.json
+2026-02-02T01:09:56.671Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.673Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994596673
+2026-02-02T01:09:56.673Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:09:56.677Z [DEBUG] Temp file written successfully, size: 841 bytes
+2026-02-02T01:09:56.677Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:09:56.677Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994596673 to /workspace/.claude.json
+2026-02-02T01:09:56.677Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:09:56.790Z [DEBUG] Install: Starting installation process (force=false, target=stable)
+2026-02-02T01:09:56.791Z [DEBUG] Install: Calling installLatest(channelOrVersion=stable, forceReinstall=false)
+2026-02-02T01:09:56.878Z [DEBUG] Checking for native installer update to version 2.1.17
+2026-02-02T01:09:56.882Z [DEBUG] Downloading native installer version 2.1.17
+2026-02-02T01:10:02.521Z [DEBUG] Atomically installed binary to /workspace/.local/share/claude/versions/2.1.17
+2026-02-02T01:10:02.685Z [DEBUG] Could not remove empty directory at /workspace/.local/bin/claude: Error: ENOENT: no such file or directory, statx '/workspace/.local/bin/claude'
+2026-02-02T01:10:02.687Z [DEBUG] Created directory /workspace/.local/bin for symlink
+2026-02-02T01:10:02.689Z [DEBUG] Atomically updated symlink /workspace/.local/bin/claude -> /workspace/.local/share/claude/versions/2.1.17
+2026-02-02T01:10:02.691Z [DEBUG] Successfully updated to version 2.1.17
+2026-02-02T01:10:02.693Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994602693
+2026-02-02T01:10:02.693Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:10:02.699Z [DEBUG] Temp file written successfully, size: 935 bytes
+2026-02-02T01:10:02.700Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:10:02.700Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994602693 to /workspace/.claude.json
+2026-02-02T01:10:02.700Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:10:02.700Z [DEBUG] Native installer: Set installMethod to "native" and disabled legacy auto-updater for protection
+2026-02-02T01:10:02.701Z [DEBUG] Install: installLatest returned version=2.1.17, wasUpdated=true, lockFailed=false
+2026-02-02T01:10:02.774Z [DEBUG] Writing to temp file: /workspace/.claude.json.tmp.6501.1769994602774
+2026-02-02T01:10:02.774Z [DEBUG] Preserving file permissions: 100600
+2026-02-02T01:10:02.787Z [DEBUG] Temp file written successfully, size: 980 bytes
+2026-02-02T01:10:02.787Z [DEBUG] Applied original permissions to temp file
+2026-02-02T01:10:02.787Z [DEBUG] Renaming /workspace/.claude.json.tmp.6501.1769994602774 to /workspace/.claude.json
+2026-02-02T01:10:02.787Z [DEBUG] File /workspace/.claude.json written atomically
+2026-02-02T01:10:03.047Z [DEBUG] Install: Setup launcher completed with 1 messages
+2026-02-02T01:10:03.047Z [DEBUG] Install: Setup message: Native installation exists but ~/.local/bin is not in your PATH. Run:
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> your shell config file && source your shell config file
+2026-02-02T01:10:03.047Z [DEBUG] Install: Cleaning up npm installations after successful install
+2026-02-02T01:10:03.056Z [DEBUG] Writing to temp file: /workspace/.claude/settings.json.tmp.6501.1769994603056
+2026-02-02T01:10:03.065Z [DEBUG] Temp file written successfully, size: 37 bytes
+2026-02-02T01:10:03.065Z [DEBUG] Renaming /workspace/.claude/settings.json.tmp.6501.1769994603056 to /workspace/.claude/settings.json
+2026-02-02T01:10:03.066Z [DEBUG] File /workspace/.claude/settings.json written atomically
+2026-02-02T01:10:03.066Z [DEBUG] Install: Saved autoUpdatesChannel=stable to user settings

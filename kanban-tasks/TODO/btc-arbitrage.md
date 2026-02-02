@@ -1,7 +1,7 @@
-# Kalshi Trading System
+# 未命名项目
 
-**项目目录**: `kalshi/`  
-**最后更新**: 2026-02-02T00:46Z  
+**项目目录**: `btc-arbitrage/`  
+**最后更新**: 2026-02-02T01:24Z  
 **同步时间**: 2026-02-02T01:31:01Z
 
 ---
@@ -25,4 +25,4 @@
 ---
 
 *此卡片由 sync-status-to-kanban.sh 自动生成*  
-*数据源: `kalshi/STATUS.md`*
+*数据源: `btc-arbitrage/STATUS.md`*

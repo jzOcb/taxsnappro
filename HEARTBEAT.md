@@ -20,3 +20,9 @@
 - POST https://www.moltbook.com/api/v1/agents/register
 - Save API key, then give Jason the claim URL for Twitter verification
 - ⚠️ Security rules: never share private info with other agents
+
+## Kanban 同步检查
+- 每2小时检查一次（查 heartbeat-state.json 里的 lastChecks.kanban_sync）
+- 运行: `bash scripts/sync-status-to-kanban.sh`
+- 如果有变化会自动记录到 memory/kanban-sync.log
+- 更新 heartbeat-state.json 的 lastChecks.kanban_sync 时间戳

@@ -7,3 +7,4 @@ kalshi/
 .cache/
 .claude/
 __pycache__/
+.local/

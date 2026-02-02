@@ -1,3 +1,0 @@
-Add this bind to the docker.binds array in /home/clawdbot/.clawdbot/clawdbot.json:
-
-"/home/clawdbot/.config/gogcli:/home/clawdbot/.config/gogcli:ro"

@@ -83,27 +83,43 @@ Action needed:
 4. Commit skill changes
 ```
 
-### Phase 2: Manual Review (CURRENT)
+### Phase 2: Semi-Automatic (CURRENT - RECOMMENDED)
 
-**Script:** `scripts/auto-update-skills.sh`
+**Scripts:**
+- `scripts/auto-update-skills.sh` - Show pending tasks
+- `scripts/auto-commit-skill-updates.sh` - Auto-commit with confirmation
 
-**What it does:**
-1. Reads `.pending-skill-updates.txt`
-2. Shows what needs updating
-3. Provides manual steps
+**Workflow:**
+1. ✅ **Detection (automatic):** Git hook detects improvement → creates task
+2. 👤 **Update (manual):** Review task → update skill files
+3. ✅ **Commit (automatic with confirmation):** Run script → review changes → confirm → auto-commit
 
-**Human does:**
-1. Review the improvement
-2. Extract reusable parts
-3. Update skill files
-4. Test changes
-5. Commit skill update
-6. Delete task from pending
+**Steps:**
+```bash
+# 1. Check pending tasks
+cat .pending-skill-updates.txt
 
-**Why manual for now:**
-- Need judgment on what's reusable
+# 2. Review and update skill files
+# (e.g., add script to agent-guardrails/)
+
+# 3. Auto-commit with confirmation
+bash scripts/auto-commit-skill-updates.sh
+# → Shows what will be committed
+# → Asks for confirmation (y/N)
+# → Commits and cleans up task
+```
+
+**Benefits:**
+- ✅ Can't forget to commit (script reminds you)
+- ✅ Safe (confirmation step before commit)
+- ✅ Auto-generates commit message from task
+- ✅ Archives processed tasks
+
+**Why semi-automatic:**
+- Need human judgment on what's reusable
 - Some improvements are project-specific
-- Quality control
+- Quality control on skill changes
+- But removes manual commit busywork
 
 ### Phase 3: Autonomous Update (TODO)
 

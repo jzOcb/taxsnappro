@@ -73,8 +73,11 @@ bash scripts/post-create-validate.sh <file_path>
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) — recent context
 4. **Main session only:** Also read `MEMORY.md`
 5. **Creating/modifying projects:** Read `SECURITY.md`
+6. **Check for pending skill updates:** `cat .pending-skill-updates.txt`
 
 If `BOOTSTRAP.md` exists, follow it, then delete it.
+
+If `.pending-skill-updates.txt` has tasks, process them before continuing work.
 
 ## 📂 Project Management
 
@@ -197,4 +200,45 @@ bash kalshi/.deployment-check.sh
 **Full checklist:** `kalshi/DEPLOYMENT-CHECKLIST.md`
 
 **Iron rule:** A feature isn't "done" until user receives intended output from production flow.
+
+
+## 🔄 Skill Update Workflow (Semi-Automatic)
+
+**When enforcement improvements happen, they must flow back to skills.**
+
+### Current Mode: Semi-Automatic (Phase 2)
+
+**Automatic detection:**
+```bash
+# Every commit triggers:
+git commit → .git/hooks/post-commit → detect-enforcement-improvement.sh
+         → Creates task in .pending-skill-updates.txt
+```
+
+**Manual update:**
+```bash
+# 1. Check pending tasks each session
+cat .pending-skill-updates.txt
+
+# 2. Review the improvement
+# 3. Update relevant skill files
+#    (e.g., add new script to agent-guardrails/)
+```
+
+**Automatic commit:**
+```bash
+# 4. Run auto-commit script
+bash scripts/auto-commit-skill-updates.sh
+
+# → Shows what will be committed
+# → Asks for confirmation (y/N)
+# → Auto-commits with generated message
+# → Archives and clears task
+```
+
+**Why this matters:**
+- Without feedback loop: improvements stay in one project, others don't benefit
+- With feedback loop: every improvement becomes reusable knowledge
+
+**Full docs:** `SKILL-UPDATE-WORKFLOW.md`
 

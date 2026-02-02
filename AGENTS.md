@@ -2,6 +2,30 @@
 
 This folder is home. Treat it that way.
 
+## 🚨 铁律：永远不要未经验证就修改系统配置
+
+**2026-02-02 事故：** 修改 clawdbot.json 添加了不完整的 browser.profiles 配置（缺少必需的 color 字段），导致服务启动验证失败，进入无限重启循环。**整个服务器宕机一整晚，Jason睡觉期间所有项目停摆。**
+
+**这是最严重的事故之一。以下规则适用于所有session和subagent：**
+
+### 配置修改规则（绝对不可违反）
+1. **修改任何配置文件之前，必须先备份**
+2. **修改后立即验证** — 运行 clawdbot doctor 检查配置合法性
+3. **绝对不要写不完整的配置** — 不确定就先查文档或schema
+4. **使用 gateway config.patch 做增量修改**，不要手动编辑整个文件
+5. **夜间/无人值守时段禁止修改系统配置** — 出问题没人能救
+
+### 为什么这么重要
+- Jason需要在他休息/睡觉时系统持续工作
+- 服务宕机 = 所有heartbeat、cron、监控全部停止
+- **信任一旦失去很难重建**
+
+### 通用验证原则（Jason反复强调）
+- **做之前verify，不要做完才发现错了**
+- **不确定就先查，不要猜**
+- **改了就验证，不要假设没问题**
+- 这不只是配置文件 — 所有有风险的操作都适用
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
@@ -303,3 +327,39 @@ Always verify. Trust but verify. Better: verify then trust.
 **Key: Verification ≠ Rejection**
 - Verify = Due diligence
 - Then use/adapt/learn from it
+
+## 📂 重要：Workspace路径映射关系
+
+**核心发现（2026-02-02）：**
+
+```
+Sandbox内部路径:  /workspace
+         ║
+         ║ (Docker volume挂载，inode: 572460)
+         ║
+Host实际路径:     /home/clawdbot/clawd/
+```
+
+**验证方法：**
+- Sandbox: `ls -lid /workspace` → inode 572460
+- Host: `ls -lid /home/clawdbot/clawd/` → inode 572460
+- **相同inode = 同一个目录**
+
+**实际含义：**
+- 我在sandbox写 `/workspace/xxx.txt`
+- Host上自动出现在 `/home/clawdbot/clawd/xxx.txt`
+- 反之亦然（双向同步）
+
+**重要限制：**
+- 我**不能直接访问** `/home/clawdbot/` 下的其他目录
+- 只能通过 `/workspace` 访问workspace本身
+- 其他目录需要Host上操作或Docker bind mount
+
+**常见陷阱：**
+- ❌ 尝试访问 `/home/clawdbot/kanban/` → 失败（Permission denied或不存在）
+- ✅ 写到 `/workspace/kanban-tasks/` → 成功（自动映射到host）
+- ❌ 以为可以用软链接让Docker容器follow → 失败（Docker不follow symlink）
+
+**解决方案：**
+- 需要让其他容器访问我的文件 → 在Host上rsync复制
+- 或者在部署时直接挂载 `/home/clawdbot/clawd/xxx` 到容器

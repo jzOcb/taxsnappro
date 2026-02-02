@@ -28,6 +28,19 @@
 - yt-dlp: 已安装
 - Notion API: .config/notion/api_key
 
+
+## 🚨 2026-02-02 服务器宕机事故（最严重事故）
+- **原因：** 修改clawdbot.json时写入不完整的browser.profiles配置（缺color字段）
+- **后果：** 服务进入无限重启循环，整晚宕机，所有项目停摆
+- **Jason的话：** 这次问题非常严重，浪费了大量时间。做之前要verify，无数次说过了
+- **教训写入：** AGENTS.md（铁律第一条）、SOUL.md（核心原则）
+- **规则：** 
+  1. 改配置前备份
+  2. 改完用clawdbot doctor验证
+  3. 不确定就先查文档
+  4. 夜间禁止改系统配置
+  5. **做之前verify，不要做完才发现错了**
+
 ## Lessons Learned
 - Sandbox containers need **recreated** (not just restarted) for new bind mounts
 - Google aggressively suspends throwaway OAuth accounts

@@ -1,0 +1,5 @@
+.config/notion/api_key
+
+# 独立 Git repos (有自己的 .git)
+openclaw-hardening/
+kalshi/

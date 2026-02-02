@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "polymarket": {
+      "version": "1.0.0",
+      "installedAt": 1769972511884
+    },
+    "digital-ocean": {
+      "version": "1.0.0",
+      "installedAt": 1769972514307
+    },
+    "tailscale": {
+      "version": "1.0.0",
+      "installedAt": 1769972516192
+    },
+    "clawdbot-security-suite": {
+      "version": "1.0.0",
+      "installedAt": 1769972519388
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1769972522110
+    },
+    "search": {
+      "version": "1.0.0",
+      "installedAt": 1769972524271
+    },
+    "ibkr-trader": {
+      "version": "1.0.0",
+      "installedAt": 1769972526848
+    },
+    "yahoo-finance-ijybk": {
+      "version": "1.0.0",
+      "installedAt": 1769972529311
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1769972531355
+    },
+    "tavily": {
+      "version": "1.0.0",
+      "installedAt": 1769972533373
+    },
+    "last30days": {
+      "version": "1.0.0",
+      "installedAt": 1769972536960
+    },
+    "youtube-summarizer": {
+      "version": "1.0.0",
+      "installedAt": 1769972539589
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// OpenClaw Gateway Security Config
+// Copy relevant sections to ~/.openclaw/openclaw.json
+{
+  gateway: {
+    // CRITICAL: Only listen on localhost
+    bind: "loopback",
+    
+    // Auth: require token for all connections
+    auth: {
+      mode: "token",
+      // Set via env: OPENCLAW_GATEWAY_TOKEN=<your-random-token>
+      // Generate: openssl rand -hex 32
+    },
+    
+    // Tailscale: recommended for remote access
+    tailscale: {
+      mode: "serve",  // "serve" = tailnet only, "funnel" = public (needs password)
+    },
+  },
+  
+  // Model routing for cost optimization
+  // (Available after PR #5873 merges, or use /model command for now)
+  // models: {
+  //   routing: {
+  //     rules: [
+  //       { match: { isCron: true }, model: "anthropic/claude-sonnet-4" },
+  //       { match: { sessionKeyPrefix: "subagent:" }, model: "anthropic/claude-sonnet-4" },
+  //     ]
+  //   }
+  // },
+
+  // Session settings
+  session: {
+    // Auto-compact long conversations to save tokens
+    compaction: {
+      enabled: true,
+    },
+  },
+  
+  // Agent defaults
+  agents: {
+    defaults: {
+      // Sandbox: keep enabled for security
+      sandbox: {
+        mode: "all",  // sandbox all sessions
+      },
+    },
+  },
+}

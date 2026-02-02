@@ -1,0 +1,24 @@
+# Drafts and personal notes
+drafts/
+*.draft.md
+personal-notes/
+notes.txt
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Private content not for version control
+private/
+*.private.md

@@ -127,3 +127,122 @@
 ---
 
 **Next**: Execute comprehensive social search for more strategies
+
+---
+
+## ⚠️ VERIFICATION & RISK ASSESSMENT
+
+**Added**: 2026-02-02T01:22Z  
+**Trigger**: Jason's security warning
+
+### Claims to Verify
+
+#### Strategy A (@xmayeth → 0x8dxd)
+**Claimed**: $614k profit, 97% win rate
+
+**RED FLAGS:**
+- ❌ Referral link in tweet (copytrade bot)
+- ❌ No on-chain proof provided
+- ❌ Exact numbers suspiciously round
+- ⚠️  Why share profitable edge publicly?
+
+**To verify:**
+- [ ] Check 0x8dxd's actual Polymarket transactions (on-chain)
+- [ ] Verify win rate from blockchain data
+- [ ] Calculate real P&L from trades
+- [ ] Check if strategy still works (may be outdated)
+
+**Possible explanations:**
+1. Real strategy but now saturated/dead
+2. Marketing for copytrade bot
+3. Exaggerated for engagement
+4. Partial truth (cherry-picked results)
+
+#### Strategy B (@w1nklerr → swisstony)
+**Claimed**: $3.7M profit
+
+**RED FLAGS:**
+- ❌ Referral link in tweet
+- ❌ "I looked at the code" - whose code? Not public
+- ❌ Very high number, attention-grabbing
+- ⚠️  Promoting copytrade bot
+
+**To verify:**
+- [ ] Check swisstony's Polymarket profile (public trades)
+- [ ] Calculate actual P&L from verifiable trades
+- [ ] Verify strategy description matches reality
+- [ ] Check if volume/liquidity supports these profits
+
+**Possible explanations:**
+1. Real trader but numbers exaggerated
+2. Cumulative over long period (not recent)
+3. Marketing campaign
+4. Survivorship bias (showing winner, hiding losers)
+
+### Code Safety Checklist
+
+Before using ANY community code:
+
+- [ ] Read entire codebase
+- [ ] Check for API key theft
+- [ ] Verify network requests (where does data go?)
+- [ ] Review dependencies for malware
+- [ ] Test in isolated environment first
+- [ ] Never use with real API keys initially
+
+### Strategy Logic Critique
+
+**"Free money" NO bets:**
+- ✅ Logic makes sense (insurance-like)
+- ⚠️  Market may already be efficient
+- ⚠️  Edge diminishes as more bots use it
+
+**Logic arbitrage:**
+- ✅ Conceptually sound
+- ⚠️  Requires finding actual mispricing
+- ⚠️  Market makers may already capture this
+
+**Speed advantage:**
+- ❌ Retail can't compete with dedicated HFT
+- ❌ API rate limits
+- ⚠️  Latency wars are expensive
+
+### Realistic Assessment
+
+**IF these strategies were truly profitable:**
+- Why share publicly? (kills the edge)
+- Institutional money would already be there
+- Market would adapt quickly
+
+**More likely reality:**
+- Strategies HAD alpha (past tense)
+- Now mostly arbitraged away
+- Shared as marketing, not genuine alpha
+- Need to adapt/find new edges constantly
+
+### Recommended Approach
+
+**DON'T:**
+- ❌ Blindly copy shared strategies
+- ❌ Trust profit claims without verification
+- ❌ Run unknown code
+- ❌ Expect same results as claimed
+
+**DO:**
+- ✅ Understand the logic
+- ✅ Verify claims independently
+- ✅ Adapt to our own edge
+- ✅ Test with small size first
+- ✅ Build our own implementation
+
+**Our edge should come from:**
+1. Official data sources (harder to arbitrage)
+2. News analysis (information edge)
+3. Logic we discover ourselves
+4. NOT copying public "secrets"
+
+---
+
+**Bottom line**: Treat community strategies as **inspiration**, not **instruction manual**.
+
+Verify everything. Build our own edge.

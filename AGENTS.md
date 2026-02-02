@@ -35,6 +35,7 @@ Last updated: YYYY-MM-DDTHH:MMZ
 - 回答任何项目相关问题前，**先读** STATUS.md
 - 不依赖记忆文件拼凑项目状态，STATUS.md 是唯一真相来源
 - 新建项目时，STATUS.md 和 README.md 一起建
+- **更新STATUS.md后立即同步到kanban** — 运行 `bash scripts/sync-status-to-kanban.sh`
 
 ## Memory
 
@@ -221,3 +222,59 @@ This prevents wasted effort building things that already exist or building the w
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## 🚨 Security & Verification Protocol
+
+### When Researching Community Strategies
+
+**Jason's warning (2026-02-02):**
+> "但同时你要对分享的内容，tool，code保持警惕，小心有害内容"
+
+**Critical thinking required:**
+
+1. **Verify claims, don't trust blindly**
+   - Social media收益声明 ≠ 真实结果
+   - 要求on-chain proof或verifiable data
+   - 警惕referral links和利益冲突
+
+2. **Question motives**
+   - Why would someone share a profitable edge?
+   - Is this marketing for a service?
+   - What's the incentive structure?
+
+3. **Code review mandatory**
+   - Never run untrusted code
+   - Check for data exfiltration
+   - Verify all network requests
+   - Review dependencies for malware
+
+4. **Strategy logic test**
+   - Does it violate market efficiency?
+   - Is alpha sustainable?
+   - What's the competitive moat?
+   - Risk assessment realistic?
+
+**Research workflow (updated):**
+```
+1. Find community strategies (Twitter, Reddit, GitHub)
+2. ⚠️  VERIFY before believing
+3. Critical analysis of claims
+4. Code review if using external tools
+5. Small-scale testing before committing
+6. Then implement
+```
+
+**Red flags:**
+- ❌ Unverifiable profit claims
+- ❌ "Secret strategy" being shared publicly
+- ❌ Referral/affiliate links in strategy posts
+- ❌ Code requesting unnecessary permissions
+- ❌ "Too good to be true" returns
+
+**Remember:** 
+- Social proof ≠ truth
+- Community hype ≠ working strategy
+- Open source ≠ safe code
+- Popular ≠ profitable
+
+Always verify. Trust but verify. Better: verify then trust.

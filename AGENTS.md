@@ -26,6 +26,34 @@ This folder is home. Treat it that way.
 - **改了就验证，不要假设没问题**
 - 这不只是配置文件 — 所有有风险的操作都适用
 
+## 🔐 安全铁律：Secrets管理
+
+**2026-02-02 事故：** Notion API token被硬编码在代码里，commit到git，差点push到GitHub public repo。**Token泄露 = 任何人都能访问Notion数据库。**
+
+**所有sessions和projects必须遵守：**
+
+### Secrets管理标准（绝对不可违反）
+1. **所有secrets必须从环境变量读取** — 配置在 `/opt/clawdbot.env`
+2. **绝对禁止硬编码** — 无论是"测试代码"还是"临时使用"
+3. **代码里无默认值** — `os.getenv('KEY')` 不能有fallback value
+4. **Commit前审查** — 搜索 `token`, `key`, `secret`, `password` 等关键词
+5. **发现问题立即报告** — 不要自己悄悄修复，要撤销泄露的token
+
+### 完整文档
+📚 **必读：[SECURITY.md](./SECURITY.md)** — 创建任何项目前先阅读
+
+**快速检查：**
+```bash
+# 扫描可疑的硬编码
+bash scripts/check-secrets.sh
+```
+
+### 为什么这么重要
+- Secret泄露 = 数据泄露、API滥用、安全风险
+- Git历史永久保留 — 删除代码不等于删除历史
+- GitHub secret scanning会block push — 影响工作流
+- **信任和安全是基础，没有例外**
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
@@ -37,6 +65,7 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+5. **If creating/modifying projects**: Read `SECURITY.md` — secrets管理标准
 
 Don't ask permission. Just do it.
 

@@ -1,0 +1,51 @@
+{
+  "version": "1.2.0",
+  "last_updated": "2026-02-02T17:55:00Z",
+  "global_config": {
+    "log_level": "INFO",
+    "error_tolerance": "retry",
+    "default_timeout": 300
+  },
+  "jobs": {
+    "token_monitor": {
+      "interval": "4h",
+      "action": "check_token_usage",
+      "model": "claude-sonnet",
+      "command": "./session_status.sh",
+      "retry_count": 2,
+      "retry_delay": 600
+    },
+    "kalshi_scan": {
+      "interval": "15m", 
+      "action": "market_scan",
+      "model": "claude-haiku",
+      "command": "python3 notify_debug.py",
+      "retry_count": 3,
+      "retry_delay": 300
+    },
+    "kanban_sync": {
+      "interval": "2h",
+      "action": "sync_kanban",
+      "model": "claude-haiku",
+      "command": "bash scripts/sync-status-to-kanban.sh",
+      "retry_count": 1,
+      "retry_delay": 180
+    },
+    "moltbook_retry": {
+      "interval": "24h",
+      "action": "register_agent",
+      "model": "claude-sonnet",
+      "command": "echo \"Moltbook registration not implemented\"",
+      "retry_count": 1,
+      "retry_delay": 3600
+    },
+    "arbitrage_monitor": {
+      "interval": "30m",
+      "action": "check_arbitrage_status",
+      "model": "claude-haiku",
+      "command": "bash check_arbitrage_status.sh",
+      "retry_count": 2,
+      "retry_delay": 600
+    }
+  }
+}

@@ -6,3 +6,11 @@ See system logs and 'systemctl status heartbeat.service' for details.
 du: cannot access 'heartbeat.log': No such file or directory
 /home/clawdbot/clawd/heartbeat_monitor.sh: line 29: [: : integer expression expected
 /home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+Failed to restart heartbeat.service: Interactive authentication required.
+See system logs and 'systemctl status heartbeat.service' for details.
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+du: cannot access 'heartbeat.log': No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 29: [: : integer expression expected
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory

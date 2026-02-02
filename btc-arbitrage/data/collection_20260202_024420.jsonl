@@ -1809,3 +1809,6 @@
 {"t": "2026-02-02T18:04:30.318950", "brti": 78856.06, "brti_chg": 0.0016, "kalshi": {"ticker": "KXBTC15M-26FEB021315-15", "yes_bid": 0.2, "yes_ask": 0.21, "volume": 8266}, "kalshi_chg": -28.5714, "signal": null}
 {"t": "2026-02-02T18:05:01.114258", "brti": 78824.96, "brti_chg": -0.0394, "kalshi": {"ticker": "KXBTC15M-26FEB021315-15", "yes_bid": 0.2, "yes_ask": 0.21, "volume": 9626}, "kalshi_chg": null, "signal": null}
 {"t": "2026-02-02T18:05:31.578423", "brti": 78827.89, "brti_chg": 0.0037, "kalshi": {"ticker": "KXBTC15M-26FEB021315-15", "yes_bid": 0.14, "yes_ask": 0.15, "volume": 10434}, "kalshi_chg": -30.0, "signal": null}
+{"t": "2026-02-02T18:06:02.303902", "brti": 78805.85, "brti_chg": -0.028, "kalshi": {"ticker": "KXBTC15M-26FEB021315-15", "yes_bid": 0.13, "yes_ask": 0.14, "volume": 11872}, "kalshi_chg": -7.1429, "signal": null}
+{"t": "2026-02-02T18:06:32.762512", "brti": 78767.4, "brti_chg": -0.0488, "kalshi": {"ticker": "KXBTC15M-26FEB021315-15", "yes_bid": 0.17, "yes_ask": 0.18, "volume": 12433}, "kalshi_chg": 30.7692, "signal": null}
+{"t": "2026-02-02T18:07:03.217236", "brti": 78790.25, "brti_chg": 0.029, "kalshi": {"ticker": "KXBTC15M-26FEB021315-15", "yes_bid": 0.13, "yes_ask": 0.15, "volume": 13061}, "kalshi_chg": -23.5294, "signal": null}

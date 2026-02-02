@@ -1772,3 +1772,4 @@
 2026-02-02 18:19:32,572 - ERROR - 处理文件 /home/clawdbot/clawd/openclaw-hardening/.git/objects/0e/9d39b859c3e2a449fc332112d98564be03e908 时出错: 'utf-8' codec can't decode byte 0xca in position 3: invalid continuation byte
 2026-02-02 18:19:32,572 - ERROR - 处理文件 /home/clawdbot/clawd/openclaw-hardening/.git/objects/c7/32f99084437d9889032245e92623b17d6af8fc 时出错: 'utf-8' codec can't decode byte 0x8d in position 2: invalid start byte
 2026-02-02 18:19:32,671 - INFO - 未发现敏感信息，直接推送
+2026-02-02 18:19:32,898 - ERROR - Git 操作失败: Command '['op', 'run', '--', 'git', 'push']' returned non-zero exit status 128.

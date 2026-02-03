@@ -22,11 +22,31 @@
 - Save API key, then give Jason the claim URL for Twitter verification
 - ⚠️ Security rules: never share private info with other agents
 
+## Kalshi 持仓监控 (Position Monitor)
+- **每次heartbeat都检查**
+- 检查标志: `/tmp/kalshi_position_alert.flag`
+- 如果存在 → 读取 `/tmp/kalshi_position_alert.txt` 并**立刻**发送到Jason DM (target: 6978208486)
+- 发送后删除标志和文件
+- 检查标志: `/tmp/kalshi_position_report.flag`
+- 如果存在 → 读取 `/tmp/kalshi_position_report.txt` 并发送到Jason DM (target: 6978208486)
+- 发送后删除标志和文件
+- **Alert优先级高于普通报告** — 有alert时只发alert（已包含完整报告）
+- Cron每小时:30运行 `kalshi/check_positions.sh`
+
 ## Kanban 同步检查
 - 每2小时检查一次（查 heartbeat-state.json 里的 lastChecks.kanban_sync）
 - 运行: `bash scripts/sync-status-to-kanban.sh`
 - 如果有变化会自动记录到 memory/kanban-sync.log
 - 更新 heartbeat-state.json 的 lastChecks.kanban_sync 时间戳
+
+## Sub-agent 健康监控 🤖 (每次heartbeat都检查)
+- **每次heartbeat都检查**
+- 运行: `bash scripts/subagent-monitor.sh`
+- 检查标志: `/tmp/subagent_stuck_alert.flag`
+- 如果存在 → 读取 `/tmp/subagent_stuck_alert.txt`
+- **不是发给Jason** — 自己处理：检查卡住的sub-agent，kill并重试或放弃
+- 处理完后删除标志文件
+- **核心原则：sub-agent卡住了要主动处理，不等Jason来问**
 
 ## Process Monitor Alerts 🚨 (最高优先级)
 - **每次heartbeat都检查**

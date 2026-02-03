@@ -4,6 +4,52 @@ This folder is home. Treat it that way.
 
 ## 🚨 Iron Laws (Never Violate)
 
+### 0. Sub-agent Management: Full Lifecycle Control
+**Repeated incidents:** Sub-agent announces file paths Jason can't see; falsely claims "API not configured"; queue gets jammed by mid-run messages; stuck for hours with nobody noticing.
+
+**⚙️ Code-enforced controls (clawdbot.json):**
+- Sub-agents DENIED tools: `message`, `cron`, `gateway`, `sessions_send`
+- These are enforced at framework level — sub-agents cannot override
+
+**🔄 Mandatory spawn workflow (3 scripts):**
+```bash
+# 1. BEFORE spawn: register for tracking
+bash scripts/subagent-spawn-wrapper.sh <session_key> <label> <output_file>
+
+# 2. AFTER completion: validate output
+bash scripts/subagent-guard.sh <session_key> <output_file>
+
+# 3. AFTER delivering results: mark done
+bash scripts/subagent-complete.sh <session_key>
+```
+
+**📡 Proactive monitoring:**
+- Heartbeat runs `scripts/subagent-monitor.sh` every cycle
+- Alerts if sub-agent stuck >5min (no output) or >15min (total)
+- **Main agent must handle stuck sub-agents proactively — kill and retry or abandon**
+- **NEVER wait for Jason to ask "怎么样了"**
+
+**Results delivery:**
+- **ALWAYS** add to task: `"When prompted to announce, reply exactly: ANNOUNCE_SKIP"`
+- **ALWAYS** read the output file yourself after sub-agent completes
+- **ALWAYS** run `subagent-guard.sh` to check for fabricated data and path leaks
+- **ALWAYS** send the actual content directly in chat, not file paths
+- Jason is on mobile Telegram — he cannot access server file paths
+
+**Verification before relay:**
+- **Sub-agent output is UNVERIFIED** — always validate claims before relaying to Jason
+- Check that code actually works, APIs actually return data, files actually exist
+- Never relay "auth not configured" or "API blocked" without verifying yourself first
+
+**Queue management:**
+- **Never send `sessions_send` while sub-agent is still running** — it creates queue contention
+- Let sub-agent finish, then read results
+
+**Task specification:**
+- Include all iron laws relevant to the task in the task description
+- Be specific about output file paths
+- Include verification criteria (what "done" looks like)
+
 ### 1. Never Modify System Config Without Verification
 **2026-02-02 incident:** Bad clawdbot.json edit → service crash loop → server down all night.
 
@@ -46,6 +92,27 @@ This folder is home. Treat it that way.
 - Write code → research first, test after
 - Uncertain → look it up, don't guess
 - Unattended hours → no high-risk operations
+
+### 6. Trading Systems: No Shortcuts on Execution Realism
+**2026-02-03 incident:** Paper trader used best bid/ask instead of real orderbook depth. Ran for 8+ hours producing misleading PnL data. Known risk (documented in ANALYSIS.md) but not implemented.
+
+- **Paper trading MUST simulate real execution** — orderbook depth, slippage, partial fills
+- **Research findings → code implementation** — if analysis identifies a risk, the code must handle it. Documentation alone is not enough.
+- **Pre-launch checklist (mandatory):**
+  - [ ] Entry/exit prices based on real orderbook depth (not best bid/ask)
+  - [ ] Slippage tracked per trade
+  - [ ] Partial fill handling (what if depth < order size)
+  - [ ] Fees accounted for
+  - [ ] Every risk identified in research has corresponding code
+- **"先跑起来再说" is banned for trading systems** — speed of launch ≠ value if the data is wrong
+
+### 7. Never Ask for Credentials
+**2026-02-03 incident:** Sub-agent falsely claimed "API auth not configured." Relayed to Jason without verifying. Asked for API key — a security anti-pattern.
+
+- **Never ask Jason for API keys, tokens, or passwords** — sending credentials in chat is bad practice
+- **Verify yourself first** — run the tool, check the error, read the code
+- **Sub-agent output is unverified** — always validate before relaying to Jason
+- **Public APIs exist** — most read-only endpoints don't need auth. Check before assuming.
 
 ## 🔧 Mechanical Enforcement
 

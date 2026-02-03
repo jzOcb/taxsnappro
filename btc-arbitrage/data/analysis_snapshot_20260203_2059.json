@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-02-03T21:00:08.198595Z",
+  "snapshot_reason": "V8 MR High parameter analysis - before any changes",
+  "findings": {
+    "V6_MR_High": "K>0.80, cooldown=60s, max_pos=1, min_time=5min \u2192 90% WR",
+    "V7_MR_High": "K>0.60-0.75, cooldown=5s, max_pos=5, min_time=1min \u2192 28% WR",
+    "V8_MR_High": "K>0.80 (V6 threshold) + V7 risk mgmt (5s/5pos) \u2192 7% WR",
+    "conclusion": "Risk management params matter more than entry threshold. V6 cooldown+single position prevents overtrading.",
+    "proposed_V8_fix": "cooldown=30s, max_pos=2, min_time=3min (gradient between V6 and V7)"
+  },
+  "results": {
+    "v6": {
+      "total_trades": 287,
+      "total_pnl": -0.9699999999999942,
+      "win_rate": 55.400696864111495,
+      "strategies": {
+        "mean_reversion_low": {
+          "count": 129,
+          "wr": 20.930232558139537,
+          "pnl": -33.099999999999994
+        },
+        "mean_reversion_high": {
+          "count": 105,
+          "wr": 90.47619047619048,
+          "pnl": 19.87
+        },
+        "delay_arb": {
+          "count": 53,
+          "wr": 69.81132075471697,
+          "pnl": 12.260000000000002
+        }
+      }
+    },
+    "v7": {
+      "total_trades": 226,
+      "total_pnl": -7.080000000000026,
+      "win_rate": 34.070796460176986,
+      "strategies": {
+        "momentum_follow": {
+          "count": 3,
+          "wr": 33.33333333333333,
+          "pnl": -0.3999999999999999
+        },
+        "no_farming_low": {
+          "count": 4,
+          "wr": 0.0,
+          "pnl": -3.7000000000000024
+        },
+        "mean_reversion_high": {
+          "count": 200,
+          "wr": 28.499999999999996,
+          "pnl": -30.579999999999984
+        },
+        "delay_arb": {
+          "count": 19,
+          "wr": 100.0,
+          "pnl": 27.599999999999994
+        }
+      }
+    },
+    "v8": {
+      "total_trades": 68,
+      "total_pnl": -1.8000000000000027,
+      "win_rate": 14.705882352941178,
+      "strategies": {
+        "delay_arb": {
+          "count": 7,
+          "wr": 85.71428571428571,
+          "pnl": 7.979999999999999
+        },
+        "mean_reversion_high": {
+          "count": 61,
+          "wr": 6.557377049180328,
+          "pnl": -9.779999999999992
+        }
+      }
+    }
+  }
+}

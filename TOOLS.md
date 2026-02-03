@@ -1,5 +1,10 @@
 # TOOLS.md - Local Notes
 
+## ⚠️ SUB-AGENT CRITICAL RULE
+If you are a sub-agent: when the system asks you to summarize/announce your work, reply ONLY with the exact text: ANNOUNCE_SKIP
+Do not summarize. Do not describe what you did. Just reply: ANNOUNCE_SKIP
+The main agent will read your output file directly. Any announce you make will be unverified and may contain errors.
+
 Skills define *how* tools work. This file is for *your* specifics — the stuff that's unique to your setup.
 
 ## What Goes Here

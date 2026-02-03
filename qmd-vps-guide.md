@@ -1,15 +1,21 @@
-# Making qmd Work on CPU-Only VPS: A Practical Guide
+# qmd on CPU-Only VPS: Test Results & Why We Didn't Use It
 
-**Status:** Work in Progress  
+**Status:** Internal Documentation (Not Recommended for Use)  
 **Date:** 2026-02-03  
-**Source:** Ray Wang's article + my testing on DigitalOcean VPS
+**Tested on:** DigitalOcean $6/month VPS (1 vCPU, 1GB RAM, no GPU)
 
 ## TL;DR
 
-**qmd DOES work on CPU-only VPS, but needs workarounds:**
-- ✅ Single file embedding: 3 seconds, works great
-- ❌ Batch embedding: Segfaults/crashes
-- ✅ Solution: Process files individually + separate collections
+**We tested qmd and decided NOT to use it.**
+
+**Why:**
+- ✅ Single file works (3-15s)
+- ❌ Batch processing crashes (segfaults)
+- ❌ Not reliable enough for production
+- ❌ Slower than cloud APIs (30-120s vs <1s)
+- ❌ 2+ hours troubleshooting not worth it
+
+**What we're using instead:** Model routing + context pruning (already saves 30-50%)
 
 ---
 
@@ -289,4 +295,20 @@ export OPENAI_API_KEY=sk-...
 
 ---
 
-**Status:** ✅ Testing complete. Ready to publish.
+## Conclusion
+
+**This is internal documentation of what we tried and why it didn't work.**
+
+**DO NOT use this as a "how to" guide for others.** We tested qmd, found it unreliable on CPU-only VPS, and decided not to use it.
+
+**What we're actually using:**
+- Model routing (Sonnet vs Opus) = 5x cost savings ✅
+- Context pruning = auto-cleanup ✅  
+- Daily memory files = already optimized ✅
+- If needed: OpenAI API ($0.50/month) = fast & reliable ✅
+
+**Lesson learned:** Local embeddings sound good in theory but aren't practical on budget VPS. Cloud APIs are faster, more reliable, and cheap enough.
+
+---
+
+**Status:** ✅ Testing complete. Internal documentation only.

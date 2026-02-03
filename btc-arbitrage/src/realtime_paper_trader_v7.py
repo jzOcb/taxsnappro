@@ -29,7 +29,8 @@ from collections import deque
 TRADE_SIZE = 10              # $10 per trade (validation, not profit)
 COOLDOWN_SEC = 5             # 5s cooldown between trades (was 60s)
 MAX_POSITIONS_PER_MARKET = 5 # Max concurrent positions per market type
-MR_HIGH_THRESHOLD = 0.60     # Mean Reversion High trigger (lowered for more signals)
+MR_HIGH_THRESHOLD = 0.60     # Mean Reversion High trigger (lower bound)
+MR_HIGH_CEILING = 0.75       # Don't enter when K > this (NO too cheap, whipsaw risk)
 DELAY_MOMENTUM_THR = 0.20    # BTC momentum threshold for delay arb (was 0.15)
 HOLD_TIMEOUT = 180           # Close position after 3min (was 6min)
 SPREAD_FILTER = 0.10         # Max spread to enter (was 0.05)
@@ -526,8 +527,8 @@ class TradingEngine:
         if time_remaining < MIN_TIME_REMAINING:
             return
 
-        # ─── STRATEGY 3: Mean Reversion High (NO farming — validated 100% WR) ───
-        if k_bid > MR_HIGH_THRESHOLD and momentum_1m is not None and momentum_1m < 0.05:
+        # ─── STRATEGY 3: Mean Reversion High (NO farming — sweet spot 0.60-0.75) ───
+        if MR_HIGH_THRESHOLD < k_bid < MR_HIGH_CEILING and momentum_1m is not None and momentum_1m < 0.05:
             no_price = 1 - k_bid
             pos_id = self.trader.open('NO', no_price, ticker, market_type, 'mean_reversion_high')
             if pos_id is not None:

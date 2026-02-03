@@ -1,0 +1,119 @@
+Stop Your AI Agent's Background Processes From Dying Silently
+
+Your AI agent launched a bot at 7pm. By 8pm it was dead. Nobody knew until you checked the next morning.
+
+This happened to us 3 times in one day. Here's what we found — and it affects every AI agent user running background processes (Claude Code, Clawdbot, OpenClaw, Cursor, or anything that shells out).
+
+The Incident
+
+We told our agent to run a long background task. Should run for 8 hours.
+
+• Agent launches it. "✅ Started."
+• 31 minutes later — silently dead. No error. No alert.
+• 3 hours later we ask "how's it going?"
+• "Oh... it stopped hours ago."
+
+We fixed what we thought was the bug. Relaunched. Dead again after 20 minutes. Fixed again. Dead again.
+
+Three crashes. Zero alerts. Hours of wasted time. The only reason we found out? We manually asked.
+
+The Root Cause
+
+This isn't a bug in your script. It's a structural problem with how AI agents launch processes.
+
+When your agent runs something in the background:
+
+Clawdbot exec session (parent)
+  └─ bash (child, inherits parent session)
+      └─ python3 your_script.py (same session group)
+
+The process inherits the parent session ID. When the exec session gets cleaned up (~20-30 minutes), the system sends SIGTERM to the entire process group. Your script dies.
+
+But here's the nasty part. Most scripts handle SIGTERM like this:
+
+def handler(signum, frame):
+    cleanup()
+    sys.exit(0)  # ← EXIT CODE 0 = "clean exit"
+
+Exit code 0 means "everything's fine." Watchdogs, health checks, monitoring — they all think it completed successfully. Nobody raises an alarm.
+
+Your process was murdered, but the death certificate says "natural causes."
+
+This Affects Everyone
+
+Any long-running process launched by an AI agent:
+
+🤖 Trading bots
+📊 Data collectors and scrapers
+🔍 Monitoring scripts
+🌐 Web servers and APIs
+📱 Notification services
+🔄 Background sync jobs
+
+If you've ever told your agent "run this in the background" — there's a good chance it died and you don't know.
+
+The Fix: 3 Layers
+
+1. Process Isolation
+
+setsid nohup python3 bot.py > /dev/null 2>&1 &
+disown $!
+
+setsid creates a new session. nohup ignores SIGHUP. disown removes it from the job table. Process gets PPID=1 and its own session ID. Parent death can't touch it.
+
+2. Never sys.exit(0) in Signal Handlers
+
+def handler(signum, frame):
+    sig_name = signal.Signals(signum).name
+    print(f"⚠️ SIGNAL: {sig_name} at {datetime.now()}", flush=True)
+    global shutdown
+    shutdown = True  # Don't sys.exit(0) — that hides the cause of death
+
+3. Managed Process Framework
+
+One tool for all background processes:
+
+managed-process.sh register my-bot "python3 bot.py" 480
+managed-process.sh start my-bot
+managed-process.sh status
+
+Cron healthcheck every 5 minutes. Process dies → auto-restart + alert to your DM. No more silent deaths.
+
+Results
+
+Before:
+• 3 crashes in one day, zero alerts
+• Hours of lost work
+• Only found out by manually asking
+
+After:
+• Auto-restart catches deaths within 5 minutes
+• Proactive alerts — you know before you ask
+• Full visibility with one command
+
+Open Source
+
+We built Process Guardian and open-sourced it:
+
+GitHub: https://github.com/jzOcb/process-guardian
+
+Works with any AI coding agent:
+
+Claude Code — clone into your project, it reads CLAUDE.md automatically:
+git clone https://github.com/jzOcb/process-guardian.git
+
+Clawdbot / OpenClaw — copy to skills directory:
+cp -r process-guardian /path/to/clawd/skills/
+bash skills/process-guardian/scripts/install.sh
+
+Standalone — anything with bash + cron:
+git clone https://github.com/jzOcb/process-guardian.git
+bash process-guardian/scripts/install.sh
+
+One install, protection forever.
+
+---
+
+If you're running background processes with your AI agent, go check if they're actually still alive right now. You might be surprised.
+
+The scariest bugs aren't the ones that crash loudly. They're the ones that die silently while you sleep.

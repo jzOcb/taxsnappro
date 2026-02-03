@@ -78,6 +78,17 @@ fi
 
 # Summary
 echo ""
+echo "=== Work Log Check ==="
+TODAY=$(date -u +%Y-%m-%d)
+WORK_LOG="/home/clawdbot/clawd/memory/work-log-${TODAY}.md"
+if [[ -f "$WORK_LOG" ]] && grep -q "$SESSION_KEY" "$WORK_LOG" 2>/dev/null; then
+    echo "✅ Sub-agent logged work to daily work log"
+else
+    echo "⚠️  Sub-agent did NOT log work. Main agent should call:"
+    echo "   bash scripts/log-work.sh <category> '<summary of what sub-agent did>'"
+fi
+
+echo ""
 echo "=== Summary ==="
 echo "File: $OUTPUT_FILE"
 echo "Size: $FILE_SIZE bytes"

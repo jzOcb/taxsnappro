@@ -58,6 +58,28 @@
 2. Kalshi 交易系统 → `kalshi/`
 3. YouTube 视频搬运 → `video-repurpose/`
 
+## Critical Lessons Learned
+
+### 2026-02-02: "Launch and Forget" Anti-Pattern 🚨
+**The single biggest workflow gap discovered:**
+- I launch bots/processes via `exec` background mode
+- Exec sessions get cleaned up after ~20-30 min → SIGTERM kills child processes
+- Signal handler called sys.exit(0) → looked like clean exit → watchdog didn't restart
+- Nobody knew processes were dead until Jason manually asked
+- This happened 3+ times in one day
+
+**Fix (3 layers):**
+1. `launch_v6_detached.sh` — setsid + nohup + disown (PPID=1, survives everything)
+2. Signal handler logs signal name, doesn't sys.exit(0)
+3. `process_monitor.sh` — cron every 5min, checks all processes, auto-restart + alert
+
+**Rule:** NEVER launch long-running processes via plain `exec &`. Always use the detached launch script. Always have monitoring.
+
+### 2026-02-02: Known Bug Replication
+- Created v6 with the same asyncio.gather bug that killed v3
+- STATUS.md documented the v3 failure reason, but I didn't check it before creating v6
+- Fix: Enhanced pre-create-check.sh to show known bugs from STATUS.md
+
 ## Pending Items
 - [ ] Kalshi API key（Jason 提供后可以自动交易）
 - [ ] YouTube cookies（下载视频需要）

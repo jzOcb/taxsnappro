@@ -317,9 +317,11 @@ class TradingEngine:
     
     def _setup_signal_handlers(self):
         def handler(signum, frame):
+            sig_name = signal.Signals(signum).name
+            msg = f"\n⚠️ SIGNAL RECEIVED: {sig_name} (signum={signum}) at {datetime.now().isoformat()}"
+            self._dual_log(msg)
+            print(msg, flush=True)
             self.graceful_shutdown = True
-            self._summary()
-            sys.exit(0)
         signal.signal(signal.SIGINT, handler)
         signal.signal(signal.SIGTERM, handler)
     

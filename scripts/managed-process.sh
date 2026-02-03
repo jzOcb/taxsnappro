@@ -283,7 +283,13 @@ for name, config in reg.items():
         continue
     
     # Process is dead
+    # Check if it's been dead for >24h with no auto_restart — stale entry
     if not config.get("auto_restart", False):
+        if os.path.exists(state_file):
+            age = time.time() - os.path.getmtime(state_file)
+            if age > 86400:  # Dead >24h, no auto-restart → stale
+                print(f"🧹 {name}: dead >24h, no auto-restart. Cleaning up.")
+                os.system(f"bash /home/clawdbot/clawd/scripts/managed-process.sh deregister {name}")
         continue
     
     # Check if it completed normally (duration-based)
@@ -333,20 +339,51 @@ PYEOF
 }
 
 # ═══════════════════════════════════════════════
+# DEREGISTER: Remove a process from the registry and clean up all its files
+# ═══════════════════════════════════════════════
+cmd_deregister() {
+    local NAME="$1"
+    
+    # Stop it first if running
+    cmd_stop "$NAME" 2>/dev/null || true
+    
+    # Remove from registry
+    python3 -c "
+import json
+reg = json.load(open('$REGISTRY'))
+if '$NAME' in reg:
+    del reg['$NAME']
+    json.dump(reg, open('$REGISTRY', 'w'), indent=4)
+    print('  ✅ $NAME removed from registry')
+else:
+    print('  ⚠️ $NAME not found in registry')
+"
+    
+    # Clean up all related files
+    rm -f "$PROCESS_DIR/${NAME}.pid" \
+          "$PROCESS_DIR/${NAME}.state" \
+          "$PROCESS_DIR/${NAME}_wrapper.sh" \
+          "$LOG_DIR/${NAME}.log" 2>/dev/null
+    
+    echo "  🧹 Cleaned up files for $NAME"
+}
+
+# ═══════════════════════════════════════════════
 # MAIN
 # ═══════════════════════════════════════════════
 ACTION="${1:-status}"
 shift || true
 
 case "$ACTION" in
-    register)   cmd_register "$@" ;;
-    start)      cmd_start "$@" ;;
-    stop)       cmd_stop "$@" ;;
-    status)     cmd_status "$@" ;;
-    restart)    cmd_restart "$@" ;;
+    register)    cmd_register "$@" ;;
+    deregister)  cmd_deregister "$@" ;;
+    start)       cmd_start "$@" ;;
+    stop)        cmd_stop "$@" ;;
+    status)      cmd_status "$@" ;;
+    restart)     cmd_restart "$@" ;;
     healthcheck) cmd_healthcheck ;;
     *)
-        echo "Usage: managed-process.sh {register|start|stop|status|restart|healthcheck} [args]"
+        echo "Usage: managed-process.sh {register|deregister|start|stop|status|restart|healthcheck} [args]"
         exit 1
         ;;
 esac

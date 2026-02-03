@@ -309,22 +309,24 @@ class FactGraph:
         if not fact.derive_fn:
             return
         
-        # Check if all dependencies are complete
+        # Collect dependency values
+        # Dependencies that are empty/incomplete are passed as None
+        # The derive_fn is responsible for handling None values (e.g., treating as 0)
         dep_values = {}
-        all_deps_ready = True
+        has_any_value = False
         
         for dep_path in fact.dependencies:
             dep = self._facts.get(dep_path)
             if dep is None:
-                logger.warning(f"Missing dependency {dep_path} for fact {fact.path}")
-                all_deps_ready = False
-                break
-            if not dep.is_complete():
-                all_deps_ready = False
-                break
-            dep_values[dep_path] = dep.value
+                dep_values[dep_path] = None
+            elif dep.is_complete():
+                dep_values[dep_path] = dep.value
+                has_any_value = True
+            else:
+                dep_values[dep_path] = None
         
-        if all_deps_ready:
+        # Evaluate if we have at least some data (or if there are no deps)
+        if has_any_value or not fact.dependencies:
             try:
                 fact.value = fact.derive_fn(dep_values)
                 fact.status = FactStatus.DERIVED

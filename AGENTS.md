@@ -31,7 +31,17 @@ This folder is home. Treat it that way.
 - "Quick version" → must call existing validated functions
 - User-facing output → must go through project's validation pipeline
 
-### 4. Verify Before Acting (通用)
+### 4. Never Launch Unmanaged Processes
+**2026-02-02 incident:** BTC bot launched via `exec &` died 3 times in one day. Nobody knew until Jason manually asked.
+
+- **ALL long-running processes MUST use `scripts/managed-process.sh`** — no exceptions
+- ❌ Never: `python script.py &`, `nohup ... &`, `exec background`
+- ✅ Always: `bash scripts/managed-process.sh register <name> <cmd>` then `start <name>`
+- Framework handles: detached execution, PID tracking, auto-restart, health alerts
+- Cron healthcheck runs every 5 min — catches dead processes automatically
+- **If a process isn't in the registry, it doesn't exist**
+
+### 5. Verify Before Acting (通用)
 - Modify config → backup first, verify after
 - Write code → research first, test after
 - Uncertain → look it up, don't guess

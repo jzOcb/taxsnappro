@@ -80,6 +80,12 @@
 - STATUS.md documented the v3 failure reason, but I didn't check it before creating v6
 - Fix: Enhanced pre-create-check.sh to show known bugs from STATUS.md
 
+## Released Projects
+- **Process Guardian** — https://github.com/jzOcb/process-guardian
+  - Managed process framework for AI agents (Claude Code + Clawdbot + standalone)
+  - Tags: claude-code-skill, agent-skill, agentskills
+  - v1.0.0 released 2026-02-03
+
 ## Pending Items
 - [ ] Kalshi API key（Jason 提供后可以自动交易）
 - [ ] YouTube cookies（下载视频需要）

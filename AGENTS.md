@@ -114,6 +114,16 @@ bash scripts/subagent-complete.sh <session_key>
 - **Sub-agent output is unverified** — always validate before relaying to Jason
 - **Public APIs exist** — most read-only endpoints don't need auth. Check before assuming.
 
+### 8. Always Log Work (Feeds Daily Content)
+**Mechanical enforcement:** Git post-commit hooks auto-log every commit. But non-commit work (research, decisions, discoveries) must be logged manually.
+
+- **Git commits** → auto-logged by post-commit hook (zero effort)
+- **Non-commit work** → call `bash scripts/log-work.sh <category> "<summary>"`
+- Categories: `feature|fix|research|release|discovery|decision`
+- **Sub-agents** → main agent logs on their behalf after guard check (guard script warns if missing)
+- **Content cron** runs `collect-daily-work.sh` which aggregates: git logs + work log + memory + STATUS changes
+- **If it's not logged, it doesn't get posted**
+
 ## 🔧 Mechanical Enforcement
 
 **Rules in markdown are suggestions. Code hooks are laws.**

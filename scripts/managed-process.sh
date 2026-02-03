@@ -299,6 +299,10 @@ for name, config in reg.items():
             if ran_min >= duration_min * 0.8:  # Completed ~80%+ of expected duration
                 continue  # Normal completion
     
+    # duration_min=0 means indefinite — should ALWAYS restart if dead
+    if duration_min == 0:
+        pass  # Fall through to restart
+    
     # Premature death — restart
     print(f"⚠️ {name} died prematurely (PID {pid}). Restarting...")
     alerts.append(f"🔴 {name}: 进程异常停止 (PID {pid})，已自动重启")

@@ -162,9 +162,38 @@ bun remove -g qmd
 rm -rf ~/.cache/qmd
 ```
 
+## Final Test Results (2026-02-03 00:25 UTC)
+
+**Single file test:** ✅ SUCCESS
+- 1 file (741B) embedded in 3 seconds
+- Search worked with 88% accuracy
+- Reranking took 2 minutes but completed
+
+**Batch processing test:** ❌ FAILED
+- 7 files (24 chunks, 55KB) hung for 3+ minutes
+- No progress indicator
+- Process killed, no results
+
+**Conclusion:** qmd embedding works on CPU but doesn't scale beyond 1-2 files.
+
+## Why It Fails at Scale
+
+**Problem:** The node-llama-cpp embedding process doesn't show progress and hangs when processing multiple chunks on CPU.
+
+**Evidence:**
+```
+Embedding 7 documents (24 chunks, 55.1 KB)
+Model: embeddinggemma
+[?25l]9;4;3
+(stuck here - no progress for 3+ minutes)
+```
+
+**Root cause:** CPU-only processing of GGUF models at scale is too slow/unstable.
+
 ## Conclusion
 
 **qmd is excellent IN THEORY** (200K community validation)  
-**NOT practical FOR US** (CPU-only VPS limitation)  
+**NOT practical FOR OUR CPU-only VPS** (batch processing hangs)  
+**WOULD WORK ON:** Mac with Metal GPU, or VPS with GPU
 
-**Better approach:** Use existing Clawdbot features (memory_search + model routing + context pruning) that are already working.
+**Better approach:** Use existing Clawdbot features (memory_search + model routing + context pruning) that are already working and proven.

@@ -404,6 +404,11 @@ def build_all_w2_aggregation(graph: FactGraph,
         export_downstream=True,
     )
 
+    # Ensure filing status exists for threshold calculation
+    if graph.get_fact("/filingStatus") is None:
+        graph.register_writable("/filingStatus", "Filing Status", FactType.ENUM, "filingStatus",
+                               export_mef=True)
+
     # --- Additional Medicare Tax threshold (filing-status dependent) ---
     graph.register_derived(
         "/medicareAdditionalTaxThreshold",
@@ -1043,6 +1048,13 @@ def _ensure_ss_upstream_facts(graph: FactGraph):
     Ensure upstream facts needed by the SS worksheet exist in the graph.
     Only registers them if they don't already exist.
     """
+    # Filing status — needed for threshold determination
+    if graph.get_fact("/filingStatus") is None:
+        graph.register_writable(
+            "/filingStatus", "Filing Status",
+            FactType.ENUM, "filingStatus", export_mef=True,
+        )
+
     # Tax-exempt interest (1040 line 2a) — needed for provisional income
     if graph.get_fact("/taxExemptInterest") is None:
         graph.register_writable(

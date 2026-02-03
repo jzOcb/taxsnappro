@@ -99,6 +99,25 @@ for status_file in "$WORKSPACE"/*/STATUS.md; do
 done
 
 # ═══════════════════════════════════════
+# SOURCE 5: Session-scanned entries (from Session Work Scanner cron)
+# ═══════════════════════════════════════
+echo "## Session-Scanned Work (research, decisions, discoveries)" >> "$OUTPUT"
+echo "" >> "$OUTPUT"
+
+if [[ -f "$WORK_LOG" ]]; then
+    # Extract non-git entries (manual + session scanner entries)
+    SCANNED=$(grep -v "git-auto" "$WORK_LOG" 2>/dev/null | grep "^- \[" || true)
+    if [[ -n "$SCANNED" ]]; then
+        echo "$SCANNED" >> "$OUTPUT"
+    else
+        echo "  (no session-scanned entries yet)" >> "$OUTPUT"
+    fi
+else
+    echo "  (no work log exists)" >> "$OUTPUT"
+fi
+echo "" >> "$OUTPUT"
+
+# ═══════════════════════════════════════
 # VALIDATION
 # ═══════════════════════════════════════
 echo "## Collection Stats" >> "$OUTPUT"

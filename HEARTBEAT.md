@@ -7,12 +7,13 @@
 - 格式简洁自然，像群消息一样
 - 更新 heartbeat-state.json 的 lastChecks.token_monitor 时间戳
 
-## Kalshi 市场扫描
-- 每3-4小时跑一次（查 heartbeat-state.json 里的 lastChecks.kalshi_scan）
-- 执行: `cd /workspace && python3 kalshi/notify.py`
-- 如果有🎯 junk bonds 回报>10% 或 🚨价格变动>5¢ → 简短报告
-- 没有 notable 结果就跳过通知（别刷屏）
-- 更新时间戳
+## Kalshi 市场扫描（自动每小时DM）
+- ⚠️ **不要在heartbeat中手动运行** - 已有cron自动扫描
+- Cron每小时运行 `kalshi/send_hourly_scan.sh`
+- **每次heartbeat检查标志**: `/tmp/kalshi_hourly_scan_dm_ready.flag`
+- 如果标志存在 → 读取 `/tmp/kalshi_hourly_scan_dm.txt` 并用 `message` 工具发送到Jason DM (target: 6978208486)
+- 发送后删除标志和报告文件
+- **重要：不要发到group，必须用message工具指定target到Jason的user ID**
 
 ## Moltbook Registration Retry
 - Rate limited until ~2026-02-02 12:41 UTC (24h cooldown)
@@ -27,11 +28,25 @@
 - 如果有变化会自动记录到 memory/kanban-sync.log
 - 更新 heartbeat-state.json 的 lastChecks.kanban_sync 时间戳
 
+## Process Monitor Alerts 🚨 (最高优先级)
+- **每次heartbeat都检查**
+- 检查标志: `/tmp/process_monitor_alert.flag`
+- 如果存在 → 读取 `/tmp/process_monitor_alert.txt` 并立即发送到Jason DM (target: 6978208486)
+- 发送后删除标志和报告文件
+- **这是自动监控系统的输出，必须立即转发**
+
 ## BTC Arbitrage 自动重启通知 🔥
 - **每次heartbeat都检查**
 - 运行: `bash /workspace/check_restart_flag.sh`
 - 如果有重启标志 → 立刻用中文通知（包含重启时间和当前状态）
 - 没有就返回 HEARTBEAT_OK
+
+## BTC v3 每小时汇报 📊
+- **每次heartbeat都检查**
+- 检查标志文件: `/tmp/btc_hourly_report_ready.flag`
+- 如果存在 → 读取 `/tmp/btc_hourly_report.txt` 并发送
+- 发送后删除标志文件和报告文件
+- Cron每小时:45生成报告，heartbeat在下次轮询时发送（最多延迟15分钟）
 
 ## Kanban文件同步（需要host cron）
 由于Docker不能follow symlinks，需要定期复制文件：

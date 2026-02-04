@@ -531,7 +531,8 @@ class PaperTrader:
                 pass
         
         pnl = (actual_exit - pos['entry']) * pos['size']
-        if pos['dir'] == 'NO': pnl = -pnl
+        # NO direction: pnl already correct (sell price - buy price)
+        # Bug fix: removed incorrect sign flip for NO trades
         pos['exit'] = actual_exit
         pos['theoretical_exit'] = theoretical_exit
         pos['slippage_exit'] = actual_exit - theoretical_exit
@@ -713,37 +714,19 @@ class TradingEngine:
         # Check for flash crash
         is_flash_crash, drop_pct = self.flash_detector.detect_flash_crash(market_type, k_bid)
         
-        # ENHANCED STRATEGY 1: Mean Reversion with Flash Crash Detection
-        # Original condition: k_bid > 0.80 and momentum < 0.05
-        # Enhanced: Also trigger on flash crashes with higher confidence
-        mean_rev_trigger = False
-        confidence_boost = 1.0
+        # STRATEGY 1: Mean Reversion — ALL DISABLED
+        # PnL bug discovered: NO trades had inverted PnL display
+        # Real performance across all versions: mean_rev_high loses money (-$29.60 v6, -$40.70 v7, -$61.50 v8)
+        # Flash crash detection kept for logging only, not trading
+        if is_flash_crash:
+            self._dual_log(f"[{elapsed:5d}s] ⚡ FLASH CRASH LOGGED (no trade): {market_type.upper()} K dropped {drop_pct:.1%}")
         
-        if k_bid > 0.80 and momentum_1m is not None and momentum_1m < 0.05:
-            # Original high-k condition
-            mean_rev_trigger = True
-        elif is_flash_crash and k_bid > 0.65:  # Lower threshold for flash crashes
-            # Flash crash condition - more aggressive
-            mean_rev_trigger = True
-            confidence_boost = 1.5  # Higher confidence for flash crashes
-            self._dual_log(f"[{elapsed:5d}s] ⚡ FLASH CRASH DETECTED: {market_type.upper()} K dropped {drop_pct:.1%} → trigger mean reversion")
-        
-        if mean_rev_trigger:
-            # K very high (or flash crash) + BTC stable/down → buy NO (mean reversion)
-            no_price = 1 - k_bid
-            pos_id = self.trader.open('NO', no_price, kalshi['ticker'], market_type, 'mean_reversion_high')
-            if pos_id is not None:
-                crash_note = " [FLASH]" if is_flash_crash else ""
-                self._dual_log(f"[{elapsed:5d}s] 📈 {market_type.upper()} MEAN-REV{crash_note}: K@{k_bid:.2f} + BTC stable → NO@{no_price:.2f} (size=${self.trader.current_trade_size})")
-                signal_type = 'mean_rev_flash' if is_flash_crash else 'mean_rev_high'
-                self.signals.append({'type': signal_type, 'market': market_type, 'time': elapsed, 'drop_pct': drop_pct if is_flash_crash else 0})
-        
-        # STRATEGY 2: Delay Arbitrage (improved with BTC momentum filter)
+        # STRATEGY 2: Delay Arbitrage — ONLY profitable strategy
         elif last_bid is not None and last_bid > 0.01 and momentum_1m is not None:
             kalshi_chg = ((k_bid - last_bid) / last_bid * 100)
             
             # BTC moved but K hasn't caught up
-            if abs(momentum_1m) > 0.15 and abs(kalshi_chg) < 5:
+            if abs(momentum_1m) > 0.20 and abs(kalshi_chg) < 5:
                 direction = 'YES' if momentum_1m > 0 else 'NO'
                 entry = k_ask if direction == 'YES' else (1 - k_bid)
                 
@@ -812,7 +795,7 @@ class TradingEngine:
                     reason = ""
                     if pct > 8: should_close, reason = True, "PROFIT"
                     elif pct < stop_threshold: should_close, reason = True, f"STOP({stop_threshold:.0f}%)"
-                    elif hold_time > 360: should_close, reason = True, "TIMEOUT"
+                    elif hold_time > 180: should_close, reason = True, "TIMEOUT"
                     
                     if should_close:
                         pnl = self.trader.close(pos['id'], current)

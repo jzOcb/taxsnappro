@@ -366,3 +366,92 @@ OpenClaw v2026.2.2 (released TODAY) 加入了 agents.defaults.subagents.thinking
 - Source: github_release v2026.2.2
 - Tags: openclaw, release, config, memory
 
+
+---
+
+## [LRN-20260204-013] best_practice
+
+**Logged**: 2026-02-04T07:05:00Z
+**Priority**: high
+**Status**: pending
+**Area**: security
+
+### Summary
+OpenClaw官方guardrails PR #6095深度分析 — 4阶段hook + 3个LLM检查器 + 2个执行安全插件
+
+### Details
+PR #6095 (34👍, 51 conversations, 42 commits) 的架构：
+
+**4个Hook阶段：**
+1. before_request — 检查用户输入
+2. before_tool_call — 检查AI计划调用的工具
+3. after_tool_call — 检查工具执行结果
+4. after_response — 检查AI最终回复
+
+**3个LLM-based guardrail：**
+- Gray Swan — indirect prompt injection检测
+- LlamaGuard — 内容安全分类
+- GPT-OSS-Safeguard — 开源安全检查
+
+**2个Execution-safety guardrail（规则型）：**
+- command-safety-guard — 阻止rm -rf, fork bomb, credential exfil
+- security-audit — 阻止访问SSH keys, API tokens, cloud creds
+
+**关键区别：**
+- 他们 = LLM流量层 (检查模型I/O)
+- 我们 = Agent行为层 (框架deny, code hooks, guard scripts)
+- 两层不冲突，而是互补
+- 他们需要额外LLM调用（成本），我们是零成本代码检查
+
+### Suggested Action
+- 内容草稿中更新：不要说官方没做安全，而是说我们做的是不同层面
+- 考虑集成官方guardrails（更新后）作为补充
+
+### Metadata
+- Source: github_pr #6095
+- Tags: security, guardrails, architecture, official
+
+
+---
+
+## [LRN-20260204-014] best_practice
+
+**Logged**: 2026-02-04T07:08:00Z
+**Priority**: medium
+**Status**: pending
+**Area**: security
+
+### Summary
+"Hardball" MFA Framework (PR #8197) — 用email OTP保护敏感agent操作
+
+### Details
+架构：
+1. Instinct Layer (SOUL.md) — AI人格层防御
+2. Operational Playbook (SECURITY.md) — 具体操作规程
+3. MFA Loop — 修改SOUL.md/openclaw.json时需要email OTP验证
+
+亮点：
+- OTP只存在RAM中，不写磁盘
+- 5分钟过期
+- Out-of-band delivery（不在同一channel显示）
+- 包含上下文（origin, action scope, timestamp）
+
+局限：
+- 仍依赖AI"选择"遵守MFA流程
+- 如果AI被injection绕过SECURITY.md，MFA也跟着被绕过
+- 不是代码强制的
+
+**与我们的方法对比：**
+- Hardball: prompt-based + MFA（需要AI配合）
+- 我们: code-enforced（不需要AI配合）
+- 但MFA的idea很好 — 可以在code层实现（git hooks requiring approval）
+
+### Suggested Action
+考虑在我们的framework中加入类似MFA的概念，但用code实现：
+- 修改AGENTS.md/SOUL.md → git hook要求Telegram确认
+- 已有的概念：elevated permissions需要Telegram user ID验证
+
+### Metadata
+- Source: github_pr #8197
+- Tags: security, mfa, hardball, prompt-defense
+

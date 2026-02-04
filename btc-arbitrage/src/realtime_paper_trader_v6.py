@@ -287,7 +287,8 @@ class PaperTrader:
                 pass
         
         pnl = (actual_exit - pos['entry']) * pos['size']
-        if pos['dir'] == 'NO': pnl = -pnl
+        # NO direction: pnl is already correct (sell price - buy price)
+        # Previous bug: was flipping sign for NO, making losses look like profits
         pos['exit'] = actual_exit
         pos['theoretical_exit'] = theoretical_exit
         pos['slippage_exit'] = actual_exit - theoretical_exit
@@ -446,10 +447,11 @@ class TradingEngine:
         k_bid = kalshi['yes_bid']
         k_ask = kalshi['yes_ask']
         
-        # STRATEGY 1: Mean Reversion at Extremes (Priority 3)
-        # mean_reversion_low DISABLED — 177 trades, 20.9% win rate, -$42.81 PnL
-        # Only keeping mean_reversion_high (144 trades, 92.4% win rate, +$27.46)
-        if k_bid > 0.80 and momentum_1m is not None and momentum_1m < 0.05:
+        # STRATEGY 1: Mean Reversion — ALL DISABLED
+        # mean_reversion_low: 180 trades, 20.6% WR, -$44.45 (real)
+        # mean_reversion_high: 153 trades, 7.2% WR, -$29.60 (real, was showing +$29.60 due to PnL bug)
+        # Only delay_arb is profitable across all versions
+        if False and k_bid > 0.80 and momentum_1m is not None and momentum_1m < 0.05:
             # K very high + BTC stable/down → buy NO (mean reversion)
             no_price = 1 - k_bid
             pos_id = self.trader.open('NO', no_price, kalshi['ticker'], market_type, 'mean_reversion_high')

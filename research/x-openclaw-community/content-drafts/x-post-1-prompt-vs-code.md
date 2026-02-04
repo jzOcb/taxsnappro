@@ -75,14 +75,19 @@ Prompt vs Code 对比：
 ---
 
 **帖6 (CTA):**
-OpenClaw官方也在做guardrail系统(PR #6095, 43👍)
-但那是LLM流量层 → 检查模型输入输出
-我们做的是agent行为层 → 框架级强制执行
+OpenClaw官方也在做guardrails(PR #6095, 34👍):
+• LlamaGuard/Gray Swan — LLM检查模型I/O
+• command-safety-guard — 阻止rm -rf等
+→ 这是LLM流量层，很重要
 
-两个层次不冲突，我们更底层。
+我们做的是agent行为层：
+• framework deny → 工具调用直接拒绝
+• pre-commit hooks → 代码提交前拦截
+• guard scripts → sub-agent输出验证
 
-Markdown里写的规则是建议。
-代码里写的规则是法律。
+两层互补，不是替代。但行为层成本=0（纯代码），流量层需要额外LLM调用。
+
+安全不是一个层就够的。两层都要。
 
 ---
 

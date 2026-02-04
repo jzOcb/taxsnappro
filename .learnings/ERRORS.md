@@ -73,3 +73,41 @@ An update that crashes the server IS a destructive command.
 - Always ask when shared reference material can't be read
 - Timed-out operations = unknown state, NOT success
 
+
+---
+
+## [ERR-20260204-003] update_cascade_failures
+
+**Logged**: 2026-02-04T14:17:00Z
+**Severity**: critical
+**Status**: resolved (by Jason — 7个问题手动修复)
+**Area**: infra
+
+### What Happened
+`update.run` 导致7个连锁问题：
+
+1. **browser.profiles配置不完整** — 缺少必需的color字段(必须是hex格式)
+2. **无效配置键** — AI猜测添加了不存在的auth/fallbacks字段
+3. **Model名称格式错误** — claude-sonnet-4.5(点号) → 应该是claude-sonnet-4-5(连字符)
+4. **Telegram channel丢失** — 配置过程中channel设置被清除
+5. **插件文件名不匹配** — openclaw.plugin.json vs clawdbot.plugin.json(改名遗留)
+   修复: `ln -s openclaw.plugin.json clawdbot.plugin.json`
+6. **插件SDK模块找不到** — Cannot find module 'openclaw/plugin-sdk'
+   修复: `git pull + pnpm install`
+7. **依赖导出不匹配** — discoverAuthStorage export missing
+   修复: `rm -rf node_modules + pnpm install + pnpm run build`
+
+### Root Cause
+AI（我）不知道正确的升级流程和配置格式，用update.run盲目更新。
+
+### 核心教训（来自Jason）
+1. **AI不知道正确配置格式 — 它会猜，猜错系统就崩**
+2. **改配置前先备份** — cp config.json config.json.bak
+3. **每次只改一个字段** — 出问题知道是哪个
+4. **不确定就查文档** — 不要让AI猜配置
+5. **更新后检查兼容性** — 文件名、模块名、依赖都可能变化
+6. **更新三步走** — git pull → pnpm install → pnpm run build
+
+### Prevention
+写入AGENTS.md作为Iron Law
+

@@ -4,6 +4,22 @@ This folder is home. Treat it that way.
 
 ## 🚨 Iron Laws (Never Violate)
 
+### -1. OpenClaw Updates: NEVER Blind Update
+**Incident (2026-02-04):** Ran `update.run` blindly → server crashed → Jason fixed 7 cascading failures manually.
+
+**The 7 failures:** config fields missing/invalid, model name format wrong (dots vs hyphens), Telegram channel wiped, plugin filenames mismatched (openclaw→clawdbot rename), SDK modules missing, dependency exports broken.
+
+**Update procedure (MANDATORY):**
+1. **Read upgrade notes/tips FIRST** — if a shared link can't be fetched, ASK what it says
+2. **Backup config:** `cp clawdbot.json clawdbot.json.bak`
+3. **Update three-step:** `git pull → pnpm install → pnpm run build`
+4. **Check compatibility:** filenames, module names, dependencies
+5. **Change one field at a time** — if something breaks, you know which one
+6. **NEVER guess config format** — check docs or `clawdbot doctor --fix`
+7. **NEVER use update.run for major version jumps** — do it manually
+
+**Core truth: AI doesn't know correct config formats. It guesses. Wrong guesses crash systems.**
+
 ### 0. Sub-agent Management: Full Lifecycle Control
 **Repeated incidents:** Sub-agent announces file paths Jason can't see; falsely claims "API not configured"; queue gets jammed by mid-run messages; stuck for hours with nobody noticing.
 

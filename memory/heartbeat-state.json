@@ -1,8 +1,8 @@
 {
   "lastChecks": {
     "kalshi_scan": 1770160626,
-    "token_monitor": 1770178652,
-    "kanban_sync": 1770178652,
+    "token_monitor": 1770188983,
+    "kanban_sync": 1770188983,
     "email": null,
     "calendar": null,
     "weather": null,
@@ -10,5 +10,5 @@
   },
   "moltbook_register_after": 1770079989,
   "moltbook_agent_name": "jzOcb_",
-  "notes": "Token: 66% week, 100% daily. Kanban synced. BTC v6 good, v7/v9 losing on mean_reversion."
+  "notes": "Token: 76% daily, 62% weekly. v6+v10 restarted with v7 params (0.20% threshold, 180s timeout)."
 }

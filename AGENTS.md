@@ -124,6 +124,30 @@ bash scripts/subagent-complete.sh <session_key>
 - **Content cron** runs `collect-daily-work.sh` which aggregates: git logs + work log + memory + STATUS changes
 - **If it's not logged, it doesn't get posted**
 
+## 🧠 Sub-agent Model Routing
+
+**Inspired by @interjc's model pickup strategy. Match task complexity to model capability and cost.**
+
+When spawning sub-agents via `sessions_spawn`, select model based on task type:
+
+| Tier | Model | When to Use | Cost |
+|------|-------|------------|------|
+| **Heavy** | `anthropic/claude-sonnet-4-20250514` | Coding, debugging, architecture, complex analysis, multi-step reasoning | ~$3/MTok in |
+| **Light** | `anthropic/claude-haiku-3.5-20241022` | Summarization, formatting, translation, data extraction, simple automation | ~$0.25/MTok in |
+| **Default** | Config default (Haiku) | Anything not clearly heavy | cheapest |
+
+**Decision process (apply at spawn time):**
+1. Task involves writing/modifying code → **Heavy (Sonnet)**
+2. Task involves debugging or complex logic → **Heavy (Sonnet)**
+3. Task involves research + synthesis + recommendations → **Heavy (Sonnet)**
+4. Task is read/summarize/format/translate/extract → **Light (Haiku)**
+5. Task is file organization, log cleanup, simple checks → **Light (Haiku)**
+6. Unsure → **Default (Haiku)**, upgrade if it fails
+
+**Override syntax:** `sessions_spawn(model="anthropic/claude-sonnet-4-20250514", task=...)`
+
+**Config default:** `agents.defaults.subagents.model` set to Haiku (cheapest). Heavy tasks explicitly override.
+
 ## 🔧 Mechanical Enforcement
 
 **Rules in markdown are suggestions. Code hooks are laws.**

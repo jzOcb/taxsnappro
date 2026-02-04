@@ -276,3 +276,27 @@
 2026-02-02 17:49:46 - Updated: claude-account-switcher → In Progress
 2026-02-02 17:49:46 - Sync complete — changes made
 2026-02-02 17:58:39 - Sync complete — no changes
+2026-02-02 18:42:44 - Updated: btc-arbitrage → TODO
+2026-02-02 18:42:44 - Sync complete — changes made
+2026-02-02 19:54:51 - Updated: btc-arbitrage → TODO
+2026-02-02 19:54:51 - Sync complete — changes made
+2026-02-02 19:56:44 - ✅ Bidirectional sync complete — no changes
+2026-02-02 19:57:02 - → STATUS → Kanban: btc-arbitrage → TODO
+2026-02-02 19:57:02 - ✅ Bidirectional sync complete — changes detected
+2026-02-02 19:57:14 - → STATUS → Kanban: btc-arbitrage → In Progress
+2026-02-02 19:57:14 - ✅ Bidirectional sync complete — changes detected
+2026-02-02 19:57:22 - 🔄 Detected manual move: btc-arbitrage (In Progress → Done)
+2026-02-02 19:57:22 - ↩ Kanban → STATUS: btc-arbitrage → 完成 (手动拖拽)
+2026-02-02 19:57:22 - ✅ Bidirectional sync complete — changes detected
+2026-02-02 19:57:33 - → STATUS → Kanban: btc-arbitrage → In Progress
+2026-02-02 19:57:33 - ✅ Bidirectional sync complete — changes detected
+2026-02-03 00:55:23 - → STATUS → Kanban: btc-arbitrage → In Progress
+2026-02-03 00:55:23 - 🔄 Detected manual move: openclaw-hardening (In Progress → Done)
+2026-02-03 00:55:23 - ↩ Kanban → STATUS: openclaw-hardening → 完成 (手动拖拽)
+2026-02-03 00:55:23 - ✅ Bidirectional sync complete — changes detected
+2026-02-04 04:17:27 - → STATUS → Kanban: ai-tax → In Progress
+2026-02-04 04:17:27 - → STATUS → Kanban: btc-arbitrage → In Progress
+2026-02-04 04:17:27 - → STATUS → Kanban: kalshi → In Progress
+2026-02-04 04:17:27 - → STATUS → Kanban: market-report → In Progress
+2026-02-04 04:17:27 - → STATUS → Kanban: openclaw-hardening → Done
+2026-02-04 04:17:27 - ✅ Bidirectional sync complete — changes detected

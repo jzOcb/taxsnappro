@@ -1,14 +1,14 @@
 {
   "lastChecks": {
-    "kalshi_scan": 1770001497,
-    "token_monitor": 1770001497,
-    "kanban_sync": 1770001497,
+    "kalshi_scan": 1770160626,
+    "token_monitor": 1770178652,
+    "kanban_sync": 1770178652,
     "email": null,
     "calendar": null,
     "weather": null,
-    "btc_arbitrage": 1770005784
+    "btc_arbitrage": 1770065621
   },
   "moltbook_register_after": 1770079989,
   "moltbook_agent_name": "jzOcb_",
-  "notes": "\u26a0\ufe0f Token critical: 11% today, 59% week. Kalshi clean. Kanban synced. Moltbook in ~21.8h."
+  "notes": "Token: 66% week, 100% daily. Kanban synced. BTC v6 good, v7/v9 losing on mean_reversion."
 }

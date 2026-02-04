@@ -134,19 +134,19 @@ When spawning sub-agents via `sessions_spawn`, select model based on task type:
 |------|-------|------------|------|
 | **Heavy** | `anthropic/claude-sonnet-4-20250514` | Coding, debugging, architecture, complex analysis, multi-step reasoning | ~$3/MTok in |
 | **Light** | `anthropic/claude-haiku-3.5-20241022` | Summarization, formatting, translation, data extraction, simple automation | ~$0.25/MTok in |
-| **Default** | Config default (Haiku) | Anything not clearly heavy | cheapest |
+| **Default** | Config default (Sonnet) | Anything not clearly light | safe choice |
 
 **Decision process (apply at spawn time):**
-1. Task involves writing/modifying code → **Heavy (Sonnet)**
+1. Task involves writing/modifying code → **Heavy (Sonnet)** — default, no override needed
 2. Task involves debugging or complex logic → **Heavy (Sonnet)**
 3. Task involves research + synthesis + recommendations → **Heavy (Sonnet)**
 4. Task is read/summarize/format/translate/extract → **Light (Haiku)**
 5. Task is file organization, log cleanup, simple checks → **Light (Haiku)**
-6. Unsure → **Default (Haiku)**, upgrade if it fails
+6. Unsure → **Default (Sonnet)**, Haiku too error-prone for ambiguous tasks
 
 **Override syntax:** `sessions_spawn(model="anthropic/claude-sonnet-4-20250514", task=...)`
 
-**Config default:** `agents.defaults.subagents.model` set to Haiku (cheapest). Heavy tasks explicitly override.
+**Config default:** `agents.defaults.subagents.model` set to Sonnet (safe). Only downgrade to Haiku for confirmed simple tasks.
 
 ## 🔧 Mechanical Enforcement
 

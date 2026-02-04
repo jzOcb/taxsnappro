@@ -266,3 +266,69 @@ openclaw-skills-security-checker虽然描述了pattern detection和whitelist管�
 - Source: community_research
 - Tags: security, code-vs-prompt
 
+
+---
+
+## [LRN-20260204-010] best_practice
+
+**Logged**: 2026-02-04T06:55:00Z
+**Priority**: medium
+**Status**: pending
+**Area**: config
+
+### Summary
+OpenCloudOS文章展示了企业微信+QQ完整接入流程，关键是plugin生态
+
+### Details
+从SegmentFault文章学到：
+1. 企业微信接入通过 `clawdbot plugins install @william.qian/simple-wecom`
+2. QQ接入通过 `sliverp/qqbot` GitHub项目
+3. 配置流程：安装plugin → config set channels → gateway restart
+4. 运维场景（PHP-FPM假死检测+自动重启）是超强卖点
+5. OpenCloudOS作为服务器OS推荐使用
+
+对我们的价值：
+- 说明plugin生态是扩展中国平台支持的关键路径
+- 运维自动化是一个我们没探索的方向
+- 企业微信+QQ接入教程已有，我们可以直接参考
+
+### Metadata
+- Source: community_research (SF article "AI运维同事")
+- Tags: wechat, qq, enterprise, devops, plugin
+
+
+---
+
+## [LRN-20260204-011] knowledge_gap
+
+**Logged**: 2026-02-04T06:55:00Z
+**Priority**: high
+**Status**: pending
+**Area**: infra
+
+### Summary
+OpenClaw进入Stabilisation Mode — 不再接受新feature PR，Skills是唯一扩展路径
+
+### Details
+Issue #5799 (21👍) 宣布：
+- PR每两分钟一个，团队无法review
+- 新feature requests会被自动关闭
+- 只接受bug reports
+- 推荐路径：Skills > CLIs/tooling > Fork
+- "Build around OpenClaw, not into it"
+
+对我们的影响：
+1. 我们的agent-guardrails作为skill更有价值了（不需要改core）
+2. 发布到ClawHub是正确策略
+3. 任何需要core改动的想法都不现实
+4. 稳定性是当前最大关注点
+
+### Suggested Action
+- 确认我们所有改进都是skill/config层面，不依赖core
+- 尽快发布agent-guardrails到ClawHub
+- 考虑把audit-skill.sh也包装成ClawHub skill
+
+### Metadata
+- Source: github_issue #5799
+- Tags: openclaw, strategy, skills, stabilisation
+

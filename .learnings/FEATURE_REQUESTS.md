@@ -32,3 +32,36 @@ medium
 - Related Features: agent-guardrails, security
 
 ---
+
+---
+
+## [FEAT-20260204-002] update_openclaw
+
+**Logged**: 2026-02-04T07:05:00Z
+**Priority**: medium
+**Status**: pending
+**Area**: infra
+
+### Requested Capability
+更新OpenClaw从v2026.1.24到v2026.2.2
+
+### User Context
+当前版本缺少：
+- 飞书官方plugin
+- Web UI Agents dashboard
+- QMD memory backend
+- agents.defaults.subagents.thinking配置
+- System prompt safety guardrails
+- Kimi K2.5 + MiniMax OAuth支持
+- 等多项改进
+
+### Complexity Estimate
+simple (clawdbot gateway update.run)
+
+### Suggested Implementation
+等Jason确认后执行更新。需要备份配置。
+
+### Metadata
+- Frequency: one-time
+- Related Features: memory, subagent, security
+

@@ -332,3 +332,37 @@ Issue #5799 (21👍) 宣布：
 - Source: github_issue #5799
 - Tags: openclaw, strategy, skills, stabilisation
 
+
+---
+
+## [LRN-20260204-012] knowledge_gap
+
+**Logged**: 2026-02-04T07:00:00Z
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Summary
+OpenClaw v2026.2.2 (released TODAY) 加入了 agents.defaults.subagents.thinking 配置
+
+### Details
+新版本关键更新：
+1. 飞书官方plugin支持（PR #7313，by openclaw-cn）
+2. Web UI Agents dashboard（管理agent文件、工具、skills）
+3. QMD backend for memory（新的可选memory系统）
+4. **agents.defaults.subagents.thinking** — 可以设置默认sub-agent思考级别
+
+对我们的影响：
+- 应该检查并配置 subagents.thinking 以优化sub-agent表现
+- 飞书官方支持说明中国市场已被官方重视
+- QMD memory backend可能比我们当前的memory系统更好
+
+### Suggested Action
+1. 检查当前版本是否是最新
+2. 配置 agents.defaults.subagents.thinking
+3. 研究QMD memory backend是否值得采用
+
+### Metadata
+- Source: github_release v2026.2.2
+- Tags: openclaw, release, config, memory
+

@@ -88,6 +88,10 @@
     "openclaw-skills-security-checker": {
       "version": "0.1.0",
       "installedAt": 1770187704691
+    },
+    "soulcraft": {
+      "version": "1.0.0",
+      "installedAt": 1770188038026
     }
   }
 }

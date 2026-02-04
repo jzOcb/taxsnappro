@@ -349,6 +349,9 @@ SegmentFault上在2026-01-31到02-04短短5天内出现了**20+篇**深度OpenCl
 3. **"OpenClaw安全加固：不是prompt，是code"** — 对标"CEO预警不要安装"系列文章，提供真正的解决方案
 4. **"Sub-agent管理的血泪教训"** — 真实踩坑故事，代码级解决方案
 
+### 🔵 OpenClaw官方也在做Guardrails（PR #6095, 43👍）
+OpenClaw官方repo最热门的PR之一：**模块化guardrail插件系统**（pre/post消息拦截，防prompt injection）。43个upvote说明安全是全社区最关心的方向。但它是plugin级别的（拦截LLM流量），而我们是agent行为级别的（框架级deny + git hooks + guard scripts）。**两个层次不冲突，我们的更底层。**
+
 ### 🟢 可以写的（有需求但竞争多）
 5. **中文社区工具推荐** — find-skills、agent-guardrails
 6. **Kalshi交易自动化** — 独特用例，无人写过

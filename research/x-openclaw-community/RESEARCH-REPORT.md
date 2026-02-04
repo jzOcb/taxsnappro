@@ -294,6 +294,28 @@ SegmentFault上在2026-01-31到02-04短短5天内出现了**20+篇**深度OpenCl
 
 ---
 
+## 十点五、Hacker News & 全球讨论热度
+
+### HN Stories（按points排序）
+| Points | Comments | 标题 | 日期 |
+|--------|----------|------|------|
+| 666 | 370 | "OpenClaw – Moltbot Renamed Again" | 01-30 |
+| 518 | 222 | "NanoClaw – Clawdbot in 500 lines TS with Apple container isolation" | 02-01 |
+| 405 | 261 | "Clawdbot - open source personal AI assistant" | 01-26 |
+| 280 | **881** | "Moltbook – A social network for moltbots" (最多评论！) | 01-28 |
+| 249 | 227 | "Clawdbot Renames to Moltbot" | 01-27 |
+| 178 | 87 | **"Malicious skills targeting Claude Code and Moltbot users"** | 01-30 |
+| 177 | 72 | **"1-Click RCE to steal your Moltbot data and keys"** | 02-01 |
+| 32 | 14 | "Clawdbot Bought Me a Car" | 01-25 |
+
+**关键发现：**
+- 总计640+ HN stories（clawdbot 159 + moltbot 479 + openclaw 2）
+- 安全相关story（恶意skills、RCE漏洞）也获得了高关注
+- Moltbook社交网络引发最多讨论（881 comments），说明AI社交是超级热点
+- "NanoClaw"（500行TS复刻版）说明极简化是一个方向
+
+---
+
 ## 十一、SegmentFault全量文章索引（40+篇，2026-01-16~02-04）
 
 ### 按时间线排列的爆发过程

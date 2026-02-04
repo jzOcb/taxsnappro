@@ -177,6 +177,33 @@ bash scripts/post-create-validate.sh <file_path>
 - [ ] Am I "simplifying" away important validation?
 - [ ] Does output go through the validated pipeline?
 
+## 📝 WAL Protocol (Write-Ahead Logging)
+**Inspired by proactive-agent v3.0 (33⭐ on ClawHub). "The urge to respond is the enemy."**
+
+### Trigger — SCAN EVERY USER MESSAGE FOR:
+- ✏️ **Corrections** — "不对", "Actually...", "应该是X不是Y"
+- 📍 **Proper nouns** — 名字、地点、公司、产品
+- 🎨 **Preferences** — "我喜欢...", "不要...", "用这个方式..."
+- 📋 **Decisions** — "就这样吧", "用X方案", "先做Y"
+- 🔢 **Specific values** — 数字、日期、ID、URL
+
+### The Protocol
+If ANY of these appear:
+1. **STOP** — 不要立即回复
+2. **WRITE** — 更新 SESSION-STATE.md（或 memory/今天.md）
+3. **THEN** — 回复用户
+
+**Why:** 上下文压缩会丢失这些细节。写入文件后它们永远不会丢失。
+
+## 📋 Structured Learning (.learnings/)
+
+When errors occur or learnings emerge, log to `.learnings/`:
+- `LEARNINGS.md` — 纠正、知识差距、最佳实践
+- `ERRORS.md` — 命令失败、异常
+- `FEATURE_REQUESTS.md` — 能力请求
+Format: `[TYPE-YYYYMMDD-XXX]` with Priority/Status/Area fields.
+When a learning repeats or is broadly applicable → **promote to AGENTS.md or TOOLS.md**.
+
 ## 📋 Every Session
 
 1. Read `SOUL.md` — who you are
@@ -185,6 +212,7 @@ bash scripts/post-create-validate.sh <file_path>
 4. **Main session only:** Also read `MEMORY.md`
 5. **Creating/modifying projects:** Read `SECURITY.md`
 6. **Check for pending skill updates:** `cat .pending-skill-updates.txt`
+7. **If SESSION-STATE.md exists:** Read it for active task context
 
 If `BOOTSTRAP.md` exists, follow it, then delete it.
 

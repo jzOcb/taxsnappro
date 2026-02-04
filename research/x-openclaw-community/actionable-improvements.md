@@ -116,6 +116,45 @@
 
 ---
 
+---
+
+### 8. Proactive-Agent Skill v3.0 (33⭐) — 最有深度的架构设计
+**他们做的（v3.0新增，极其精妙）：**
+
+**WAL Protocol (Write-Ahead Logging):**
+- 扫描每条用户消息中的：纠正、专有名词、偏好、决策、草稿修改、具体数值
+- 发现这些→先写入SESSION-STATE.md→再回复用户
+- "The urge to respond is the enemy" — 感觉明显不需要记的，恰恰最需要记
+
+**Working Buffer Protocol:**
+- 60%上下文时开始记录每条交互到working-buffer.md
+- 压缩后先读buffer，提取重要信息
+- Buffer是文件→压缩不会丢失
+
+**Compaction Recovery:**
+- 自动触发条件：session以<summary>开头、用户说"where were we"
+- 恢复顺序：buffer → SESSION-STATE → daily notes → 全局搜索
+- **永远不问"我们在讨论什么？"** — buffer里有
+
+**ADL Protocol (Anti-Drift Limits):**
+- 禁止为了"看起来聪明"添加复杂度
+- 优先级：Stability > Explainability > Reusability > Scalability > Novelty
+
+**VFM Protocol (Value-First Modification):**
+- 改进前打分：高频(3x)、减少失败(3x)、减轻用户负担(2x)、节省成本(2x)
+- 加权分<50就不做
+
+**💡 我们应该采纳的：**
+1. **SESSION-STATE.md** — 我们没有这个！当前任务状态应该有专门文件
+2. **WAL Protocol** — 先写后回复。我们的Iron Laws已经有类似思想但不够系统化
+3. **Working Buffer** — 压缩前的安全网。我们的context经常在长对话中丢失
+4. **VFM scoring** — 改进前先评分，避免无意义的改动
+
+**实施难度：** 中。需要修改session管理逻辑。
+**预期收益：** 极高。直接解决Moltbook 542 votes那个中文帖的所有问题。
+
+---
+
 ## 🔴 立即实施清单 (Tonight)
 
 1. [x] 研究完成，报告写好

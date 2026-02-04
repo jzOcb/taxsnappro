@@ -9,3 +9,11 @@ kalshi/
 __pycache__/
 .local/
 notion.env
+
+# BTC arbitrage runtime data (too large for git)
+btc-arbitrage/data/rt_v*.json
+btc-arbitrage/logs/rt_v*.log
+btc_hourly_report.log
+heartbeat_monitor.log
+moltbook_registration.log
+get-pip.py

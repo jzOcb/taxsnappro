@@ -1,9 +1,0 @@
-{
-  "duration_min": 10,
-  "pnl": 0,
-  "signals": [],
-  "trades": [],
-  "flash_crashes": [],
-  "websocket_mode": "REST",
-  "complete": false
-}

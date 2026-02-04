@@ -386,7 +386,18 @@ SegmentFault上在2026-01-31到02-04短短5天内出现了**20+篇**深度OpenCl
 
 ### 安全审计
 - **Argus Security扫描发现512个安全问题（8个CRITICAL）** — 6👍
+  - 8个CRITICAL：明文存储OAuth token、无加密
+  - 190个Semgrep SAST发现
+  - 255个密钥泄露（245个API key、2个私钥）
+  - 20个CVE依赖漏洞
 - **默认配置暴露控制UI** — issue #2245
+- **🚨 活跃恶意软件活动（2026-02-04 TODAY）** — issue #8490
+  - 多个ClawHub skills在分发恶意软件
+  - 隐藏base64编码shell命令，下载执行任意代码
+  - 这正是我们agent-guardrails要防御的场景
+- **编码/混淆命令绕过安全过滤** — issue #8592
+  - base64编码payload可以绕过现有的模式匹配
+  - PR #5923 "Operation CLAW FORTRESS" 正在修复
 
 ### 总量
 - 1265个open issues

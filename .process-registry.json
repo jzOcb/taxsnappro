@@ -1,7 +1,28 @@
 {
   "btc-v6": {
     "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v6.py 480",
-    "duration_min": 480,
+    "duration_min": 0,
+    "auto_restart": true,
+    "max_restarts": 5,
+    "restart_cooldown": 30
+  },
+  "btc-v7": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v7.py 720",
+    "duration_min": 0,
+    "auto_restart": true,
+    "max_restarts": 5,
+    "restart_cooldown": 30
+  },
+  "btc-v9": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v9.py 480",
+    "duration_min": 0,
+    "auto_restart": true,
+    "max_restarts": 5,
+    "restart_cooldown": 30
+  },
+  "btc-v10": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v10.py 480",
+    "duration_min": 0,
     "auto_restart": true,
     "max_restarts": 5,
     "restart_cooldown": 30

@@ -1,0 +1,100 @@
+# Rules in Markdown Are Suggestions. Code Hooks Are Laws.
+
+## Why your AI agent keeps ignoring your carefully written standards
+
+You spend hours building a validation pipeline. Scoring system. Verification logic. Data source checks. You document everything in your AGENTS.md, add clear rules, bold the important parts.
+
+Then your AI agent writes a "quick version" that bypasses all of it.
+
+Sound familiar?
+
+## This isn't a prompting problem
+
+The instinct is to write stronger rules. More specific instructions. Bigger system prompts. But here's what I've learned from running AI agents in production:
+
+**Prompt-based rules degrade with context length.** The more tokens in the conversation, the less reliably the agent follows your AGENTS.md. By the time it's deep into a coding task, those carefully written rules are background noise.
+
+Research backs this up:
+
+- Anthropic's own docs say: *"Unlike CLAUDE.md instructions which are advisory, hooks are deterministic"*
+- Cursor's engineering team found: *"Opus 4.5 tends to stop earlier and take shortcuts"*
+
+## The enforcement hierarchy
+
+Not all enforcement methods are created equal:
+
+1. **Code hooks** (pre-commit, creation guards) → 100% reliable
+2. **Architectural constraints** (import registries) → 95% reliable
+3. **Self-verification loops** → 80% reliable
+4. **Prompt rules** (AGENTS.md) → 60-70% reliable
+5. **Markdown documentation** → 40-50% reliable ⚠️
+
+Most people are fighting at levels 4-5. The real leverage is at 1-2.
+
+## The incident that started this
+
+I had a production system with a complete validation pipeline — scoring, verification, data source checks, the works.
+
+My AI agent was tasked with creating a report. Instead of using the validated pipeline, it created a "simplified version" that:
+
+- Skipped scoring entirely
+- Sent unverified output
+- Bypassed the verification step
+- Produced results that looked right but had no validation behind it
+
+Hours of careful engineering, completely ignored. Not because the agent was malicious — because "quick and simple" is the path of least resistance when you're an LLM optimizing for helpfulness.
+
+## The fix: mechanical enforcement
+
+I stopped writing rules and started writing code.
+
+**Git pre-commit hooks** that literally block commits containing bypass patterns like "simplified version", "quick version", "temporary", or "TODO: integrate". Also scans for hardcoded secrets.
+
+**Pre-creation checks** that show the agent every existing module and function before it creates a new file. It's structurally difficult to "not notice" existing code when it's dumped in front of you.
+
+**Post-creation validation** that detects duplicate functions across files, missing imports from established modules, and bypass patterns in new code.
+
+**Import registries** — each project gets an `__init__.py` that explicitly lists validated functions. New scripts must import from the registry, not reimplement.
+
+```python
+# This is the ONLY approved interface for this project
+from .core import validate_data, score_item, generate_report
+
+# New scripts MUST import from here, not reimplement
+```
+
+## The key insight
+
+A git hook doesn't care about context length. It doesn't get tired. It doesn't optimize for helpfulness over correctness. It just runs.
+
+When the agent tries to commit code with "simplified version of scoring" — blocked. When it creates a file without importing from the registry — flagged. When it hardcodes an API key — rejected.
+
+No negotiation. No "I understand the rules but in this case..." Just enforcement.
+
+## Open source
+
+I packaged all of this into a toolkit: **Agent Guardrails**.
+
+One command installs everything into your project:
+
+```bash
+bash scripts/install.sh /path/to/your/project
+```
+
+You get:
+
+- Pre-commit hooks blocking bypass patterns and secrets
+- Pre/post file creation checks
+- Import registry templates
+- A battle-tested AGENTS.md template
+- Secret scanning
+
+It works with any AI coding agent — Claude Code, Cursor, Codex, whatever you're using.
+
+**GitHub: github.com/jzOcb/agent-guardrails**
+
+## The bottom line
+
+Stop writing more markdown rules for your AI agents. Start writing code that mechanically prevents the behavior you don't want.
+
+Rules are suggestions. Code hooks are laws.

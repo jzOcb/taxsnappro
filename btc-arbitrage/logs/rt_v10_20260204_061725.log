@@ -1,0 +1,13 @@
+2026-02-04T06:17:25.431642 
+======================================================================
+v10 - WebSocket + Enhanced Features
+======================================================================
+Duration: 480min | Start: 06:17:25
+New Features: WebSocket real-time updates, flash crash detection,
+              dynamic position sizing, enhanced mean reversion
+Data Mode: WebSocket
+Markets: 15min + Hourly
+======================================================================
+
+2026-02-04T06:18:25.506853 [   60s] BTC: $76,429.20 (4ex, -0.006%) | REST | 15m: N/A | 1h: N/A | P&L: $+0.00 (0, 0.0% WR, 0 flash)
+2026-02-04T06:19:25.583361 [  120s] BTC: $76,406.66 (4ex, -0.029%) | REST | 15m: N/A | 1h: N/A | P&L: $+0.00 (0, 0.0% WR, 0 flash)

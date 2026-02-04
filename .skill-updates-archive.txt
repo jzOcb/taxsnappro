@@ -1,0 +1,30 @@
+---
+Date: 2026-02-02 21:45 UTC
+Commit: fea7d5b (and eddadeb)
+Skill: agent-guardrails
+Files: scripts/detect-enforcement-improvement.sh scripts/auto-update-skills.sh scripts/auto-commit-skill-updates.sh SKILL-UPDATE-WORKFLOW.md
+
+Commit Message:
+Add automatic skill update feedback loop + semi-automatic mode
+
+This is a META enforcement improvement:
+- Detects when enforcement improvements happen
+- Auto-creates tasks to update skills
+- Semi-automatic commit with confirmation
+
+Action needed:
+1. Review the enforcement workflow improvements (3 scripts + 1 doc)
+2. Extract the automatic feedback loop pattern
+3. Add to skills/agent-guardrails/:
+   - New script: create-skill-update-loop.sh (for other projects to install)
+   - Reference doc: skill-update-feedback.md
+   - Update SKILL.md: Document the new meta-enforcement pattern
+4. Commit skill changes
+5. Mark this task done
+
+Why this matters:
+This is THE solution to "enforcement improvements don't flow back to skills."
+Every project should be able to install this feedback loop.
+
+---
+

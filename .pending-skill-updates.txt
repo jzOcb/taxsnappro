@@ -1,0 +1,25 @@
+---
+Date: 2026-02-03 23:18 UTC
+Commit: d0adb42
+Skill: agent-guardrails
+Files: scripts/post-create-validate.sh
+
+Commit Message:
+feat: community skills integration — parity scanner, security audit merge, sub-agent controls
+
+- kalshi/parity_scanner.py: Polymarket arb logic adapted for Kalshi (risk scoring, stale detection, fee calc)
+- research/: downloaded polymarket-arb and security-audit skills for reference
+- skills/agent-guardrails/: check-secrets.sh enhanced with OWASP patterns and dep scanning
+- scripts/: sub-agent lifecycle management (spawn, monitor, guard, complete)
+- content/: OpenClaw article drafts and images
+- memory/: daily log and work log for 2026-02-03
+- AGENTS.md: Iron Law #0 (sub-agent management) + mechanical enforcement
+
+Action needed:
+1. Review the enforcement improvement
+2. Extract reusable patterns/scripts
+3. Update skills/agent-guardrails/
+4. Commit skill changes
+5. Mark this task done
+
+---

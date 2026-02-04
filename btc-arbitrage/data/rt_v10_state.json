@@ -1,0 +1,21 @@
+{
+  "elapsed_sec": 300,
+  "start_time": 1770187578.7380812,
+  "trader": {
+    "balance": 1000,
+    "initial": 1000,
+    "pnl": 0,
+    "positions": [],
+    "trades": [],
+    "session_stats": {
+      "wins": 0,
+      "losses": 0,
+      "total": 0
+    },
+    "consecutive_wins": 0
+  },
+  "signals": [],
+  "flash_crashes": [],
+  "websocket_mode": "WebSocket",
+  "last_checkpoint": 1770187878.9072423
+}

@@ -2,6 +2,7 @@
 """
 Real-time Paper Trader v6 - RESEARCH-NOTES.md 改进版
 Based on: btc-arbitrage/RESEARCH-NOTES.md Priority 1-5
+[v6.1] Added orderbook depth-based execution simulation
 
 Key Changes:
 1. BTC momentum filter for crash detection (Priority 1)
@@ -19,6 +20,11 @@ import websockets
 from datetime import datetime
 from urllib import request
 from collections import deque
+try:
+    from orderbook_executor import get_real_entry_price, get_real_exit_price
+    HAS_ORDERBOOK = True
+except ImportError:
+    HAS_ORDERBOOK = False
 
 class BTCPriceFeed:
     def __init__(self):
@@ -236,11 +242,30 @@ class PaperTrader:
         self.last_exit_time = 0
     
     def open(self, direction, price, ticker, market_type, strategy):
-        cost = self.trade_size * price
+        # Use orderbook depth for real execution price
+        theoretical_price = price
+        actual_price = price
+        fill_info = None
+        if HAS_ORDERBOOK:
+            try:
+                real_price, fill_info = get_real_entry_price(ticker, direction, self.trade_size)
+                if real_price and real_price > 0:
+                    actual_price = real_price
+            except Exception:
+                pass  # Fall back to theoretical price
+        
+        cost = self.trade_size * actual_price
         if cost > self.balance: return None
         pos = {'id': len(self.positions), 'dir': direction, 'size': self.trade_size,
-               'entry': price, 'time': time.time(), 'ticker': ticker, 'open': True,
+               'entry': actual_price, 'theoretical_entry': theoretical_price,
+               'slippage_entry': actual_price - theoretical_price,
+               'time': time.time(), 'ticker': ticker, 'open': True,
                'market_type': market_type, 'strategy': strategy}
+        if fill_info:
+            pos['entry_fill'] = {'vwap': fill_info.get('vwap', 0), 
+                                 'levels': fill_info.get('levels_consumed', 0),
+                                 'slippage': fill_info.get('slippage', 0),
+                                 'partial': fill_info.get('partial', False)}
         self.positions.append(pos)
         self.balance -= cost
         return pos['id']
@@ -248,13 +273,33 @@ class PaperTrader:
     def close(self, pos_id, exit_price):
         pos = next((p for p in self.positions if p['id'] == pos_id and p['open']), None)
         if not pos: return None
-        pnl = (exit_price - pos['entry']) * pos['size']
+        
+        # Use orderbook depth for real exit price
+        theoretical_exit = exit_price
+        actual_exit = exit_price
+        fill_info = None
+        if HAS_ORDERBOOK:
+            try:
+                real_price, fill_info = get_real_exit_price(pos['ticker'], pos['dir'], pos['size'])
+                if real_price and real_price > 0:
+                    actual_exit = real_price
+            except Exception:
+                pass
+        
+        pnl = (actual_exit - pos['entry']) * pos['size']
         if pos['dir'] == 'NO': pnl = -pnl
-        pos['exit'] = exit_price
+        pos['exit'] = actual_exit
+        pos['theoretical_exit'] = theoretical_exit
+        pos['slippage_exit'] = actual_exit - theoretical_exit
         pos['pnl'] = pnl
         pos['open'] = False
         pos['close_time'] = time.time()
-        self.balance += pos['size'] * exit_price
+        if fill_info:
+            pos['exit_fill'] = {'vwap': fill_info.get('vwap', 0),
+                                'levels': fill_info.get('levels_consumed', 0),
+                                'slippage': fill_info.get('slippage', 0),
+                                'partial': fill_info.get('partial', False)}
+        self.balance += pos['size'] * actual_exit
         self.pnl += pnl
         self.trades.append(pos.copy())
         self.last_exit_time = time.time()
@@ -402,15 +447,9 @@ class TradingEngine:
         k_ask = kalshi['yes_ask']
         
         # STRATEGY 1: Mean Reversion at Extremes (Priority 3)
-        # Only trade when K is at extremes (<20¢ or >80¢)
-        if k_bid < 0.20 and momentum_1m is not None and momentum_1m > -0.05:
-            # K very low + BTC stable/up → buy YES (mean reversion)
-            pos_id = self.trader.open('YES', k_ask, kalshi['ticker'], market_type, 'mean_reversion_low')
-            if pos_id is not None:
-                self._dual_log(f"[{elapsed:5d}s] 📉 {market_type.upper()} MEAN-REV: K@{k_ask:.2f} (extreme low) + BTC stable → YES")
-                self.signals.append({'type': 'mean_rev_low', 'market': market_type, 'time': elapsed})
-        
-        elif k_bid > 0.80 and momentum_1m is not None and momentum_1m < 0.05:
+        # mean_reversion_low DISABLED — 177 trades, 20.9% win rate, -$42.81 PnL
+        # Only keeping mean_reversion_high (144 trades, 92.4% win rate, +$27.46)
+        if k_bid > 0.80 and momentum_1m is not None and momentum_1m < 0.05:
             # K very high + BTC stable/down → buy NO (mean reversion)
             no_price = 1 - k_bid
             pos_id = self.trader.open('NO', no_price, kalshi['ticker'], market_type, 'mean_reversion_high')

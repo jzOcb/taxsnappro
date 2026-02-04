@@ -1,0 +1,13 @@
+{
+  "elapsed_sec": 300,
+  "start_time": 1770060606.9587772,
+  "trader": {
+    "balance": 1000,
+    "initial": 1000,
+    "pnl": 0,
+    "positions": [],
+    "trades": []
+  },
+  "signals": [],
+  "last_checkpoint": 1770060906.9640498
+}

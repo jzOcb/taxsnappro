@@ -1,0 +1,129 @@
+2026-02-03T19:00:59.348658 
+======================================================================
+v8 — Best-of-Breed: V6 MR High + V7 Delay Arb
+======================================================================
+Duration: 480min | Start: 19:00:59 UTC
+Strategies:
+  MR-High: K > 0.8 + momentum < 0.05 → buy NO (V6 params, 100% WR)
+  Delay Arb: sustained momentum > 0.2% → follow BTC (V7 params, 100% WR)
+Risk: cooldown=5s, max_pos=5/mkt, timeout=180s, profit=8.0%
+======================================================================
+
+2026-02-03T19:01:00.349935 [    1s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.50 ask=0.60 ttc=840s can_enter=True(ok)
+2026-02-03T19:01:30.380620 [   31s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.41 ask=0.44 ttc=810s can_enter=True(ok)
+2026-02-03T19:01:59.408463 [   60s] BTC: $72,911.80 (-0.084%) | Brackets: 1 | Open: 0 | Trades: 0 (MR:0 DA:0) | P&L: $+0.00
+2026-02-03T19:02:00.412474 [   61s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.43 ask=0.46 ttc=780s can_enter=True(ok)
+2026-02-03T19:02:30.439852 [   91s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.28 ask=0.29 ttc=750s can_enter=True(ok)
+2026-02-03T19:02:59.466539 [  120s] BTC: $72,962.28 (-0.001%) | Brackets: 1 | Open: 0 | Trades: 0 (MR:0 DA:0) | P&L: $+0.00
+2026-02-03T19:03:00.469828 [  121s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.30 ask=0.33 ttc=720s can_enter=True(ok)
+2026-02-03T19:03:30.496436 [  151s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.29 ask=0.32 ttc=690s can_enter=True(ok)
+2026-02-03T19:03:59.527247 [  180s] BTC: $73,072.93 (-0.037%) | Brackets: 1 | Open: 0 | Trades: 0 (MR:0 DA:0) | P&L: $+0.00
+2026-02-03T19:04:00.528169 [  181s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.39 ask=0.43 ttc=659s can_enter=True(ok)
+2026-02-03T19:04:30.564556 [  211s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.42 ask=0.45 ttc=629s can_enter=True(ok)
+2026-02-03T19:04:59.592348 [  240s] BTC: $73,087.62 (-0.083%) | Brackets: 1 | Open: 0 | Trades: 0 (MR:0 DA:0) | P&L: $+0.00
+2026-02-03T19:05:00.594869 [  241s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.50 ask=0.52 ttc=599s can_enter=True(ok)
+2026-02-03T19:05:30.623236 [  271s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.40 ask=0.43 ttc=569s can_enter=True(ok)
+2026-02-03T19:05:59.651866 [  300s] BTC: $73,192.41 (+0.120%) | Brackets: 1 | Open: 0 | Trades: 0 (MR:0 DA:0) | P&L: $+0.00
+2026-02-03T19:06:00.653100 [  301s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.44 ask=0.45 ttc=539s can_enter=True(ok)
+2026-02-03T19:06:02.655112 [  303s] 🎯 DELAY KXBTC15M-26FEB031415-15: BTC +0.206%(1m) +0.206%(30s) → YES@0.45
+2026-02-03T19:06:12.668150 [  313s] ✅ delay_arb KXBTC15M-26FEB031415-15 CLOSE (PROFIT): $+3.50 | Total: $+3.50
+2026-02-03T19:06:30.684861 [  331s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.80 ask=0.81 ttc=509s can_enter=True(ok)
+2026-02-03T19:06:42.697070 [  343s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.82 → NO@0.18 (mom=-0.002%)
+2026-02-03T19:06:59.719534 [  360s] BTC: $73,441.85 (-0.033%) | Brackets: 1 | Open: 1 | Trades: 1 (MR:0 DA:1) | P&L: $+3.50
+2026-02-03T19:07:00.720689 [  361s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.82 ask=0.84 ttc=479s can_enter=True(ok)
+2026-02-03T19:07:12.739188 [  373s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.50 | Total: $+3.00
+2026-02-03T19:07:17.742900 [  378s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.85 → NO@0.15 (mom=-0.071%)
+2026-02-03T19:07:30.764138 [  391s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.85 ask=0.87 ttc=449s can_enter=True(ok)
+2026-02-03T19:07:42.781750 [  403s] ✅ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (PROFIT): $+0.20 | Total: $+3.20
+2026-02-03T19:07:47.787018 [  408s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.81 → NO@0.19 (mom=-0.074%)
+2026-02-03T19:07:59.806036 [  420s] BTC: $73,372.70 (-0.026%) | Brackets: 1 | Open: 1 | Trades: 3 (MR:2 DA:1) | P&L: $+3.20
+2026-02-03T19:08:00.806695 [  421s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.81 ask=0.83 ttc=419s can_enter=True(ok)
+2026-02-03T19:08:13.825625 [  434s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.70 | Total: $+2.50
+2026-02-03T19:08:18.830278 [  439s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.86 → NO@0.14 (mom=+0.048%)
+2026-02-03T19:08:30.847776 [  451s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.86 ask=0.88 ttc=389s can_enter=True(ok)
+2026-02-03T19:08:59.894837 [  480s] BTC: $73,457.55 (+0.007%) | Brackets: 1 | Open: 1 | Trades: 4 (MR:3 DA:1) | P&L: $+2.50
+2026-02-03T19:09:00.897335 [  481s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.87 ask=0.88 ttc=359s can_enter=True(ok)
+2026-02-03T19:09:30.940657 [  511s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.85 ask=0.87 ttc=329s can_enter=True(ok)
+2026-02-03T19:09:43.959267 [  524s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-1.00 | Total: $+1.50
+2026-02-03T19:09:48.965073 [  529s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.94 → NO@0.06 (mom=-0.014%)
+2026-02-03T19:09:48.965559 [  529s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+1.30
+2026-02-03T19:09:53.970820 [  534s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.94 → NO@0.06 (mom=-0.015%)
+2026-02-03T19:09:53.971286 [  534s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+1.10
+2026-02-03T19:09:58.975881 [  539s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.94 → NO@0.06 (mom=-0.015%)
+2026-02-03T19:09:58.976327 [  539s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+0.90
+2026-02-03T19:09:59.979145 [  540s] BTC: $73,508.51 (-0.021%) | Brackets: 1 | Open: 0 | Trades: 8 (MR:7 DA:1) | P&L: $+0.90
+2026-02-03T19:10:00.980538 [  541s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.94 ask=0.96 ttc=299s can_enter=False(cooldown)
+2026-02-03T19:10:03.984299 [  544s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.94 → NO@0.06 (mom=+0.039%)
+2026-02-03T19:10:03.984974 [  544s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+0.70
+2026-02-03T19:10:19.000906 [  559s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.97 → NO@0.03 (mom=+0.039%)
+2026-02-03T19:10:19.001610 [  559s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+0.50
+2026-02-03T19:10:31.013960 [  571s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.97 ask=0.99 ttc=269s can_enter=True(ok)
+2026-02-03T19:10:35.017428 [  575s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.97 → NO@0.03 (mom=+0.036%)
+2026-02-03T19:10:35.017896 [  575s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+0.30
+2026-02-03T19:10:40.022636 [  580s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.97 → NO@0.03 (mom=+0.016%)
+2026-02-03T19:10:40.023170 [  580s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.20 | Total: $+0.10
+2026-02-03T19:10:45.030485 [  585s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.98 → NO@0.02 (mom=-0.019%)
+2026-02-03T19:10:45.030972 [  585s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.00
+2026-02-03T19:10:50.034929 [  590s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.98 → NO@0.02 (mom=+0.033%)
+2026-02-03T19:10:50.035499 [  590s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.10
+2026-02-03T19:10:55.040302 [  595s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.98 → NO@0.02 (mom=-0.059%)
+2026-02-03T19:10:55.040746 [  595s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.20
+2026-02-03T19:11:00.044843 [  600s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.98 → NO@0.02 (mom=-0.085%)
+2026-02-03T19:11:00.045466 [  600s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.30
+2026-02-03T19:11:00.045572 [  600s] BTC: $73,645.16 (-0.085%) | Brackets: 1 | Open: 0 | Trades: 16 (MR:15 DA:1) | P&L: $-0.30
+2026-02-03T19:11:01.046729 [  601s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.98 ask=0.99 ttc=239s can_enter=False(cooldown)
+2026-02-03T19:11:05.052032 [  605s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.98 → NO@0.02 (mom=-0.166%)
+2026-02-03T19:11:05.052554 [  605s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.40
+2026-02-03T19:11:10.057643 [  610s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.98 → NO@0.02 (mom=-0.116%)
+2026-02-03T19:11:10.058142 [  610s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.50
+2026-02-03T19:11:15.062847 [  615s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.97 → NO@0.03 (mom=-0.030%)
+2026-02-03T19:11:15.063306 [  615s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.60
+2026-02-03T19:11:31.082175 [  631s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.97 ask=0.98 ttc=209s can_enter=True(ok)
+2026-02-03T19:11:51.102119 [  651s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=+0.035%)
+2026-02-03T19:11:51.102628 [  651s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.70
+2026-02-03T19:11:57.108561 [  657s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=+0.022%)
+2026-02-03T19:11:57.109098 [  657s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.80
+2026-02-03T19:12:00.112433 [  660s] BTC: $73,980.05 (+0.022%) | Brackets: 1 | Open: 0 | Trades: 21 (MR:20 DA:1) | P&L: $-0.80
+2026-02-03T19:12:01.116433 [  661s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=179s can_enter=False(cooldown)
+2026-02-03T19:12:02.118996 [  662s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=-0.066%)
+2026-02-03T19:12:02.119576 [  662s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-0.90
+2026-02-03T19:12:28.145848 [  688s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=+0.013%)
+2026-02-03T19:12:28.146486 [  688s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-1.00
+2026-02-03T19:12:31.154657 [  691s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=149s can_enter=False(cooldown)
+2026-02-03T19:12:33.157511 [  693s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=-0.010%)
+2026-02-03T19:12:33.157987 [  693s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-1.10
+2026-02-03T19:12:51.174714 [  711s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=+0.046%)
+2026-02-03T19:12:51.175294 [  711s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-1.20
+2026-02-03T19:12:57.182904 [  717s] 📈 MR-HIGH KXBTC15M-26FEB031415-15: K@0.99 → NO@0.01 (mom=+0.040%)
+2026-02-03T19:12:57.183412 [  717s] ❌ mean_reversion_high KXBTC15M-26FEB031415-15 CLOSE (STOP(-25%)): $-0.10 | Total: $-1.30
+2026-02-03T19:13:00.185536 [  720s] BTC: $74,418.02 (+0.040%) | Brackets: 1 | Open: 0 | Trades: 26 (MR:25 DA:1) | P&L: $-1.30
+2026-02-03T19:13:01.186990 [  721s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=119s can_enter=False(too_close)
+2026-02-03T19:13:31.220309 [  751s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=89s can_enter=False(too_close)
+2026-02-03T19:14:00.250970 [  780s] BTC: $74,561.37 (-0.083%) | Brackets: 1 | Open: 0 | Trades: 26 (MR:25 DA:1) | P&L: $-1.30
+2026-02-03T19:14:01.252121 [  781s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=59s can_enter=False(too_close)
+2026-02-03T19:14:31.295037 [  811s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=29s can_enter=False(too_close)
+2026-02-03T19:15:00.329250 [  840s] BTC: $74,523.72 (-0.095%) | Brackets: 1 | Open: 0 | Trades: 26 (MR:25 DA:1) | P&L: $-1.30
+2026-02-03T19:15:01.330466 [  841s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.99 ask=1.00 ttc=-1s can_enter=False(too_close)
+2026-02-03T19:15:31.376780 [  872s] 🔍 DEBUG KXBTC15M-26FEB031430-30: K=0.15 ask=0.45 ttc=869s can_enter=False(spread_wide)
+2026-02-03T19:15:51.402749 [  892s] 🎯 DELAY KXBTC15M-26FEB031430-30: BTC -0.222%(1m) -0.222%(30s) → NO@0.65
+2026-02-03T19:16:00.421555 [  901s] BTC: $74,404.31 (-0.058%) | Brackets: 1 | Open: 1 | Trades: 26 (MR:25 DA:1) | P&L: $-1.30
+2026-02-03T19:16:01.424103 [  902s] 🔍 DEBUG KXBTC15M-26FEB031430-30: K=0.35 ask=0.37 ttc=839s can_enter=True(ok)
+2026-02-03T19:16:17.450307 [  918s] ✅ delay_arb KXBTC15M-26FEB031430-30 CLOSE (PROFIT): $+0.70 | Total: $-0.60
+2026-02-03T19:16:27.691730 
+⚠️ SIGNAL: SIGTERM at 2026-02-03T19:16:27.691645
+2026-02-03T19:16:28.463243 
+======================================================================
+v8 SUMMARY — Best-of-Breed (V6 MR High + V7 Delay Arb)
+======================================================================
+Duration: 15min (0.3h)
+Total Trades: 27
+Trade Rate: 104.6/hr
+P&L: $-0.60
+Final Balance: $999.40
+
+  delay_arb:
+    Trades: 2, Win Rate: 100%, P&L: $+4.20, Avg: $+2.100
+  mean_reversion_high:
+    Trades: 25, Win Rate: 4%, P&L: $-4.80, Avg: $-0.192
+======================================================================
+

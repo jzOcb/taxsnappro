@@ -1,9 +1,38 @@
 # STATUS.md — BTC Arbitrage Bot
-Last updated: 2026-02-02T23:13Z
+Last updated: 2026-02-03T10:30Z
 
 ## 当前状态: 进行中
 
 ## 最后做了什么
+- ✅ **v7 Created** (2026-02-03 ~10:30 UTC)
+  - **Full strategy overhaul** based on RESEARCH-V2.md findings
+  - File: `src/realtime_paper_trader_v7.py`
+  - Watchdog: `scripts/run_v7_with_watchdog.sh`
+  - **Strategy changes:**
+    1. **REMOVED** Mean Reversion Low (had 20% win rate — structurally losing, ~70% of markets resolve NO)
+    2. **KEPT & ENHANCED** Mean Reversion High (100% win rate, 19/19 wins; configurable threshold via MR_HIGH_THR env, default 80¢)
+    3. **ADDED** Parity Arbitrage — scans ALL open KXBTC15M markets for crossed books (YES_ask + NO_ask < $0.993); also logs cross-bracket opportunities
+    4. **FIXED** Delay Arbitrage — momentum threshold 0.15% → 0.30%, require 30s+60s sustained momentum same direction, only first 7min of window, skip if BTC vol > 0.03
+    5. **ADDED** Endgame Strategy — last 3 minutes of window, parses bracket from ticker, estimates probability via normal CDF, buys near-certain side (>95% prob) at <97¢
+  - **Technical improvements:**
+    - DualMarketPoller returns no_bid, no_ask (derived from yes_ask, yes_bid)
+    - fetch_all_open() method fetches ALL open markets for a series (parity scanning)
+    - Per-strategy stats tracking in summary and checkpoints
+    - Bracket parsing from ticker (B<low>T<high> pattern) and title regex
+    - Probability estimation using normal CDF approximation
+    - Config saved in final JSON output
+    - All v6 infrastructure preserved (asyncio.gather with return_exceptions, signal handlers, checkpoints)
+  - **Throughput update (same session):**
+    - Trade size: $10 → $50 (5x)
+    - Concurrent positions: 1 → 3 per market type
+    - MR High: up to 3 simultaneous across different brackets (1 per bracket)
+    - Cooldown: MR High 20s (was 60s), others stay 60s
+    - Multi-bracket scanning: MR High and Endgame scan ALL open KXBTC15M brackets
+    - Position management: finds correct market data per ticker (not just primary)
+  - State: `data/rt_v7_state.json` | Logs: `logs/rt_v7_*.log`
+  - **NOT YET LAUNCHED** — needs Jason's go-ahead
+
+- **Previous:**
 - ❌🔧 **v6 BUG FIX + 重启** (23:09-23:13)
   - **问题**: v6在20:09崩溃，运行仅31分钟（应该8小时）
   - **根本原因**: `asyncio.gather(*tasks)` 没有 `return_exceptions=True`

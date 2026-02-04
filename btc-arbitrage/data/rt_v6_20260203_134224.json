@@ -1,0 +1,1225 @@
+{
+  "duration_min": 423,
+  "pnl": 2.200000000000002,
+  "signals": [
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 56
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 603
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 812
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 902
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 962
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 1828
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2413
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2503
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2685
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3291
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3351
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3441
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3502
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3562
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3622
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3682
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 4500
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 5006
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 5066
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 6034
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 6094
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 6154
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 6254
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 6314
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 6818
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 7232
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 7891
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 7968
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 8029
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 8119
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 9459
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 9968
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 10540
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 10630
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 11746
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 12567
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 12658
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 13294
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 13384
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 13474
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 13565
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 13985
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 14130
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 14200
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 14293
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 14353
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 14413
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 14473
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 15289
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 16038
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 16136
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 16923
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 17014
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 17104
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 17166
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 17704
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 17810
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 20710
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 22249
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 22581
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 23310
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 24157
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 24265
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 24326
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "time": 1770100770.643613,
+      "ticker": "KXBTC15M-26FEB030145-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.1,
+      "pnl": -1.0,
+      "close_time": 1770100800.6863372
+    },
+    {
+      "id": 1,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.12,
+      "time": 1770101318.392526,
+      "ticker": "KXBTC15M-26FEB030200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.10999999999999999,
+      "pnl": 0.10000000000000009,
+      "close_time": 1770101318.3930545
+    },
+    {
+      "id": 2,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18999999999999995,
+      "time": 1770101526.608539,
+      "ticker": "KXBTC15M-26FEB030200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.16000000000000003,
+      "pnl": 0.29999999999999916,
+      "close_time": 1770101556.6523106
+    },
+    {
+      "id": 3,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18999999999999995,
+      "time": 1770101616.7191975,
+      "ticker": "KXBTC15M-26FEB030200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.16000000000000003,
+      "pnl": 0.29999999999999916,
+      "close_time": 1770101616.7197297
+    },
+    {
+      "id": 4,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.16000000000000003,
+      "time": 1770101676.7938247,
+      "ticker": "KXBTC15M-26FEB030200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.07999999999999996,
+      "pnl": 0.8000000000000007,
+      "close_time": 1770101707.843677
+    },
+    {
+      "id": 5,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.91,
+      "time": 1770102542.853429,
+      "ticker": "KXBTC15M-26FEB030215-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.99,
+      "pnl": 0.7999999999999996,
+      "close_time": 1770102734.1913989
+    },
+    {
+      "id": 6,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "time": 1770103127.6269436,
+      "ticker": "KXBTC15M-26FEB030230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.11,
+      "pnl": -0.9000000000000001,
+      "close_time": 1770103157.6750178
+    },
+    {
+      "id": 7,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "time": 1770103217.7547808,
+      "ticker": "KXBTC15M-26FEB030230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.26,
+      "pnl": 0.6,
+      "close_time": 1770103278.858418
+    },
+    {
+      "id": 8,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.15,
+      "time": 1770103399.9999425,
+      "ticker": "KXBTC15M-26FEB030230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.08,
+      "pnl": -0.7,
+      "close_time": 1770103461.112443
+    },
+    {
+      "id": 9,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18000000000000005,
+      "time": 1770104005.7503126,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.15000000000000002,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770104005.7509608
+    },
+    {
+      "id": 10,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.15000000000000002,
+      "time": 1770104065.8232844,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.12,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770104095.8703988
+    },
+    {
+      "id": 11,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.14,
+      "time": 1770104155.9325254,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.06000000000000005,
+      "pnl": 0.7999999999999996,
+      "close_time": 1770104156.9343348
+    },
+    {
+      "id": 12,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.08999999999999997,
+      "time": 1770104217.0038228,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.07999999999999996,
+      "pnl": 0.10000000000000009,
+      "close_time": 1770104217.0043578
+    },
+    {
+      "id": 13,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18000000000000005,
+      "time": 1770104277.0696776,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.15000000000000002,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770104277.0702682
+    },
+    {
+      "id": 14,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.09999999999999998,
+      "time": 1770104337.1587026,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.07999999999999996,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770104337.159335
+    },
+    {
+      "id": 15,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.09999999999999998,
+      "time": 1770104397.2339723,
+      "ticker": "KXBTC15M-26FEB030245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.07999999999999996,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770104397.234522
+    },
+    {
+      "id": 16,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.18,
+      "time": 1770105215.1986425,
+      "ticker": "KXBTC15M-26FEB030300-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.13,
+      "pnl": -0.4999999999999999,
+      "close_time": 1770105336.3776824
+    },
+    {
+      "id": 17,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18000000000000005,
+      "time": 1770105720.7919533,
+      "ticker": "KXBTC15M-26FEB030315-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.15000000000000002,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770105720.7926366
+    },
+    {
+      "id": 18,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.35,
+      "time": 1770105780.86045,
+      "ticker": "KXBTC15M-26FEB030315-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.31999999999999995,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770105780.8612018
+    },
+    {
+      "id": 19,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.16000000000000003,
+      "time": 1770106748.9950647,
+      "ticker": "KXBTC15M-26FEB030330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.13,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770106748.9957557
+    },
+    {
+      "id": 20,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.09999999999999998,
+      "time": 1770106809.077895,
+      "ticker": "KXBTC15M-26FEB030330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.06999999999999995,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770106809.0784993
+    },
+    {
+      "id": 21,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.14,
+      "time": 1770106869.145126,
+      "ticker": "KXBTC15M-26FEB030330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.09999999999999998,
+      "pnl": 0.40000000000000036,
+      "close_time": 1770106909.2167208
+    },
+    {
+      "id": 22,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.09999999999999998,
+      "time": 1770106969.2979949,
+      "ticker": "KXBTC15M-26FEB030330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.06999999999999995,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770106969.298556
+    },
+    {
+      "id": 23,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.09999999999999998,
+      "time": 1770107029.3760498,
+      "ticker": "KXBTC15M-26FEB030330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.06999999999999995,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770107029.3767016
+    },
+    {
+      "id": 24,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.74,
+      "time": 1770107532.93707,
+      "ticker": "KXBTC15M-26FEB030345-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.64,
+      "pnl": 0.9999999999999998,
+      "close_time": 1770107559.9754937
+    },
+    {
+      "id": 25,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.21999999999999997,
+      "time": 1770107947.4318645,
+      "ticker": "KXBTC15M-26FEB030345-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.19999999999999996,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770107947.4326165
+    },
+    {
+      "id": 26,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.16,
+      "time": 1770108606.2629998,
+      "ticker": "KXBTC15M-26FEB030400-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.1,
+      "pnl": -0.6,
+      "close_time": 1770108623.2895885
+    },
+    {
+      "id": 27,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.12,
+      "time": 1770108683.3621628,
+      "ticker": "KXBTC15M-26FEB030400-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.08,
+      "pnl": -0.3999999999999999,
+      "close_time": 1770108684.3642206
+    },
+    {
+      "id": 28,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.1,
+      "time": 1770108744.4353647,
+      "ticker": "KXBTC15M-26FEB030400-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.05,
+      "pnl": -0.5,
+      "close_time": 1770108774.4832468
+    },
+    {
+      "id": 29,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.05,
+      "time": 1770108834.5507414,
+      "ticker": "KXBTC15M-26FEB030400-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.02,
+      "pnl": -0.30000000000000004,
+      "close_time": 1770108865.5996
+    },
+    {
+      "id": 30,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.55,
+      "time": 1770110174.1016743,
+      "ticker": "KXBTC15M-26FEB030430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.33999999999999997,
+      "pnl": 2.1000000000000005,
+      "close_time": 1770110227.185371
+    },
+    {
+      "id": 31,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.17,
+      "time": 1770110682.6810055,
+      "ticker": "KXBTC15M-26FEB030430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.07,
+      "pnl": -1.0,
+      "close_time": 1770110710.725221
+    },
+    {
+      "id": 32,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18999999999999995,
+      "time": 1770111255.2941704,
+      "ticker": "KXBTC15M-26FEB030445-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.12,
+      "pnl": 0.6999999999999995,
+      "close_time": 1770111285.341644
+    },
+    {
+      "id": 33,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.9,
+      "time": 1770111345.4109964,
+      "ticker": "KXBTC15M-26FEB030445-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.98,
+      "pnl": 0.7999999999999996,
+      "close_time": 1770111648.8987541
+    },
+    {
+      "id": 34,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.13,
+      "time": 1770112460.8891158,
+      "ticker": "KXBTC15M-26FEB030500-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.10999999999999999,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770112465.8986273
+    },
+    {
+      "id": 35,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.15000000000000002,
+      "time": 1770113281.8153121,
+      "ticker": "KXBTC15M-26FEB030515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.18999999999999995,
+      "pnl": -0.39999999999999925,
+      "close_time": 1770113311.8615284
+    },
+    {
+      "id": 36,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18999999999999995,
+      "time": 1770113372.9361808,
+      "ticker": "KXBTC15M-26FEB030515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.16000000000000003,
+      "pnl": 0.29999999999999916,
+      "close_time": 1770113372.9367242
+    },
+    {
+      "id": 37,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "time": 1770114008.7741513,
+      "ticker": "KXBTC15M-26FEB030530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.1,
+      "pnl": -1.0,
+      "close_time": 1770114038.8189087
+    },
+    {
+      "id": 38,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.16,
+      "time": 1770114098.881534,
+      "ticker": "KXBTC15M-26FEB030530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.09,
+      "pnl": -0.7000000000000001,
+      "close_time": 1770114128.9244905
+    },
+    {
+      "id": 39,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.1,
+      "time": 1770114188.989759,
+      "ticker": "KXBTC15M-26FEB030530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.23,
+      "pnl": 1.3,
+      "close_time": 1770114189.9925961
+    },
+    {
+      "id": 40,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.17,
+      "time": 1770114280.1073997,
+      "ticker": "KXBTC15M-26FEB030530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.12,
+      "pnl": -0.5000000000000002,
+      "close_time": 1770114431.3505578
+    },
+    {
+      "id": 41,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.19,
+      "time": 1770114699.6662836,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.1,
+      "pnl": -0.8999999999999999,
+      "close_time": 1770114733.7225702
+    },
+    {
+      "id": 42,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.06,
+      "time": 1770114844.8598428,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.02,
+      "pnl": -0.3999999999999999,
+      "close_time": 1770114854.8748722
+    },
+    {
+      "id": 43,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.04,
+      "time": 1770114914.9537227,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.01,
+      "pnl": -0.3,
+      "close_time": 1770114914.9545732
+    },
+    {
+      "id": 44,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.04,
+      "time": 1770115008.0533903,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.02,
+      "pnl": -0.2,
+      "close_time": 1770115008.0540435
+    },
+    {
+      "id": 45,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.04,
+      "time": 1770115068.1336164,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.01,
+      "pnl": -0.3,
+      "close_time": 1770115068.1343546
+    },
+    {
+      "id": 46,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.05,
+      "time": 1770115128.2059035,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.02,
+      "pnl": -0.30000000000000004,
+      "close_time": 1770115128.2064955
+    },
+    {
+      "id": 47,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.06,
+      "time": 1770115188.2808707,
+      "ticker": "KXBTC15M-26FEB030545-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.01,
+      "pnl": -0.49999999999999994,
+      "close_time": 1770115188.2814407
+    },
+    {
+      "id": 48,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "time": 1770116004.3227477,
+      "ticker": "KXBTC15M-26FEB030600-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.26,
+      "pnl": 0.6,
+      "close_time": 1770116095.4676182
+    },
+    {
+      "id": 49,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.14,
+      "time": 1770116753.2647495,
+      "ticker": "KXBTC15M-26FEB030615-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.12,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770116791.3301847
+    },
+    {
+      "id": 50,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.15000000000000002,
+      "time": 1770116851.407425,
+      "ticker": "KXBTC15M-26FEB030615-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.12,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770116851.4080637
+    },
+    {
+      "id": 51,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.17,
+      "time": 1770117638.315025,
+      "ticker": "KXBTC15M-26FEB030630-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.22,
+      "pnl": 0.4999999999999999,
+      "close_time": 1770117669.3688726
+    },
+    {
+      "id": 52,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.22,
+      "time": 1770117729.4424663,
+      "ticker": "KXBTC15M-26FEB030630-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.15,
+      "pnl": -0.7000000000000001,
+      "close_time": 1770117759.4915273
+    },
+    {
+      "id": 53,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.14,
+      "time": 1770117819.5595481,
+      "ticker": "KXBTC15M-26FEB030630-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.17,
+      "pnl": 0.3,
+      "close_time": 1770117820.5617356
+    },
+    {
+      "id": 54,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.15,
+      "time": 1770117880.6406894,
+      "ticker": "KXBTC15M-26FEB030630-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.09,
+      "pnl": -0.6,
+      "close_time": 1770117910.693865
+    },
+    {
+      "id": 55,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.7,
+      "time": 1770118419.3375642,
+      "ticker": "KXBTC15M-26FEB030645-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.84,
+      "pnl": 1.4000000000000001,
+      "close_time": 1770118425.3471868
+    },
+    {
+      "id": 56,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.88,
+      "time": 1770118525.4591985,
+      "ticker": "KXBTC15M-26FEB030645-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "exit": 0.96,
+      "pnl": 0.7999999999999996,
+      "close_time": 1770118848.9888592
+    },
+    {
+      "id": 57,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.21,
+      "time": 1770121425.0934181,
+      "ticker": "KXBTC15M-26FEB030730-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.23,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770121451.1444728
+    },
+    {
+      "id": 58,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18999999999999995,
+      "time": 1770122963.8775327,
+      "ticker": "KXBTC15M-26FEB030800-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.26,
+      "pnl": -0.7000000000000006,
+      "close_time": 1770123054.0191853
+    },
+    {
+      "id": 59,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.13,
+      "time": 1770123296.2953231,
+      "ticker": "KXBTC15M-26FEB030800-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.07999999999999996,
+      "pnl": 0.5000000000000004,
+      "close_time": 1770123326.3468695
+    },
+    {
+      "id": 60,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.17000000000000004,
+      "time": 1770124025.2196574,
+      "ticker": "KXBTC15M-26FEB030815-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.21999999999999997,
+      "pnl": -0.49999999999999933,
+      "close_time": 1770124053.2697906
+    },
+    {
+      "id": 61,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.16,
+      "time": 1770124872.2036273,
+      "ticker": "KXBTC15M-26FEB030830-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.11,
+      "pnl": -0.5,
+      "close_time": 1770124920.2855947
+    },
+    {
+      "id": 62,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.18,
+      "time": 1770124980.3596444,
+      "ticker": "KXBTC15M-26FEB030830-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.1,
+      "pnl": -0.7999999999999998,
+      "close_time": 1770124981.3642733
+    },
+    {
+      "id": 63,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.19,
+      "time": 1770125041.4444318,
+      "ticker": "KXBTC15M-26FEB030830-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.06,
+      "pnl": -1.3,
+      "close_time": 1770125071.532951
+    }
+  ],
+  "complete": false
+}

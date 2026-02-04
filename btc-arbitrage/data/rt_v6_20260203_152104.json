@@ -1,0 +1,33 @@
+{
+  "duration_min": 2,
+  "pnl": -0.7000000000000006,
+  "signals": [
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 31
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 125
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.18999999999999995,
+      "time": 1770131930.450115,
+      "ticker": "KXBTC15M-26FEB031030-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "exit": 0.26,
+      "pnl": -0.7000000000000006,
+      "close_time": 1770131960.5283597
+    }
+  ],
+  "complete": false
+}

@@ -1,0 +1,12 @@
+2026-02-03T19:00:52.091161 
+======================================================================
+v8 — Best-of-Breed: V6 MR High + V7 Delay Arb
+======================================================================
+Duration: 480min | Start: 19:00:52 UTC
+Strategies:
+  MR-High: K > 0.8 + momentum < 0.05 → buy NO (V6 params, 100% WR)
+  Delay Arb: sustained momentum > 0.2% → follow BTC (V7 params, 100% WR)
+Risk: cooldown=5s, max_pos=5/mkt, timeout=180s, profit=8.0%
+======================================================================
+
+2026-02-03T19:00:53.092602 [    1s] 🔍 DEBUG KXBTC15M-26FEB031415-15: K=0.50 ask=0.60 ttc=847s can_enter=True(ok)

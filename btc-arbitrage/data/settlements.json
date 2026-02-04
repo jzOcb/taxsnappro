@@ -6,5 +6,557 @@
     "settlement_result": "yes",
     "brti_proxy_at_check": 76622.52833333334,
     "volume": 26604
+  },
+  {
+    "timestamp": "2026-02-03T03:15:39.287229",
+    "ticker": "KXBTC15M-26FEB022215-15",
+    "close_time": "2026-02-03T03:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78033.85166666667,
+    "volume": 39610
+  },
+  {
+    "timestamp": "2026-02-03T04:45:43.730402",
+    "ticker": "KXBTC15M-26FEB022345-45",
+    "close_time": "2026-02-03T04:45:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78948.31833333334,
+    "volume": 31173
+  },
+  {
+    "timestamp": "2026-02-03T05:15:45.411101",
+    "ticker": "KXBTC15M-26FEB030015-15",
+    "close_time": "2026-02-03T05:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78447.75166666666,
+    "volume": 41480
+  },
+  {
+    "timestamp": "2026-02-03T05:30:46.369073",
+    "ticker": "KXBTC15M-26FEB030030-30",
+    "close_time": "2026-02-03T05:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78395.33833333333,
+    "volume": 28647
+  },
+  {
+    "timestamp": "2026-02-03T05:45:47.356746",
+    "ticker": "KXBTC15M-26FEB030045-45",
+    "close_time": "2026-02-03T05:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78314.90166666667,
+    "volume": 44793
+  },
+  {
+    "timestamp": "2026-02-03T06:15:48.994586",
+    "ticker": "KXBTC15M-26FEB030115-15",
+    "close_time": "2026-02-03T06:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78078.18166666666,
+    "volume": 42084
+  },
+  {
+    "timestamp": "2026-02-03T06:45:50.586564",
+    "ticker": "KXBTC15M-26FEB030145-45",
+    "close_time": "2026-02-03T06:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78449.24833333334,
+    "volume": 23830
+  },
+  {
+    "timestamp": "2026-02-03T07:15:52.241293",
+    "ticker": "KXBTC15M-26FEB030215-15",
+    "close_time": "2026-02-03T07:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78742.99833333334,
+    "volume": 33086
+  },
+  {
+    "timestamp": "2026-02-03T07:30:53.306969",
+    "ticker": "KXBTC15M-26FEB030230-30",
+    "close_time": "2026-02-03T07:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78639.68166666667,
+    "volume": 31862
+  },
+  {
+    "timestamp": "2026-02-03T07:45:54.458991",
+    "ticker": "KXBTC15M-26FEB030245-45",
+    "close_time": "2026-02-03T07:45:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78757.39833333333,
+    "volume": 25018
+  },
+  {
+    "timestamp": "2026-02-03T08:00:55.408130",
+    "ticker": "KXBTC15M-26FEB030300-00",
+    "close_time": "2026-02-03T08:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78737.905,
+    "volume": 28502
+  },
+  {
+    "timestamp": "2026-02-03T08:15:56.310646",
+    "ticker": "KXBTC15M-26FEB030315-15",
+    "close_time": "2026-02-03T08:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78442.14833333333,
+    "volume": 28740
+  },
+  {
+    "timestamp": "2026-02-03T08:30:57.340689",
+    "ticker": "KXBTC15M-26FEB030330-30",
+    "close_time": "2026-02-03T08:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78847.81999999999,
+    "volume": 42187
+  },
+  {
+    "timestamp": "2026-02-03T08:45:58.230562",
+    "ticker": "KXBTC15M-26FEB030345-45",
+    "close_time": "2026-02-03T08:45:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78929.28333333334,
+    "volume": 27302
+  },
+  {
+    "timestamp": "2026-02-03T09:00:59.240643",
+    "ticker": "KXBTC15M-26FEB030400-00",
+    "close_time": "2026-02-03T09:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78720.09833333333,
+    "volume": 18485
+  },
+  {
+    "timestamp": "2026-02-03T09:16:00.440463",
+    "ticker": "KXBTC15M-26FEB030415-15",
+    "close_time": "2026-02-03T09:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78176.36166666668,
+    "volume": 37842
+  },
+  {
+    "timestamp": "2026-02-03T09:31:01.544636",
+    "ticker": "KXBTC15M-26FEB030430-30",
+    "close_time": "2026-02-03T09:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77922.98833333334,
+    "volume": 27000
+  },
+  {
+    "timestamp": "2026-02-03T09:46:02.504591",
+    "ticker": "KXBTC15M-26FEB030445-45",
+    "close_time": "2026-02-03T09:45:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78269.75833333335,
+    "volume": 12509
+  },
+  {
+    "timestamp": "2026-02-03T10:01:03.467504",
+    "ticker": "KXBTC15M-26FEB030500-00",
+    "close_time": "2026-02-03T10:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78356.84833333333,
+    "volume": 11847
+  },
+  {
+    "timestamp": "2026-02-03T10:16:04.380457",
+    "ticker": "KXBTC15M-26FEB030515-15",
+    "close_time": "2026-02-03T10:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78486.92499999999,
+    "volume": 12280
+  },
+  {
+    "timestamp": "2026-02-03T10:31:05.311422",
+    "ticker": "KXBTC15M-26FEB030530-30",
+    "close_time": "2026-02-03T10:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78347.19499999999,
+    "volume": 13357
+  },
+  {
+    "timestamp": "2026-02-03T10:46:06.238036",
+    "ticker": "KXBTC15M-26FEB030545-45",
+    "close_time": "2026-02-03T10:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78087.90833333333,
+    "volume": 8767
+  },
+  {
+    "timestamp": "2026-02-03T11:01:07.256014",
+    "ticker": "KXBTC15M-26FEB030600-00",
+    "close_time": "2026-02-03T11:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78081.32833333332,
+    "volume": 16038
+  },
+  {
+    "timestamp": "2026-02-03T11:16:08.220537",
+    "ticker": "KXBTC15M-26FEB030615-15",
+    "close_time": "2026-02-03T11:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78153.585,
+    "volume": 16112
+  },
+  {
+    "timestamp": "2026-02-03T11:31:09.182729",
+    "ticker": "KXBTC15M-26FEB030630-30",
+    "close_time": "2026-02-03T11:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77992.70833333333,
+    "volume": 16626
+  },
+  {
+    "timestamp": "2026-02-03T11:46:10.116895",
+    "ticker": "KXBTC15M-26FEB030645-45",
+    "close_time": "2026-02-03T11:45:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78182.52500000001,
+    "volume": 16738
+  },
+  {
+    "timestamp": "2026-02-03T12:01:11.104983",
+    "ticker": "KXBTC15M-26FEB030700-00",
+    "close_time": "2026-02-03T12:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78047.57833333332,
+    "volume": 16733
+  },
+  {
+    "timestamp": "2026-02-03T12:16:12.265592",
+    "ticker": "KXBTC15M-26FEB030715-15",
+    "close_time": "2026-02-03T12:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78131.33166666667,
+    "volume": 17464
+  },
+  {
+    "timestamp": "2026-02-03T12:31:13.220597",
+    "ticker": "KXBTC15M-26FEB030730-30",
+    "close_time": "2026-02-03T12:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78210.33166666667,
+    "volume": 22426
+  },
+  {
+    "timestamp": "2026-02-03T12:46:14.212374",
+    "ticker": "KXBTC15M-26FEB030745-45",
+    "close_time": "2026-02-03T12:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78232.09166666666,
+    "volume": 26031
+  },
+  {
+    "timestamp": "2026-02-03T13:01:15.191728",
+    "ticker": "KXBTC15M-26FEB030800-00",
+    "close_time": "2026-02-03T13:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78283.74166666667,
+    "volume": 19292
+  },
+  {
+    "timestamp": "2026-02-03T13:16:16.121222",
+    "ticker": "KXBTC15M-26FEB030815-15",
+    "close_time": "2026-02-03T13:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78330.09166666666,
+    "volume": 22569
+  },
+  {
+    "timestamp": "2026-02-03T13:31:17.096650",
+    "ticker": "KXBTC15M-26FEB030830-30",
+    "close_time": "2026-02-03T13:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78335.93833333334,
+    "volume": 17550
+  },
+  {
+    "timestamp": "2026-02-03T13:46:18.079968",
+    "ticker": "KXBTC15M-26FEB030845-45",
+    "close_time": "2026-02-03T13:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 78245.62666666666,
+    "volume": 21425
+  },
+  {
+    "timestamp": "2026-02-03T14:01:19.098256",
+    "ticker": "KXBTC15M-26FEB030900-00",
+    "close_time": "2026-02-03T14:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78246.57833333332,
+    "volume": 27951
+  },
+  {
+    "timestamp": "2026-02-03T14:16:20.109012",
+    "ticker": "KXBTC15M-26FEB030915-15",
+    "close_time": "2026-02-03T14:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78313.55500000001,
+    "volume": 26968
+  },
+  {
+    "timestamp": "2026-02-03T14:31:21.168361",
+    "ticker": "KXBTC15M-26FEB030930-30",
+    "close_time": "2026-02-03T14:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 78362.815,
+    "volume": 44445
+  },
+  {
+    "timestamp": "2026-02-03T14:46:22.136948",
+    "ticker": "KXBTC15M-26FEB030945-45",
+    "close_time": "2026-02-03T14:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77728.52666666667,
+    "volume": 38320
+  },
+  {
+    "timestamp": "2026-02-03T15:01:23.206111",
+    "ticker": "KXBTC15M-26FEB031000-00",
+    "close_time": "2026-02-03T15:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77177.51333333334,
+    "volume": 27415
+  },
+  {
+    "timestamp": "2026-02-03T15:16:24.301117",
+    "ticker": "KXBTC15M-26FEB031015-15",
+    "close_time": "2026-02-03T15:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77129.18666666666,
+    "volume": 43189
+  },
+  {
+    "timestamp": "2026-02-03T15:31:25.328868",
+    "ticker": "KXBTC15M-26FEB031030-30",
+    "close_time": "2026-02-03T15:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 77668.28499999999,
+    "volume": 31050
+  },
+  {
+    "timestamp": "2026-02-03T15:46:26.414600",
+    "ticker": "KXBTC15M-26FEB031045-45",
+    "close_time": "2026-02-03T15:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77417.85833333332,
+    "volume": 39404
+  },
+  {
+    "timestamp": "2026-02-03T16:01:27.457115",
+    "ticker": "KXBTC15M-26FEB031100-00",
+    "close_time": "2026-02-03T16:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 77994.00166666666,
+    "volume": 27999
+  },
+  {
+    "timestamp": "2026-02-03T16:16:28.515217",
+    "ticker": "KXBTC15M-26FEB031115-15",
+    "close_time": "2026-02-03T16:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 77317.20166666668,
+    "volume": 25206
+  },
+  {
+    "timestamp": "2026-02-03T16:31:29.480149",
+    "ticker": "KXBTC15M-26FEB031130-30",
+    "close_time": "2026-02-03T16:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76687.70666666667,
+    "volume": 33442
+  },
+  {
+    "timestamp": "2026-02-03T16:46:30.712470",
+    "ticker": "KXBTC15M-26FEB031145-45",
+    "close_time": "2026-02-03T16:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76560.265,
+    "volume": 50986
+  },
+  {
+    "timestamp": "2026-02-03T17:01:31.808317",
+    "ticker": "KXBTC15M-26FEB031200-00",
+    "close_time": "2026-02-03T17:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76398.935,
+    "volume": 36202
+  },
+  {
+    "timestamp": "2026-02-03T17:16:32.917235",
+    "ticker": "KXBTC15M-26FEB031215-15",
+    "close_time": "2026-02-03T17:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 75782.22833333333,
+    "volume": 21873
+  },
+  {
+    "timestamp": "2026-02-03T17:31:34.041212",
+    "ticker": "KXBTC15M-26FEB031230-30",
+    "close_time": "2026-02-03T17:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 75801.25,
+    "volume": 36604
+  },
+  {
+    "timestamp": "2026-02-03T17:46:34.992750",
+    "ticker": "KXBTC15M-26FEB031245-45",
+    "close_time": "2026-02-03T17:45:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 75145.02666666666,
+    "volume": 27840
+  },
+  {
+    "timestamp": "2026-02-03T18:01:35.946936",
+    "ticker": "KXBTC15M-26FEB031300-00",
+    "close_time": "2026-02-03T18:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 75086.29,
+    "volume": 45111
+  },
+  {
+    "timestamp": "2026-02-03T18:16:36.998244",
+    "ticker": "KXBTC15M-26FEB031315-15",
+    "close_time": "2026-02-03T18:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 74721.59166666666,
+    "volume": 61525
+  },
+  {
+    "timestamp": "2026-02-03T18:31:37.990709",
+    "ticker": "KXBTC15M-26FEB031330-30",
+    "close_time": "2026-02-03T18:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 74106.54333333333,
+    "volume": 54882
+  },
+  {
+    "timestamp": "2026-02-03T19:01:39.711591",
+    "ticker": "KXBTC15M-26FEB031400-00",
+    "close_time": "2026-02-03T19:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 73144.06666666667,
+    "volume": 28046
+  },
+  {
+    "timestamp": "2026-02-03T19:16:40.769991",
+    "ticker": "KXBTC15M-26FEB031415-15",
+    "close_time": "2026-02-03T19:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 74321.96333333333,
+    "volume": 43879
+  },
+  {
+    "timestamp": "2026-02-03T19:31:41.888936",
+    "ticker": "KXBTC15M-26FEB031430-30",
+    "close_time": "2026-02-03T19:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 74826.90999999999,
+    "volume": 67085
+  },
+  {
+    "timestamp": "2026-02-03T20:01:43.515883",
+    "ticker": "KXBTC15M-26FEB031500-00",
+    "close_time": "2026-02-03T20:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 74932.04333333332,
+    "volume": 44111
+  },
+  {
+    "timestamp": "2026-02-03T20:16:44.536316",
+    "ticker": "KXBTC15M-26FEB031515-15",
+    "close_time": "2026-02-03T20:15:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 74649.15999999999,
+    "volume": 47510
+  },
+  {
+    "timestamp": "2026-02-03T20:31:45.625187",
+    "ticker": "KXBTC15M-26FEB031530-30",
+    "close_time": "2026-02-03T20:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 76116.97333333333,
+    "volume": 25749
+  },
+  {
+    "timestamp": "2026-02-03T20:46:46.588940",
+    "ticker": "KXBTC15M-26FEB031545-45",
+    "close_time": "2026-02-03T20:45:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 76467.96833333334,
+    "volume": 31269
+  },
+  {
+    "timestamp": "2026-02-03T21:01:47.549825",
+    "ticker": "KXBTC15M-26FEB031600-00",
+    "close_time": "2026-02-03T21:00:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 76498.985,
+    "volume": 48377
+  },
+  {
+    "timestamp": "2026-02-03T21:16:48.611899",
+    "ticker": "KXBTC15M-26FEB031615-15",
+    "close_time": "2026-02-03T21:15:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 76531.88833333332,
+    "volume": 38842
+  },
+  {
+    "timestamp": "2026-02-03T22:01:50.916660",
+    "ticker": "KXBTC15M-26FEB031700-00",
+    "close_time": "2026-02-03T22:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76186.05166666667,
+    "volume": 65149
+  },
+  {
+    "timestamp": "2026-02-03T22:31:52.576750",
+    "ticker": "KXBTC15M-26FEB031730-30",
+    "close_time": "2026-02-03T22:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 76007.84999999999,
+    "volume": 48339
+  },
+  {
+    "timestamp": "2026-02-03T23:01:54.147007",
+    "ticker": "KXBTC15M-26FEB031800-00",
+    "close_time": "2026-02-03T23:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 75625.59833333334,
+    "volume": 54696
+  },
+  {
+    "timestamp": "2026-02-03T23:31:55.725872",
+    "ticker": "KXBTC15M-26FEB031830-30",
+    "close_time": "2026-02-03T23:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 75713.945,
+    "volume": 46847
+  },
+  {
+    "timestamp": "2026-02-04T01:01:59.920494",
+    "ticker": "KXBTC15M-26FEB032000-00",
+    "close_time": "2026-02-04T01:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76014.045,
+    "volume": 47636
+  },
+  {
+    "timestamp": "2026-02-04T02:02:03.402289",
+    "ticker": "KXBTC15M-26FEB032100-00",
+    "close_time": "2026-02-04T02:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76328.105,
+    "volume": 22748
+  },
+  {
+    "timestamp": "2026-02-04T05:32:13.080086",
+    "ticker": "KXBTC15M-26FEB040030-30",
+    "close_time": "2026-02-04T05:30:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 76359.37833333334,
+    "volume": 45554
   }
 ]

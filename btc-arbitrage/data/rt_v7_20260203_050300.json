@@ -1,0 +1,43 @@
+{
+  "version": "v7",
+  "duration_min": 6,
+  "pnl": -1.2,
+  "signals": [
+    {
+      "type": "momentum",
+      "market": "15m",
+      "ticker": "KXBTC15M-26FEB030015-15",
+      "time": 283
+    },
+    {
+      "type": "no_farm",
+      "market": "15m",
+      "ticker": "KXBTC15M-26FEB030015-15",
+      "time": 368
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.6,
+      "time": 1770094853.3836222,
+      "ticker": "KXBTC15M-26FEB030015-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "momentum_follow",
+      "exit": 0.72,
+      "pnl": -1.2,
+      "close_time": 1770094933.514912
+    }
+  ],
+  "strategy_stats": {
+    "momentum_follow": {
+      "count": 1,
+      "wins": 0,
+      "pnl": -1.2
+    }
+  },
+  "complete": false
+}

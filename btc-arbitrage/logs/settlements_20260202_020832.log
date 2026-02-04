@@ -1,0 +1,390 @@
+
+======================================================================
+KALSHI SETTLEMENT TRACKER
+======================================================================
+Tracking KXBTC15M settlements vs BRTI proxy
+Check interval: 3 minutes
+
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB020300-00
+  Close: 2026-02-02T08:00:00Z
+  Result: YES
+  BRTI Proxy (now): $76,622.53
+  Volume: 26604
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB022215-15
+  Close: 2026-02-03T03:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,033.85
+  Volume: 39610
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB022345-45
+  Close: 2026-02-03T04:45:00Z
+  Result: YES
+  BRTI Proxy (now): $78,948.32
+  Volume: 31173
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030015-15
+  Close: 2026-02-03T05:15:00Z
+  Result: NO
+  BRTI Proxy (now): $78,447.75
+  Volume: 41480
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030030-30
+  Close: 2026-02-03T05:30:00Z
+  Result: NO
+  BRTI Proxy (now): $78,395.34
+  Volume: 28647
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030045-45
+  Close: 2026-02-03T05:45:00Z
+  Result: NO
+  BRTI Proxy (now): $78,314.90
+  Volume: 44793
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030115-15
+  Close: 2026-02-03T06:15:00Z
+  Result: NO
+  BRTI Proxy (now): $78,078.18
+  Volume: 42084
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030145-45
+  Close: 2026-02-03T06:45:00Z
+  Result: NO
+  BRTI Proxy (now): $78,449.25
+  Volume: 23830
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030215-15
+  Close: 2026-02-03T07:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,743.00
+  Volume: 33086
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030230-30
+  Close: 2026-02-03T07:30:00Z
+  Result: NO
+  BRTI Proxy (now): $78,639.68
+  Volume: 31862
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030245-45
+  Close: 2026-02-03T07:45:00Z
+  Result: YES
+  BRTI Proxy (now): $78,757.40
+  Volume: 25018
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030300-00
+  Close: 2026-02-03T08:00:00Z
+  Result: NO
+  BRTI Proxy (now): $78,737.90
+  Volume: 28502
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030315-15
+  Close: 2026-02-03T08:15:00Z
+  Result: NO
+  BRTI Proxy (now): $78,442.15
+  Volume: 28740
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030330-30
+  Close: 2026-02-03T08:30:00Z
+  Result: YES
+  BRTI Proxy (now): $78,847.82
+  Volume: 42187
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030345-45
+  Close: 2026-02-03T08:45:00Z
+  Result: YES
+  BRTI Proxy (now): $78,929.28
+  Volume: 27302
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030400-00
+  Close: 2026-02-03T09:00:00Z
+  Result: NO
+  BRTI Proxy (now): $78,720.10
+  Volume: 18485
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030415-15
+  Close: 2026-02-03T09:15:00Z
+  Result: NO
+  BRTI Proxy (now): $78,176.36
+  Volume: 37842
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030430-30
+  Close: 2026-02-03T09:30:00Z
+  Result: NO
+  BRTI Proxy (now): $77,922.99
+  Volume: 27000
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030445-45
+  Close: 2026-02-03T09:45:00Z
+  Result: YES
+  BRTI Proxy (now): $78,269.76
+  Volume: 12509
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030500-00
+  Close: 2026-02-03T10:00:00Z
+  Result: YES
+  BRTI Proxy (now): $78,356.85
+  Volume: 11847
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030515-15
+  Close: 2026-02-03T10:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,486.92
+  Volume: 12280
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030530-30
+  Close: 2026-02-03T10:30:00Z
+  Result: NO
+  BRTI Proxy (now): $78,347.19
+  Volume: 13357
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030545-45
+  Close: 2026-02-03T10:45:00Z
+  Result: NO
+  BRTI Proxy (now): $78,087.91
+  Volume: 8767
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030600-00
+  Close: 2026-02-03T11:00:00Z
+  Result: NO
+  BRTI Proxy (now): $78,081.33
+  Volume: 16038
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030615-15
+  Close: 2026-02-03T11:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,153.59
+  Volume: 16112
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030630-30
+  Close: 2026-02-03T11:30:00Z
+  Result: NO
+  BRTI Proxy (now): $77,992.71
+  Volume: 16626
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030645-45
+  Close: 2026-02-03T11:45:00Z
+  Result: YES
+  BRTI Proxy (now): $78,182.53
+  Volume: 16738
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030700-00
+  Close: 2026-02-03T12:00:00Z
+  Result: NO
+  BRTI Proxy (now): $78,047.58
+  Volume: 16733
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030715-15
+  Close: 2026-02-03T12:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,131.33
+  Volume: 17464
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030730-30
+  Close: 2026-02-03T12:30:00Z
+  Result: YES
+  BRTI Proxy (now): $78,210.33
+  Volume: 22426
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030745-45
+  Close: 2026-02-03T12:45:00Z
+  Result: NO
+  BRTI Proxy (now): $78,232.09
+  Volume: 26031
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030800-00
+  Close: 2026-02-03T13:00:00Z
+  Result: YES
+  BRTI Proxy (now): $78,283.74
+  Volume: 19292
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030815-15
+  Close: 2026-02-03T13:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,330.09
+  Volume: 22569
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030830-30
+  Close: 2026-02-03T13:30:00Z
+  Result: NO
+  BRTI Proxy (now): $78,335.94
+  Volume: 17550
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030845-45
+  Close: 2026-02-03T13:45:00Z
+  Result: NO
+  BRTI Proxy (now): $78,245.63
+  Volume: 21425
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030900-00
+  Close: 2026-02-03T14:00:00Z
+  Result: YES
+  BRTI Proxy (now): $78,246.58
+  Volume: 27951
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030915-15
+  Close: 2026-02-03T14:15:00Z
+  Result: YES
+  BRTI Proxy (now): $78,313.56
+  Volume: 26968
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030930-30
+  Close: 2026-02-03T14:30:00Z
+  Result: YES
+  BRTI Proxy (now): $78,362.82
+  Volume: 44445
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB030945-45
+  Close: 2026-02-03T14:45:00Z
+  Result: NO
+  BRTI Proxy (now): $77,728.53
+  Volume: 38320
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031000-00
+  Close: 2026-02-03T15:00:00Z
+  Result: NO
+  BRTI Proxy (now): $77,177.51
+  Volume: 27415
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031015-15
+  Close: 2026-02-03T15:15:00Z
+  Result: NO
+  BRTI Proxy (now): $77,129.19
+  Volume: 43189
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031030-30
+  Close: 2026-02-03T15:30:00Z
+  Result: YES
+  BRTI Proxy (now): $77,668.28
+  Volume: 31050
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031045-45
+  Close: 2026-02-03T15:45:00Z
+  Result: NO
+  BRTI Proxy (now): $77,417.86
+  Volume: 39404
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031100-00
+  Close: 2026-02-03T16:00:00Z
+  Result: YES
+  BRTI Proxy (now): $77,994.00
+  Volume: 27999
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031115-15
+  Close: 2026-02-03T16:15:00Z
+  Result: NO
+  BRTI Proxy (now): $77,317.20
+  Volume: 25206
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031130-30
+  Close: 2026-02-03T16:30:00Z
+  Result: NO
+  BRTI Proxy (now): $76,687.71
+  Volume: 33442
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031145-45
+  Close: 2026-02-03T16:45:00Z
+  Result: NO
+  BRTI Proxy (now): $76,560.26
+  Volume: 50986
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031200-00
+  Close: 2026-02-03T17:00:00Z
+  Result: NO
+  BRTI Proxy (now): $76,398.93
+  Volume: 36202
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031215-15
+  Close: 2026-02-03T17:15:00Z
+  Result: NO
+  BRTI Proxy (now): $75,782.23
+  Volume: 21873
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031230-30
+  Close: 2026-02-03T17:30:00Z
+  Result: YES
+  BRTI Proxy (now): $75,801.25
+  Volume: 36604
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031245-45
+  Close: 2026-02-03T17:45:00Z
+  Result: NO
+  BRTI Proxy (now): $75,145.03
+  Volume: 27840
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031300-00
+  Close: 2026-02-03T18:00:00Z
+  Result: NO
+  BRTI Proxy (now): $75,086.29
+  Volume: 45111
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031315-15
+  Close: 2026-02-03T18:15:00Z
+  Result: NO
+  BRTI Proxy (now): $74,721.59
+  Volume: 61525
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031330-30
+  Close: 2026-02-03T18:30:00Z
+  Result: NO
+  BRTI Proxy (now): $74,106.54
+  Volume: 54882
+
+🔔 NEW SETTLEMENT
+  Market: KXBTC15M-26FEB031400-00
+  Close: 2026-02-03T19:00:00Z
+  Result: NO

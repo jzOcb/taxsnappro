@@ -1,43 +1,21 @@
 #!/bin/bash
+# 更新 Heartbeat 监控脚本
 
-LOG_FILE="/workspace/heartbeat_monitor.log"
+# 日志路径更新
+LOG_PATH="/home/clawdbot/clawd/heartbeat_monitor.log"
 
-# 记录日志
-log() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $*" >> "$LOG_FILE"
-}
+# BTC Arbitrage重启检查
+RESTART_FLAG="/home/clawdbot/clawd/check_restart_flag.sh"
 
-# 检查并重启 Heartbeat 服务
-monitor_heartbeat() {
-    log "开始 Heartbeat 监控"
+if [ -f "$RESTART_FLAG" ]; then
+    RESTART_INFO=$(bash "$RESTART_FLAG")
     
-    # 检查调度器是否运行
-    if ! pgrep -f "heartbeat_scheduler.py" > /dev/null; then
-        log "Heartbeat 调度器未运行，尝试重启"
-        systemctl restart heartbeat.service
-        
-        # 等待并再次验证
-        sleep 10
-        if ! pgrep -f "heartbeat_scheduler.py" > /dev/null; then
-            log "重启失败，发送告警"
-            # 可以添加告警通知逻辑
-        fi
-    fi
+    # 使用 message 工具发送通知
+    message action=send \
+        channel=telegram \
+        to="-1003548880054" \
+        message="⚠️ BTC Arbitrage 重启通知：
+$RESTART_INFO"
     
-    # 检查日志文件大小
-    log_size=$(du -k "heartbeat.log" | cut -f1)
-    if [ "$log_size" -gt 10240 ]; then  # 10MB
-        log "日志文件过大，进行轮转"
-        mv heartbeat.log "heartbeat.log.$(date +%Y%m%d%H%M%S)"
-        touch heartbeat.log
-    fi
-    
-    log "Heartbeat 监控完成"
-}
-
-# 主执行流程
-main() {
-    monitor_heartbeat
-}
-
-main
+    echo "[$(date)] BTC Arbitrage 重启通知: $RESTART_INFO" >> "$LOG_PATH"
+fi

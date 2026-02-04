@@ -1,0 +1,27 @@
+2026-02-03T19:00:02.179248 
+======================================================================
+v8 — Best-of-Breed: V6 MR High + V7 Delay Arb
+======================================================================
+Duration: 480min | Start: 19:00:02 UTC
+Strategies:
+  MR-High: K > 0.8 + momentum < 0.05 → buy NO (V6 params, 100% WR)
+  Delay Arb: sustained momentum > 0.2% → follow BTC (V7 params, 100% WR)
+Risk: cooldown=5s, max_pos=5/mkt, timeout=180s, profit=8.0%
+======================================================================
+
+2026-02-03T19:00:03.197297 [    1s] 🔍 DEBUG KXBTC15M-26FEB031400-00: K=0.00 ask=0.01 ttc=-3s can_enter=False(too_close)
+2026-02-03T19:00:33.233306 [   31s] 🔍 DEBUG KXBTC15M-26FEB031400-00: K=0.00 ask=0.01 ttc=-33s can_enter=False(too_close)
+2026-02-03T19:00:47.186890 
+⚠️ SIGNAL: SIGTERM at 2026-02-03T19:00:47.186756
+2026-02-03T19:00:47.249411 
+======================================================================
+v8 SUMMARY — Best-of-Breed (V6 MR High + V7 Delay Arb)
+======================================================================
+Duration: 0min (0.0h)
+Total Trades: 0
+Trade Rate: 0.0/hr
+P&L: $+0.00
+Final Balance: $1000.00
+
+======================================================================
+

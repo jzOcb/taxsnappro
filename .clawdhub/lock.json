@@ -48,6 +48,46 @@
     "youtube-summarizer": {
       "version": "1.0.0",
       "installedAt": 1769972539589
+    },
+    "nano-banana": {
+      "version": "1.0.1",
+      "installedAt": 1770157023591
+    },
+    "nano-banana-pro-2": {
+      "version": "0.1.0",
+      "installedAt": 1770157039570
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1770157053075
+    },
+    "self-improving-agent": {
+      "version": "1.0.5",
+      "installedAt": 1770186718423
+    },
+    "proactive-agent": {
+      "version": "3.0.0",
+      "installedAt": 1770186883364
+    },
+    "capability-evolver": {
+      "version": "1.1.0",
+      "installedAt": 1770186886551
+    },
+    "reflect-learn": {
+      "version": "2.0.0",
+      "installedAt": 1770187288267
+    },
+    "stock-analysis": {
+      "version": "6.2.0",
+      "installedAt": 1770187573678
+    },
+    "remind-me": {
+      "version": "2.1.0",
+      "installedAt": 1770187575729
+    },
+    "openclaw-skills-security-checker": {
+      "version": "0.1.0",
+      "installedAt": 1770187704691
     }
   }
 }

@@ -14,3 +14,169 @@ See system logs and 'systemctl status heartbeat.service' for details.
 du: cannot access 'heartbeat.log': No such file or directory
 /home/clawdbot/clawd/heartbeat_monitor.sh: line 29: [: : integer expression expected
 /home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+Failed to restart heartbeat.service: Interactive authentication required.
+See system logs and 'systemctl status heartbeat.service' for details.
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+du: cannot access 'heartbeat.log': No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 29: [: : integer expression expected
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+Failed to restart heartbeat.service: Interactive authentication required.
+See system logs and 'systemctl status heartbeat.service' for details.
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+du: cannot access 'heartbeat.log': No such file or directory
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 29: [: : integer expression expected
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 7: /workspace/heartbeat_monitor.log: No such file or directory
+2026-02-02 20:00:01,633 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+2026-02-03 00:00:01,841 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+2026-02-03 04:00:01,393 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+2026-02-03 08:00:01,456 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+2026-02-03 12:00:02,561 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+2026-02-03 16:00:02,058 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 11: warning: command substitution: ignored null byte in input
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+2026-02-03 20:00:01,472 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+/home/clawdbot/clawd/heartbeat_monitor.sh: line 14: message: command not found
+2026-02-04 00:00:02,079 - HeartbeatScheduler - ERROR - 加载配置文件失败: [Errno 2] No such file or directory: 'heartbeat_config.json'
+Traceback (most recent call last):
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 188, in <module>
+    main()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 184, in main
+    scheduler.load_config()
+  File "/home/clawdbot/clawd/heartbeat_scheduler.py", line 50, in load_config
+    with open(self.config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'heartbeat_config.json'

@@ -1,0 +1,47 @@
+{
+  "duration_min": 20,
+  "pnl": -0.6000000000000001,
+  "signals": [
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 513
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 600
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "time": 1770074503.1299608,
+      "ticker": "KXBTC15M-26FEB021830-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.13,
+      "pnl": -0.7000000000000001,
+      "close_time": 1770074530.1739624
+    },
+    {
+      "id": 1,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.08,
+      "time": 1770074590.2367449,
+      "ticker": "KXBTC15M-26FEB021830-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "exit": 0.09,
+      "pnl": 0.09999999999999995,
+      "close_time": 1770074651.3275397
+    }
+  ],
+  "complete": false
+}

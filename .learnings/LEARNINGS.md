@@ -212,3 +212,57 @@ GEP Protocol核心组件：
 - Tags: self-improvement, evolution, automation
 
 ---
+
+---
+
+## [LRN-20260204-008] best_practice
+
+**Logged**: 2026-02-04T06:50:00Z
+**Priority**: medium
+**Status**: pending
+**Area**: infra
+
+### Summary
+memU (7.4K⭐) treats "memory as filesystem" — structured, hierarchical, instantly accessible
+
+### Details
+memU的核心设计：
+- 文件夹=分类，文件=记忆项，符号链接=交叉引用
+- 结构化：preferences/, relationships/, knowledge/, context/
+- 主动预测用户意图（不等指令就行动）
+- 减少token成本（缓存insights，避免重复LLM调用）
+
+与我们的区别：
+- 我们用flat daily files (memory/YYYY-MM-DD.md)
+- memU用层级目录结构
+- 我们可以从中学习：把memory按主题组织，而不只是按日期
+
+### Suggested Action
+考虑在memory/下增加主题子目录（如memory/projects/, memory/decisions/, memory/people/）
+
+### Metadata
+- Source: community_research (memU, 7419⭐)
+- Tags: memory, architecture, filesystem
+
+---
+
+## [LRN-20260204-009] knowledge_gap
+
+**Logged**: 2026-02-04T07:00:00Z
+**Priority**: low
+**Status**: pending
+**Area**: infra
+
+### Summary
+ClawHub security-checker skill只有SKILL.md（prompt-based），没有实际代码
+
+### Details
+openclaw-skills-security-checker虽然描述了pattern detection和whitelist管理，
+但实际安装后只有一个SKILL.md文件——完全依赖AI按照指令行事。
+我们的audit-skill.sh是真正的可执行代码。
+这证实了"Prompt是建议，Code是法律"的论点。
+
+### Metadata
+- Source: community_research
+- Tags: security, code-vs-prompt
+

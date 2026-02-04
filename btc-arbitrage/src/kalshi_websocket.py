@@ -52,6 +52,8 @@ class KalshiWebSocketClient:
         on_error: Optional[Callable[[Exception], None]] = None,
         reconnect_delay: float = 1.0,
         max_reconnect_delay: float = 60.0,
+        api_key: Optional[str] = None,
+        private_key_path: Optional[str] = None,
     ):
         """
         Initialize WebSocket client
@@ -62,6 +64,8 @@ class KalshiWebSocketClient:
             on_error: Callback for errors
             reconnect_delay: Initial reconnect delay (seconds)
             max_reconnect_delay: Maximum reconnect delay (seconds)
+            api_key: Kalshi API key ID (or from KALSHI_API_KEY env)
+            private_key_path: Path to RSA private key PEM (or from KALSHI_PRIVATE_KEY_PATH env)
         """
         self.on_orderbook = on_orderbook
         self.on_ticker = on_ticker
@@ -75,6 +79,14 @@ class KalshiWebSocketClient:
         self.running = False
         self.subscribed_tickers = set()
         
+        # RSA auth
+        import os
+        self.api_key = api_key or os.getenv('KALSHI_API_KEY', '')
+        self.private_key_path = private_key_path or os.getenv('KALSHI_PRIVATE_KEY_PATH', '')
+        self._private_key = None
+        self._load_auth()
+        
+        self._auth_headers_cache = None
         self.stats = {
             'messages_received': 0,
             'orderbook_updates': 0,
@@ -84,15 +96,65 @@ class KalshiWebSocketClient:
             'last_message_time': None,
         }
     
+    def _load_auth(self):
+        """Load RSA private key for authentication"""
+        if not self.api_key or not self.private_key_path:
+            logger.warning("No Kalshi API credentials configured")
+            return
+        try:
+            from cryptography.hazmat.primitives import serialization
+            with open(self.private_key_path) as f:
+                key_data = f.read()
+            self._private_key = serialization.load_pem_private_key(key_data.encode(), password=None)
+            logger.info(f"✅ Kalshi RSA key loaded (key: {self.api_key[:12]}...)")
+        except Exception as e:
+            logger.error(f"Failed to load RSA key: {e}")
+    
+    def _get_auth_headers(self) -> Dict:
+        """Generate RSA-PSS signed auth headers for WebSocket"""
+        if not self._private_key or not self.api_key:
+            return {}
+        try:
+            import time as _time
+            import base64
+            from cryptography.hazmat.primitives import hashes
+            from cryptography.hazmat.primitives.asymmetric import padding
+            
+            timestamp_ms = int(_time.time() * 1000)
+            message = f"{timestamp_ms}GET/trade-api/ws/v2"
+            signature = self._private_key.sign(
+                message.encode(),
+                padding.PSS(
+                    mgf=padding.MGF1(hashes.SHA256()),
+                    salt_length=hashes.SHA256.digest_size
+                ),
+                hashes.SHA256()
+            )
+            return {
+                "KALSHI-ACCESS-KEY": self.api_key,
+                "KALSHI-ACCESS-TIMESTAMP": str(timestamp_ms),
+                "KALSHI-ACCESS-SIGNATURE": base64.b64encode(signature).decode(),
+            }
+        except Exception as e:
+            logger.error(f"Auth header generation failed: {e}")
+            return {}
+    
     async def connect(self):
-        """Establish WebSocket connection"""
+        """Establish WebSocket connection with RSA auth"""
         try:
             logger.info(f"Connecting to {self.WS_URL}...")
             
-            # Connect with timeout
+            # Generate auth headers
+            auth_headers = self._get_auth_headers()
+            if not auth_headers:
+                logger.error("No auth headers - cannot connect to Kalshi WebSocket")
+                return False
+            
+            # Connect with timeout and auth
             self.ws = await asyncio.wait_for(
                 websockets.connect(
                     self.WS_URL,
+                    additional_headers=auth_headers,
                     ping_interval=20,
                     ping_timeout=10,
                     close_timeout=5,
@@ -241,7 +303,7 @@ class KalshiWebSocketClient:
     async def _reconnect_loop(self):
         """Auto-reconnect loop with exponential backoff"""
         while self.running:
-            if not self.ws or self.ws.closed:
+            if not self.ws or getattr(self.ws, "close_code", None) is not None:
                 logger.info("Attempting to reconnect...")
                 
                 connected = await self.connect()
@@ -294,7 +356,7 @@ class KalshiWebSocketClient:
         logger.info("Stopping WebSocket client...")
         self.running = False
         
-        if self.ws and not self.ws.closed:
+        if self.ws and getattr(self.ws, "close_code", None) is None:
             await self.ws.close()
         
         logger.info("WebSocket client stopped")

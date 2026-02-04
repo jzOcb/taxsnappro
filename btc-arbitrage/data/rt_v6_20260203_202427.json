@@ -1,0 +1,749 @@
+{
+  "duration_min": 67,
+  "pnl": 2.5300000000000002,
+  "signals": [
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 41
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 156
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 258
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 319
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 430
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 946
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 1188
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 1300
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 1862
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 1982
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2111
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2179
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2255
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 2690
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 2774
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 2932
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 3022
+    },
+    {
+      "type": "mean_rev_low",
+      "market": "15m",
+      "time": 3173
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 3627
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3705
+    },
+    {
+      "type": "mean_rev_high",
+      "market": "15m",
+      "time": 3771
+    },
+    {
+      "type": "delay",
+      "market": "15m",
+      "time": 3836
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.19,
+      "theoretical_entry": 0.19,
+      "slippage_entry": 0.0,
+      "time": 1770146237.4261055,
+      "ticker": "KXBTC15M-26FEB031430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.19,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.29,
+      "theoretical_exit": 0.29,
+      "slippage_exit": 0.0,
+      "pnl": 0.9999999999999998,
+      "close_time": 1770146267.5063002,
+      "exit_fill": {
+        "vwap": 0.29,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 1,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.61,
+      "theoretical_entry": 0.52,
+      "slippage_entry": 0.08999999999999997,
+      "time": 1770146352.6481593,
+      "ticker": "KXBTC15M-26FEB031430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.61,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.73,
+      "theoretical_exit": 0.73,
+      "slippage_exit": 0.0,
+      "pnl": 1.2,
+      "close_time": 1770146388.72987,
+      "exit_fill": {
+        "vwap": 0.73,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 2,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.09,
+      "theoretical_entry": 0.09999999999999998,
+      "slippage_entry": -0.009999999999999981,
+      "time": 1770146454.8342266,
+      "ticker": "KXBTC15M-26FEB031430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "entry_fill": {
+        "vwap": 0.09,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.08,
+      "theoretical_exit": 0.07999999999999996,
+      "slippage_exit": 4.163336342344337e-17,
+      "pnl": 0.09999999999999995,
+      "close_time": 1770146455.3353148,
+      "exit_fill": {
+        "vwap": 0.08,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 3,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.13,
+      "theoretical_entry": 0.14,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770146515.4383235,
+      "ticker": "KXBTC15M-26FEB031430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "entry_fill": {
+        "vwap": 0.13,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.24,
+      "theoretical_exit": 0.22999999999999998,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": -1.0999999999999999,
+      "close_time": 1770146540.5146434,
+      "exit_fill": {
+        "vwap": 0.24,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 4,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.65,
+      "theoretical_entry": 0.58,
+      "slippage_entry": 0.07000000000000006,
+      "time": 1770146626.6433196,
+      "ticker": "KXBTC15M-26FEB031430-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.65,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.71,
+      "theoretical_exit": 0.71,
+      "slippage_exit": 0.0,
+      "pnl": 0.5999999999999994,
+      "close_time": 1770146635.6920972,
+      "exit_fill": {
+        "vwap": 0.71,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 5,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.63,
+      "theoretical_entry": 0.48,
+      "slippage_entry": 0.15000000000000002,
+      "time": 1770147143.2649443,
+      "ticker": "KXBTC15M-26FEB031445-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.62,
+      "theoretical_exit": 0.47,
+      "slippage_exit": 0.15000000000000002,
+      "pnl": -0.10000000000000009,
+      "close_time": 1770147143.7658424,
+      "exit_fill": {
+        "vwap": 0.62,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 6,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.6,
+      "theoretical_entry": 0.44999999999999996,
+      "slippage_entry": 0.15000000000000002,
+      "time": 1770147385.0671775,
+      "ticker": "KXBTC15M-26FEB031445-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.6,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.58,
+      "theoretical_exit": 0.43999999999999995,
+      "slippage_exit": 0.14,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770147385.5683231,
+      "exit_fill": {
+        "vwap": 0.58,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 7,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.63,
+      "theoretical_entry": 0.53,
+      "slippage_entry": 0.09999999999999998,
+      "time": 1770147496.7271485,
+      "ticker": "KXBTC15M-26FEB031445-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.74,
+      "theoretical_exit": 0.75,
+      "slippage_exit": -0.010000000000000009,
+      "pnl": 1.0999999999999999,
+      "close_time": 1770147665.0165114,
+      "exit_fill": {
+        "vwap": 0.74,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 8,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "theoretical_entry": 0.2,
+      "slippage_entry": 0.0,
+      "time": 1770148058.466018,
+      "ticker": "KXBTC15M-26FEB031500-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.2,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.14,
+      "theoretical_exit": 0.14,
+      "slippage_exit": 0.0,
+      "pnl": -0.6,
+      "close_time": 1770148118.5895324,
+      "exit_fill": {
+        "vwap": 0.14,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 9,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.12,
+      "theoretical_entry": 0.13,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770148178.686111,
+      "ticker": "KXBTC15M-26FEB031500-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.12,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.23000000000000004,
+      "theoretical_exit": 0.23,
+      "slippage_exit": 2.7755575615628914e-17,
+      "pnl": 1.1000000000000005,
+      "close_time": 1770148239.8171782,
+      "exit_fill": {
+        "vwap": 0.23000000000000004,
+        "levels": 1,
+        "slippage": 2.7755575615628914e-17,
+        "partial": false
+      }
+    },
+    {
+      "id": 10,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.25,
+      "theoretical_entry": 0.19,
+      "slippage_entry": 0.06,
+      "time": 1770148307.9334219,
+      "ticker": "KXBTC15M-26FEB031500-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.25,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.22000000000000003,
+      "theoretical_exit": 0.17,
+      "slippage_exit": 0.05000000000000002,
+      "pnl": -0.2999999999999997,
+      "close_time": 1770148308.4311643,
+      "exit_fill": {
+        "vwap": 0.22000000000000003,
+        "levels": 1,
+        "slippage": 2.7755575615628914e-17,
+        "partial": false
+      }
+    },
+    {
+      "id": 11,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.12,
+      "theoretical_entry": 0.13,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770148375.5430336,
+      "ticker": "KXBTC15M-26FEB031500-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.12,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.07,
+      "theoretical_exit": 0.07,
+      "slippage_exit": 0.0,
+      "pnl": -0.4999999999999999,
+      "close_time": 1770148391.6069896,
+      "exit_fill": {
+        "vwap": 0.07,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 12,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.15,
+      "theoretical_entry": 0.15,
+      "slippage_entry": 0.0,
+      "time": 1770148451.7089608,
+      "ticker": "KXBTC15M-26FEB031500-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.15,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.25,
+      "theoretical_exit": 0.23,
+      "slippage_exit": 0.01999999999999999,
+      "pnl": 1.0,
+      "close_time": 1770148517.8420277,
+      "exit_fill": {
+        "vwap": 0.25,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 13,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.59,
+      "theoretical_entry": 0.5800000000000001,
+      "slippage_entry": 0.009999999999999898,
+      "time": 1770148887.2954955,
+      "ticker": "KXBTC15M-26FEB031515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.59,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.56,
+      "theoretical_exit": 0.53,
+      "slippage_exit": 0.030000000000000027,
+      "pnl": 0.29999999999999916,
+      "close_time": 1770148887.7955313,
+      "exit_fill": {
+        "vwap": 0.56,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 14,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.53,
+      "theoretical_entry": 0.48,
+      "slippage_entry": 0.050000000000000044,
+      "time": 1770148970.9266105,
+      "ticker": "KXBTC15M-26FEB031515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.53,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.52,
+      "theoretical_exit": 0.43000000000000005,
+      "slippage_exit": 0.08999999999999997,
+      "pnl": 0.10000000000000009,
+      "close_time": 1770148971.428571,
+      "exit_fill": {
+        "vwap": 0.52,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 15,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.2,
+      "theoretical_entry": 0.21,
+      "slippage_entry": -0.009999999999999981,
+      "time": 1770149128.653371,
+      "ticker": "KXBTC15M-26FEB031515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.2,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.13,
+      "theoretical_exit": 0.13,
+      "slippage_exit": 0.0,
+      "pnl": -0.7000000000000001,
+      "close_time": 1770149158.7417321,
+      "exit_fill": {
+        "vwap": 0.13,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 16,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.16,
+      "theoretical_entry": 0.16,
+      "slippage_entry": 0.0,
+      "time": 1770149218.8463,
+      "ticker": "KXBTC15M-26FEB031515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.16,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.07,
+      "theoretical_exit": 0.06,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": -0.8999999999999999,
+      "close_time": 1770149310.020131,
+      "exit_fill": {
+        "vwap": 0.07,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 17,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.06,
+      "theoretical_entry": 0.07,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770149370.1330268,
+      "ticker": "KXBTC15M-26FEB031515-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_low",
+      "entry_fill": {
+        "vwap": 0.06,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.04,
+      "theoretical_exit": 0.04,
+      "slippage_exit": 0.0,
+      "pnl": -0.19999999999999996,
+      "close_time": 1770149370.6286032,
+      "exit_fill": {
+        "vwap": 0.04,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 18,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.714,
+      "theoretical_entry": 0.54,
+      "slippage_entry": 0.17399999999999993,
+      "time": 1770149824.180171,
+      "ticker": "KXBTC15M-26FEB031530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "delay_arb",
+      "entry_fill": {
+        "vwap": 0.714,
+        "levels": 2,
+        "slippage": 0.014000000000000012,
+        "partial": false
+      },
+      "exit": 0.67,
+      "theoretical_exit": 0.53,
+      "slippage_exit": 0.14,
+      "pnl": -0.4399999999999993,
+      "close_time": 1770149824.674735,
+      "exit_fill": {
+        "vwap": 0.67,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 19,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.187,
+      "theoretical_entry": 0.18999999999999995,
+      "slippage_entry": -0.002999999999999947,
+      "time": 1770149901.7920048,
+      "ticker": "KXBTC15M-26FEB031530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "entry_fill": {
+        "vwap": 0.187,
+        "levels": 2,
+        "slippage": 0.007000000000000006,
+        "partial": false
+      },
+      "exit": 0.16,
+      "theoretical_exit": 0.16000000000000003,
+      "slippage_exit": -2.7755575615628914e-17,
+      "pnl": 0.26999999999999996,
+      "close_time": 1770149902.2834759,
+      "exit_fill": {
+        "vwap": 0.16,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 20,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.1,
+      "theoretical_entry": 0.07999999999999996,
+      "slippage_entry": 0.020000000000000046,
+      "time": 1770149967.3822246,
+      "ticker": "KXBTC15M-26FEB031530-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "mean_reversion_high",
+      "entry_fill": {
+        "vwap": 0.1,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "exit": 0.06,
+      "theoretical_exit": 0.06000000000000005,
+      "slippage_exit": -5.551115123125783e-17,
+      "pnl": 0.4000000000000001,
+      "close_time": 1770149967.9231577,
+      "exit_fill": {
+        "vwap": 0.06,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    }
+  ],
+  "complete": false
+}

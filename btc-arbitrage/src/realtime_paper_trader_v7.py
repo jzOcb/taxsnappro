@@ -22,6 +22,11 @@ import websockets
 from datetime import datetime
 from urllib import request
 from collections import deque
+try:
+    from orderbook_executor import get_real_entry_price, get_real_exit_price
+    HAS_ORDERBOOK = True
+except ImportError:
+    HAS_ORDERBOOK = False
 
 # ═══════════════════════════════════════════════════════
 #  TUNABLE PARAMETERS — Validation Mode
@@ -269,13 +274,31 @@ class PaperTrader:
         self.last_exit_times = {}  # per-ticker cooldown
 
     def open(self, direction, price, ticker, market_type, strategy):
-        cost = self.trade_size * price
+        theoretical_price = price
+        actual_price = price
+        fill_info = None
+        if HAS_ORDERBOOK and direction in ('YES', 'NO'):
+            try:
+                real_price, fill_info = get_real_entry_price(ticker, direction, self.trade_size)
+                if real_price and real_price > 0:
+                    actual_price = real_price
+            except Exception:
+                pass
+        
+        cost = self.trade_size * actual_price
         if cost > self.balance: return None
         pos = {
             'id': len(self.positions), 'dir': direction, 'size': self.trade_size,
-            'entry': price, 'time': time.time(), 'ticker': ticker, 'open': True,
+            'entry': actual_price, 'theoretical_entry': theoretical_price,
+            'slippage_entry': actual_price - theoretical_price,
+            'time': time.time(), 'ticker': ticker, 'open': True,
             'market_type': market_type, 'strategy': strategy
         }
+        if fill_info:
+            pos['entry_fill'] = {'vwap': fill_info.get('vwap', 0),
+                                 'levels': fill_info.get('levels_consumed', 0),
+                                 'slippage': fill_info.get('slippage', 0),
+                                 'partial': fill_info.get('partial', False)}
         self.positions.append(pos)
         self.balance -= cost
         return pos['id']
@@ -297,25 +320,40 @@ class PaperTrader:
     def close(self, pos_id, exit_price):
         pos = next((p for p in self.positions if p['id'] == pos_id and p['open']), None)
         if not pos: return None
+        
+        theoretical_exit = exit_price
+        actual_exit = exit_price
+        fill_info = None
+        
         if pos['dir'] == 'PARITY':
-            # Parity always settles at $1 total
             pnl = self.trade_size * (1.0 - pos['entry'])
-            # Subtract Kalshi fee (~0.7% of profit)
             fee = max(0, pnl) * 0.007
             pnl -= fee
         else:
-            # exit_price is already in the correct frame:
-            # YES: exit = yes_bid, NO: exit = 1-yes_ask (NO price)
-            # So pnl = (exit - entry) * size for both directions
-            pnl = (exit_price - pos['entry']) * pos['size']
-        pos['exit'] = exit_price
+            if HAS_ORDERBOOK:
+                try:
+                    real_price, fill_info = get_real_exit_price(pos['ticker'], pos['dir'], pos['size'])
+                    if real_price and real_price > 0:
+                        actual_exit = real_price
+                except Exception:
+                    pass
+            pnl = (actual_exit - pos['entry']) * pos['size']
+        
+        pos['exit'] = actual_exit
+        pos['theoretical_exit'] = theoretical_exit
+        pos['slippage_exit'] = actual_exit - theoretical_exit
         pos['pnl'] = pnl
         pos['open'] = False
         pos['close_time'] = time.time()
+        if fill_info:
+            pos['exit_fill'] = {'vwap': fill_info.get('vwap', 0),
+                                'levels': fill_info.get('levels_consumed', 0),
+                                'slippage': fill_info.get('slippage', 0),
+                                'partial': fill_info.get('partial', False)}
         if pos['dir'] == 'PARITY':
-            self.balance += self.trade_size * 1.0  # Settlement = $1 per share
+            self.balance += self.trade_size * 1.0
         else:
-            self.balance += pos['size'] * exit_price
+            self.balance += pos['size'] * actual_exit
         self.pnl += pnl
         self.trades.append(pos.copy())
         self.last_exit_times[pos['ticker']] = time.time()

@@ -38,6 +38,21 @@ if [ -f /tmp/btc_arbitrage_restarted.flag ]; then
     has_alert=1
 fi
 
+# Check hourly report flag
+if [ -f /tmp/btc_hourly_report_ready.flag ]; then
+    if [ $has_alert -eq 1 ]; then echo ""; echo "---"; echo ""; fi
+    
+    if [ -f /tmp/btc_hourly_report.txt ]; then
+        cat /tmp/btc_hourly_report.txt
+        rm -f /tmp/btc_hourly_report.txt /tmp/btc_hourly_report_ready.flag
+        has_alert=1
+    else
+        echo "⚠️ Hourly report flag存在但找不到报告文件"
+        rm -f /tmp/btc_hourly_report_ready.flag
+        has_alert=1
+    fi
+fi
+
 if [ $has_alert -eq 0 ]; then
     echo "HEARTBEAT_OK"
 fi

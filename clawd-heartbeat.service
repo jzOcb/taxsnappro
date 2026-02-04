@@ -1,0 +1,14 @@
+[Unit]
+Description=Clawdbot Heartbeat Scheduler
+After=network.target
+
+[Service]
+Type=simple
+User=clawdbot
+WorkingDirectory=/home/clawdbot/clawd
+ExecStart=/usr/bin/python3 /home/clawdbot/clawd/heartbeat_scheduler.py
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target

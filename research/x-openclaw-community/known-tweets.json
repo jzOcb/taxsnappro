@@ -1,0 +1,26 @@
+[
+  {
+    "user": "interjc",
+    "name": "Justin",
+    "text": "我让 openclaw 🦞 制定了任务委派机制，根据复杂程度把不同的任务在创建 subagent 的时候分配给合适的模型\n\n同时在 /root/.openclaw/workspace 采用 git 来管理，有关键更新以后他会自己 push 到 GitHub，这样以后就算服务器崩了，记忆也都沉淀下来了",
+    "likes": 84,
+    "bookmarks": 112,
+    "views": 11167,
+    "retweets": 8,
+    "replies": 10,
+    "url": "https://x.com/interjc/status/2018469905730076720",
+    "date": "Mon Feb 02 23:41:41 +0000 2026"
+  },
+  {
+    "user": "pbteja1998",
+    "name": "Bhanu Teja P",
+    "text": "",
+    "likes": 7364,
+    "bookmarks": 28609,
+    "views": 3261106,
+    "retweets": 792,
+    "replies": 389,
+    "url": "https://x.com/pbteja1998/status/2017662163540971756",
+    "date": "Sat Jan 31 18:12:00 +0000 2026"
+  }
+]

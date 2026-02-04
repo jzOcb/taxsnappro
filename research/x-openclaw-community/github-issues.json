@@ -1,0 +1,609 @@
+[
+  {
+    "title": "Linux/Windows Clawdbot Apps",
+    "url": "https://github.com/openclaw/openclaw/issues/75",
+    "reactions": 37,
+    "comments": 16,
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "created": "2026-01-01"
+  },
+  {
+    "title": "OpenClaw: Stabilisation Mode",
+    "url": "https://github.com/openclaw/openclaw/issues/5799",
+    "reactions": 29,
+    "comments": 1,
+    "labels": [],
+    "created": "2026-02-01"
+  },
+  {
+    "title": "[Feature]: Please add Feishu and WeChat support",
+    "url": "https://github.com/openclaw/openclaw/issues/2170",
+    "reactions": 27,
+    "comments": 12,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "Remove the whatsapp dialogue",
+    "url": "https://github.com/openclaw/openclaw/issues/2676",
+    "reactions": 24,
+    "comments": 11,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "[Bug]:This version of Antigravity is no longer supported. Please update to receive the latest features!",
+    "url": "https://github.com/openclaw/openclaw/issues/4111",
+    "reactions": 23,
+    "comments": 52,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "[Feature]: Azure OpenAI as model provider",
+    "url": "https://github.com/openclaw/openclaw/issues/2280",
+    "reactions": 18,
+    "comments": 19,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "feat: Add nano-gpt.com as a provider",
+    "url": "https://github.com/openclaw/openclaw/pull/1886",
+    "reactions": 15,
+    "comments": 12,
+    "labels": [
+      "docs",
+      "cli",
+      "commands",
+      "agents"
+    ],
+    "created": "2026-01-25"
+  },
+  {
+    "title": "Fixes cron jobs",
+    "url": "https://github.com/openclaw/openclaw/pull/3335",
+    "reactions": 15,
+    "comments": 4,
+    "labels": [],
+    "created": "2026-01-28"
+  },
+  {
+    "title": "Feature Request: Custom baseUrl for model providers (OpenAI-compatible proxies)",
+    "url": "https://github.com/openclaw/openclaw/issues/2305",
+    "reactions": 12,
+    "comments": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "[feat]: add LiteLLM as a provider",
+    "url": "https://github.com/openclaw/openclaw/pull/5198",
+    "reactions": 11,
+    "comments": 1,
+    "labels": [
+      "docs",
+      "commands",
+      "agents"
+    ],
+    "created": "2026-01-31"
+  },
+  {
+    "title": "微信学习交流群",
+    "url": "https://github.com/openclaw/openclaw/issues/3088",
+    "reactions": 11,
+    "comments": 3,
+    "labels": [],
+    "created": "2026-01-28"
+  },
+  {
+    "title": "feat: add Maple AI provider integration",
+    "url": "https://github.com/openclaw/openclaw/pull/2419",
+    "reactions": 11,
+    "comments": 7,
+    "labels": [
+      "docs",
+      "commands",
+      "agents"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "Feature Request: Native MCP client support for remote MCP servers",
+    "url": "https://github.com/openclaw/openclaw/issues/4240",
+    "reactions": 11,
+    "comments": 5,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "建了个微信群，欢迎加入，一起学习交流Clawdbot/Moltbot",
+    "url": "https://github.com/openclaw/openclaw/issues/2748",
+    "reactions": 11,
+    "comments": 4,
+    "labels": [],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "feat(skills): Add Firecrawl skill",
+    "url": "https://github.com/openclaw/openclaw/pull/1945",
+    "reactions": 10,
+    "comments": 1,
+    "labels": [
+      "r: skill"
+    ],
+    "created": "2026-01-25"
+  },
+  {
+    "title": "[Feature]: Add QQ Channel Support for China Mainland Users",
+    "url": "https://github.com/openclaw/openclaw/issues/3684",
+    "reactions": 9,
+    "comments": 7,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "Feature: Strip raw audio attachment after successful transcription",
+    "url": "https://github.com/openclaw/openclaw/issues/4197",
+    "reactions": 9,
+    "comments": 9,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "[Bug]: Large session files",
+    "url": "https://github.com/openclaw/openclaw/issues/2254",
+    "reactions": 8,
+    "comments": 2,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "I start gateway service error",
+    "url": "https://github.com/openclaw/openclaw/issues/2506",
+    "reactions": 8,
+    "comments": 2,
+    "labels": [],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "【开源自荐】 Ai知识库",
+    "url": "https://github.com/openclaw/openclaw/issues/4348",
+    "reactions": 8,
+    "comments": 1,
+    "labels": [],
+    "created": "2026-01-30"
+  },
+  {
+    "title": "Cron tool description incomplete — agents cannot reliably create cron jobs",
+    "url": "https://github.com/openclaw/openclaw/issues/1982",
+    "reactions": 8,
+    "comments": 5,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-25"
+  },
+  {
+    "title": "[Bug]: docker install \"./docker-setup.sh\" happen => ERROR [12/14] RUN CLAWDBOT_A2UI_SKIP_MISSING=1 pnpm build",
+    "url": "https://github.com/openclaw/openclaw/issues/3146",
+    "reactions": 7,
+    "comments": 10,
+    "labels": [
+      "bug",
+      "r: support"
+    ],
+    "created": "2026-01-28"
+  },
+  {
+    "title": "[Feature]: improve Docker setup",
+    "url": "https://github.com/openclaw/openclaw/issues/2178",
+    "reactions": 7,
+    "comments": 12,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "Reminders not working: blocked when heartbeat disabled",
+    "url": "https://github.com/openclaw/openclaw/issues/4224",
+    "reactions": 7,
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "Move provider to a plugin-architecture",
+    "url": "https://github.com/openclaw/openclaw/pull/661",
+    "reactions": 6,
+    "comments": 21,
+    "labels": [],
+    "created": "2026-01-10"
+  },
+  {
+    "title": "Telegram unable to receive cron message",
+    "url": "https://github.com/openclaw/openclaw/issues/5339",
+    "reactions": 6,
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-31"
+  },
+  {
+    "title": "Ollama provider not working - Unknown model error",
+    "url": "https://github.com/openclaw/openclaw/issues/2021",
+    "reactions": 6,
+    "comments": 13,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "feat(channels): Add WeChat Official Account support via Bridge",
+    "url": "https://github.com/openclaw/openclaw/pull/2780",
+    "reactions": 6,
+    "comments": 3,
+    "labels": [],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "Compaction always fails to generate summaries - falls back to static text",
+    "url": "https://github.com/openclaw/openclaw/issues/3479",
+    "reactions": 6,
+    "comments": 4,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-28"
+  },
+  {
+    "title": "[Bug]: Cron jobs with wake=now don't deliver to Telegram",
+    "url": "https://github.com/openclaw/openclaw/issues/2937",
+    "reactions": 6,
+    "comments": 3,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "Model resolution fails for openrouter/auto - Unknown model error",
+    "url": "https://github.com/openclaw/openclaw/issues/3762",
+    "reactions": 5,
+    "comments": 8,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "feat: add LiteLLM as a provider",
+    "url": "https://github.com/openclaw/openclaw/pull/6488",
+    "reactions": 5,
+    "comments": 3,
+    "labels": [
+      "docs",
+      "channel: telegram",
+      "commands",
+      "docker",
+      "agents"
+    ],
+    "created": "2026-02-01"
+  },
+  {
+    "title": "feat: Add GitHub Copilot CLI as a built-in CLI backend",
+    "url": "https://github.com/openclaw/openclaw/pull/3624",
+    "reactions": 5,
+    "comments": 6,
+    "labels": [
+      "docs",
+      "gateway",
+      "agents"
+    ],
+    "created": "2026-01-28"
+  },
+  {
+    "title": "TUI shows no output for chat.send runs (chat events not emitted)",
+    "url": "https://github.com/openclaw/openclaw/issues/2493",
+    "reactions": 5,
+    "comments": 19,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "[Bug]: Kimi/Moonshot OpenAI-compatible models fail silently (direct API works, Clawdbot hangs)",
+    "url": "https://github.com/openclaw/openclaw/issues/3475",
+    "reactions": 5,
+    "comments": 11,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-28"
+  },
+  {
+    "title": "Ollama models return '(no output)' — enforceFinalTag incorrectly applied to all Ollama models",
+    "url": "https://github.com/openclaw/openclaw/issues/2279",
+    "reactions": 5,
+    "comments": 10,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "[Bug]: no output",
+    "url": "https://github.com/openclaw/openclaw/issues/5030",
+    "reactions": 5,
+    "comments": 30,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-30"
+  },
+  {
+    "title": "Fix/openrouter auto prefix to allow proper routing",
+    "url": "https://github.com/openclaw/openclaw/pull/2395",
+    "reactions": 4,
+    "comments": 1,
+    "labels": [
+      "commands",
+      "agents"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "[Feature] Support for Llama cpp config",
+    "url": "https://github.com/openclaw/openclaw/issues/3746",
+    "reactions": 4,
+    "comments": 1,
+    "labels": [
+      "r: support"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "[maintainer] feat: Feishu/Lark channel support",
+    "url": "https://github.com/openclaw/openclaw/pull/7313",
+    "reactions": 4,
+    "comments": 11,
+    "labels": [
+      "docs",
+      "channel: discord",
+      "channel: telegram",
+      "maintainer"
+    ],
+    "created": "2026-02-02"
+  },
+  {
+    "title": "[Feature]: integrate PowerMem as a Memory backend (semantic recall + long‑term memory)",
+    "url": "https://github.com/openclaw/openclaw/issues/7021",
+    "reactions": 4,
+    "comments": 3,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-02-02"
+  },
+  {
+    "title": "[Feature]: Knowledge-Graph-based memory: OpenMemory/Cognee/ZEP",
+    "url": "https://github.com/openclaw/openclaw/issues/2910",
+    "reactions": 4,
+    "comments": 6,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "feat: Add Docs Chat Widget with RAG-powered Q&A",
+    "url": "https://github.com/openclaw/openclaw/pull/7908",
+    "reactions": 4,
+    "comments": 0,
+    "labels": [
+      "docs"
+    ],
+    "created": "2026-02-03"
+  },
+  {
+    "title": "Cron jobs with wakeMode 'now' incorrectly skipped when HEARTBEAT.md is empty",
+    "url": "https://github.com/openclaw/openclaw/issues/2217",
+    "reactions": 4,
+    "comments": 2,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "Feature Request: Rate limit usage notifications",
+    "url": "https://github.com/openclaw/openclaw/issues/1703",
+    "reactions": 4,
+    "comments": 2,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-25"
+  },
+  {
+    "title": "[Bug]: Ollama never responds",
+    "url": "https://github.com/openclaw/openclaw/issues/2474",
+    "reactions": 4,
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "[Feature]: Intelligent Model Routing",
+    "url": "https://github.com/openclaw/openclaw/issues/7482",
+    "reactions": 3,
+    "comments": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-02-02"
+  },
+  {
+    "title": "fix(ui): prefer session label over displayName in dropdown",
+    "url": "https://github.com/openclaw/openclaw/pull/5097",
+    "reactions": 3,
+    "comments": 0,
+    "labels": [
+      "app: web-ui"
+    ],
+    "created": "2026-01-31"
+  },
+  {
+    "title": "Gateway crashes on unhandled fetch rejection",
+    "url": "https://github.com/openclaw/openclaw/issues/2054",
+    "reactions": 3,
+    "comments": 1,
+    "labels": [],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "Clawd not working with LMStudio",
+    "url": "https://github.com/openclaw/openclaw/issues/1695",
+    "reactions": 3,
+    "comments": 23,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-01-25"
+  },
+  {
+    "title": "中文文档翻译（部分）",
+    "url": "https://github.com/openclaw/openclaw/issues/2685",
+    "reactions": 3,
+    "comments": 1,
+    "labels": [],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "feat: add modelverse provider",
+    "url": "https://github.com/openclaw/openclaw/pull/2155",
+    "reactions": 3,
+    "comments": 1,
+    "labels": [
+      "docs",
+      "cli",
+      "commands",
+      "agents"
+    ],
+    "created": "2026-01-26"
+  },
+  {
+    "title": "Meta: Cron reliability — tracking root causes and fix PRs",
+    "url": "https://github.com/openclaw/openclaw/issues/7947",
+    "reactions": 3,
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "created": "2026-02-03"
+  },
+  {
+    "title": "Docs: add zh-CN showcase.md",
+    "url": "https://github.com/openclaw/openclaw/pull/6947",
+    "reactions": 2,
+    "comments": 0,
+    "labels": [
+      "docs"
+    ],
+    "created": "2026-02-02"
+  },
+  {
+    "title": "feat(wecom): add WeCom channel plugin and docs",
+    "url": "https://github.com/openclaw/openclaw/pull/2559",
+    "reactions": 2,
+    "comments": 6,
+    "labels": [
+      "docs"
+    ],
+    "created": "2026-01-27"
+  },
+  {
+    "title": "feat(qq): add QQ OneBot v11 extension support / 添加 QQ OneBot v11 支持",
+    "url": "https://github.com/openclaw/openclaw/pull/3848",
+    "reactions": 2,
+    "comments": 3,
+    "labels": [],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "Feature Request: Traditional Chinese (繁體中文) localization for Control UI",
+    "url": "https://github.com/openclaw/openclaw/issues/3799",
+    "reactions": 2,
+    "comments": 3,
+    "labels": [],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "feat: Add token optimizer plugin with message_received hook integration",
+    "url": "https://github.com/openclaw/openclaw/pull/7267",
+    "reactions": 2,
+    "comments": 1,
+    "labels": [],
+    "created": "2026-02-02"
+  },
+  {
+    "title": "🚀 Feature Request: Context Optimizer Custom - 30-70% Token Cost Reduction",
+    "url": "https://github.com/openclaw/openclaw/issues/5431",
+    "reactions": 2,
+    "comments": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-31"
+  },
+  {
+    "title": "feat(web-fetch): add Jina Reader as extraction fallback",
+    "url": "https://github.com/openclaw/openclaw/pull/3747",
+    "reactions": 2,
+    "comments": 4,
+    "labels": [
+      "docs",
+      "agents"
+    ],
+    "created": "2026-01-29"
+  },
+  {
+    "title": "Feature Request: Anthropic Prompt Caching Support",
+    "url": "https://github.com/openclaw/openclaw/issues/3606",
+    "reactions": 2,
+    "comments": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "created": "2026-01-28"
+  }
+]

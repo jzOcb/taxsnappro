@@ -235,11 +235,17 @@ SegmentFault上在2026-01-31到02-04短短5天内出现了**20+篇**深度OpenCl
 | Carl (裸辞AI创业者) | SegmentFault | Peter故事+AI趋势 | 深度内容 |
 
 ### 中文社区聚集地
-1. **微信群** — 至少2个活跃群（GitHub issues可见）
-2. **SegmentFault** — 主要技术文章聚集地
-3. **GitHub Issues/Discussions** — 官方反馈渠道
-4. **X/Twitter** — 分享使用技巧和踩坑
-5. **Discord "Friends of the Crustacean 🦞🤝"** — 官方社区
+1. **B站 (Bilibili)** — 🔥🔥🔥 **1436个视频！** 最高播放16.3万（大耳朵TV）。主要平台。
+   - "openclaw": 330个视频
+   - "clawdbot": 786个视频
+   - "moltbot": 320个视频
+   - Top UP主: 大耳朵TV(16万)、技术爬爬虾(15.9万+14881收藏)、IT咖啡馆(12.2万)、小白debug(8.5万)
+2. **SegmentFault** — 40+篇深度技术文章
+3. **微信群** — 至少2个活跃群（GitHub issues可见）
+4. **GitHub Issues/Discussions** — 官方反馈渠道（中文issue大量）
+5. **X/Twitter** — 分享使用技巧和踩坑
+6. **Discord "Friends of the Crustacean 🦞🤝"** — 官方社区
+7. **阿里云/百度智能云/京东云** — 大厂官方账号发布教程（B站+文章）
 
 ### 中国平台适配现状
 | 平台 | 支持状态 | 备注 |

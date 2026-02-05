@@ -139,7 +139,27 @@ managed-process.sh start btc-v15
 
 ---
 
+## Rule #10: 启动前杀死所有同名进程（防幽灵重复）
+
+**process manager启动新实例前，必须先 pkill -f 同名脚本。**
+
+**为什么：**
+- 手动 `python3 bot.py &` 启动的进程，process manager不知道
+- 只查自己的PID文件 → 漏掉野生进程 → 多实例同时跑
+- 多实例抢同一市场 = 数据污染 + 资源浪费 + 难以排查
+
+**修复：**
+```bash
+# 在 start() 里自动杀同名进程
+local SCRIPT_NAME=$(echo "$CMD" | grep -oE '[a-zA-Z0-9_-]+\.py' | tail -1)
+pkill -f "python3.*$SCRIPT_NAME" || true
+```
+
+**教训来源：** 2026-02-05，3个trader跑了双份，Jason发现后追问
+
+---
+
 *Source: @predict_anon methodology + our own 血泪教训*
 *Created: 2026-02-05*
-*Updated: 2026-02-05 — Added Rule #9 (managed process enforcement)*
+*Updated: 2026-02-05 — Added Rule #10 (orphan process prevention)*
 *Status: Active — 永不废除*

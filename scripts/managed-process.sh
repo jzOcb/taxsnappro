@@ -89,6 +89,20 @@ else:
         return 1
     fi
     
+    # ═══════════════════════════════════════════════
+    # SAFETY: Kill any orphaned processes with same script name
+    # This prevents duplicates from manual launches
+    # ═══════════════════════════════════════════════
+    local SCRIPT_NAME=$(echo "$CMD" | grep -oE '[a-zA-Z0-9_-]+\.py' | tail -1)
+    if [ -n "$SCRIPT_NAME" ]; then
+        local ORPHAN_PIDS=$(pgrep -f "python3.*$SCRIPT_NAME" 2>/dev/null | head -5)
+        if [ -n "$ORPHAN_PIDS" ]; then
+            echo "🧹 Killing orphaned $SCRIPT_NAME processes: $ORPHAN_PIDS"
+            echo "$ORPHAN_PIDS" | xargs kill -9 2>/dev/null || true
+            sleep 1
+        fi
+    fi
+    
     # Create wrapper script that handles signals and logging
     local WRAPPER="$PROCESS_DIR/${NAME}_wrapper.sh"
     cat > "$WRAPPER" << 'WRAPPER_EOF'

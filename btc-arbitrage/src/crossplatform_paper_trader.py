@@ -72,7 +72,7 @@ POLL_INTERVAL = 30           # seconds between price poll cycles
 RESCAN_INTERVAL = 600        # 10 minutes: re-scan for new market pairs (was 30min, Day 1)
 PM_MOMENTUM_WINDOW = 300     # 5 minutes: check PM price movement
 PM_MOVE_THRESHOLD = 0.03     # 3¢ move in PM triggers signal
-SPREAD_ENTRY_MIN = 0.06      # minimum 6¢ spread to enter (covers 3.6% fees + margin)
+SPREAD_ENTRY_MIN = 0.03      # minimum 3¢ spread to enter (covers 0.6% Kalshi fees + margin)
 SPREAD_EXIT_MAX = 0.02       # exit when spread narrows to 2¢
 TRADE_MAX_SIZE = 100.0       # max $100 per paper trade (scaled from $50, Day 1)
 TOTAL_MAX_EXPOSURE = 600.0   # max $600 total paper exposure (scaled from $300, Day 1)
@@ -1413,10 +1413,10 @@ class PaperTrader:
         else:
             price_change = trade.entry_price - exit_price
 
-        # Fee calculation: Kalshi maker 0.3% + PM ~1.5% per side = ~1.8% per side, 3.6% round trip
+        # Fee calculation: Kalshi-only (PM is signal, not traded - US residents can't use PM)
+        # Kalshi maker 0.3% per side = 0.6% round trip
         KALSHI_FEE = 0.003  # 0.3% maker
-        PM_FEE = 0.015      # ~1.5% average
-        ROUND_TRIP_FEE = 2 * (KALSHI_FEE + PM_FEE)  # Entry + Exit on both platforms
+        ROUND_TRIP_FEE = 2 * KALSHI_FEE  # Entry + Exit on Kalshi only = 0.6%
         
         gross_pnl = trade.size_usd * price_change
         fee_cost = trade.size_usd * ROUND_TRIP_FEE

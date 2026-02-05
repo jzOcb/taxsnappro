@@ -888,8 +888,14 @@ def estimate_yes_probability(market: dict) -> float:
     elif series_type == 'entertainment':
         return _estimate_entertainment(market, keyword)
     else:
-        # Unknown series — use conservative Trump speech model
-        return _estimate_trump_speech(market, keyword, 'trump_weekly')
+        # ⚠️ NO FALLBACK - Unknown series = don't trade (not gambling)
+        series_ticker = market.get("series_ticker", "unknown")
+        volume = market.get("volume", 0)
+        if volume > 50000:
+            logger.warning(f"⚠️ HIGH VOLUME NO MODEL: {series_ticker} ({volume:,} vol) - build model to trade")
+        else:
+            logger.debug(f"Skipping {series_ticker}: no probability model")
+        return None  # None = don't trade
 
 
 def _estimate_trump_speech(market: dict, keyword: str, series_type: str) -> float:
@@ -1088,10 +1094,12 @@ def _estimate_entertainment(market: dict, keyword: str) -> float:
 
     model = ENTERTAINMENT_MODELS.get(series_ticker, {})
     
-    # ⚠️ FIX: Don't trade entertainment series without specific model
+    # ⚠️ NO MODEL = NO TRADE
     if not model:
-        logger.warning(f"No model for entertainment series {series_ticker}, returning 50% (no edge)")
-        return 50.0  # Return 50% = no edge, won't enter trade
+        volume = market.get("volume", 0)
+        if volume > 50000:
+            logger.warning(f"⚠️ HIGH VOLUME NO MODEL: entertainment/{series_ticker} ({volume:,} vol)")
+        return None  # None = don't trade (not gambling)
     
     high_prob = model.get('high_prob', {})
     low_prob = model.get('low_prob', {})
@@ -1187,6 +1195,11 @@ def should_trade(market: dict, state: dict) -> Optional[dict]:
 
     # Get fair value estimate
     fair_yes = estimate_yes_probability(market)
+    
+    # ⚠️ NO MODEL = NO TRADE (not gambling)
+    if fair_yes is None:
+        return None
+    
     fair_no = 100 - fair_yes
     yes_mid = market["yes_mid"]
 

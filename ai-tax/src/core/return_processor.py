@@ -27,11 +27,11 @@ from .fact_graph import FactGraph, FactType
 from .modules.federal_core import (
     register_all_federal_core,
     _compute_bracket_tax,
-    BRACKETS_MFJ_QSS, BRACKETS_SINGLE, BRACKETS_HOH, BRACKETS_MFS,
-    STD_DEDUCTION_MFJ, STD_DEDUCTION_SINGLE, STD_DEDUCTION_HOH, STD_DEDUCTION_MFS,
+    _get_rounded_taxable_income,
 )
 from .modules.income_sources import build_income_sources
 from .modules.investments import build_all_investment_modules
+from .tax_constants import get_constants, TaxYearConstants
 from .security import mask_ssn, mask_ein, sanitize_dict_for_log, SecureLogger
 
 logger = SecureLogger(__name__)
@@ -365,8 +365,10 @@ class ReturnProcessor:
     def calculate(self) -> TaxResult:
         """
         Run the full tax calculation and return results.
+        Uses tax year-specific constants (2024 vs 2025 brackets, deductions, etc.)
         """
         self._init_graph()
+        self._tc = get_constants(self.tax_year)
         result = TaxResult(tax_year=self.tax_year)
         
         # --- Filing status ---
@@ -463,8 +465,19 @@ class ReturnProcessor:
         result.total_income = _d(self.graph.get("/totalIncome"))
         result.total_adjustments = _d(self.graph.get("/adjustmentsToIncome"))
         result.agi = _d(self.graph.get("/agi"))
-        result.standard_deduction = _d(self.graph.get("/standardDeduction"))
-        result.taxable_income = _d(self.graph.get("/taxableIncome"))
+        
+        # Use year-specific standard deduction (override graph's hardcoded 2025 values)
+        tc = self._tc
+        if status in ("married_filing_jointly", "qualifying_surviving_spouse"):
+            result.standard_deduction = tc.std_deduction_mfj
+        elif status == "head_of_household":
+            result.standard_deduction = tc.std_deduction_hoh
+        elif status == "married_filing_separately":
+            result.standard_deduction = tc.std_deduction_mfs
+        else:
+            result.standard_deduction = tc.std_deduction_single
+        
+        result.taxable_income = max(result.agi - result.standard_deduction, Decimal("0"))
         
         # --- Itemized deduction check ---
         if self._itemized:
@@ -481,28 +494,22 @@ class ReturnProcessor:
             result.deduction_type = "standard"
             result.deduction_used = result.standard_deduction
         
-        # --- Tax from brackets ---
-        result.tax_from_brackets = _d(self.graph.get("/tentativeTaxFromTaxableIncome"))
-        
-        # If we overrode deduction (itemized), recalculate bracket tax
-        if result.deduction_type == "itemized":
-            brackets = self._get_brackets(status)
-            from .modules.federal_core import _get_rounded_taxable_income
-            rounded_ti = _get_rounded_taxable_income(result.taxable_income)
-            result.tax_from_brackets = _compute_bracket_tax(rounded_ti, brackets)
+        # --- Tax from brackets (always use year-specific brackets) ---
+        brackets = self._get_brackets(status)
+        rounded_ti = _get_rounded_taxable_income(result.taxable_income)
+        result.tax_from_brackets = _compute_bracket_tax(rounded_ti, brackets)
         
         # --- Additional taxes ---
         result.additional_medicare_tax = _d(self.graph.get("/additionalMedicareTax"))
         result.niit = _d(self.graph.get("/netInvestmentIncomeTax"))
         
-        # Recalculate NIIT if needed (when itemized changes AGI path)
-        # NIIT = 3.8% × min(net investment income, AGI - threshold)
+        # Recalculate NIIT with year-specific thresholds
         if status == "married_filing_jointly":
-            niit_threshold = Decimal("250000")
+            niit_threshold = tc.niit_threshold_mfj
         elif status == "married_filing_separately":
-            niit_threshold = Decimal("125000")
+            niit_threshold = tc.niit_threshold_mfs
         else:
-            niit_threshold = Decimal("200000")
+            niit_threshold = tc.niit_threshold_other
         
         net_invest = max(
             result.total_interest + result.total_dividends + 
@@ -543,11 +550,12 @@ class ReturnProcessor:
         return result
     
     def _calc_itemized_deduction(self, agi: Decimal) -> Decimal:
-        """Calculate itemized deduction (Schedule A)."""
+        """Calculate itemized deduction (Schedule A) with year-specific SALT cap."""
+        tc = self._tc
         salt = min(
             self._itemized.get('state_tax', Decimal("0")) + 
             self._itemized.get('property_tax', Decimal("0")),
-            Decimal("10000")  # SALT cap
+            tc.salt_cap  # $10K for 2024, $40K for 2025 (OBBBA)
         )
         
         mortgage = self._itemized.get('mortgage_interest', Decimal("0"))
@@ -560,14 +568,15 @@ class ReturnProcessor:
         return salt + mortgage + charity + medical_deductible
     
     def _get_brackets(self, status: str) -> list:
-        """Get bracket table for filing status."""
+        """Get year-specific bracket table for filing status."""
+        tc = self._tc
         if status in ("married_filing_jointly", "qualifying_surviving_spouse"):
-            return BRACKETS_MFJ_QSS
+            return list(tc.brackets_mfj)
         elif status == "head_of_household":
-            return BRACKETS_HOH
+            return list(tc.brackets_hoh)
         elif status == "married_filing_separately":
-            return BRACKETS_MFS
-        return BRACKETS_SINGLE
+            return list(tc.brackets_mfs)
+        return list(tc.brackets_single)
     
     def _get_marginal_rate(self, taxable_income: Decimal, status: str) -> Decimal:
         """Get marginal tax rate."""
@@ -578,34 +587,27 @@ class ReturnProcessor:
         return Decimal("0.37")
     
     def _calc_ma_tax(self, result: TaxResult):
-        """Calculate Massachusetts state income tax."""
+        """Calculate Massachusetts state income tax with year-specific constants."""
         result.state = "MA"
+        tc = self._tc
         
-        # MA flat rate: 5% on Part A income (wages, interest, dividends)
-        # 8.5% on short-term capital gains 
-        # 5% on long-term capital gains
-        # 4% surtax on income > $1M (2025: indexed)
-        
-        ma_rate = Decimal("0.05")
-        
-        # MA taxable income ≈ federal AGI with some MA-specific adjustments
-        # Simplified: use federal AGI - MA personal exemption ($4,400 single, $8,800 MFJ)
+        # MA taxable income ≈ federal AGI - MA personal exemption
         if self._filing_status in ("married_filing_jointly", "qualifying_surviving_spouse"):
-            ma_exemption = Decimal("8800")
+            ma_exemption = tc.ma_exemption_mfj
         elif self._filing_status == "head_of_household":
-            ma_exemption = Decimal("6800")
+            ma_exemption = tc.ma_exemption_hoh
         else:
-            ma_exemption = Decimal("4400")
+            ma_exemption = tc.ma_exemption_single
         
         ma_taxable = max(result.agi - ma_exemption, Decimal("0"))
         result.state_taxable_income = ma_taxable
         
         # Base tax at 5%
-        state_tax = (ma_taxable * ma_rate).quantize(Decimal("1"))
+        state_tax = (ma_taxable * tc.ma_rate).quantize(Decimal("1"))
         
-        # MA millionaire surtax: 4% on income over $1,000,000
-        if result.agi > Decimal("1000000"):
-            surtax = ((result.agi - Decimal("1000000")) * Decimal("0.04")).quantize(Decimal("1"))
+        # MA millionaire surtax: 4% on income over threshold
+        if result.agi > tc.ma_surtax_threshold:
+            surtax = ((result.agi - tc.ma_surtax_threshold) * tc.ma_surtax_rate).quantize(Decimal("1"))
             state_tax += surtax
         
         result.state_tax = state_tax
@@ -629,11 +631,12 @@ class ReturnProcessor:
                     f"(${result.standard_deduction:,.0f}). Consider bunching deductions."
                 )
         
-        # HSA max-out check
+        # HSA max-out check (year-specific limits)
+        tc = self._tc if hasattr(self, '_tc') else get_constants(self.tax_year)
         if result.filing_status == "married_filing_jointly":
-            hsa_limit = Decimal("8550")
+            hsa_limit = tc.hsa_family
         else:
-            hsa_limit = Decimal("4300")
+            hsa_limit = tc.hsa_self
         
         if result.hsa_deduction < hsa_limit and result.hsa_deduction > 0:
             opts.append(
@@ -658,7 +661,7 @@ class ReturnProcessor:
         # Retirement contributions
         for w2 in self._w2_data + self._spouse_w2_data:
             if w2.get('box12_d_401k', 0) > 0:
-                limit_401k = Decimal("23500") if self.tax_year >= 2025 else Decimal("23000")
+                limit_401k = tc.limit_401k
                 if _d(w2.get('box12_d_401k', 0)) < limit_401k:
                     opts.append(
                         f"401(k) contribution below ${limit_401k:,.0f} limit. "

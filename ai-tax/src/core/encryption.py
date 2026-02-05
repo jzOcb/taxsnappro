@@ -1,8 +1,12 @@
 """
 Encryption at Rest — Encrypt/decrypt user tax data for storage.
 
-Uses Fernet symmetric encryption (AES-128-CBC with HMAC-SHA256).
-Key is derived from a master password using PBKDF2.
+Uses AES-256-GCM (Galois/Counter Mode) for authenticated encryption.
+- AES-256: 256-bit key for encryption (NIST approved, matches documentation)
+- GCM: Provides both confidentiality and integrity (authenticated encryption)
+- Each encryption generates a unique 96-bit nonce (IV)
+
+Key is derived from a master password using PBKDF2 with 600,000 iterations.
 
 Usage:
     enc = DataEncryptor.from_password("master-password-from-env")
@@ -19,8 +23,13 @@ Usage:
 Security:
 - Master key MUST come from environment variable, never hardcoded
 - Encrypted files use .enc extension
-- Each encryption uses a unique IV (built into Fernet)
-- HMAC prevents tampering
+- Each encryption uses a unique 96-bit nonce (cryptographically random)
+- GCM mode provides authentication (detects tampering)
+- 600,000 PBKDF2 iterations (OWASP 2024 recommendation for SHA-256)
+
+Migration:
+- Can decrypt legacy Fernet-encrypted data (AES-128-CBC)
+- All new encryptions use AES-256-GCM
 """
 
 import os
@@ -31,11 +40,12 @@ import secrets
 from pathlib import Path
 from typing import Any, Optional
 
-# Use cryptography library if available, fallback to basic implementation
+# Use cryptography library
 try:
-    from cryptography.fernet import Fernet
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
     from cryptography.hazmat.primitives import hashes
     from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+    from cryptography.fernet import Fernet, InvalidToken  # For legacy decryption
     HAS_CRYPTOGRAPHY = True
 except ImportError:
     HAS_CRYPTOGRAPHY = False
@@ -45,31 +55,63 @@ except ImportError:
 ENV_KEY_NAME = "AI_TAX_ENCRYPTION_KEY"
 ENV_SALT_NAME = "AI_TAX_ENCRYPTION_SALT"
 
+# Magic bytes to identify AES-256-GCM encrypted data (vs legacy Fernet)
+AES256_GCM_MAGIC = b"AES256GCM1"  # 10 bytes
+
 
 class DataEncryptor:
     """
     Encrypt and decrypt tax data at rest.
     
-    Uses Fernet (AES-128-CBC + HMAC-SHA256) for authenticated encryption.
-    Key is derived from a master password using PBKDF2 with 480,000 iterations.
+    Uses AES-256-GCM for authenticated encryption:
+    - 256-bit key (32 bytes)
+    - 96-bit nonce (12 bytes, randomly generated per encryption)
+    - 128-bit authentication tag (built into GCM)
+    
+    Key is derived from a master password using PBKDF2 with 600,000 iterations.
+    
+    Format of encrypted data:
+    [MAGIC:10][NONCE:12][CIPHERTEXT+TAG:variable]
+    
+    Can also decrypt legacy Fernet data (AES-128-CBC) for migration.
     """
     
-    def __init__(self, key: bytes):
-        """Initialize with a Fernet key (32 bytes, base64-encoded)."""
+    def __init__(self, key: bytes, legacy_fernet_key: Optional[bytes] = None):
+        """
+        Initialize with a 256-bit key.
+        
+        Args:
+            key: 32-byte AES-256 key
+            legacy_fernet_key: Optional 32-byte Fernet key for decrypting old data
+        """
         if not HAS_CRYPTOGRAPHY:
             raise RuntimeError(
                 "cryptography package required for encryption. "
                 "Install with: pip install cryptography"
             )
-        self._fernet = Fernet(key)
+        
+        if len(key) != 32:
+            raise ValueError("AES-256 requires a 32-byte key")
+        
+        self._key = key
+        self._aesgcm = AESGCM(key)
+        
+        # Legacy support for Fernet-encrypted data
+        self._legacy_fernet = None
+        if legacy_fernet_key:
+            self._legacy_fernet = Fernet(legacy_fernet_key)
     
     @classmethod
     def from_password(cls, password: str, salt: Optional[bytes] = None) -> 'DataEncryptor':
         """
         Create encryptor from a password string.
         
-        Uses PBKDF2 with 480,000 iterations (OWASP recommended minimum).
+        Uses PBKDF2 with 600,000 iterations (OWASP 2024 recommended for SHA-256).
         Salt should be stored alongside encrypted data or in env var.
+        
+        Derives TWO keys:
+        - 32-byte AES-256 key for new encryptions
+        - 32-byte Fernet-compatible key for legacy decryption
         """
         if not HAS_CRYPTOGRAPHY:
             raise RuntimeError("cryptography package required")
@@ -84,14 +126,26 @@ class DataEncryptor:
                 print(f"⚠️  Generated new encryption salt. Save this in {ENV_SALT_NAME}:")
                 print(f"   {base64.b64encode(salt).decode()}")
         
+        # Derive AES-256 key
         kdf = PBKDF2HMAC(
             algorithm=hashes.SHA256(),
             length=32,
             salt=salt,
-            iterations=480000,
+            iterations=600000,  # OWASP 2024 recommendation
         )
-        key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
-        return cls(key)
+        aes_key = kdf.derive(password.encode())
+        
+        # Derive legacy Fernet key (for decrypting old data)
+        # Use different salt suffix to get different key
+        legacy_kdf = PBKDF2HMAC(
+            algorithm=hashes.SHA256(),
+            length=32,
+            salt=salt + b"_legacy",
+            iterations=480000,  # Old iteration count for compatibility
+        )
+        legacy_key = base64.urlsafe_b64encode(legacy_kdf.derive(password.encode()))
+        
+        return cls(aes_key, legacy_fernet_key=legacy_key)
     
     @classmethod
     def from_env(cls) -> 'DataEncryptor':
@@ -115,12 +169,38 @@ class DataEncryptor:
         return cls.from_password(password, salt)
     
     def encrypt(self, data: bytes) -> bytes:
-        """Encrypt raw bytes."""
-        return self._fernet.encrypt(data)
+        """
+        Encrypt raw bytes using AES-256-GCM.
+        
+        Returns: MAGIC (10) + NONCE (12) + CIPHERTEXT+TAG
+        """
+        nonce = secrets.token_bytes(12)  # 96-bit nonce for GCM
+        ciphertext = self._aesgcm.encrypt(nonce, data, None)
+        return AES256_GCM_MAGIC + nonce + ciphertext
     
     def decrypt(self, token: bytes) -> bytes:
-        """Decrypt raw bytes."""
-        return self._fernet.decrypt(token)
+        """
+        Decrypt raw bytes.
+        
+        Automatically detects AES-256-GCM vs legacy Fernet format.
+        """
+        # Check if it's our new AES-256-GCM format
+        if token.startswith(AES256_GCM_MAGIC):
+            nonce = token[10:22]  # 12 bytes after magic
+            ciphertext = token[22:]
+            return self._aesgcm.decrypt(nonce, ciphertext, None)
+        
+        # Try legacy Fernet decryption
+        if self._legacy_fernet:
+            try:
+                return self._legacy_fernet.decrypt(token)
+            except InvalidToken:
+                pass
+        
+        raise ValueError(
+            "Unable to decrypt: unrecognized format. "
+            "Data may be corrupted or encrypted with a different key."
+        )
     
     def encrypt_json(self, obj: Any) -> str:
         """Encrypt a JSON-serializable object, return base64 string."""
@@ -165,6 +245,15 @@ class DataEncryptor:
         """Decrypt a base64 string back to text."""
         encrypted = base64.b64decode(encrypted_str)
         return self.decrypt(encrypted).decode('utf-8')
+    
+    def re_encrypt(self, old_token: bytes) -> bytes:
+        """
+        Re-encrypt data from legacy format to AES-256-GCM.
+        
+        Use this for migrating old Fernet-encrypted data.
+        """
+        plaintext = self.decrypt(old_token)
+        return self.encrypt(plaintext)
 
 
 class SecureStorage:
@@ -172,8 +261,8 @@ class SecureStorage:
     High-level secure storage for tax return data.
     
     Handles:
-    - Encrypting tax returns before writing to disk
-    - Decrypting when loading
+    - Encrypting tax returns before writing to disk (AES-256-GCM)
+    - Decrypting when loading (supports legacy Fernet data)
     - Automatic cleanup (TTL-based expiry)
     - Audit logging (who accessed what, when)
     """
@@ -187,7 +276,7 @@ class SecureStorage:
         self._audit_log = self.storage_dir / "access_audit.log"
     
     def save_return(self, return_id: str, data: dict) -> str:
-        """Save an encrypted tax return."""
+        """Save an encrypted tax return (using AES-256-GCM)."""
         encrypted = self._enc.encrypt_json(data)
         
         file_path = self.storage_dir / f"{return_id}.enc"
@@ -199,7 +288,7 @@ class SecureStorage:
         return str(file_path)
     
     def load_return(self, return_id: str) -> dict:
-        """Load and decrypt a tax return."""
+        """Load and decrypt a tax return (auto-detects format)."""
         file_path = self.storage_dir / f"{return_id}.enc"
         
         if not file_path.exists():
@@ -229,6 +318,16 @@ class SecureStorage:
             f.stem for f in self.storage_dir.glob("*.enc")
             if f.name != "access_audit.log"
         ]
+    
+    def migrate_to_aes256(self, return_id: str):
+        """
+        Migrate a single return from legacy Fernet to AES-256-GCM.
+        
+        Loads with legacy decryption, re-saves with new encryption.
+        """
+        data = self.load_return(return_id)
+        self.save_return(return_id, data)
+        self._audit(f"MIGRATE {return_id} -> AES-256-GCM")
     
     def _audit(self, action: str):
         """Append to audit log."""

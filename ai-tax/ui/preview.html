@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tax 2024 - Mercury Style Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 20px 40px;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .nav-links a {
+            color: rgba(148, 163, 184, 0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        /* Main Content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px 40px 40px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .header p {
+            color: rgba(148, 163, 184, 0.6);
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.2s;
+        }
+        
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-card .label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(148, 163, 184, 0.8);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: 600;
+        }
+        
+        .stat-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+        
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 16px;
+        }
+        
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .card-subtitle {
+            color: rgba(148, 163, 184, 0.6);
+            font-size: 14px;
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: rgba(148, 163, 184, 0.5);
+        }
+        
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+        
+        .empty-state a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Summary List */
+        .summary-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .summary-label {
+            color: rgba(148, 163, 184, 0.6);
+        }
+        
+        .badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .badge-yellow {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+        
+        .badge-green {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            margin: 16px 0;
+        }
+        
+        .btn-disabled {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            width: 100%;
+            opacity: 0.5;
+            cursor: not-allowed;
+            margin-top: auto;
+        }
+        
+        /* Upload Page */
+        .upload-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 120px 40px 40px 40px;
+        }
+        
+        .upload-zone {
+            border: 2px dashed rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            background: rgba(30, 41, 59, 0.3);
+            padding: 60px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 24px;
+        }
+        
+        .upload-zone:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+            background: rgba(30, 41, 59, 0.5);
+        }
+        
+        .upload-zone svg {
+            width: 48px;
+            height: 48px;
+            color: rgba(59, 130, 246, 0.8);
+            margin-bottom: 16px;
+        }
+        
+        .upload-zone h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .upload-zone p {
+            color: rgba(148, 163, 184, 0.6);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="logo">
+            <span>⚡</span>
+            <span>AI Tax</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#upload">Upload</a>
+            <a href="#">Review</a>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <main class="main">
+        <div class="header">
+            <div>
+                <h1>Tax Dashboard</h1>
+                <p>Tax Year 2024</p>
+            </div>
+            <button class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Upload Documents
+            </button>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="card stat-card">
+                <div class="label">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    Total Income
+                </div>
+                <div class="value" style="color: #10b981">$0</div>
+            </div>
+            <div class="card stat-card">
+                <div class="label">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                    Deductions
+                </div>
+                <div class="value" style="color: #f59e0b">$0</div>
+            </div>
+            <div class="card stat-card">
+                <div class="label">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                        <line x1="8" y1="6" x2="16" y2="6"></line>
+                        <line x1="8" y1="10" x2="16" y2="10"></line>
+                        <line x1="8" y1="14" x2="12" y2="14"></line>
+                    </svg>
+                    Estimated Tax
+                </div>
+                <div class="value" style="color: #ef4444">$0</div>
+            </div>
+            <div class="card stat-card">
+                <div class="label">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                    Estimated Refund
+                </div>
+                <div class="value" style="color: #3b82f6">$0</div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Documents</span>
+                    <span class="card-subtitle">0 files</span>
+                </div>
+                <div class="empty-state">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <p>No documents yet</p>
+                    <a href="#upload">Upload your first document →</a>
+                </div>
+            </div>
+            <div class="card" style="display: flex; flex-direction: column;">
+                <span class="card-title">Tax Summary</span>
+                <hr class="divider">
+                <div class="summary-list">
+                    <div class="summary-row">
+                        <span class="summary-label">Filing Status</span>
+                        <span>Single</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Tax Year</span>
+                        <span>2024</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Status</span>
+                        <span class="badge badge-yellow">In Progress</span>
+                    </div>
+                </div>
+                <button class="btn-disabled" style="margin-top: 24px;">Generate Tax Return</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Upload Section Preview -->
+    <section id="upload" class="upload-container" style="background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);">
+        <h1 style="font-size: 32px; font-weight: 600;">Upload Documents</h1>
+        <p style="color: rgba(148, 163, 184, 0.6); text-align: center; max-width: 500px; margin-top: 8px;">
+            Upload your W-2, 1099, and other tax documents. We'll extract the data automatically.
+        </p>
+        
+        <div class="upload-zone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <h3>Drop your tax documents here</h3>
+            <p>W-2, 1099, 1098, or any tax forms</p>
+            <button class="btn-primary">Browse Files</button>
+        </div>
+    </section>
+</body>
+</html>

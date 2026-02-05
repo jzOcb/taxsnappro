@@ -1,11 +1,11 @@
 # STATUS.md — AI Tax
-Last updated: 2026-02-03T17:55Z
+Last updated: 2026-02-05T21:00Z
 
-## 当前状态: 进行中
+## 当前状态: UI开发中 🚀
 
 ## 项目目标
-用AI帮用户报税，从Jason自己的2025年税开始验证全流程（包括e-file到IRS）。
-架构按产品标准搭，暂不收费但考虑未来商业化。
+用AI帮用户报税，从Jason自己的2024年税开始验证全流程。
+目标：让朋友家人能用（免费），架构按产品标准搭，考虑未来商业化。
 
 ## 用户Profile (第一个用例)
 - Married Filing Jointly
@@ -16,40 +16,102 @@ Last updated: 2026-02-03T17:55Z
 - 房贷、HSA、401K
 - 需要税务优化（折旧、退休账户、TLH等）
 
-## 技术路径
-- Option A (快): Column Tax白标API + AI前端
-- Option B (自建): 参考IRS Direct File开源代码 + MeF集成
+## 已完成 ✅
 
-## 需要支持的税表
-1040, Schedule 1/2/3/A/B/C/D/E, Form 8949/8889/8959/8960, MA State Return
+### 核心引擎
+- [x] Tax Engine with 2024/2025 constants
+- [x] Fact Graph engine (IRS Direct File inspired)
+- [x] Document parser scaffolding
+- [x] Federal core module (tax brackets, deductions)
+- [x] Income sources module (W-2, 1099 handling)
+- [x] Investments module (capital gains, dividends)
+- [x] 46 unit tests passing
 
-## 已完成
-1. [x] 产品可行性研究报告
-2. [x] 税务优化Playbook（针对Jason情况）
-3. [x] Column Tax API研究 → 结论：白标UI模式，不适合AI-first方案
-4. [x] IRS Direct File开源代码架构研究 → Fact Graph引擎是核心可复用组件
-5. [x] 项目骨架搭建（models, tax_engine, document_parser, tests）
-6. [x] 12个单元测试全部通过（税务计算验证）
+### 安全 & 合规
+- [x] AES-256-GCM encryption (upgraded from AES-128)
+- [x] Data retention policy (3 years)
+- [x] PII masking & secure logging
+- [x] WISP (Written Information Security Plan)
+- [x] Privacy Policy
+- [x] Terms of Service  
+- [x] User Consent Form (§7216 compliant)
+- [x] Legal review document
 
-## 下一步
-1. [ ] Clone Direct File repo，本地跑起来
-2. [ ] 研究Fact Graph XML模块，理解税务规则格式
-3. [ ] 原型：LLM ↔ Fact Graph集成（AI能否读取fact graph状态并生成问题）
-4. [ ] EFIN申请流程启动（需要6-12个月）
-5. [ ] Jason提供2025年税表开始跑数据
-6. [ ] 搭建文档解析原型（W-2 OCR → 结构化数据）
+### UI (Mercury风格)
+- [x] Static HTML preview
+- [x] Reflex app structure
+- [x] Dashboard page (stats, documents, summary)
+- [x] Upload page (drag & drop)
+- [x] Review page (tax calculations)
+- [x] Settings page (API keys, options)
+- [x] Dark theme with gradient accents
+- [x] Inter font, glass card effects
 
-## 关键研究
-- 产品可行性报告: research/ai-tax-product-2026-02-03.md
-- 税务优化playbook: research/tax-optimization-playbook-2025.md
-- 技术架构研究: research/technical-architecture-research.md
+## 进行中 🔄
+- [ ] Connect UI to tax engine (state → calculations)
+- [ ] Document parsing with AI (OCR → structured data)
+- [ ] Google OAuth integration (Drive/Gmail)
 
-## 技术决策
-- **税务引擎**: Fork IRS Direct File的Scala Fact Graph引擎（712+税务facts，经IRS验证）
-- **AI层**: LLM替代传统问卷流程，读取Fact Graph状态，生成自然语言问题
-- **MeF filing**: Phase 1 生成XML/PDF → Phase 2 合作e-file provider → Phase 3 自有EFIN
-- **Column Tax**: 不集成（白标UI模式与AI-first冲突），但参考其合规模型
+## 下一步 📋
+1. 完善UI-backend集成
+2. 测试Reflex app本地运行
+3. 等Jason上传2024税务文档到Drive
+4. 跑通完整流程：上传 → 解析 → 计算 → 生成报告
+
+## 技术栈
+- **Backend**: Python 3.12
+- **Tax Engine**: Custom (IRS Direct File inspired)
+- **UI**: Reflex (Python → React)
+- **Document Parsing**: Claude Vision / local OCR
+- **Encryption**: AES-256-GCM (Fernet wrapper)
+- **OAuth**: Google APIs (Drive, Gmail)
+
+## 关键文件
+```
+ai-tax/
+├── src/core/
+│   ├── tax_engine.py      # Tax calculations
+│   ├── fact_graph.py      # IRS Fact Graph
+│   ├── tax_constants.py   # 2024/2025 brackets
+│   ├── encryption.py      # AES-256-GCM
+│   └── modules/           # Federal, income, investments
+├── ui/
+│   ├── aitax/             # Reflex app
+│   │   ├── aitax.py       # Main pages
+│   │   ├── state.py       # App state
+│   │   └── components.py  # UI components
+│   └── preview.html       # Static preview
+├── docs/
+│   ├── WISP.md            # Security plan
+│   ├── PRIVACY-POLICY.md
+│   ├── TERMS-OF-SERVICE.md
+│   ├── USER-CONSENT-FORM.md
+│   └── LEGAL-REVIEW.md
+└── tests/                 # 46 tests
+```
+
+## 研究文档
+- 产品可行性: `research/ai-tax-product-2026-02-03.md`
+- 税务优化: `research/tax-optimization-playbook-2025.md`
+- 技术架构: `research/technical-architecture-research.md`
+- 改进研究: `research/improvements-research-2026-02-05.md`
+
+## 技术决策记录
+| 决策 | 选择 | 原因 |
+|------|------|------|
+| Tax Engine | 自建 (Python) | Direct File是Scala，我们用Python复用逻辑 |
+| UI Framework | Reflex | Python全栈，Mercury级美观度 |
+| Encryption | AES-256-GCM | 合规要求，替换了Fernet的AES-128 |
+| Column Tax | 不集成 | 白标UI模式与AI-first冲突 |
+| PTIN | 暂不需要 | 朋友家人免费用不需要 |
+
+## 合规状态
+- ✅ FTC Safeguards Rule (WISP)
+- ✅ IRS Pub 4557 (security)
+- ✅ IRC §7216 consent (rewritten)
+- ✅ Anthropic DPA (auto-included in ToS)
+- ⏳ PTIN ($30.75/yr) - 商业化时需要
 
 ## Blockers
-- 等Jason的W-2/1099/去年1040
-- GitHub账号suspended，无法提issue或创建repo
+- 等Jason上传2024税务文档
+- GitHub账号suspended

@@ -163,3 +163,34 @@ pkill -f "python3.*$SCRIPT_NAME" || true
 *Created: 2026-02-05*
 *Updated: 2026-02-05 — Added Rule #10 (orphan process prevention)*
 *Status: Active — 永不废除*
+
+---
+
+## Rule #11: 没有模型 = 不交易（禁止 fallback 赌博）
+
+**对每个 ticker/series，要么有专门的概率模型，要么不交易。**
+
+**禁止的做法：**
+```python
+# ❌ 错误：用默认概率瞎猜
+if ticker not in MODELS:
+    return default_probability  # 这是赌博
+
+# ❌ 错误：用其他类型的模型
+if series_type == 'unknown':
+    return _estimate_trump_speech(...)  # MAMDANI 不是 Trump
+```
+
+**正确的做法：**
+```python
+# ✅ 正确：没模型就不交易
+if ticker not in MODELS:
+    if volume > 50000:
+        logger.warning(f"HIGH VOLUME NO MODEL: {ticker} - build model first")
+    return None  # None = skip, not guess
+```
+
+**教训来源：** 2026-02-05，KXMAMDANIMENTION (NY州政治) 用了 Trump 词频模型，
+把 "hochul/governor" 概率估成 20%（实际 99%），亏了 $34.80。
+
+---

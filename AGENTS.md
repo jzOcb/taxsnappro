@@ -140,6 +140,67 @@ bash scripts/subagent-complete.sh <session_key>
 - **Content cron** runs `collect-daily-work.sh` which aggregates: git logs + work log + memory + STATUS changes
 - **If it's not logged, it doesn't get posted**
 
+### 9. Cost-Aware by Default
+**Every cron job, sub-agent, and automated task MUST use the cheapest viable model.**
+
+- **Pure execution** (run a script, post a tweet, check a process) → **Haiku** always
+- **Analysis + drafting** (research, write replies, scan opportunities) → **Sonnet**
+- **Creative writing** (articles, bilingual content, strategy) → **Opus** (main session only)
+- When creating a new cron job → **ask yourself: does this need to think, or just execute?**
+- Default for new cron agentTurn: **Haiku** unless task clearly needs reasoning
+- **Never use Opus in cron jobs** — too expensive for automated tasks
+
+### 11. Data Security: Vault Architecture
+**Sensitive data NEVER enters LLM context directly.**
+
+**Vault directory:** `~/.openclaw/workspace/vault/` (chmod 700)
+- `personal-info.md` — real name, emails, IDs
+- `credentials-map.md` — all API keys, tokens, private key locations
+- `MEMORY.md.bak` — pre-sanitization backup
+
+**Rules:**
+- MEMORY.md uses `[VAULT]` placeholders for sensitive data
+- When credentials are needed: read from vault → use → don't print/log
+- vault/ files are NEVER auto-loaded into session context
+- New skills must pass `scripts/audit-skills.sh` before installation
+- Any output containing real names/emails/keys must be sanitized before sending
+
+**Skill audit:** Run `bash scripts/audit-skills.sh` periodically and before installing new skills.
+
+### 10. X Engagement: Auto-Pipeline
+**The X engagement pipeline runs autonomously. Do NOT wait for Jason to ask.**
+
+**Queue-based posting (`scripts/x-queue.json`):**
+- Main agent (or monitor cron) finds opportunities → drafts replies → adds to queue
+- `x-queue-post.py` cron (every 10min, Haiku) auto-posts one item from queue
+- Queue format: `[{"target": "@handle", "text": "...", "reply_to": "tweet_id"}]`
+- Log: `scripts/x-queue-log.json`
+
+**Content rules (NEVER violate):**
+- Use "I" not "we/us" — Jason is one person
+- **NEVER mention auto-posting, scheduled tweets, or automation** in any public post
+- Links to Jason's articles/posts only when natural — don't force it
+- "感兴趣可以翻翻我主页" > direct link spam
+- Each reply must provide genuine value first,引流 second
+- Max 15 replies/day, minimum 10min gaps between posts
+
+**Budget:** $5/day X API spend (~$0.01/tweet = 500 tweets/day max, far above our needs)
+
+**Style: 模仿@robbinfan范凯**
+- 即时感：像直播思考，"卧槽刚发现""不行了我要马上"
+- 不怕暴露兴奋和无知："我格局太小了"
+- 具体到行动：直说"我刚下单了/刚删了/刚跑通了"
+- 思考深度：从具体事件自然上升到方法论
+- 叙事递进：发现→试→震惊→反思→总结
+- 没有营销感：全是真实使用记录
+- 用"我"不用"我们"，说"感兴趣可以看一下我写的这个"
+
+**Monitor cron (4x/day) auto-scans and drafts. If high-quality opportunities found:**
+1. Draft replies in 范凯 style (natural, real, emotional)
+2. Prioritize big accounts and high-engagement posts
+3. Add to queue for auto-posting
+4. Send summary to Jason's Telegram for visibility (not approval — pipeline is autonomous)
+
 ## 🧠 Sub-agent Model Routing
 
 **Inspired by @interjc's model pickup strategy. Match task complexity to model capability and cost.**

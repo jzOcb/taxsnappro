@@ -1,27 +1,41 @@
 {
-  "btc-v6": {
-    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v6.py 480",
+  "weather-v2": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 -u src/weather_paper_trader_v2.py 720",
     "duration_min": 0,
     "auto_restart": true,
     "max_restarts": 5,
     "restart_cooldown": 30
   },
-  "btc-v7": {
-    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v7.py 720",
+  "btc-v11": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 -u src/realtime_paper_trader_v11.py 480",
     "duration_min": 0,
     "auto_restart": true,
     "max_restarts": 5,
     "restart_cooldown": 30
   },
-  "btc-v9": {
-    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v9.py 480",
+  "btc-v14": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 -u src/realtime_paper_trader_v14.py 480",
     "duration_min": 0,
     "auto_restart": true,
     "max_restarts": 5,
     "restart_cooldown": 30
   },
-  "btc-v10": {
-    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 src/realtime_paper_trader_v10.py 480",
+  "crossplatform-trader": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 -u src/crossplatform_paper_trader.py",
+    "duration_min": 0,
+    "auto_restart": true,
+    "max_restarts": 5,
+    "restart_cooldown": 30
+  },
+  "mention-trader": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 -u src/mention_paper_trader.py",
+    "duration_min": 0,
+    "auto_restart": true,
+    "max_restarts": 5,
+    "restart_cooldown": 30
+  },
+  "nba-trader": {
+    "command": "cd /home/clawdbot/clawd/btc-arbitrage && python3 -u src/nba_paper_trader.py",
     "duration_min": 0,
     "auto_restart": true,
     "max_restarts": 5,

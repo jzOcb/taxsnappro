@@ -369,6 +369,237 @@ else:
 }
 
 # ═══════════════════════════════════════════════
+# CRON-HEALTH: Check OpenClaw cron scheduler per-job
+# Reads from disk (no API dependency). Alerts via Telegram directly.
+# If majority of jobs stale, restarts gateway.
+# ═══════════════════════════════════════════════
+cmd_cron_health() {
+    local JOBS_FILE="/home/clawdbot/.openclaw/cron/jobs.json"
+    local CH_LOG="$LOG_DIR/cron-health.log"
+    local COOLDOWN_FILE="/tmp/cron-health-cooldown"
+    local COOLDOWN_SECS=1800  # 30 min
+
+    # Get Telegram bot token from OpenClaw config (or fallback)
+    local BOT_TOKEN
+    BOT_TOKEN=$(python3 -c "
+import json
+try:
+    with open('/home/clawdbot/.openclaw/clawdbot.json') as f:
+        cfg = json.load(f)
+    print(cfg['channels']['telegram']['botToken'])
+except:
+    print('')
+" 2>/dev/null)
+    local CHAT_ID="6978208486"
+
+    # Trim log
+    if [ -f "$CH_LOG" ] && [ "$(wc -l < "$CH_LOG" 2>/dev/null)" -gt 1000 ]; then
+        tail -500 "$CH_LOG" > "${CH_LOG}.tmp" && mv "${CH_LOG}.tmp" "$CH_LOG"
+    fi
+
+    if [ ! -f "$JOBS_FILE" ]; then
+        echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) WARN: $JOBS_FILE not found" >> "$CH_LOG"
+        return 1
+    fi
+
+    # Per-job health check
+    local RESULT
+    RESULT=$(python3 -c "
+import json, time
+
+with open('$JOBS_FILE') as f:
+    data = json.load(f)
+
+jobs = data.get('jobs', [])
+now_ms = int(time.time() * 1000)
+
+stale = []
+healthy = 0
+total = 0
+
+for j in jobs:
+    if not j.get('enabled', True):
+        continue
+    total += 1
+
+    name = j.get('name', j.get('id', '?'))
+    sched = j.get('schedule', {})
+    state = j.get('state', {})
+    next_run = state.get('nextRunAtMs', 0)
+    last_run = state.get('lastRunAtMs', 0)
+    kind = sched.get('kind', '')
+
+    if kind == 'every':
+        interval_ms = sched.get('everyMs', 0)
+    elif kind == 'cron':
+        interval_ms = 86400000
+    elif kind == 'at':
+        healthy += 1
+        continue
+    else:
+        healthy += 1
+        continue
+
+    if interval_ms == 0:
+        healthy += 1
+        continue
+
+    # nextRunAtMs overdue by >2x interval
+    if next_run > 0 and next_run < now_ms:
+        overdue_ms = now_ms - next_run
+        if overdue_ms > interval_ms * 2:
+            overdue_min = int(overdue_ms / 60000)
+            stale.append(f'{name} ({overdue_min}min overdue)')
+            continue
+
+    # lastRun but no nextRun
+    if last_run > 0 and next_run == 0:
+        gap_ms = now_ms - last_run
+        if gap_ms > interval_ms * 3:
+            stale.append(f'{name} (no next run, {int(gap_ms/60000)}min since last)')
+            continue
+
+    healthy += 1
+
+if stale:
+    print(f'STALE|{len(stale)}|{total}|' + chr(10).join(stale))
+else:
+    print(f'OK|0|{total}|all healthy')
+" 2>/dev/null)
+
+    local STATUS=$(echo "$RESULT" | head -1 | cut -d'|' -f1)
+    local STALE_COUNT=$(echo "$RESULT" | head -1 | cut -d'|' -f2)
+    local TOTAL=$(echo "$RESULT" | head -1 | cut -d'|' -f3)
+    local DETAILS=$(echo "$RESULT" | cut -d'|' -f4-)
+
+    if [ "$STATUS" = "STALE" ]; then
+        echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) ALERT: ${STALE_COUNT}/${TOTAL} cron jobs stale" >> "$CH_LOG"
+
+        local ALERT_MSG="⚠️ <b>Cron Health Alert</b>
+${STALE_COUNT}/${TOTAL} jobs overdue:
+${DETAILS}"
+
+        # Restart gateway if majority stale
+        if [ "$STALE_COUNT" -gt "$(( TOTAL / 2 ))" ]; then
+            ALERT_MSG="${ALERT_MSG}
+
+🔄 Majority stale — restarting gateway..."
+            echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) Restarting gateway (${STALE_COUNT}/${TOTAL})" >> "$CH_LOG"
+            local GATEWAY_PID=$(pgrep -f "openclaw.*gateway" | head -1)
+            if [ -n "$GATEWAY_PID" ]; then
+                kill -USR1 "$GATEWAY_PID"
+            fi
+        fi
+
+        # Send Telegram (with cooldown)
+        if [ -n "$BOT_TOKEN" ]; then
+            local CAN_ALERT=true
+            if [ -f "$COOLDOWN_FILE" ]; then
+                local last=$(cat "$COOLDOWN_FILE" 2>/dev/null)
+                local now=$(date +%s)
+                if [ "$((now - last))" -lt "$COOLDOWN_SECS" ]; then
+                    CAN_ALERT=false
+                fi
+            fi
+            if [ "$CAN_ALERT" = "true" ]; then
+                curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+                    -d "chat_id=${CHAT_ID}" \
+                    -d "text=${ALERT_MSG}" \
+                    -d "parse_mode=HTML" > /dev/null 2>&1
+                date +%s > "$COOLDOWN_FILE"
+                echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) Telegram alert sent" >> "$CH_LOG"
+            else
+                echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) Alert suppressed (cooldown)" >> "$CH_LOG"
+            fi
+        fi
+    else
+        echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) OK: ${TOTAL} cron jobs healthy" >> "$CH_LOG"
+    fi
+}
+
+# ═══════════════════════════════════════════════
+# PROC-HEALTH: Check paper trader + other key processes
+# No registry needed — directly checks known process patterns
+# ═══════════════════════════════════════════════
+cmd_proc_health() {
+    local PH_LOG="$LOG_DIR/proc-health.log"
+    local COOLDOWN_FILE="/tmp/proc-health-cooldown"
+    local COOLDOWN_SECS=1800
+
+    local BOT_TOKEN
+    BOT_TOKEN=$(python3 -c "
+import json
+try:
+    with open('/home/clawdbot/.openclaw/clawdbot.json') as f:
+        cfg = json.load(f)
+    print(cfg['channels']['telegram']['botToken'])
+except:
+    print('')
+" 2>/dev/null)
+    local CHAT_ID="6978208486"
+
+    # Dynamic: check all REGISTERED managed processes instead of hardcoded list
+    local DOWN=""
+    # Use global REGISTRY (line 22) — don't override with local
+    
+    if [ -f "$REGISTRY" ]; then
+        # Check each registered process
+        local names
+        names=$(python3 -c "
+import json
+with open('$REGISTRY') as f:
+    reg = json.load(f)
+for name in reg:
+    print(name)
+" 2>/dev/null)
+        
+        for name in $names; do
+            local pid_file="$PROCESS_DIR/${name}.pid"
+            if [ -f "$pid_file" ]; then
+                local pid=$(cat "$pid_file" 2>/dev/null)
+                if [ -n "$pid" ] && ! kill -0 "$pid" 2>/dev/null; then
+                    DOWN="${DOWN} ${name}"
+                fi
+            else
+                DOWN="${DOWN} ${name}(no-pid)"
+            fi
+        done
+    fi
+
+    if [ -n "$DOWN" ]; then
+        echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) ALERT: Managed processes down:${DOWN}" >> "$PH_LOG"
+
+        if [ -n "$BOT_TOKEN" ]; then
+            local CAN_ALERT=true
+            if [ -f "$COOLDOWN_FILE" ]; then
+                local last=$(cat "$COOLDOWN_FILE" 2>/dev/null)
+                local now=$(date +%s)
+                if [ "$((now - last))" -lt "$COOLDOWN_SECS" ]; then
+                    CAN_ALERT=false
+                fi
+            fi
+            if [ "$CAN_ALERT" = "true" ]; then
+                curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+                    -d "chat_id=${CHAT_ID}" \
+                    -d "text=⚠️ Managed processes DOWN:${DOWN}" > /dev/null 2>&1
+                date +%s > "$COOLDOWN_FILE"
+            fi
+        fi
+    else
+        echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) OK: All managed processes alive" >> "$PH_LOG"
+    fi
+}
+
+# ═══════════════════════════════════════════════
+# WATCHDOG: Unified check — cron health + process health
+# Run from system crontab: */10 * * * *
+# ═══════════════════════════════════════════════
+cmd_watchdog() {
+    cmd_cron_health
+    cmd_proc_health
+}
+
+# ═══════════════════════════════════════════════
 # MAIN
 # ═══════════════════════════════════════════════
 ACTION="${1:-status}"
@@ -382,8 +613,11 @@ case "$ACTION" in
     status)      cmd_status "$@" ;;
     restart)     cmd_restart "$@" ;;
     healthcheck) cmd_healthcheck ;;
+    cron-health) cmd_cron_health ;;
+    proc-health) cmd_proc_health ;;
+    watchdog)    cmd_watchdog ;;
     *)
-        echo "Usage: managed-process.sh {register|deregister|start|stop|status|restart|healthcheck} [args]"
+        echo "Usage: managed-process.sh {register|deregister|start|stop|status|restart|healthcheck|cron-health|proc-health|watchdog} [args]"
         exit 1
         ;;
 esac

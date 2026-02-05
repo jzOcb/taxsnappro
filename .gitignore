@@ -17,3 +17,4 @@ btc_hourly_report.log
 heartbeat_monitor.log
 moltbook_registration.log
 get-pip.py
+.env.x-api

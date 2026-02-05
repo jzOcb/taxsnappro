@@ -20,7 +20,7 @@ import yfinance as yf
 import json
 import sys
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import argparse
 
 # === Configuration ===
@@ -151,21 +151,162 @@ def check_alerts(indices_data, sectors_data, macro_data, watchlist_data):
     return alerts
 
 
+def generate_analysis(indices_data, sectors_data, macro_data, watchlist_data):
+    """Generate market analysis and short-term outlook."""
+    analysis = []
+    outlook = []
+
+    # --- Derive key metrics ---
+    sp = indices_data.get("^GSPC", {})
+    nq = indices_data.get("^IXIC", {})
+    rut = indices_data.get("^RUT", {})
+    vix = macro_data.get("^VIX", {})
+    tnx = macro_data.get("^TNX", {})
+    gold = macro_data.get("GC=F", {})
+    oil = macro_data.get("CL=F", {})
+    dxy = macro_data.get("DX-Y.NYB", {})
+    btc = macro_data.get("BTC-USD", {})
+
+    sp_chg = sp.get("change_pct", 0)
+    nq_chg = nq.get("change_pct", 0)
+    rut_chg = rut.get("change_pct", 0)
+    vix_val = vix.get("price", 0)
+    vix_chg = vix.get("change_pct", 0)
+    tnx_val = tnx.get("price", 0)
+    gold_chg = gold.get("change_pct", 0)
+    btc_chg = btc.get("change_pct", 0)
+
+    # Sorted sectors
+    sorted_sectors = sorted(
+        [(s, SECTORS[s], sectors_data[s]) for s in SECTORS if s in sectors_data],
+        key=lambda x: x[2]["change_pct"],
+        reverse=True,
+    )
+    best_sector = sorted_sectors[0] if sorted_sectors else None
+    worst_sector = sorted_sectors[-1] if sorted_sectors else None
+
+    # --- 市况分析 ---
+    # 1) Broad risk-off / risk-on
+    if sp_chg < -1.0 and vix_chg > 10:
+        analysis.append("市场进入risk-off模式，大盘普跌+VIX飙升，机构正在减仓或对冲。")
+    elif sp_chg > 1.0 and vix_chg < -5:
+        analysis.append("risk-on情绪主导，指数上攻同时恐慌指数回落，资金积极入场。")
+
+    # 2) Tech vs defensives rotation
+    tech_chg = sectors_data.get("XLK", {}).get("change_pct", 0)
+    staples_chg = sectors_data.get("XLP", {}).get("change_pct", 0)
+    utils_chg = sectors_data.get("XLU", {}).get("change_pct", 0)
+    defensive_avg = (staples_chg + utils_chg) / 2 if (staples_chg or utils_chg) else 0
+    if tech_chg < -1.5 and defensive_avg > -0.5:
+        analysis.append(f"科技板块({tech_chg:+.1f}%)跌幅远超防御性板块({defensive_avg:+.1f}%)，典型的growth→value轮动信号。")
+    elif tech_chg > 1.0 and defensive_avg < 0:
+        analysis.append("资金从防御板块流向科技成长，市场偏好高beta。")
+
+    # 3) Small vs large cap divergence
+    if abs(sp_chg - rut_chg) > 1.0:
+        if rut_chg > sp_chg:
+            analysis.append(f"小盘股（Russell {rut_chg:+.1f}%）表现强于大盘（S&P {sp_chg:+.1f}%），risk appetite偏乐观。")
+        else:
+            analysis.append(f"大盘抗跌（S&P {sp_chg:+.1f}%）优于小盘（Russell {rut_chg:+.1f}%），资金避险偏好大票。")
+
+    # 4) Bond-equity signal
+    if tnx_val:
+        if tnx_val > 4.5 and sp_chg < -0.5:
+            analysis.append(f"10Y收益率{tnx_val:.2f}%持续高位压制估值，debt rollover成本上升对高负债公司不利。")
+        elif tnx_val < 4.0 and sp_chg > 0:
+            analysis.append(f"10Y收益率降至{tnx_val:.2f}%，利率环境趋宽松，利好成长股估值修复。")
+
+    # 5) VIX level interpretation
+    if vix_val >= 30:
+        analysis.append(f"VIX {vix_val:.0f} — 极度恐慌区域（>30），历史上是超卖反弹的前置信号，但要等确认。")
+    elif vix_val >= 25:
+        analysis.append(f"VIX {vix_val:.0f} — 高恐慌区域，期权隐含波动率显著偏高，short vol策略需谨慎。")
+    elif vix_val >= 20 and vix_chg > 10:
+        analysis.append(f"VIX从低位快速拉升至{vix_val:.0f}（+{vix_chg:.0f}%），市场情绪急转，short-term仍有惯性下行风险。")
+
+    # 6) Crypto correlation
+    if btc_chg < -5 and sp_chg < -1:
+        analysis.append(f"BTC（{btc_chg:+.1f}%）和美股同步大跌，宏观risk-off主导，加密市场非独立行情。")
+
+    # 7) Gold as safe haven
+    if gold_chg > 1 and sp_chg < -1:
+        analysis.append("黄金逆势上涨，典型避险买盘，市场对尾部风险定价上升。")
+    elif gold_chg < -0.5 and sp_chg < -1:
+        analysis.append("股金齐跌，可能是流动性紧缩（margin call被迫卖出一切）而非单纯避险。")
+
+    # 8) Notable stock moves
+    for sym in WATCHLIST:
+        d = watchlist_data.get(sym, {})
+        chg = d.get("change_pct", 0)
+        if abs(chg) >= 5:
+            if sym in ("COIN", "MSTR") and btc_chg < -5:
+                analysis.append(f"{sym}({chg:+.1f}%)随BTC({btc_chg:+.1f}%)联动下跌，crypto beta放大效应。")
+                break
+            elif sym in ("LLY", "NVO") and abs(chg) > 5:
+                analysis.append(f"减肥药龙头{sym}({chg:+.1f}%)大幅异动，关注是否有trial/guidance催化剂。")
+                break
+
+    # Fallback if no analysis generated
+    if not analysis:
+        if abs(sp_chg) < 0.3:
+            analysis.append("市场窄幅震荡，缺乏明确方向，等待催化剂。")
+        else:
+            direction = "偏多" if sp_chg > 0 else "偏空"
+            analysis.append(f"整体{direction}，S&P {sp_chg:+.1f}%，无明显异常信号。")
+
+    # --- 短期展望 ---
+    bearish_signals = 0
+    bullish_signals = 0
+
+    if sp_chg < -1.0:
+        bearish_signals += 1
+    elif sp_chg > 1.0:
+        bullish_signals += 1
+    if vix_chg > 15:
+        bearish_signals += 1
+    elif vix_chg < -10:
+        bullish_signals += 1
+    if vix_val >= 25:
+        bearish_signals += 1
+        # Contrarian: extreme VIX is also a bounce signal
+        bullish_signals += 0.5
+    if tech_chg < -2:
+        bearish_signals += 1
+    if btc_chg < -5:
+        bearish_signals += 0.5
+    if gold_chg > 1 and sp_chg < 0:
+        bearish_signals += 0.5
+
+    if bearish_signals >= 3:
+        outlook.append("⚠️ 短期偏空 — 多重risk-off信号共振，明日大概率低开或延续弱势。")
+        outlook.append("但VIX急升后1-3天常有技术反弹，不建议在恐慌高点追空。")
+        outlook.append("关注支撑位和成交量变化，放量下跌=趋势，缩量下跌=洗盘。")
+    elif bearish_signals >= 2:
+        outlook.append("⚠️ 短期谨慎 — 空头信号偏多，但未到极端，可能横盘消化。")
+        outlook.append("关注明日开盘前30分钟方向确认。")
+    elif bullish_signals >= 2:
+        outlook.append("📈 短期偏多 — 多头信号占优，有望延续反弹。")
+    else:
+        outlook.append("📊 短期中性 — 多空信号混杂，方向不明，建议观望。")
+
+    return analysis, outlook
+
+
 def format_report(indices_data, sectors_data, macro_data, watchlist_data, alerts):
     """Format the market report as a readable text."""
-    now = datetime.utcnow()
+    now = datetime.now(timezone.utc)
     lines = []
-    
+
     # Header
     if alerts:
         lines.append("🚨 美股市场警报 🚨")
         for a in alerts:
             lines.append(a)
         lines.append("")
-    
+
     lines.append(f"📊 美股市场报告 — {now.strftime('%Y-%m-%d %H:%M')} UTC")
     lines.append("")
-    
+
     # Indices
     lines.append("📈 主要指数")
     for symbol, name in INDICES.items():
@@ -174,16 +315,21 @@ def format_report(indices_data, sectors_data, macro_data, watchlist_data, alerts
             emoji = "🟢" if d["change_pct"] >= 0 else "🔴"
             lines.append(f"  {emoji} {name}: {d['price']:,.1f} ({d['change_pct']:+.1f}%)")
     lines.append("")
-    
-    # Macro
+
+    # Macro — VIX uses inverted emoji (up = bad), no $ prefix for VIX/TNX
     lines.append("🌍 宏观信号")
     for symbol, name in MACRO.items():
         if symbol in macro_data:
             d = macro_data[symbol]
-            emoji = "🟢" if d["change_pct"] >= 0 else "🔴"
-            if symbol == "^TNX":
+            if symbol == "^VIX":
+                # VIX up = bearish → 🔴, VIX down = bullish → 🟢
+                emoji = "🔴" if d["change_pct"] >= 0 else "🟢"
+                lines.append(f"  {emoji} {name}: {d['price']:.1f} ({d['change_pct']:+.1f}%)")
+            elif symbol == "^TNX":
+                emoji = "🟢" if d["change_pct"] >= 0 else "🔴"
                 lines.append(f"  {emoji} {name}: {d['price']:.2f}% ({d['change_pct']:+.1f}%)")
             else:
+                emoji = "🟢" if d["change_pct"] >= 0 else "🔴"
                 lines.append(f"  {emoji} {name}: ${d['price']:,.1f} ({d['change_pct']:+.1f}%)")
     lines.append("")
     
@@ -223,7 +369,22 @@ def format_report(indices_data, sectors_data, macro_data, watchlist_data, alerts
             lines.append("💀 今日领跌")
             for s, d in losers:
                 lines.append(f"  🔴 {s:6s} ${d['price']:>8.1f}  {d['change_pct']:+.1f}%")
-    
+    lines.append("")
+
+    # Analysis & Outlook
+    analysis, outlook = generate_analysis(indices_data, sectors_data, macro_data, watchlist_data)
+
+    if analysis:
+        lines.append("🧠 市况分析")
+        for a in analysis:
+            lines.append(f"  • {a}")
+        lines.append("")
+
+    if outlook:
+        lines.append("🔮 短期展望")
+        for o in outlook:
+            lines.append(f"  {o}")
+
     return "\n".join(lines)
 
 
@@ -247,7 +408,7 @@ def generate_report(alert_only=False, output_json=False):
     
     if output_json:
         return json.dumps({
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "alerts": alerts,
             "indices": indices_data,
             "sectors": sectors_data,

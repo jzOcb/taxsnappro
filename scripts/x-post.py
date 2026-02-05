@@ -95,7 +95,36 @@ def check_already_replied(tweet_id):
         return False  # can't check, allow posting
 
 
-def post_tweet(text, reply_to=None, skip_checks=False):
+def upload_media(image_path):
+    """Upload image to Twitter and return media_id."""
+    import base64
+    
+    oauth = OAuth1Session(
+        API_KEY,
+        client_secret=API_SECRET,
+        resource_owner_key=ACCESS_TOKEN,
+        resource_owner_secret=ACCESS_TOKEN_SECRET,
+    )
+    
+    with open(image_path, 'rb') as f:
+        image_data = base64.b64encode(f.read()).decode('utf-8')
+    
+    # v1.1 media upload endpoint
+    response = oauth.post(
+        "https://upload.twitter.com/1.1/media/upload.json",
+        data={"media_data": image_data}
+    )
+    
+    if response.status_code == 200:
+        media_id = response.json()['media_id_string']
+        print(f"📷 Image uploaded: {media_id}")
+        return media_id
+    else:
+        print(f"❌ Media upload failed: {response.status_code} - {response.text[:200]}")
+        return None
+
+
+def post_tweet(text, reply_to=None, skip_checks=False, media_ids=None):
     oauth = OAuth1Session(
         API_KEY,
         client_secret=API_SECRET,
@@ -121,6 +150,8 @@ def post_tweet(text, reply_to=None, skip_checks=False):
     payload = {"text": text}
     if reply_to:
         payload["reply"] = {"in_reply_to_tweet_id": str(reply_to)}
+    if media_ids:
+        payload["media"] = {"media_ids": media_ids}
     
     response = oauth.post(
         "https://api.x.com/2/tweets",
@@ -144,6 +175,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Post to X/Twitter via API v2")
     parser.add_argument("text", help="Tweet text")
     parser.add_argument("--reply-to", help="Tweet ID to reply to")
+    parser.add_argument("--image", help="Path to image file to attach")
     parser.add_argument("--dry-run", action="store_true", help="Print but don't post")
     parser.add_argument("--skip-checks", action="store_true", 
                         help="Skip self-reply and duplicate checks (for intentional threads)")
@@ -154,5 +186,14 @@ if __name__ == "__main__":
         print(f"  Text: {args.text}")
         if args.reply_to:
             print(f"  Reply to: {args.reply_to}")
+        if args.image:
+            print(f"  Image: {args.image}")
     else:
-        post_tweet(args.text, args.reply_to, args.skip_checks)
+        media_ids = None
+        if args.image:
+            media_id = upload_media(args.image)
+            if media_id:
+                media_ids = [media_id]
+            else:
+                print("⚠️  Proceeding without image due to upload failure")
+        post_tweet(args.text, args.reply_to, args.skip_checks, media_ids)

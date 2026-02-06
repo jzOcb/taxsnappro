@@ -41,6 +41,13 @@ from typing import Optional, Dict, List, Tuple
 
 import requests
 
+# Dynamic LLM-based probability estimation for unknown series
+try:
+    from dynamic_probability import get_dynamic_probability
+    HAS_DYNAMIC_PROB = True
+except ImportError:
+    HAS_DYNAMIC_PROB = False
+
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
@@ -888,9 +895,20 @@ def estimate_yes_probability(market: dict) -> float:
     elif series_type == 'entertainment':
         return _estimate_entertainment(market, keyword)
     else:
-        # ⚠️ NO FALLBACK - Unknown series = don't trade (not gambling)
+        # Try dynamic LLM-based estimation for unknown series
         series_ticker = market.get("series_ticker", "unknown")
         volume = market.get("volume", 0)
+        
+        if HAS_DYNAMIC_PROB:
+            logger.info(f"🤖 Using LLM for {series_ticker} ({keyword})")
+            dynamic_prob = get_dynamic_probability(market)
+            if dynamic_prob is not None:
+                logger.info(f"🤖 LLM estimated {keyword}: {dynamic_prob:.0f}%")
+                return dynamic_prob
+            else:
+                logger.info(f"🤖 LLM uncertain about {keyword}, skipping")
+        
+        # No static model AND no dynamic estimate = don't trade
         if volume > 50000:
             logger.warning(f"⚠️ HIGH VOLUME NO MODEL: {series_ticker} ({volume:,} vol) - build model to trade")
         else:

@@ -1,5 +1,5 @@
 """
-TaxForge - Application State
+TaxSnapPro - Application State
 """
 import reflex as rx
 import os
@@ -1139,7 +1139,7 @@ class TaxAppState(rx.State):
         try:
             save_state(self)
         except Exception as e:
-            print(f"[TaxForge] Auto-save failed: {e}")
+            print(f"[TaxSnapPro] Auto-save failed: {e}")
     
     def _calculate_tax(self, income: float, brackets: list) -> float:
         """Calculate tax from brackets."""

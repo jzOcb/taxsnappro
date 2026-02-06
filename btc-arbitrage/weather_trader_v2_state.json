@@ -135,10 +135,10 @@
       "market_date": "2026-02-05",
       "entered_at": "2026-02-05T13:33:13.679212+00:00",
       "status": "open",
-      "current_bid": 1,
+      "current_bid": 0,
       "current_ask": 2,
-      "current_value": 0.9,
-      "unrealized_pnl": -5.4
+      "current_value": 0.0,
+      "unrealized_pnl": -6.3
     },
     {
       "id": "W2-0006",
@@ -497,7 +497,7 @@
       "source_count": 2,
       "tier": 2,
       "metar_temp": 68.0,
-      "timestamp": "2026-02-06T02:35:08.189044+00:00"
+      "timestamp": "2026-02-06T03:05:37.942367+00:00"
     },
     "NYC": {
       "mu": 26.0,
@@ -511,12 +511,12 @@
         "nws_adj": 27.0,
         "om_raw": 29.6,
         "om_adj": 24.6,
-        "metar_current": 27.0
+        "metar_current": 26.1
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 27.0,
-      "timestamp": "2026-02-06T02:35:08.957430+00:00"
+      "metar_temp": 26.1,
+      "timestamp": "2026-02-06T03:05:38.563215+00:00"
     },
     "CHI": {
       "mu": 39.5,
@@ -535,7 +535,7 @@
       "source_count": 2,
       "tier": 1,
       "metar_temp": 28.9,
-      "timestamp": "2026-02-06T02:35:09.569548+00:00"
+      "timestamp": "2026-02-06T03:05:39.262657+00:00"
     },
     "PHI": {
       "mu": 23.5,
@@ -549,12 +549,12 @@
         "nws_adj": 24.0,
         "om_raw": 29.9,
         "om_adj": 22.9,
-        "metar_current": 28.0
+        "metar_current": 26.1
       },
       "source_count": 2,
       "tier": 2,
-      "metar_temp": 28.0,
-      "timestamp": "2026-02-06T02:35:10.198770+00:00"
+      "metar_temp": 26.1,
+      "timestamp": "2026-02-06T03:05:39.888575+00:00"
     },
     "BOS": {
       "mu": 25.8,
@@ -568,12 +568,12 @@
         "nws_adj": 25.0,
         "om_raw": 30.0,
         "om_adj": 27.0,
-        "metar_current": 27.0
+        "metar_current": 26.1
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 27.0,
-      "timestamp": "2026-02-06T02:35:10.850862+00:00"
+      "metar_temp": 26.1,
+      "timestamp": "2026-02-06T03:05:41.155543+00:00"
     },
     "DEN": null,
     "MIA": {
@@ -588,12 +588,12 @@
         "nws_adj": 64.0,
         "om_raw": 66.0,
         "om_adj": 66.0,
-        "metar_current": 53.1
+        "metar_current": 52.0
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 53.1,
-      "timestamp": "2026-02-06T02:35:11.548178+00:00"
+      "metar_temp": 52.0,
+      "timestamp": "2026-02-06T03:05:42.437678+00:00"
     },
     "SFO": {
       "mu": 68.0,
@@ -607,12 +607,12 @@
         "nws_adj": 66.0,
         "om_raw": 66.0,
         "om_adj": 71.0,
-        "metar_current": 63.0
+        "metar_current": 64.9
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 63.0,
-      "timestamp": "2026-02-06T02:35:12.724035+00:00"
+      "metar_temp": 64.9,
+      "timestamp": "2026-02-06T03:05:43.080191+00:00"
     },
     "DC": null,
     "AUS": {
@@ -627,12 +627,12 @@
         "nws_adj": 85.0,
         "om_raw": 82.3,
         "om_adj": 86.3,
-        "metar_current": 51.1
+        "metar_current": 48.0
       },
       "source_count": 2,
       "tier": 2,
-      "metar_temp": 51.1,
-      "timestamp": "2026-02-06T02:35:13.402764+00:00"
+      "metar_temp": 48.0,
+      "timestamp": "2026-02-06T03:05:43.717746+00:00"
     },
     "SEA": {
       "mu": 55.3,
@@ -646,12 +646,12 @@
         "nws_adj": 56.0,
         "om_raw": 54.2,
         "om_adj": 54.2,
-        "metar_current": 50.0
+        "metar_current": 48.9
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 50.0,
-      "timestamp": "2026-02-06T02:35:14.097777+00:00"
+      "metar_temp": 48.9,
+      "timestamp": "2026-02-06T03:05:44.362126+00:00"
     },
     "LV": {
       "mu": 72.1,
@@ -665,12 +665,12 @@
         "nws_adj": 71.0,
         "om_raw": 72.8,
         "om_adj": 73.8,
-        "metar_current": 68.0
+        "metar_current": 64.0
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 68.0,
-      "timestamp": "2026-02-06T02:35:14.985605+00:00"
+      "metar_temp": 64.0,
+      "timestamp": "2026-02-06T03:05:44.993398+00:00"
     },
     "NOLA": null,
     "PHX": {
@@ -685,16 +685,16 @@
         "nws_adj": 77.0,
         "om_raw": 82.5,
         "om_adj": 80.5,
-        "metar_current": 73.9
+        "metar_current": 72.0
       },
       "source_count": 2,
       "tier": 1,
-      "metar_temp": 73.9,
-      "timestamp": "2026-02-06T02:35:15.774583+00:00"
+      "metar_temp": 72.0,
+      "timestamp": "2026-02-06T03:05:45.630169+00:00"
     },
     "ATL": null,
     "MIN": null
   },
   "started_at": "2026-02-05T13:32:57.791336+00:00",
-  "last_update": "2026-02-06T02:42:22.849356+00:00"
+  "last_update": "2026-02-06T03:07:49.107285+00:00"
 }

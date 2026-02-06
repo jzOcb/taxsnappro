@@ -1,3 +1,3 @@
-"""TaxForge - AI-powered tax preparation"""
+"""TaxSnapPro - AI-powered tax preparation"""
 
-__version__ = "0.9.31"
+__version__ = "1.0.1"

@@ -1,5 +1,5 @@
 """
-TaxForge - Reusable UI Components (Fintech Light Theme)
+TaxSnapPro - Reusable UI Components (Fintech Light Theme)
 """
 import reflex as rx
 from typing import Callable
@@ -356,7 +356,7 @@ def nav_bar() -> rx.Component:
         rx.hstack(
             rx.hstack(
                 rx.text("🔨", font_size="24px"),
-                rx.text("TaxForge", color=COLORS["text_primary"], font_size="20px", font_weight="700"),
+                rx.text("TaxSnapPro", color=COLORS["text_primary"], font_size="20px", font_weight="700"),
                 spacing="2",
             ),
             rx.spacer(),
@@ -450,7 +450,7 @@ def api_key_modal(is_open: bool, on_close: Callable, api_key_value: str,
                                 width="100%",
                             ),
                             rx.text(
-                                "TaxForge uses Google Gemini (FREE) to extract data from your tax documents. "
+                                "TaxSnapPro uses Google Gemini (FREE) to extract data from your tax documents. "
                                 "Get your API key in 30 seconds:",
                                 color=COLORS["text_secondary"],
                                 font_size="14px",

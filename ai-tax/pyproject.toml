@@ -3,13 +3,13 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "taxforge"
-version = "0.9.31"
+name = "taxsnappro"
+version = "1.0.1"
 description = "AI-powered tax preparation assistant"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "TaxForge Team"}
+    {name = "TaxSnapPro Team"}
 ]
 keywords = ["tax", "ai", "tax-preparation", "irs", "1040"]
 classifiers = [
@@ -38,10 +38,10 @@ dev = [
 ]
 
 [project.scripts]
-taxforge = "aitax.cli:main"
+taxsnappro = "aitax.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/taxforge/taxforge"
+Homepage = "https://github.com/jzOcb/taxsnappro"
 
 [tool.setuptools.packages.find]
 where = ["ui"]

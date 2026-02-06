@@ -1,6 +1,6 @@
 {
-  "bankroll": 1000.0,
-  "total_pnl": 0.0,
+  "bankroll": 900.5,
+  "total_pnl": -99.5,
   "positions": [
     {
       "id": "KXNBAGAME-26FEB07DALSAS-DAL-1770319198",
@@ -28,31 +28,6 @@
       "status": "open"
     },
     {
-      "id": "KXNBAGAME-26FEB05WASDET-WAS-1770337881",
-      "ticker": "KXNBAGAME-26FEB05WASDET-WAS",
-      "event_ticker": "KXNBAGAME-26FEB05WASDET",
-      "direction": "BUY_NO",
-      "team": "WAS (away)",
-      "game": "Washington Wizards @ Detroit Pistons",
-      "game_time": "2026-02-06T00:00Z",
-      "contracts": 66,
-      "entry_price": 75,
-      "cost": 49.5,
-      "fair_value": 11.3,
-      "edge_cents": 14.2,
-      "edge_pct": 0.142,
-      "sportsbook_odds": {
-        "provider": "Draft Kings",
-        "away_ml": 750,
-        "home_ml": -1200,
-        "spread": -16.5,
-        "over_under": 227.5
-      },
-      "kalshi_mid_at_entry": 25.5,
-      "opened_at": "2026-02-06T00:31:21.786765+00:00",
-      "status": "open"
-    },
-    {
       "id": "KXNBAGAME-26FEB05CHITOR-TOR-1770339693",
       "ticker": "KXNBAGAME-26FEB05CHITOR-TOR",
       "event_ticker": "KXNBAGAME-26FEB05CHITOR",
@@ -75,31 +50,6 @@
       },
       "kalshi_mid_at_entry": 83.5,
       "opened_at": "2026-02-06T01:01:33.900224+00:00",
-      "status": "open"
-    },
-    {
-      "id": "KXNBAGAME-26FEB05BKNORL-ORL-1770339693",
-      "ticker": "KXNBAGAME-26FEB05BKNORL-ORL",
-      "event_ticker": "KXNBAGAME-26FEB05BKNORL",
-      "direction": "BUY_NO",
-      "team": "ORL (home)",
-      "game": "Brooklyn Nets @ Orlando Magic",
-      "game_time": "2026-02-06T00:00Z",
-      "contracts": 1250,
-      "entry_price": 4,
-      "cost": 50.0,
-      "fair_value": 76.6,
-      "edge_cents": 19.9,
-      "edge_pct": 0.1991,
-      "sportsbook_odds": {
-        "provider": "Draft Kings",
-        "away_ml": 310,
-        "home_ml": -395,
-        "spread": -9.5,
-        "over_under": 214.5
-      },
-      "kalshi_mid_at_entry": 96.5,
-      "opened_at": "2026-02-06T01:01:33.900376+00:00",
       "status": "open"
     },
     {
@@ -203,12 +153,71 @@
       "status": "open"
     }
   ],
-  "settled": [],
-  "signals_seen": 67,
+  "settled": [
+    {
+      "id": "KXNBAGAME-26FEB05WASDET-WAS-1770337881",
+      "ticker": "KXNBAGAME-26FEB05WASDET-WAS",
+      "event_ticker": "KXNBAGAME-26FEB05WASDET",
+      "direction": "BUY_NO",
+      "team": "WAS (away)",
+      "game": "Washington Wizards @ Detroit Pistons",
+      "game_time": "2026-02-06T00:00Z",
+      "contracts": 66,
+      "entry_price": 75,
+      "cost": 49.5,
+      "fair_value": 11.3,
+      "edge_cents": 14.2,
+      "edge_pct": 0.142,
+      "sportsbook_odds": {
+        "provider": "Draft Kings",
+        "away_ml": 750,
+        "home_ml": -1200,
+        "spread": -16.5,
+        "over_under": 227.5
+      },
+      "kalshi_mid_at_entry": 25.5,
+      "opened_at": "2026-02-06T00:31:21.786765+00:00",
+      "status": "settled",
+      "result": "yes",
+      "won": false,
+      "profit": -49.5,
+      "settled_at": "2026-02-06T03:02:11.026097+00:00"
+    },
+    {
+      "id": "KXNBAGAME-26FEB05BKNORL-ORL-1770339693",
+      "ticker": "KXNBAGAME-26FEB05BKNORL-ORL",
+      "event_ticker": "KXNBAGAME-26FEB05BKNORL",
+      "direction": "BUY_NO",
+      "team": "ORL (home)",
+      "game": "Brooklyn Nets @ Orlando Magic",
+      "game_time": "2026-02-06T00:00Z",
+      "contracts": 1250,
+      "entry_price": 4,
+      "cost": 50.0,
+      "fair_value": 76.6,
+      "edge_cents": 19.9,
+      "edge_pct": 0.1991,
+      "sportsbook_odds": {
+        "provider": "Draft Kings",
+        "away_ml": 310,
+        "home_ml": -395,
+        "spread": -9.5,
+        "over_under": 214.5
+      },
+      "kalshi_mid_at_entry": 96.5,
+      "opened_at": "2026-02-06T01:01:33.900376+00:00",
+      "status": "settled",
+      "result": "yes",
+      "won": false,
+      "profit": -50.0,
+      "settled_at": "2026-02-06T03:02:11.264046+00:00"
+    }
+  ],
+  "signals_seen": 71,
   "trades_taken": 8,
   "wins": 0,
-  "losses": 0,
-  "last_scan": "2026-02-06T02:31:58.224027+00:00",
+  "losses": 2,
+  "last_scan": "2026-02-06T03:02:10.776296+00:00",
   "daily_stats": {
     "2026-02-05": {
       "scans": 14,
@@ -216,9 +225,9 @@
       "trades": 17
     },
     "2026-02-06": {
-      "scans": 6,
-      "signals": 50,
-      "trades": 50
+      "scans": 7,
+      "signals": 54,
+      "trades": 54
     }
   }
 }

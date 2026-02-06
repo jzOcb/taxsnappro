@@ -1,5 +1,5 @@
 """
-TaxForge - Main Application (Fintech Light Theme)
+TaxSnapPro - Main Application (Fintech Light Theme)
 """
 import reflex as rx
 from .state import TaxAppState
@@ -1515,7 +1515,7 @@ app = rx.App(
 )
 
 # Register pages
-app.add_page(dashboard_page, route="/", title="TaxForge - Dashboard", on_load=TaxAppState.load_saved_data)
-app.add_page(upload_page, route="/upload", title="TaxForge - Upload")
-app.add_page(review_page, route="/review", title="TaxForge - Review")
-app.add_page(settings_page, route="/settings", title="TaxForge - Settings")
+app.add_page(dashboard_page, route="/", title="TaxSnapPro - Dashboard", on_load=TaxAppState.load_saved_data)
+app.add_page(upload_page, route="/upload", title="TaxSnapPro - Upload")
+app.add_page(review_page, route="/review", title="TaxSnapPro - Review")
+app.add_page(settings_page, route="/settings", title="TaxSnapPro - Settings")

@@ -1,9 +1,9 @@
-# TaxForge 🧾
+# TaxSnapPro 🧾
 
 AI-powered tax preparation tool. Upload your tax documents, let AI extract the data, and get instant tax calculations.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![PyPI](https://img.shields.io/pypi/v/taxforge.svg)
+![PyPI](https://img.shields.io/pypi/v/taxsnappro.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Features
@@ -32,10 +32,10 @@ AI-powered tax preparation tool. Upload your tax documents, let AI extract the d
 
 ```bash
 # Install
-pip install taxforge
+pip install taxsnappro
 
 # Run
-taxforge
+taxsnappro
 ```
 
 Then open http://localhost:3000 in your browser.
@@ -47,7 +47,7 @@ Then open http://localhost:3000 in your browser.
 
 ## Configuration
 
-1. Launch TaxForge: `taxforge`
+1. Launch TaxSnapPro: `taxsnappro`
 2. Go to **Settings**
 3. Enter your Gemini API key
 4. Start uploading documents!
@@ -61,7 +61,7 @@ Then open http://localhost:3000 in your browser.
 
 ## Tax Calculations
 
-TaxForge calculates:
+TaxSnapPro calculates:
 - Federal income tax (all brackets for 2024)
 - Standard vs. Itemized deductions
 - Self-employment tax (Schedule SE)
@@ -83,8 +83,8 @@ TaxForge calculates:
 
 ```bash
 # Clone
-git clone https://github.com/jzOcb/taxforge.git
-cd taxforge
+git clone https://github.com/jzOcb/taxsnappro.git
+cd taxsnappro
 
 # Install dependencies
 pip install -e .
@@ -99,4 +99,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Disclaimer
 
-TaxForge is for educational and estimation purposes only. Always consult a qualified tax professional for official tax filing. The authors are not responsible for any errors in tax calculations.
+TaxSnapPro is for educational and estimation purposes only. Always consult a qualified tax professional for official tax filing. The authors are not responsible for any errors in tax calculations.

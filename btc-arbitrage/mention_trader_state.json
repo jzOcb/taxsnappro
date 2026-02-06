@@ -1200,9 +1200,9 @@
   "total_trades": 36,
   "total_wins": 3,
   "total_losses": 6,
-  "scan_count": 53,
+  "scan_count": 54,
   "started_at": "2026-02-05T14:08:18.635091+00:00",
-  "last_scan": "2026-02-06T02:30:49.500943+00:00",
+  "last_scan": "2026-02-06T02:56:25.981918+00:00",
   "series_pnl": {
     "entertainment": -34.8,
     "trump_sotu": -42.9

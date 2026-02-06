@@ -4249,3 +4249,1025 @@ NameError: name 'logger' is not defined
 2026-02-06 02:41:15 [INFO]     📅 ?                    closes 2026-02-08T00:00 (in 1d 21h)
 2026-02-06 02:41:15 [INFO]     📅 ?                    closes 2026-02-09T15:00 (in 3d 12h)
 2026-02-06 02:41:15 [INFO] ================================================================================
+2026-02-06 02:56:25 [INFO] 🔍 Scan #54 — scanning 23 Kalshi series + Polymarket...
+2026-02-06 02:56:34 [INFO]    KXEARNINGSMENTIONCOINBASE: 14 markets
+2026-02-06 02:56:34 [INFO]    KXEARNINGSMENTIONEA: 12 markets
+2026-02-06 02:56:34 [INFO]    KXEARNINGSMENTIONNBIS: 11 markets
+2026-02-06 02:56:34 [INFO]    KXFIGHTMENTION: 52 markets
+2026-02-06 02:56:34 [INFO]    KXGREENDAYMENTION: 1 markets
+2026-02-06 02:56:34 [INFO]    KXMAMDANIMENTION: 15 markets
+2026-02-06 02:56:34 [INFO]    KXMRBEASTMENTION: 15 markets
+2026-02-06 02:56:34 [INFO]    KXNBAMENTION: 100 markets
+2026-02-06 02:56:34 [INFO]    KXNCAABMENTION: 16 markets
+2026-02-06 02:56:34 [INFO]    KXNFLMENTION: 36 markets
+2026-02-06 02:56:34 [INFO]    KXTRUMPMENTION: 94 markets
+2026-02-06 02:56:34 [INFO]    KXTRUMPSAY: 10 markets
+2026-02-06 02:56:34 [INFO]    KXTRUMPSAYMONTH: 14 markets
+2026-02-06 02:56:34 [INFO]    KXTRUMPSAYNICKNAME: 15 markets
+2026-02-06 02:56:34 [INFO]    KXWOMENTION: 16 markets
+2026-02-06 02:56:34 [INFO] Kalshi scan: found 423 active mention markets across 23 series
+2026-02-06 02:56:34 [INFO] Polymarket scan: found 9 active mention markets
+2026-02-06 02:56:34 [INFO]    Total markets: 432 (Kalshi=423, PM=9)
+2026-02-06 02:56:34 [INFO]      earnings: 37 markets
+2026-02-06 02:56:34 [INFO]      entertainment: 47 markets
+2026-02-06 02:56:34 [INFO]      sports_nba: 118 markets
+2026-02-06 02:56:34 [INFO]      sports_nfl: 88 markets
+2026-02-06 02:56:34 [INFO]      trump_sotu: 94 markets
+2026-02-06 02:56:34 [INFO]      trump_weekly: 48 markets
+2026-02-06 02:56:34 [INFO] Probability estimate for 'zohran / mamdani': 7% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:35 [INFO] LLM estimated zelensky probability: 70.0% for trump sotu
+2026-02-06 02:56:35 [INFO] Probability estimate for 'zelensky': 60% (static=None, llm=70.0, adj=0.0)
+2026-02-06 02:56:35 [INFO] Probability estimate for 'witkoff': 15% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] LLM estimated walz probability: 2.0% for trump sotu
+2026-02-06 02:56:36 [INFO] Probability estimate for 'walz': 14% (static=None, llm=2.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'usha': 13% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'thune': 13% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'schumer': 28% (static=None, llm=25.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'reagan': 20% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'putin': 40% (static=None, llm=35.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'prince mohammed': 9% (static=None, llm=5.0, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'president xi': 83% (static=97, llm=None, adj=0.0)
+2026-02-06 02:56:36 [INFO] Probability estimate for 'pocahontas': 13% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:38 [INFO] LLM estimated pelosi probability: 65.0% for trump sotu
+2026-02-06 02:56:38 [INFO] Probability estimate for 'pelosi': 52% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:56:38 [INFO] Probability estimate for 'pam / bondi': 16% (static=None, llm=2.0, adj=0.0)
+2026-02-06 02:56:39 [INFO] LLM estimated obama probability: 15.0% for trump sotu
+2026-02-06 02:56:39 [INFO] Probability estimate for 'obama': 22% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:41 [WARNING] LLM returned non-numeric response: 1. **Speaker:** Donald Trump is known for his sometimes unpredictable remarks and tendency to deviate from prepared speeches.
+2. **Event:** The State of the Union address is typically a formal speech outlining the President's agenda and accomplishments. While generally
+2026-02-06 02:56:41 [INFO] No probability estimate for newsom / newscum, skipping
+2026-02-06 02:56:41 [INFO] V2 system skipped newsom / newscum (no confident estimate)
+2026-02-06 02:56:41 [INFO] Probability estimate for 'modi': 8% (static=None, llm=2.0, adj=0.0)
+2026-02-06 02:56:41 [INFO] Probability estimate for 'marco / rubio': 21% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:41 [INFO] Probability estimate for 'lincoln': 28% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:41 [INFO] Probability estimate for 'kristi / noem': 19% (static=None, llm=5.0, adj=0.0)
+2026-02-06 02:56:41 [INFO] Probability estimate for 'keir / starmer': 7% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:43 [WARNING] LLM returned non-numeric response: 1. **Speaker:** Donald Trump is known for using specific names and phrases, especially when discussing political or controversial topics.
+2. **Event Type:** The State of the Union address is a formal speech, but Trump has been known to deviate from
+2026-02-06 02:56:43 [INFO] No probability estimate for kash / patel, skipping
+2026-02-06 02:56:43 [INFO] V2 system skipped kash / patel (no confident estimate)
+2026-02-06 02:56:44 [INFO] LLM estimated karoline / leavitt probability: 1.0% for trump sotu
+2026-02-06 02:56:44 [INFO] Probability estimate for 'karoline / leavitt': 11% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:44 [INFO] Probability estimate for 'kamala': 26% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:45 [INFO] LLM estimated jared / kushner probability: 15.0% for trump sotu
+2026-02-06 02:56:45 [INFO] Probability estimate for 'jared / kushner': 22% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:47 [INFO] LLM estimated howard / lutnick probability: 1.0% for trump sotu
+2026-02-06 02:56:47 [INFO] Probability estimate for 'howard / lutnick': 10% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:49 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 02:56:49 [INFO] No probability estimate for homan, skipping
+2026-02-06 02:56:49 [INFO] V2 system skipped homan (no confident estimate)
+2026-02-06 02:56:50 [INFO] LLM estimated hegseth probability: 1.0% for trump sotu
+2026-02-06 02:56:50 [INFO] Probability estimate for 'hegseth': 16% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:50 [INFO] Probability estimate for 'clinton': 20% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:50 [INFO] Probability estimate for 'charlie kirk': 19% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:50 [INFO] Probability estimate for 'biden': 88% (static=87, llm=None, adj=0.0)
+2026-02-06 02:56:51 [INFO] LLM estimated bibi / netanyahu probability: 15.0% for trump sotu
+2026-02-06 02:56:51 [INFO] Probability estimate for 'bibi / netanyahu': 22% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:51 [INFO] Probability estimate for 'bessent': 14% (static=None, llm=0.0, adj=0.0)
+2026-02-06 02:56:53 [INFO] LLM estimated iceland probability: 1.0% for trump sotu
+2026-02-06 02:56:53 [INFO] Probability estimate for 'iceland': 5% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:53 [INFO] Probability estimate for 'venezuela': 68% (static=50, llm=65.0, adj=0.0)
+2026-02-06 02:56:53 [INFO] Probability estimate for 'ukraine': 79% (static=87, llm=None, adj=0.0)
+2026-02-06 02:56:53 [INFO] Probability estimate for 'taiwan': 18% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:53 [INFO] Probability estimate for 'russia': 82% (static=87, llm=None, adj=0.0)
+2026-02-06 02:56:54 [INFO] LLM estimated portland probability: 15.0% for trump sotu
+2026-02-06 02:56:54 [INFO] Probability estimate for 'portland': 18% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:56 [INFO] LLM estimated palestine probability: 15.0% for trump sotu
+2026-02-06 02:56:56 [INFO] Probability estimate for 'palestine': 14% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:56 [INFO] Probability estimate for 'new york': 81% (static=87, llm=None, adj=0.0)
+2026-02-06 02:56:57 [INFO] LLM estimated mount mckinley probability: 1.0% for trump sotu
+2026-02-06 02:56:57 [INFO] Probability estimate for 'mount mckinley': 12% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:56:59 [INFO] LLM estimated minnesota / minneapolis probability: 15.0% for trump sotu
+2026-02-06 02:56:59 [INFO] Probability estimate for 'minnesota / minneapolis': 31% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:59 [INFO] Probability estimate for 'mexico': 69% (static=65, llm=85.0, adj=0.0)
+2026-02-06 02:56:59 [INFO] Probability estimate for 'israel': 81% (static=87, llm=None, adj=0.0)
+2026-02-06 02:56:59 [INFO] Probability estimate for 'iran': 89% (static=87, llm=None, adj=0.0)
+2026-02-06 02:56:59 [INFO] Probability estimate for 'india': 27% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:56:59 [INFO] Probability estimate for 'gulf of america': 90% (static=97, llm=None, adj=0.0)
+2026-02-06 02:56:59 [INFO] Probability estimate for 'greenland': 25% (static=None, llm=2.0, adj=0.0)
+2026-02-06 02:57:00 [INFO] LLM estimated gaza probability: 70.0% for trump sotu
+2026-02-06 02:57:00 [INFO] Probability estimate for 'gaza': 69% (static=None, llm=70.0, adj=0.0)
+2026-02-06 02:57:00 [INFO] Probability estimate for 'el salvador': 20% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:00 [INFO] Probability estimate for 'cuba': 26% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] LLM estimated congo probability: 1.0% for trump sotu
+2026-02-06 02:57:02 [INFO] Probability estimate for 'congo': 15% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'colombia': 13% (static=None, llm=5.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'china': 89% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'chicago': 61% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'canada': 47% (static=65, llm=15.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'california': 65% (static=65, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'arizona': 28% (static=None, llm=25.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'argentina': 12% (static=None, llm=2.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'alaska': 26% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'the state of the / our union is strong': 86% (static=None, llm=95.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'affordability': 67% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'woke / dei': 71% (static=None, llm=70.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'vaccine / autism': 13% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'ufc': 12% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'trump': 93% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'trillion': 96% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'transgender': 31% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'somali / somalia / somalian': 19% (static=None, llm=5.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'sleepy joe': 59% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'radical left': 84% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'olympics / world cup': 90% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'nuclear': 70% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'mental institution': 21% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'maha / make america healthy again': 90% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'ice / national guard': 71% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'hottest': 93% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'hoax': 62% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'highest inflation': 79% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'fraud': 74% (static=None, llm=70.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'fentanyl / cocaine': 73% (static=None, llm=70.0, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'eight war': 82% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:02 [INFO] Probability estimate for 'drill baby drill': 78% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:03 [INFO] LLM estimated crypto / bitcoin probability: 5.0% for trump sotu
+2026-02-06 02:57:03 [INFO] Probability estimate for 'crypto / bitcoin': 14% (static=None, llm=5.0, adj=0.0)
+2026-02-06 02:57:03 [INFO] Probability estimate for 'ballroom': 32% (static=18, llm=None, adj=0.0)
+2026-02-06 02:57:05 [WARNING] LLM returned non-numeric response: 1. **Speaker and Vocabulary:** Donald Trump is known for using numbers and statistics in his speeches, often in a somewhat exaggerated or simplified manner.
+
+2. **Event Type:** The State of the Union address is a formal speech, but Trump has
+2026-02-06 02:57:05 [INFO] No probability estimate for 250, skipping
+2026-02-06 02:57:05 [INFO] V2 system skipped 250 (no confident estimate)
+2026-02-06 02:57:05 [INFO] Probability estimate for 'rigged election / stolen election': 80% (static=None, llm=90.0, adj=0.0)
+2026-02-06 02:57:06 [WARNING] LLM returned non-numeric response: 1. **Speaker:** Donald Trump is known to be somewhat unpredictable, but his speeches often touch on a range of topics.
+2. **Event Type:** "trump weekly" suggests a recurring event, likely a speech or rally. Without more information
+2026-02-06 02:57:06 [INFO] No probability estimate for marijuana / weed / cannabis, skipping
+2026-02-06 02:57:06 [INFO] V2 system skipped marijuana / weed / cannabis (no confident estimate)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'insurrection act': 20% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'communist / communism': 23% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'ufc': 24% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'turning point': 52% (static=None, llm=45.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'trump derangement syndrome': 92% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'third term': 20% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'stimulus': 56% (static=None, llm=70.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'nicki minaj': 21% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:06 [INFO] Probability estimate for 'nick shirley': 10% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:08 [INFO] LLM estimated newscum probability: 1.0% for trump weekly
+2026-02-06 02:57:08 [INFO] Probability estimate for 'newscum': 28% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:09 [INFO] LLM estimated moscow probability: 25.0% for trump weekly
+2026-02-06 02:57:09 [INFO] Probability estimate for 'moscow': 34% (static=None, llm=25.0, adj=0.0)
+2026-02-06 02:57:11 [WARNING] LLM returned non-numeric response: 1. **Speaker:** Donald Trump is known to be unpredictable and can deviate from prepared remarks.
+2. **Event Type:** "trump weekly" is vague, but likely refers to a recurring event where Trump speaks, possibly a rally, press conference
+2026-02-06 02:57:11 [INFO] No probability estimate for marijuana / weed / cannabis, skipping
+2026-02-06 02:57:11 [INFO] V2 system skipped marijuana / weed / cannabis (no confident estimate)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'gulf of america': 92% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'greenland': 15% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'autism': 19% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'whack job / wack job': 67% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'tampon tim': 7% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'slopadopolous': 17% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'rocket man': 20% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'pocahontas': 33% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'piggy': 11% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'marjorie traitor greene': 24% (static=None, llm=15.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'low energy': 74% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'little communist': 9% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'fat slob': 13% (static=None, llm=1.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'crying chuck / cryin chuck': 36% (static=None, llm=25.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'crazy bernie': 56% (static=None, llm=65.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'con job': 40% (static=None, llm=25.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'comrade kamala': 9% (static=None, llm=5.0, adj=0.0)
+2026-02-06 02:57:11 [INFO] Probability estimate for 'biden crime family': 73% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:12 [INFO] LLM uncertain about portnoy in unknown speech
+2026-02-06 02:57:12 [INFO] No probability estimate for portnoy, skipping
+2026-02-06 02:57:12 [INFO] V2 system skipped portnoy (no confident estimate)
+2026-02-06 02:57:12 [INFO] Probability estimate for 'trump': 73% (static=97, llm=None, adj=0.0)
+2026-02-06 02:57:14 [INFO] LLM uncertain about wind / windy in unknown speech
+2026-02-06 02:57:14 [INFO] No probability estimate for wind / windy, skipping
+2026-02-06 02:57:14 [INFO] V2 system skipped wind / windy (no confident estimate)
+2026-02-06 02:57:15 [INFO] LLM uncertain about what a catch in unknown speech
+2026-02-06 02:57:15 [INFO] No probability estimate for what a catch, skipping
+2026-02-06 02:57:15 [INFO] V2 system skipped what a catch (no confident estimate)
+2026-02-06 02:57:17 [INFO] LLM uncertain about west coast in unknown speech
+2026-02-06 02:57:17 [INFO] No probability estimate for west coast, skipping
+2026-02-06 02:57:17 [INFO] V2 system skipped west coast (no confident estimate)
+2026-02-06 02:57:18 [INFO] LLM uncertain about tush push in unknown speech
+2026-02-06 02:57:18 [INFO] No probability estimate for tush push, skipping
+2026-02-06 02:57:18 [INFO] V2 system skipped tush push (no confident estimate)
+2026-02-06 02:57:20 [INFO] LLM uncertain about turf in unknown speech
+2026-02-06 02:57:20 [INFO] No probability estimate for turf, skipping
+2026-02-06 02:57:20 [INFO] V2 system skipped turf (no confident estimate)
+2026-02-06 02:57:20 [INFO] Probability estimate for 'trade / traded': 84% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:21 [INFO] LLM uncertain about tom brady in unknown speech
+2026-02-06 02:57:21 [INFO] No probability estimate for tom brady, skipping
+2026-02-06 02:57:21 [INFO] V2 system skipped tom brady (no confident estimate)
+2026-02-06 02:57:23 [INFO] LLM uncertain about schedule in unknown speech
+2026-02-06 02:57:23 [INFO] No probability estimate for schedule, skipping
+2026-02-06 02:57:23 [INFO] V2 system skipped schedule (no confident estimate)
+2026-02-06 02:57:24 [INFO] LLM uncertain about safety in unknown speech
+2026-02-06 02:57:24 [INFO] No probability estimate for safety, skipping
+2026-02-06 02:57:24 [INFO] V2 system skipped safety (no confident estimate)
+2026-02-06 02:57:26 [INFO] LLM uncertain about russell wilson in unknown speech
+2026-02-06 02:57:26 [INFO] No probability estimate for russell wilson, skipping
+2026-02-06 02:57:26 [INFO] V2 system skipped russell wilson (no confident estimate)
+2026-02-06 02:57:27 [INFO] LLM uncertain about roughing the passer in unknown speech
+2026-02-06 02:57:27 [INFO] No probability estimate for roughing the passer, skipping
+2026-02-06 02:57:27 [INFO] V2 system skipped roughing the passer (no confident estimate)
+2026-02-06 02:57:29 [INFO] LLM uncertain about robert kraft in unknown speech
+2026-02-06 02:57:29 [INFO] No probability estimate for robert kraft, skipping
+2026-02-06 02:57:29 [INFO] V2 system skipped robert kraft (no confident estimate)
+2026-02-06 02:57:30 [INFO] LLM uncertain about record in unknown speech
+2026-02-06 02:57:30 [INFO] No probability estimate for record, skipping
+2026-02-06 02:57:30 [INFO] V2 system skipped record (no confident estimate)
+2026-02-06 02:57:32 [INFO] LLM uncertain about pro bowl / pro bowler in unknown speech
+2026-02-06 02:57:32 [INFO] No probability estimate for pro bowl / pro bowler, skipping
+2026-02-06 02:57:32 [INFO] V2 system skipped pro bowl / pro bowler (no confident estimate)
+2026-02-06 02:57:33 [INFO] LLM uncertain about one handed in unknown speech
+2026-02-06 02:57:33 [INFO] No probability estimate for one handed, skipping
+2026-02-06 02:57:33 [INFO] V2 system skipped one handed (no confident estimate)
+2026-02-06 02:57:35 [INFO] LLM uncertain about no good in unknown speech
+2026-02-06 02:57:35 [INFO] No probability estimate for no good, skipping
+2026-02-06 02:57:35 [INFO] V2 system skipped no good (no confident estimate)
+2026-02-06 02:57:36 [INFO] LLM uncertain about next gen stat in unknown speech
+2026-02-06 02:57:36 [INFO] No probability estimate for next gen stat, skipping
+2026-02-06 02:57:36 [INFO] V2 system skipped next gen stat (no confident estimate)
+2026-02-06 02:57:38 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 02:57:38 [INFO] No probability estimate for mvp, skipping
+2026-02-06 02:57:38 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 02:57:39 [INFO] LLM uncertain about marshawn lynch in unknown speech
+2026-02-06 02:57:39 [INFO] No probability estimate for marshawn lynch, skipping
+2026-02-06 02:57:39 [INFO] V2 system skipped marshawn lynch (no confident estimate)
+2026-02-06 02:57:41 [INFO] LLM uncertain about mahomes in unknown speech
+2026-02-06 02:57:41 [INFO] No probability estimate for mahomes, skipping
+2026-02-06 02:57:41 [INFO] V2 system skipped mahomes (no confident estimate)
+2026-02-06 02:57:42 [INFO] LLM uncertain about lombardi in unknown speech
+2026-02-06 02:57:42 [INFO] No probability estimate for lombardi, skipping
+2026-02-06 02:57:42 [INFO] V2 system skipped lombardi (no confident estimate)
+2026-02-06 02:57:44 [INFO] LLM uncertain about levi's in unknown speech
+2026-02-06 02:57:44 [INFO] No probability estimate for levi's, skipping
+2026-02-06 02:57:44 [INFO] V2 system skipped levi's (no confident estimate)
+2026-02-06 02:57:45 [INFO] LLM uncertain about legion of boom in unknown speech
+2026-02-06 02:57:45 [INFO] No probability estimate for legion of boom, skipping
+2026-02-06 02:57:45 [INFO] V2 system skipped legion of boom (no confident estimate)
+2026-02-06 02:57:47 [INFO] LLM uncertain about late hit in unknown speech
+2026-02-06 02:57:47 [INFO] No probability estimate for late hit, skipping
+2026-02-06 02:57:47 [INFO] V2 system skipped late hit (no confident estimate)
+2026-02-06 02:57:48 [INFO] LLM uncertain about hunt / hunting in unknown speech
+2026-02-06 02:57:48 [INFO] No probability estimate for hunt / hunting, skipping
+2026-02-06 02:57:48 [INFO] V2 system skipped hunt / hunting (no confident estimate)
+2026-02-06 02:57:48 [INFO] Probability estimate for 'honor': 79% (static=87, llm=None, adj=0.0)
+2026-02-06 02:57:50 [INFO] LLM uncertain about gronk / gronkowski in unknown speech
+2026-02-06 02:57:50 [INFO] No probability estimate for gronk / gronkowski, skipping
+2026-02-06 02:57:50 [INFO] V2 system skipped gronk / gronkowski (no confident estimate)
+2026-02-06 02:57:51 [INFO] LLM uncertain about golden gate in unknown speech
+2026-02-06 02:57:51 [INFO] No probability estimate for golden gate, skipping
+2026-02-06 02:57:51 [INFO] V2 system skipped golden gate (no confident estimate)
+2026-02-06 02:57:53 [INFO] LLM uncertain about gatorade in unknown speech
+2026-02-06 02:57:53 [INFO] No probability estimate for gatorade, skipping
+2026-02-06 02:57:53 [INFO] V2 system skipped gatorade (no confident estimate)
+2026-02-06 02:57:54 [INFO] LLM uncertain about fine / fines / fined in unknown speech
+2026-02-06 02:57:54 [INFO] No probability estimate for fine / fines / fined, skipping
+2026-02-06 02:57:54 [INFO] V2 system skipped fine / fines / fined (no confident estimate)
+2026-02-06 02:57:56 [INFO] LLM uncertain about dynasty in unknown speech
+2026-02-06 02:57:56 [INFO] No probability estimate for dynasty, skipping
+2026-02-06 02:57:56 [INFO] V2 system skipped dynasty (no confident estimate)
+2026-02-06 02:57:57 [INFO] LLM uncertain about contract in unknown speech
+2026-02-06 02:57:57 [INFO] No probability estimate for contract, skipping
+2026-02-06 02:57:57 [INFO] V2 system skipped contract (no confident estimate)
+2026-02-06 02:57:59 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 02:57:59 [INFO] No probability estimate for comeback / come back, skipping
+2026-02-06 02:57:59 [INFO] V2 system skipped comeback / come back (no confident estimate)
+2026-02-06 02:58:00 [INFO] LLM uncertain about cardi b in unknown speech
+2026-02-06 02:58:00 [INFO] No probability estimate for cardi b, skipping
+2026-02-06 02:58:00 [INFO] V2 system skipped cardi b (no confident estimate)
+2026-02-06 02:58:02 [INFO] LLM uncertain about rookie in unknown speech
+2026-02-06 02:58:02 [INFO] No probability estimate for rookie, skipping
+2026-02-06 02:58:02 [INFO] V2 system skipped rookie (no confident estimate)
+2026-02-06 02:58:03 [INFO] LLM uncertain about overtime in unknown speech
+2026-02-06 02:58:03 [INFO] No probability estimate for overtime, skipping
+2026-02-06 02:58:03 [INFO] V2 system skipped overtime (no confident estimate)
+2026-02-06 02:58:05 [INFO] LLM uncertain about frost bank in unknown speech
+2026-02-06 02:58:05 [INFO] No probability estimate for frost bank, skipping
+2026-02-06 02:58:05 [INFO] V2 system skipped frost bank (no confident estimate)
+2026-02-06 02:58:06 [INFO] LLM uncertain about triple double in unknown speech
+2026-02-06 02:58:06 [INFO] No probability estimate for triple double, skipping
+2026-02-06 02:58:06 [INFO] V2 system skipped triple double (no confident estimate)
+2026-02-06 02:58:06 [INFO] Probability estimate for 'trade / trades / traded': 87% (static=87, llm=None, adj=0.0)
+2026-02-06 02:58:08 [INFO] LLM uncertain about tech / technical in unknown speech
+2026-02-06 02:58:08 [INFO] No probability estimate for tech / technical, skipping
+2026-02-06 02:58:08 [INFO] V2 system skipped tech / technical (no confident estimate)
+2026-02-06 02:58:09 [INFO] LLM uncertain about retire / retired / retirement in unknown speech
+2026-02-06 02:58:09 [INFO] No probability estimate for retire / retired / retirement, skipping
+2026-02-06 02:58:09 [INFO] V2 system skipped retire / retired / retirement (no confident estimate)
+2026-02-06 02:58:11 [INFO] LLM uncertain about playoff in unknown speech
+2026-02-06 02:58:11 [INFO] No probability estimate for playoff, skipping
+2026-02-06 02:58:11 [INFO] V2 system skipped playoff (no confident estimate)
+2026-02-06 02:58:12 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 02:58:12 [INFO] No probability estimate for mvp, skipping
+2026-02-06 02:58:12 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 02:58:14 [INFO] LLM uncertain about jordan in unknown speech
+2026-02-06 02:58:14 [INFO] No probability estimate for jordan, skipping
+2026-02-06 02:58:14 [INFO] V2 system skipped jordan (no confident estimate)
+2026-02-06 02:58:15 [INFO] LLM uncertain about injury / injured in unknown speech
+2026-02-06 02:58:15 [INFO] No probability estimate for injury / injured, skipping
+2026-02-06 02:58:15 [INFO] V2 system skipped injury / injured (no confident estimate)
+2026-02-06 02:58:17 [INFO] LLM uncertain about elbow in unknown speech
+2026-02-06 02:58:17 [INFO] No probability estimate for elbow, skipping
+2026-02-06 02:58:17 [INFO] V2 system skipped elbow (no confident estimate)
+2026-02-06 02:58:19 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 02:58:19 [INFO] No probability estimate for draft, skipping
+2026-02-06 02:58:19 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 02:58:20 [INFO] LLM uncertain about crowd / crowded in unknown speech
+2026-02-06 02:58:20 [INFO] No probability estimate for crowd / crowded, skipping
+2026-02-06 02:58:20 [INFO] V2 system skipped crowd / crowded (no confident estimate)
+2026-02-06 02:58:21 [INFO] LLM uncertain about buzzer in unknown speech
+2026-02-06 02:58:21 [INFO] No probability estimate for buzzer, skipping
+2026-02-06 02:58:21 [INFO] V2 system skipped buzzer (no confident estimate)
+2026-02-06 02:58:23 [INFO] LLM uncertain about ankle in unknown speech
+2026-02-06 02:58:23 [INFO] No probability estimate for ankle, skipping
+2026-02-06 02:58:23 [INFO] V2 system skipped ankle (no confident estimate)
+2026-02-06 02:58:24 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 02:58:24 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 02:58:24 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 02:58:26 [INFO] LLM uncertain about airball / airballs / airballed in unknown speech
+2026-02-06 02:58:26 [INFO] No probability estimate for airball / airballs / airballed, skipping
+2026-02-06 02:58:26 [INFO] V2 system skipped airball / airballs / airballed (no confident estimate)
+2026-02-06 02:58:27 [INFO] LLM uncertain about overtime in unknown speech
+2026-02-06 02:58:27 [INFO] No probability estimate for overtime, skipping
+2026-02-06 02:58:27 [INFO] V2 system skipped overtime (no confident estimate)
+2026-02-06 02:58:29 [INFO] LLM uncertain about rookie in unknown speech
+2026-02-06 02:58:29 [INFO] No probability estimate for rookie, skipping
+2026-02-06 02:58:29 [INFO] V2 system skipped rookie (no confident estimate)
+2026-02-06 02:58:30 [INFO] LLM uncertain about paycom in unknown speech
+2026-02-06 02:58:30 [INFO] No probability estimate for paycom, skipping
+2026-02-06 02:58:30 [INFO] V2 system skipped paycom (no confident estimate)
+2026-02-06 02:58:32 [INFO] LLM uncertain about triple double in unknown speech
+2026-02-06 02:58:32 [INFO] No probability estimate for triple double, skipping
+2026-02-06 02:58:32 [INFO] V2 system skipped triple double (no confident estimate)
+2026-02-06 02:58:32 [INFO] Probability estimate for 'trade / trades / traded': 85% (static=87, llm=None, adj=0.0)
+2026-02-06 02:58:33 [INFO] LLM uncertain about tech / technical in unknown speech
+2026-02-06 02:58:33 [INFO] No probability estimate for tech / technical, skipping
+2026-02-06 02:58:33 [INFO] V2 system skipped tech / technical (no confident estimate)
+2026-02-06 02:58:35 [INFO] LLM uncertain about retire / retired / retirement in unknown speech
+2026-02-06 02:58:35 [INFO] No probability estimate for retire / retired / retirement, skipping
+2026-02-06 02:58:35 [INFO] V2 system skipped retire / retired / retirement (no confident estimate)
+2026-02-06 02:58:36 [INFO] LLM uncertain about playoff in unknown speech
+2026-02-06 02:58:36 [INFO] No probability estimate for playoff, skipping
+2026-02-06 02:58:36 [INFO] V2 system skipped playoff (no confident estimate)
+2026-02-06 02:58:38 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 02:58:38 [INFO] No probability estimate for mvp, skipping
+2026-02-06 02:58:38 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 02:58:39 [INFO] LLM uncertain about jordan in unknown speech
+2026-02-06 02:58:39 [INFO] No probability estimate for jordan, skipping
+2026-02-06 02:58:39 [INFO] V2 system skipped jordan (no confident estimate)
+2026-02-06 02:58:41 [INFO] LLM uncertain about injury / injured in unknown speech
+2026-02-06 02:58:41 [INFO] No probability estimate for injury / injured, skipping
+2026-02-06 02:58:41 [INFO] V2 system skipped injury / injured (no confident estimate)
+2026-02-06 02:58:42 [INFO] LLM uncertain about elbow in unknown speech
+2026-02-06 02:58:42 [INFO] No probability estimate for elbow, skipping
+2026-02-06 02:58:42 [INFO] V2 system skipped elbow (no confident estimate)
+2026-02-06 02:58:44 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 02:58:44 [INFO] No probability estimate for draft, skipping
+2026-02-06 02:58:44 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 02:58:45 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 02:58:45 [INFO] No probability estimate for crowd / crowded, skipping
+2026-02-06 02:58:45 [INFO] V2 system skipped crowd / crowded (no confident estimate)
+2026-02-06 02:58:47 [INFO] LLM uncertain about buzzer in unknown speech
+2026-02-06 02:58:47 [INFO] No probability estimate for buzzer, skipping
+2026-02-06 02:58:47 [INFO] V2 system skipped buzzer (no confident estimate)
+2026-02-06 02:58:48 [INFO] LLM uncertain about ankle in unknown speech
+2026-02-06 02:58:48 [INFO] No probability estimate for ankle, skipping
+2026-02-06 02:58:48 [INFO] V2 system skipped ankle (no confident estimate)
+2026-02-06 02:58:50 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 02:58:50 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 02:58:50 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 02:58:51 [INFO] LLM uncertain about airball / airballs / airballed in unknown speech
+2026-02-06 02:58:51 [INFO] No probability estimate for airball / airballs / airballed, skipping
+2026-02-06 02:58:51 [INFO] V2 system skipped airball / airballs / airballed (no confident estimate)
+2026-02-06 02:58:53 [INFO] LLM uncertain about overtime in unknown speech
+2026-02-06 02:58:53 [INFO] No probability estimate for overtime, skipping
+2026-02-06 02:58:53 [INFO] V2 system skipped overtime (no confident estimate)
+2026-02-06 02:58:54 [INFO] LLM uncertain about rookie in unknown speech
+2026-02-06 02:58:54 [INFO] No probability estimate for rookie, skipping
+2026-02-06 02:58:54 [INFO] V2 system skipped rookie (no confident estimate)
+2026-02-06 02:58:56 [INFO] LLM uncertain about golden 1 in unknown speech
+2026-02-06 02:58:56 [INFO] No probability estimate for golden 1, skipping
+2026-02-06 02:58:56 [INFO] V2 system skipped golden 1 (no confident estimate)
+2026-02-06 02:58:57 [INFO] LLM uncertain about triple double in unknown speech
+2026-02-06 02:58:57 [INFO] No probability estimate for triple double, skipping
+2026-02-06 02:58:57 [INFO] V2 system skipped triple double (no confident estimate)
+2026-02-06 02:58:57 [INFO] Probability estimate for 'trade / trades / traded': 87% (static=87, llm=None, adj=0.0)
+2026-02-06 02:58:59 [INFO] LLM uncertain about tech / technical in unknown speech
+2026-02-06 02:58:59 [INFO] No probability estimate for tech / technical, skipping
+2026-02-06 02:58:59 [INFO] V2 system skipped tech / technical (no confident estimate)
+2026-02-06 02:59:00 [INFO] LLM uncertain about retire / retired / retirement in unknown speech
+2026-02-06 02:59:00 [INFO] No probability estimate for retire / retired / retirement, skipping
+2026-02-06 02:59:00 [INFO] V2 system skipped retire / retired / retirement (no confident estimate)
+2026-02-06 02:59:02 [INFO] LLM uncertain about playoff in unknown speech
+2026-02-06 02:59:02 [INFO] No probability estimate for playoff, skipping
+2026-02-06 02:59:02 [INFO] V2 system skipped playoff (no confident estimate)
+2026-02-06 02:59:03 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 02:59:03 [INFO] No probability estimate for mvp, skipping
+2026-02-06 02:59:03 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 02:59:05 [INFO] LLM uncertain about jordan in unknown speech
+2026-02-06 02:59:05 [INFO] No probability estimate for jordan, skipping
+2026-02-06 02:59:05 [INFO] V2 system skipped jordan (no confident estimate)
+2026-02-06 02:59:06 [INFO] LLM uncertain about injury / injured in unknown speech
+2026-02-06 02:59:06 [INFO] No probability estimate for injury / injured, skipping
+2026-02-06 02:59:06 [INFO] V2 system skipped injury / injured (no confident estimate)
+2026-02-06 02:59:08 [INFO] LLM uncertain about elbow in unknown speech
+2026-02-06 02:59:08 [INFO] No probability estimate for elbow, skipping
+2026-02-06 02:59:08 [INFO] V2 system skipped elbow (no confident estimate)
+2026-02-06 02:59:10 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 02:59:10 [INFO] No probability estimate for draft, skipping
+2026-02-06 02:59:10 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 02:59:11 [INFO] LLM uncertain about crowd / crowded in unknown speech
+2026-02-06 02:59:11 [INFO] No probability estimate for crowd / crowded, skipping
+2026-02-06 02:59:11 [INFO] V2 system skipped crowd / crowded (no confident estimate)
+2026-02-06 02:59:12 [INFO] LLM uncertain about buzzer in unknown speech
+2026-02-06 02:59:12 [INFO] No probability estimate for buzzer, skipping
+2026-02-06 02:59:12 [INFO] V2 system skipped buzzer (no confident estimate)
+2026-02-06 02:59:14 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 02:59:14 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 02:59:14 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 02:59:15 [INFO] LLM uncertain about overtime in unknown speech
+2026-02-06 02:59:15 [INFO] No probability estimate for overtime, skipping
+2026-02-06 02:59:15 [INFO] V2 system skipped overtime (no confident estimate)
+2026-02-06 02:59:17 [INFO] LLM uncertain about rookie in unknown speech
+2026-02-06 02:59:17 [INFO] No probability estimate for rookie, skipping
+2026-02-06 02:59:17 [INFO] V2 system skipped rookie (no confident estimate)
+2026-02-06 02:59:18 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 02:59:18 [INFO] No probability estimate for little caesars, skipping
+2026-02-06 02:59:18 [INFO] V2 system skipped little caesars (no confident estimate)
+2026-02-06 02:59:20 [INFO] LLM uncertain about triple double in unknown speech
+2026-02-06 02:59:20 [INFO] No probability estimate for triple double, skipping
+2026-02-06 02:59:20 [INFO] V2 system skipped triple double (no confident estimate)
+2026-02-06 02:59:20 [INFO] Probability estimate for 'trade / trades / traded': 89% (static=87, llm=None, adj=0.0)
+2026-02-06 02:59:21 [INFO] LLM uncertain about tech / technical in unknown speech
+2026-02-06 02:59:21 [INFO] No probability estimate for tech / technical, skipping
+2026-02-06 02:59:21 [INFO] V2 system skipped tech / technical (no confident estimate)
+2026-02-06 02:59:23 [INFO] LLM uncertain about retire / retired / retirement in unknown speech
+2026-02-06 02:59:23 [INFO] No probability estimate for retire / retired / retirement, skipping
+2026-02-06 02:59:23 [INFO] V2 system skipped retire / retired / retirement (no confident estimate)
+2026-02-06 02:59:24 [INFO] LLM uncertain about playoff in unknown speech
+2026-02-06 02:59:24 [INFO] No probability estimate for playoff, skipping
+2026-02-06 02:59:24 [INFO] V2 system skipped playoff (no confident estimate)
+2026-02-06 02:59:26 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 02:59:26 [INFO] No probability estimate for mvp, skipping
+2026-02-06 02:59:26 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 02:59:27 [INFO] LLM uncertain about jordan in unknown speech
+2026-02-06 02:59:27 [INFO] No probability estimate for jordan, skipping
+2026-02-06 02:59:27 [INFO] V2 system skipped jordan (no confident estimate)
+2026-02-06 02:59:29 [INFO] LLM uncertain about injury / injured in unknown speech
+2026-02-06 02:59:29 [INFO] No probability estimate for injury / injured, skipping
+2026-02-06 02:59:29 [INFO] V2 system skipped injury / injured (no confident estimate)
+2026-02-06 02:59:30 [INFO] LLM uncertain about elbow in unknown speech
+2026-02-06 02:59:30 [INFO] No probability estimate for elbow, skipping
+2026-02-06 02:59:30 [INFO] V2 system skipped elbow (no confident estimate)
+2026-02-06 02:59:32 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 02:59:32 [INFO] No probability estimate for draft, skipping
+2026-02-06 02:59:32 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 02:59:33 [INFO] LLM uncertain about crowd / crowded in unknown speech
+2026-02-06 02:59:33 [INFO] No probability estimate for crowd / crowded, skipping
+2026-02-06 02:59:33 [INFO] V2 system skipped crowd / crowded (no confident estimate)
+2026-02-06 02:59:35 [INFO] LLM uncertain about buzzer in unknown speech
+2026-02-06 02:59:35 [INFO] No probability estimate for buzzer, skipping
+2026-02-06 02:59:35 [INFO] V2 system skipped buzzer (no confident estimate)
+2026-02-06 02:59:36 [INFO] LLM uncertain about ankle in unknown speech
+2026-02-06 02:59:36 [INFO] No probability estimate for ankle, skipping
+2026-02-06 02:59:36 [INFO] V2 system skipped ankle (no confident estimate)
+2026-02-06 02:59:38 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 02:59:38 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 02:59:38 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 02:59:39 [INFO] LLM uncertain about airball / airballs / airballed in unknown speech
+2026-02-06 02:59:39 [INFO] No probability estimate for airball / airballs / airballed, skipping
+2026-02-06 02:59:39 [INFO] V2 system skipped airball / airballs / airballed (no confident estimate)
+2026-02-06 02:59:41 [INFO] LLM uncertain about rookie in unknown speech
+2026-02-06 02:59:41 [INFO] No probability estimate for rookie, skipping
+2026-02-06 02:59:41 [INFO] V2 system skipped rookie (no confident estimate)
+2026-02-06 02:59:42 [INFO] LLM uncertain about overtime in unknown speech
+2026-02-06 02:59:42 [INFO] No probability estimate for overtime, skipping
+2026-02-06 02:59:42 [INFO] V2 system skipped overtime (no confident estimate)
+2026-02-06 02:59:44 [INFO] LLM uncertain about mortgage matchup in unknown speech
+2026-02-06 02:59:44 [INFO] No probability estimate for mortgage matchup, skipping
+2026-02-06 02:59:44 [INFO] V2 system skipped mortgage matchup (no confident estimate)
+2026-02-06 02:59:45 [INFO] LLM uncertain about triple double in unknown speech
+2026-02-06 02:59:45 [INFO] No probability estimate for triple double, skipping
+2026-02-06 02:59:45 [INFO] V2 system skipped triple double (no confident estimate)
+2026-02-06 02:59:45 [INFO] Probability estimate for 'trade / trades / traded': 87% (static=87, llm=None, adj=0.0)
+2026-02-06 02:59:47 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 02:59:47 [INFO] No probability estimate for tech / technical, skipping
+2026-02-06 02:59:47 [INFO] V2 system skipped tech / technical (no confident estimate)
+2026-02-06 02:59:48 [INFO] LLM uncertain about retire / retired / retirement in unknown speech
+2026-02-06 02:59:48 [INFO] No probability estimate for retire / retired / retirement, skipping
+2026-02-06 02:59:48 [INFO] V2 system skipped retire / retired / retirement (no confident estimate)
+2026-02-06 02:59:50 [INFO] LLM uncertain about playoff in unknown speech
+2026-02-06 02:59:50 [INFO] No probability estimate for playoff, skipping
+2026-02-06 02:59:50 [INFO] V2 system skipped playoff (no confident estimate)
+2026-02-06 02:59:51 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 02:59:51 [INFO] No probability estimate for mvp, skipping
+2026-02-06 02:59:51 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 02:59:53 [INFO] LLM uncertain about jordan in unknown speech
+2026-02-06 02:59:53 [INFO] No probability estimate for jordan, skipping
+2026-02-06 02:59:53 [INFO] V2 system skipped jordan (no confident estimate)
+2026-02-06 02:59:54 [INFO] LLM uncertain about elbow in unknown speech
+2026-02-06 02:59:54 [INFO] No probability estimate for elbow, skipping
+2026-02-06 02:59:54 [INFO] V2 system skipped elbow (no confident estimate)
+2026-02-06 02:59:56 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 02:59:56 [INFO] No probability estimate for draft, skipping
+2026-02-06 02:59:56 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 02:59:57 [INFO] LLM uncertain about crowd / crowded in unknown speech
+2026-02-06 02:59:57 [INFO] No probability estimate for crowd / crowded, skipping
+2026-02-06 02:59:57 [INFO] V2 system skipped crowd / crowded (no confident estimate)
+2026-02-06 02:59:59 [INFO] LLM uncertain about buzzer in unknown speech
+2026-02-06 02:59:59 [INFO] No probability estimate for buzzer, skipping
+2026-02-06 02:59:59 [INFO] V2 system skipped buzzer (no confident estimate)
+2026-02-06 03:00:00 [INFO] LLM uncertain about ankle in unknown speech
+2026-02-06 03:00:00 [INFO] No probability estimate for ankle, skipping
+2026-02-06 03:00:00 [INFO] V2 system skipped ankle (no confident estimate)
+2026-02-06 03:00:02 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 03:00:02 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 03:00:02 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 03:00:03 [INFO] LLM uncertain about triple double in unknown speech
+2026-02-06 03:00:03 [INFO] No probability estimate for triple double, skipping
+2026-02-06 03:00:03 [INFO] V2 system skipped triple double (no confident estimate)
+2026-02-06 03:00:05 [INFO] LLM uncertain about tech / technical in unknown speech
+2026-02-06 03:00:05 [INFO] No probability estimate for tech / technical, skipping
+2026-02-06 03:00:05 [INFO] V2 system skipped tech / technical (no confident estimate)
+2026-02-06 03:00:06 [INFO] LLM uncertain about retire / retired / retirement in unknown speech
+2026-02-06 03:00:06 [INFO] No probability estimate for retire / retired / retirement, skipping
+2026-02-06 03:00:06 [INFO] V2 system skipped retire / retired / retirement (no confident estimate)
+2026-02-06 03:00:08 [INFO] LLM uncertain about playoff in unknown speech
+2026-02-06 03:00:08 [INFO] No probability estimate for playoff, skipping
+2026-02-06 03:00:08 [INFO] V2 system skipped playoff (no confident estimate)
+2026-02-06 03:00:09 [INFO] LLM uncertain about mvp in unknown speech
+2026-02-06 03:00:09 [INFO] No probability estimate for mvp, skipping
+2026-02-06 03:00:09 [INFO] V2 system skipped mvp (no confident estimate)
+2026-02-06 03:00:11 [INFO] LLM uncertain about jordan in unknown speech
+2026-02-06 03:00:11 [INFO] No probability estimate for jordan, skipping
+2026-02-06 03:00:11 [INFO] V2 system skipped jordan (no confident estimate)
+2026-02-06 03:00:12 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 03:00:12 [INFO] No probability estimate for draft, skipping
+2026-02-06 03:00:12 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 03:00:14 [INFO] LLM uncertain about buzzer in unknown speech
+2026-02-06 03:00:14 [INFO] No probability estimate for buzzer, skipping
+2026-02-06 03:00:14 [INFO] V2 system skipped buzzer (no confident estimate)
+2026-02-06 03:00:15 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 03:00:15 [INFO] No probability estimate for ankle, skipping
+2026-02-06 03:00:15 [INFO] V2 system skipped ankle (no confident estimate)
+2026-02-06 03:00:17 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 03:00:17 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 03:00:17 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 03:00:19 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 03:00:19 [INFO] No probability estimate for web3, skipping
+2026-02-06 03:00:19 [INFO] V2 system skipped web3 (no confident estimate)
+2026-02-06 03:00:20 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 03:00:20 [INFO] No probability estimate for subscription, skipping
+2026-02-06 03:00:20 [INFO] V2 system skipped subscription (no confident estimate)
+2026-02-06 03:00:21 [INFO] LLM uncertain about staking / stake in unknown speech
+2026-02-06 03:00:21 [INFO] No probability estimate for staking / stake, skipping
+2026-02-06 03:00:21 [INFO] V2 system skipped staking / stake (no confident estimate)
+2026-02-06 03:00:23 [INFO] LLM uncertain about stablecoin in unknown speech
+2026-02-06 03:00:23 [INFO] No probability estimate for stablecoin, skipping
+2026-02-06 03:00:23 [INFO] V2 system skipped stablecoin (no confident estimate)
+2026-02-06 03:00:24 [INFO] LLM uncertain about sec / securities and exchange commission in unknown speech
+2026-02-06 03:00:24 [INFO] No probability estimate for sec / securities and exchange commission, skipping
+2026-02-06 03:00:24 [INFO] V2 system skipped sec / securities and exchange commission (no confident estimate)
+2026-02-06 03:00:26 [INFO] LLM uncertain about regulator / regulatory / regulation in unknown speech
+2026-02-06 03:00:26 [INFO] Probability estimate for 'regulator / regulatory / regulation': 52% (static=35, llm=None, adj=0.0)
+2026-02-06 03:00:27 [INFO] LLM uncertain about margin in unknown speech
+2026-02-06 03:00:27 [INFO] No probability estimate for margin, skipping
+2026-02-06 03:00:27 [INFO] V2 system skipped margin (no confident estimate)
+2026-02-06 03:00:29 [INFO] LLM uncertain about international in unknown speech
+2026-02-06 03:00:29 [INFO] No probability estimate for international, skipping
+2026-02-06 03:00:29 [INFO] V2 system skipped international (no confident estimate)
+2026-02-06 03:00:30 [INFO] LLM uncertain about institution / institutional in unknown speech
+2026-02-06 03:00:30 [INFO] No probability estimate for institution / institutional, skipping
+2026-02-06 03:00:30 [INFO] V2 system skipped institution / institutional (no confident estimate)
+2026-02-06 03:00:32 [INFO] LLM uncertain about ethereum / eth in unknown speech
+2026-02-06 03:00:32 [INFO] No probability estimate for ethereum / eth, skipping
+2026-02-06 03:00:32 [INFO] V2 system skipped ethereum / eth (no confident estimate)
+2026-02-06 03:00:33 [INFO] LLM uncertain about decentralized exchange / dex in unknown speech
+2026-02-06 03:00:33 [INFO] No probability estimate for decentralized exchange / dex, skipping
+2026-02-06 03:00:33 [INFO] V2 system skipped decentralized exchange / dex (no confident estimate)
+2026-02-06 03:00:35 [INFO] LLM uncertain about custodial / custody in unknown speech
+2026-02-06 03:00:35 [INFO] No probability estimate for custodial / custody, skipping
+2026-02-06 03:00:35 [INFO] V2 system skipped custodial / custody (no confident estimate)
+2026-02-06 03:00:36 [INFO] LLM uncertain about blockchain in unknown speech
+2026-02-06 03:00:36 [INFO] No probability estimate for blockchain, skipping
+2026-02-06 03:00:36 [INFO] V2 system skipped blockchain (no confident estimate)
+2026-02-06 03:00:38 [INFO] LLM uncertain about bitcoin in unknown speech
+2026-02-06 03:00:38 [INFO] No probability estimate for bitcoin, skipping
+2026-02-06 03:00:38 [INFO] V2 system skipped bitcoin (no confident estimate)
+2026-02-06 03:00:39 [INFO] LLM uncertain about jared / kushner in unknown speech
+2026-02-06 03:00:39 [INFO] No probability estimate for jared / kushner, skipping
+2026-02-06 03:00:39 [INFO] V2 system skipped jared / kushner (no confident estimate)
+2026-02-06 03:00:41 [INFO] LLM uncertain about saudi arabia in unknown speech
+2026-02-06 03:00:41 [INFO] Probability estimate for 'saudi arabia': 35% (static=35, llm=None, adj=0.0)
+2026-02-06 03:00:42 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 03:00:42 [INFO] No probability estimate for underperformance, skipping
+2026-02-06 03:00:42 [INFO] V2 system skipped underperformance (no confident estimate)
+2026-02-06 03:00:44 [INFO] LLM uncertain about competition in unknown speech
+2026-02-06 03:00:44 [INFO] No probability estimate for competition, skipping
+2026-02-06 03:00:44 [INFO] V2 system skipped competition (no confident estimate)
+2026-02-06 03:00:45 [INFO] LLM uncertain about acquisition in unknown speech
+2026-02-06 03:00:45 [INFO] No probability estimate for acquisition, skipping
+2026-02-06 03:00:45 [INFO] V2 system skipped acquisition (no confident estimate)
+2026-02-06 03:00:45 [INFO] Probability estimate for 'ea sports fc': 12% (static=12, llm=None, adj=0.0)
+2026-02-06 03:00:47 [INFO] LLM uncertain about skate in unknown speech
+2026-02-06 03:00:47 [INFO] No probability estimate for skate, skipping
+2026-02-06 03:00:47 [INFO] V2 system skipped skate (no confident estimate)
+2026-02-06 03:00:48 [INFO] LLM uncertain about the sims in unknown speech
+2026-02-06 03:00:48 [INFO] No probability estimate for the sims, skipping
+2026-02-06 03:00:48 [INFO] V2 system skipped the sims (no confident estimate)
+2026-02-06 03:00:50 [INFO] LLM uncertain about mobile in unknown speech
+2026-02-06 03:00:50 [INFO] No probability estimate for mobile, skipping
+2026-02-06 03:00:50 [INFO] V2 system skipped mobile (no confident estimate)
+2026-02-06 03:00:51 [INFO] LLM uncertain about live service in unknown speech
+2026-02-06 03:00:51 [INFO] No probability estimate for live service, skipping
+2026-02-06 03:00:51 [INFO] V2 system skipped live service (no confident estimate)
+2026-02-06 03:00:53 [INFO] LLM uncertain about player engagement in unknown speech
+2026-02-06 03:00:53 [INFO] No probability estimate for player engagement, skipping
+2026-02-06 03:00:53 [INFO] V2 system skipped player engagement (no confident estimate)
+2026-02-06 03:00:54 [INFO] LLM uncertain about apex legends in unknown speech
+2026-02-06 03:00:54 [INFO] No probability estimate for apex legends, skipping
+2026-02-06 03:00:54 [INFO] V2 system skipped apex legends (no confident estimate)
+2026-02-06 03:00:56 [INFO] LLM uncertain about tripleten / triple ten in unknown speech
+2026-02-06 03:00:56 [INFO] No probability estimate for tripleten / triple ten, skipping
+2026-02-06 03:00:56 [INFO] V2 system skipped tripleten / triple ten (no confident estimate)
+2026-02-06 03:00:57 [INFO] LLM uncertain about token in unknown speech
+2026-02-06 03:00:57 [INFO] No probability estimate for token, skipping
+2026-02-06 03:00:57 [INFO] V2 system skipped token (no confident estimate)
+2026-02-06 03:00:59 [INFO] LLM uncertain about nvidia in unknown speech
+2026-02-06 03:00:59 [INFO] No probability estimate for nvidia, skipping
+2026-02-06 03:00:59 [INFO] V2 system skipped nvidia (no confident estimate)
+2026-02-06 03:01:00 [INFO] LLM uncertain about neocloud in unknown speech
+2026-02-06 03:01:00 [INFO] No probability estimate for neocloud, skipping
+2026-02-06 03:01:00 [INFO] V2 system skipped neocloud (no confident estimate)
+2026-02-06 03:01:02 [INFO] LLM uncertain about meta in unknown speech
+2026-02-06 03:01:02 [INFO] No probability estimate for meta, skipping
+2026-02-06 03:01:02 [INFO] V2 system skipped meta (no confident estimate)
+2026-02-06 03:01:03 [INFO] LLM uncertain about hyperscaler in unknown speech
+2026-02-06 03:01:03 [INFO] No probability estimate for hyperscaler, skipping
+2026-02-06 03:01:03 [INFO] V2 system skipped hyperscaler (no confident estimate)
+2026-02-06 03:01:05 [INFO] LLM uncertain about clickhouse / click house in unknown speech
+2026-02-06 03:01:05 [INFO] Probability estimate for 'clickhouse / click house': 61% (static=65, llm=None, adj=0.0)
+2026-02-06 03:01:06 [INFO] LLM uncertain about cash in unknown speech
+2026-02-06 03:01:06 [INFO] No probability estimate for cash, skipping
+2026-02-06 03:01:06 [INFO] V2 system skipped cash (no confident estimate)
+2026-02-06 03:01:08 [INFO] LLM uncertain about aether in unknown speech
+2026-02-06 03:01:08 [INFO] No probability estimate for aether, skipping
+2026-02-06 03:01:08 [INFO] V2 system skipped aether (no confident estimate)
+2026-02-06 03:01:08 [INFO] Probability estimate for 'maga / make america great again': 84% (static=97, llm=None, adj=0.0)
+2026-02-06 03:01:08 [INFO] Probability estimate for 'win': 92% (static=97, llm=None, adj=0.0)
+2026-02-06 03:01:09 [INFO] LLM uncertain about water in unknown speech
+2026-02-06 03:01:09 [INFO] No probability estimate for water, skipping
+2026-02-06 03:01:09 [INFO] V2 system skipped water (no confident estimate)
+2026-02-06 03:01:11 [INFO] LLM uncertain about time in unknown speech
+2026-02-06 03:01:11 [INFO] No probability estimate for time, skipping
+2026-02-06 03:01:11 [INFO] V2 system skipped time (no confident estimate)
+2026-02-06 03:01:12 [INFO] LLM uncertain about subscribe in unknown speech
+2026-02-06 03:01:12 [INFO] No probability estimate for subscribe, skipping
+2026-02-06 03:01:12 [INFO] V2 system skipped subscribe (no confident estimate)
+2026-02-06 03:01:14 [INFO] LLM uncertain about saudi arabia in unknown speech
+2026-02-06 03:01:14 [INFO] Probability estimate for 'saudi arabia': 30% (static=35, llm=None, adj=0.0)
+2026-02-06 03:01:15 [INFO] LLM uncertain about prize in unknown speech
+2026-02-06 03:01:15 [INFO] No probability estimate for prize, skipping
+2026-02-06 03:01:15 [INFO] V2 system skipped prize (no confident estimate)
+2026-02-06 03:01:17 [INFO] LLM uncertain about money in unknown speech
+2026-02-06 03:01:17 [INFO] Probability estimate for 'money': 69% (static=65, llm=None, adj=0.0)
+2026-02-06 03:01:17 [INFO] Probability estimate for 'million': 94% (static=97, llm=None, adj=0.0)
+2026-02-06 03:01:18 [INFO] LLM uncertain about feastable in unknown speech
+2026-02-06 03:01:18 [INFO] No probability estimate for feastable, skipping
+2026-02-06 03:01:18 [INFO] V2 system skipped feastable (no confident estimate)
+2026-02-06 03:01:20 [INFO] LLM uncertain about contestant in unknown speech
+2026-02-06 03:01:20 [INFO] No probability estimate for contestant, skipping
+2026-02-06 03:01:20 [INFO] V2 system skipped contestant (no confident estimate)
+2026-02-06 03:01:21 [INFO] LLM uncertain about challenge in unknown speech
+2026-02-06 03:01:21 [INFO] No probability estimate for challenge, skipping
+2026-02-06 03:01:21 [INFO] V2 system skipped challenge (no confident estimate)
+2026-02-06 03:01:21 [INFO] Probability estimate for 'car': 25% (static=12, llm=None, adj=0.0)
+2026-02-06 03:01:21 [INFO] Probability estimate for 'billion': 78% (static=97, llm=None, adj=0.0)
+2026-02-06 03:01:23 [INFO] LLM uncertain about beast in unknown speech
+2026-02-06 03:01:23 [INFO] No probability estimate for beast, skipping
+2026-02-06 03:01:23 [INFO] V2 system skipped beast (no confident estimate)
+2026-02-06 03:01:23 [INFO] Probability estimate for 'war / conflict / invasion': 82% (static=87, llm=None, adj=0.0)
+2026-02-06 03:01:24 [INFO] LLM uncertain about vance in unknown speech
+2026-02-06 03:01:24 [INFO] No probability estimate for vance, skipping
+2026-02-06 03:01:24 [INFO] V2 system skipped vance (no confident estimate)
+2026-02-06 03:01:26 [INFO] LLM uncertain about trans / transgender in unknown speech
+2026-02-06 03:01:26 [INFO] No probability estimate for trans / transgender, skipping
+2026-02-06 03:01:26 [INFO] V2 system skipped trans / transgender (no confident estimate)
+2026-02-06 03:01:27 [INFO] LLM uncertain about ralph lauren in unknown speech
+2026-02-06 03:01:27 [INFO] No probability estimate for ralph lauren, skipping
+2026-02-06 03:01:27 [INFO] V2 system skipped ralph lauren (no confident estimate)
+2026-02-06 03:01:27 [INFO] Probability estimate for 'pizza': 19% (static=12, llm=None, adj=0.0)
+2026-02-06 03:01:29 [INFO] LLM uncertain about paralympic / paralympics in unknown speech
+2026-02-06 03:01:29 [INFO] No probability estimate for paralympic / paralympics, skipping
+2026-02-06 03:01:29 [INFO] V2 system skipped paralympic / paralympics (no confident estimate)
+2026-02-06 03:01:30 [INFO] LLM uncertain about nhl in unknown speech
+2026-02-06 03:01:30 [INFO] No probability estimate for nhl, skipping
+2026-02-06 03:01:30 [INFO] V2 system skipped nhl (no confident estimate)
+2026-02-06 03:01:32 [INFO] LLM uncertain about mikaela shiffrin in unknown speech
+2026-02-06 03:01:32 [INFO] No probability estimate for mikaela shiffrin, skipping
+2026-02-06 03:01:32 [INFO] V2 system skipped mikaela shiffrin (no confident estimate)
+2026-02-06 03:01:33 [INFO] LLM uncertain about lindsey vonn in unknown speech
+2026-02-06 03:01:33 [INFO] No probability estimate for lindsey vonn, skipping
+2026-02-06 03:01:33 [INFO] V2 system skipped lindsey vonn (no confident estimate)
+2026-02-06 03:01:35 [INFO] LLM uncertain about jamaica in unknown speech
+2026-02-06 03:01:35 [INFO] No probability estimate for jamaica, skipping
+2026-02-06 03:01:35 [INFO] V2 system skipped jamaica (no confident estimate)
+2026-02-06 03:01:36 [INFO] LLM uncertain about dope / doping in unknown speech
+2026-02-06 03:01:36 [INFO] No probability estimate for dope / doping, skipping
+2026-02-06 03:01:36 [INFO] V2 system skipped dope / doping (no confident estimate)
+2026-02-06 03:01:38 [INFO] LLM uncertain about bocelli in unknown speech
+2026-02-06 03:01:38 [INFO] No probability estimate for bocelli, skipping
+2026-02-06 03:01:38 [INFO] V2 system skipped bocelli (no confident estimate)
+2026-02-06 03:01:39 [INFO] LLM uncertain about armani in unknown speech
+2026-02-06 03:01:39 [INFO] No probability estimate for armani, skipping
+2026-02-06 03:01:39 [INFO] V2 system skipped armani (no confident estimate)
+2026-02-06 03:01:41 [INFO] LLM uncertain about arianna fontana in unknown speech
+2026-02-06 03:01:41 [INFO] No probability estimate for arianna fontana, skipping
+2026-02-06 03:01:41 [INFO] V2 system skipped arianna fontana (no confident estimate)
+2026-02-06 03:01:42 [INFO] LLM uncertain about acl in unknown speech
+2026-02-06 03:01:42 [INFO] No probability estimate for acl, skipping
+2026-02-06 03:01:42 [INFO] V2 system skipped acl (no confident estimate)
+2026-02-06 03:01:44 [INFO] LLM uncertain about walk on in unknown speech
+2026-02-06 03:01:44 [INFO] No probability estimate for walk on, skipping
+2026-02-06 03:01:44 [INFO] V2 system skipped walk on (no confident estimate)
+2026-02-06 03:01:45 [INFO] LLM uncertain about transfer / transferred in unknown speech
+2026-02-06 03:01:45 [INFO] No probability estimate for transfer / transferred, skipping
+2026-02-06 03:01:45 [INFO] V2 system skipped transfer / transferred (no confident estimate)
+2026-02-06 03:01:47 [INFO] LLM uncertain about schedule in unknown speech
+2026-02-06 03:01:47 [INFO] No probability estimate for schedule, skipping
+2026-02-06 03:01:47 [INFO] V2 system skipped schedule (no confident estimate)
+2026-02-06 03:01:48 [INFO] LLM uncertain about recruit / recruited / recruitment in unknown speech
+2026-02-06 03:01:48 [INFO] No probability estimate for recruit / recruited / recruitment, skipping
+2026-02-06 03:01:48 [INFO] V2 system skipped recruit / recruited / recruitment (no confident estimate)
+2026-02-06 03:01:50 [INFO] LLM uncertain about record in unknown speech
+2026-02-06 03:01:50 [INFO] No probability estimate for record, skipping
+2026-02-06 03:01:50 [INFO] V2 system skipped record (no confident estimate)
+2026-02-06 03:01:51 [INFO] LLM uncertain about overtime in unknown speech
+2026-02-06 03:01:51 [INFO] No probability estimate for overtime, skipping
+2026-02-06 03:01:51 [INFO] V2 system skipped overtime (no confident estimate)
+2026-02-06 03:01:53 [INFO] LLM uncertain about nil in unknown speech
+2026-02-06 03:01:53 [INFO] No probability estimate for nil, skipping
+2026-02-06 03:01:53 [INFO] V2 system skipped nil (no confident estimate)
+2026-02-06 03:01:54 [INFO] LLM uncertain about msg / madison square garden in unknown speech
+2026-02-06 03:01:54 [INFO] No probability estimate for msg / madison square garden, skipping
+2026-02-06 03:01:54 [INFO] V2 system skipped msg / madison square garden (no confident estimate)
+2026-02-06 03:01:56 [INFO] LLM uncertain about march madness in unknown speech
+2026-02-06 03:01:56 [INFO] No probability estimate for march madness, skipping
+2026-02-06 03:01:56 [INFO] V2 system skipped march madness (no confident estimate)
+2026-02-06 03:01:57 [INFO] LLM uncertain about elbow in unknown speech
+2026-02-06 03:01:57 [INFO] No probability estimate for elbow, skipping
+2026-02-06 03:01:57 [INFO] V2 system skipped elbow (no confident estimate)
+2026-02-06 03:01:59 [INFO] LLM uncertain about draft in unknown speech
+2026-02-06 03:01:59 [INFO] No probability estimate for draft, skipping
+2026-02-06 03:01:59 [INFO] V2 system skipped draft (no confident estimate)
+2026-02-06 03:02:00 [INFO] LLM uncertain about double double in unknown speech
+2026-02-06 03:02:00 [INFO] No probability estimate for double double, skipping
+2026-02-06 03:02:00 [INFO] V2 system skipped double double (no confident estimate)
+2026-02-06 03:02:02 [INFO] LLM uncertain about ankle in unknown speech
+2026-02-06 03:02:02 [INFO] No probability estimate for ankle, skipping
+2026-02-06 03:02:02 [INFO] V2 system skipped ankle (no confident estimate)
+2026-02-06 03:02:03 [INFO] LLM uncertain about alley-oop in unknown speech
+2026-02-06 03:02:03 [INFO] No probability estimate for alley-oop, skipping
+2026-02-06 03:02:03 [INFO] V2 system skipped alley-oop (no confident estimate)
+2026-02-06 03:02:03 [INFO] Probability estimate for 'all american': 74% (static=97, llm=None, adj=0.0)
+2026-02-06 03:02:05 [INFO] LLM uncertain about airball / air ball in unknown speech
+2026-02-06 03:02:05 [INFO] No probability estimate for airball / air ball, skipping
+2026-02-06 03:02:05 [INFO] V2 system skipped airball / air ball (no confident estimate)
+2026-02-06 03:02:07 [INFO] LLM uncertain about triangle in unknown speech
+2026-02-06 03:02:07 [INFO] No probability estimate for triangle, skipping
+2026-02-06 03:02:07 [INFO] V2 system skipped triangle (no confident estimate)
+2026-02-06 03:02:08 [INFO] LLM uncertain about train / trained / training in unknown speech
+2026-02-06 03:02:08 [INFO] No probability estimate for train / trained / training, skipping
+2026-02-06 03:02:08 [INFO] V2 system skipped train / trained / training (no confident estimate)
+2026-02-06 03:02:09 [INFO] LLM uncertain about tired / tiring in unknown speech
+2026-02-06 03:02:09 [INFO] No probability estimate for tired / tiring, skipping
+2026-02-06 03:02:09 [INFO] V2 system skipped tired / tiring (no confident estimate)
+2026-02-06 03:02:11 [INFO] LLM uncertain about smashed / smashing in unknown speech
+2026-02-06 03:02:11 [INFO] No probability estimate for smashed / smashing, skipping
+2026-02-06 03:02:11 [INFO] V2 system skipped smashed / smashing (no confident estimate)
+2026-02-06 03:02:12 [INFO] LLM uncertain about slip / slips / slipped in unknown speech
+2026-02-06 03:02:12 [INFO] No probability estimate for slip / slips / slipped, skipping
+2026-02-06 03:02:12 [INFO] V2 system skipped slip / slips / slipped (no confident estimate)
+2026-02-06 03:02:14 [INFO] LLM uncertain about meta in unknown speech
+2026-02-06 03:02:14 [INFO] No probability estimate for meta, skipping
+2026-02-06 03:02:14 [INFO] V2 system skipped meta (no confident estimate)
+2026-02-06 03:02:15 [INFO] LLM uncertain about mcgregor in unknown speech
+2026-02-06 03:02:15 [INFO] No probability estimate for mcgregor, skipping
+2026-02-06 03:02:15 [INFO] V2 system skipped mcgregor (no confident estimate)
+2026-02-06 03:02:17 [INFO] LLM uncertain about lok dog in unknown speech
+2026-02-06 03:02:17 [INFO] No probability estimate for lok dog, skipping
+2026-02-06 03:02:17 [INFO] V2 system skipped lok dog (no confident estimate)
+2026-02-06 03:02:18 [INFO] LLM uncertain about lights out in unknown speech
+2026-02-06 03:02:18 [INFO] No probability estimate for lights out, skipping
+2026-02-06 03:02:18 [INFO] V2 system skipped lights out (no confident estimate)
+2026-02-06 03:02:18 [INFO] Probability estimate for 'legal / illegal': 65% (static=87, llm=None, adj=0.0)
+2026-02-06 03:02:20 [INFO] LLM uncertain about knockout / knock out / knocked out in unknown speech
+2026-02-06 03:02:20 [INFO] No probability estimate for knockout / knock out / knocked out, skipping
+2026-02-06 03:02:20 [INFO] V2 system skipped knockout / knock out / knocked out (no confident estimate)
+2026-02-06 03:02:22 [INFO] LLM uncertain about decision / judge in unknown speech
+2026-02-06 03:02:22 [INFO] No probability estimate for decision / judge, skipping
+2026-02-06 03:02:22 [INFO] V2 system skipped decision / judge (no confident estimate)
+2026-02-06 03:02:23 [INFO] LLM uncertain about dana in unknown speech
+2026-02-06 03:02:23 [INFO] No probability estimate for dana, skipping
+2026-02-06 03:02:23 [INFO] V2 system skipped dana (no confident estimate)
+2026-02-06 03:02:24 [INFO] LLM uncertain about choke / choked / chokehold in unknown speech
+2026-02-06 03:02:24 [INFO] No probability estimate for choke / choked / chokehold, skipping
+2026-02-06 03:02:24 [INFO] V2 system skipped choke / choked / chokehold (no confident estimate)
+2026-02-06 03:02:26 [INFO] LLM uncertain about championship in unknown speech
+2026-02-06 03:02:26 [INFO] No probability estimate for championship, skipping
+2026-02-06 03:02:26 [INFO] V2 system skipped championship (no confident estimate)
+2026-02-06 03:02:27 [INFO] LLM uncertain about blood / bloody in unknown speech
+2026-02-06 03:02:27 [INFO] No probability estimate for blood / bloody, skipping
+2026-02-06 03:02:27 [INFO] V2 system skipped blood / bloody (no confident estimate)
+2026-02-06 03:02:29 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 03:02:29 [INFO] No probability estimate for adrenaline, skipping
+2026-02-06 03:02:29 [INFO] V2 system skipped adrenaline (no confident estimate)
+2026-02-06 03:02:30 [INFO] LLM uncertain about triangle in unknown speech
+2026-02-06 03:02:30 [INFO] No probability estimate for triangle, skipping
+2026-02-06 03:02:30 [INFO] V2 system skipped triangle (no confident estimate)
+2026-02-06 03:02:32 [INFO] LLM uncertain about train / trained / training in unknown speech
+2026-02-06 03:02:32 [INFO] No probability estimate for train / trained / training, skipping
+2026-02-06 03:02:32 [INFO] V2 system skipped train / trained / training (no confident estimate)
+2026-02-06 03:02:33 [INFO] LLM uncertain about tired / tiring in unknown speech
+2026-02-06 03:02:33 [INFO] No probability estimate for tired / tiring, skipping
+2026-02-06 03:02:33 [INFO] V2 system skipped tired / tiring (no confident estimate)
+2026-02-06 03:02:35 [INFO] LLM uncertain about smashed / smashing in unknown speech
+2026-02-06 03:02:35 [INFO] No probability estimate for smashed / smashing, skipping
+2026-02-06 03:02:35 [INFO] V2 system skipped smashed / smashing (no confident estimate)
+2026-02-06 03:02:36 [INFO] LLM uncertain about slip / slips / slipped in unknown speech
+2026-02-06 03:02:36 [INFO] No probability estimate for slip / slips / slipped, skipping
+2026-02-06 03:02:36 [INFO] V2 system skipped slip / slips / slipped (no confident estimate)
+2026-02-06 03:02:38 [INFO] LLM uncertain about prince in unknown speech
+2026-02-06 03:02:38 [INFO] No probability estimate for prince, skipping
+2026-02-06 03:02:38 [INFO] V2 system skipped prince (no confident estimate)
+2026-02-06 03:02:39 [INFO] LLM uncertain about meta in unknown speech
+2026-02-06 03:02:39 [INFO] No probability estimate for meta, skipping
+2026-02-06 03:02:39 [INFO] V2 system skipped meta (no confident estimate)
+2026-02-06 03:02:41 [INFO] LLM uncertain about mcgregor in unknown speech
+2026-02-06 03:02:41 [INFO] No probability estimate for mcgregor, skipping
+2026-02-06 03:02:41 [INFO] V2 system skipped mcgregor (no confident estimate)
+2026-02-06 03:02:42 [INFO] LLM uncertain about lights out in unknown speech
+2026-02-06 03:02:42 [INFO] No probability estimate for lights out, skipping
+2026-02-06 03:02:42 [INFO] V2 system skipped lights out (no confident estimate)
+2026-02-06 03:02:42 [INFO] Probability estimate for 'legal / illegal': 66% (static=87, llm=None, adj=0.0)
+2026-02-06 03:02:44 [INFO] LLM uncertain about knockout / knock out / knocked out in unknown speech
+2026-02-06 03:02:44 [INFO] No probability estimate for knockout / knock out / knocked out, skipping
+2026-02-06 03:02:44 [INFO] V2 system skipped knockout / knock out / knocked out (no confident estimate)
+2026-02-06 03:02:45 [INFO] LLM uncertain about karate kid in unknown speech
+2026-02-06 03:02:45 [INFO] No probability estimate for karate kid, skipping
+2026-02-06 03:02:45 [INFO] V2 system skipped karate kid (no confident estimate)
+2026-02-06 03:02:47 [INFO] LLM uncertain about decision / judge in unknown speech
+2026-02-06 03:02:47 [INFO] No probability estimate for decision / judge, skipping
+2026-02-06 03:02:47 [INFO] V2 system skipped decision / judge (no confident estimate)
+2026-02-06 03:02:48 [INFO] LLM uncertain about dana in unknown speech
+2026-02-06 03:02:48 [INFO] No probability estimate for dana, skipping
+2026-02-06 03:02:48 [INFO] V2 system skipped dana (no confident estimate)
+2026-02-06 03:02:50 [INFO] LLM uncertain about choke / choked / chokehold in unknown speech
+2026-02-06 03:02:50 [INFO] No probability estimate for choke / choked / chokehold, skipping
+2026-02-06 03:02:50 [INFO] V2 system skipped choke / choked / chokehold (no confident estimate)
+2026-02-06 03:02:51 [INFO] LLM uncertain about championship in unknown speech
+2026-02-06 03:02:51 [INFO] No probability estimate for championship, skipping
+2026-02-06 03:02:51 [INFO] V2 system skipped championship (no confident estimate)
+2026-02-06 03:02:53 [INFO] LLM uncertain about blood / bloody in unknown speech
+2026-02-06 03:02:53 [INFO] No probability estimate for blood / bloody, skipping
+2026-02-06 03:02:53 [INFO] V2 system skipped blood / bloody (no confident estimate)
+2026-02-06 03:02:54 [INFO] LLM uncertain about adrenaline in unknown speech
+2026-02-06 03:02:54 [INFO] No probability estimate for adrenaline, skipping
+2026-02-06 03:02:54 [INFO] V2 system skipped adrenaline (no confident estimate)
+2026-02-06 03:02:56 [INFO] LLM uncertain about triangle in unknown speech
+2026-02-06 03:02:56 [INFO] No probability estimate for triangle, skipping
+2026-02-06 03:02:56 [INFO] V2 system skipped triangle (no confident estimate)
+2026-02-06 03:02:57 [INFO] LLM uncertain about train / trained / training in unknown speech
+2026-02-06 03:02:57 [INFO] No probability estimate for train / trained / training, skipping
+2026-02-06 03:02:57 [INFO] V2 system skipped train / trained / training (no confident estimate)
+2026-02-06 03:02:59 [INFO] LLM uncertain about tired / tiring in unknown speech
+2026-02-06 03:02:59 [INFO] No probability estimate for tired / tiring, skipping
+2026-02-06 03:02:59 [INFO] V2 system skipped tired / tiring (no confident estimate)
+2026-02-06 03:03:00 [INFO] LLM uncertain about smashed / smashing in unknown speech
+2026-02-06 03:03:00 [INFO] No probability estimate for smashed / smashing, skipping
+2026-02-06 03:03:00 [INFO] V2 system skipped smashed / smashing (no confident estimate)
+2026-02-06 03:03:02 [INFO] LLM uncertain about slip / slips / slipped in unknown speech
+2026-02-06 03:03:02 [INFO] No probability estimate for slip / slips / slipped, skipping
+2026-02-06 03:03:02 [INFO] V2 system skipped slip / slips / slipped (no confident estimate)
+2026-02-06 03:03:03 [INFO] LLM uncertain about meta in unknown speech
+2026-02-06 03:03:03 [INFO] No probability estimate for meta, skipping
+2026-02-06 03:03:03 [INFO] V2 system skipped meta (no confident estimate)
+2026-02-06 03:03:05 [INFO] LLM uncertain about mcgregor in unknown speech
+2026-02-06 03:03:05 [INFO] No probability estimate for mcgregor, skipping
+2026-02-06 03:03:05 [INFO] V2 system skipped mcgregor (no confident estimate)
+2026-02-06 03:03:06 [INFO] LLM uncertain about lights out in unknown speech
+2026-02-06 03:03:06 [INFO] No probability estimate for lights out, skipping
+2026-02-06 03:03:06 [INFO] V2 system skipped lights out (no confident estimate)
+2026-02-06 03:03:06 [INFO] Probability estimate for 'legal / illegal': 66% (static=87, llm=None, adj=0.0)
+2026-02-06 03:03:08 [INFO] LLM uncertain about knockout / knock out / knocked out in unknown speech
+2026-02-06 03:03:08 [INFO] No probability estimate for knockout / knock out / knocked out, skipping
+2026-02-06 03:03:08 [INFO] V2 system skipped knockout / knock out / knocked out (no confident estimate)
+2026-02-06 03:03:09 [INFO] LLM uncertain about gorets in unknown speech
+2026-02-06 03:03:09 [INFO] No probability estimate for gorets, skipping
+2026-02-06 03:03:09 [INFO] V2 system skipped gorets (no confident estimate)
+2026-02-06 03:03:11 [INFO] LLM uncertain about decision / judge in unknown speech
+2026-02-06 03:03:11 [INFO] No probability estimate for decision / judge, skipping
+2026-02-06 03:03:11 [INFO] V2 system skipped decision / judge (no confident estimate)
+2026-02-06 03:03:12 [INFO] LLM uncertain about dana in unknown speech
+2026-02-06 03:03:12 [INFO] No probability estimate for dana, skipping
+2026-02-06 03:03:12 [INFO] V2 system skipped dana (no confident estimate)
+2026-02-06 03:03:14 [INFO] LLM uncertain about choke / choked / chokehold in unknown speech
+2026-02-06 03:03:14 [INFO] No probability estimate for choke / choked / chokehold, skipping
+2026-02-06 03:03:14 [INFO] V2 system skipped choke / choked / chokehold (no confident estimate)
+2026-02-06 03:03:15 [INFO] LLM uncertain about championship in unknown speech
+2026-02-06 03:03:15 [INFO] No probability estimate for championship, skipping
+2026-02-06 03:03:15 [INFO] V2 system skipped championship (no confident estimate)
+2026-02-06 03:03:17 [INFO] LLM uncertain about blood / bloody in unknown speech
+2026-02-06 03:03:17 [INFO] No probability estimate for blood / bloody, skipping
+2026-02-06 03:03:17 [INFO] V2 system skipped blood / bloody (no confident estimate)
+2026-02-06 03:03:18 [INFO] LLM uncertain about adrenaline in unknown speech
+2026-02-06 03:03:18 [INFO] No probability estimate for adrenaline, skipping
+2026-02-06 03:03:18 [INFO] V2 system skipped adrenaline (no confident estimate)
+2026-02-06 03:03:18 [INFO] Probability estimate for 'trump / president': 82% (static=97, llm=None, adj=0.0)
+2026-02-06 03:03:20 [INFO] LLM uncertain about trash / garbage in unknown speech
+2026-02-06 03:03:20 [INFO] No probability estimate for trash / garbage, skipping
+2026-02-06 03:03:20 [INFO] V2 system skipped trash / garbage (no confident estimate)
+2026-02-06 03:03:21 [INFO] LLM uncertain about snow in unknown speech
+2026-02-06 03:03:21 [INFO] No probability estimate for snow, skipping
+2026-02-06 03:03:21 [INFO] V2 system skipped snow (no confident estimate)
+2026-02-06 03:03:23 [ERROR] Gemini API error: 429 - {
+  "error": {
+    "code": 429,
+    "message": "Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.",
+   
+2026-02-06 03:03:23 [INFO] No probability estimate for safe / safer / safety, skipping
+2026-02-06 03:03:23 [INFO] V2 system skipped safe / safer / safety (no confident estimate)
+2026-02-06 03:03:24 [INFO] LLM uncertain about nypd in unknown speech
+2026-02-06 03:03:24 [INFO] No probability estimate for nypd, skipping
+2026-02-06 03:03:24 [INFO] V2 system skipped nypd (no confident estimate)
+2026-02-06 03:03:26 [INFO] LLM uncertain about ice / national guard in unknown speech
+2026-02-06 03:03:26 [INFO] No probability estimate for ice / national guard, skipping
+2026-02-06 03:03:26 [INFO] V2 system skipped ice / national guard (no confident estimate)
+2026-02-06 03:03:27 [INFO] LLM uncertain about home / housing in unknown speech
+2026-02-06 03:03:27 [INFO] No probability estimate for home / housing, skipping
+2026-02-06 03:03:27 [INFO] V2 system skipped home / housing (no confident estimate)
+2026-02-06 03:03:29 [INFO] LLM uncertain about hochul / governor in unknown speech
+2026-02-06 03:03:29 [INFO] No probability estimate for hochul / governor, skipping
+2026-02-06 03:03:29 [INFO] V2 system skipped hochul / governor (no confident estimate)
+2026-02-06 03:03:30 [INFO] LLM uncertain about freeze / freezing in unknown speech
+2026-02-06 03:03:30 [INFO] No probability estimate for freeze / freezing, skipping
+2026-02-06 03:03:30 [INFO] V2 system skipped freeze / freezing (no confident estimate)
+2026-02-06 03:03:32 [INFO] LLM uncertain about five borough in unknown speech
+2026-02-06 03:03:32 [INFO] No probability estimate for five borough, skipping
+2026-02-06 03:03:32 [INFO] V2 system skipped five borough (no confident estimate)
+2026-02-06 03:03:32 [INFO] Probability estimate for 'economy / economic': 82% (static=97, llm=None, adj=0.0)
+2026-02-06 03:03:33 [INFO] LLM uncertain about cleanup / clean up in unknown speech
+2026-02-06 03:03:33 [INFO] No probability estimate for cleanup / clean up, skipping
+2026-02-06 03:03:33 [INFO] V2 system skipped cleanup / clean up (no confident estimate)
+2026-02-06 03:03:35 [INFO] LLM uncertain about budget / deficit in unknown speech
+2026-02-06 03:03:35 [INFO] No probability estimate for budget / deficit, skipping
+2026-02-06 03:03:35 [INFO] V2 system skipped budget / deficit (no confident estimate)
+2026-02-06 03:03:36 [INFO] LLM uncertain about afford / affordable / affordability in unknown speech
+2026-02-06 03:03:36 [INFO] No probability estimate for afford / affordable / affordability, skipping
+2026-02-06 03:03:36 [INFO] V2 system skipped afford / affordable / affordability (no confident estimate)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'adams / previous administration': 82% (static=97, llm=None, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'before 2030': 80% (static=87, llm=None, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'before 2030': 74% (static=87, llm=None, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'hellhole': 16% (static=None, llm=15.0, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'biden's war': 68% (static=87, llm=None, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'tiktok': 26% (static=None, llm=30.0, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'stagflation': 14% (static=None, llm=15.0, adj=0.0)
+2026-02-06 03:03:36 [INFO] Probability estimate for 'kamala': 57% (static=None, llm=65.0, adj=0.0)
+2026-02-06 03:03:36 [INFO]    No new trading opportunities

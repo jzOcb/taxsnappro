@@ -1,5 +1,5 @@
 """
-TaxForge - Document Extractor using Google Gemini API (Free Tier)
+TaxSnapPro - Document Extractor using Google Gemini API (Free Tier)
 """
 import os
 import base64
@@ -292,7 +292,7 @@ async def extract_with_retry(
             if attempt < MAX_RETRIES - 1:
                 # Wait and retry with exponential backoff
                 wait_time = RETRY_DELAY_SECONDS * (2 ** attempt)
-                print(f"[TaxForge] Rate limited, waiting {wait_time}s before retry {attempt + 2}/{MAX_RETRIES}...")
+                print(f"[TaxSnapPro] Rate limited, waiting {wait_time}s before retry {attempt + 2}/{MAX_RETRIES}...")
                 await asyncio.sleep(wait_time)
                 continue
             else:

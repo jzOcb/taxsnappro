@@ -3,6 +3,7 @@
 Usage: 
   python3 x-post.py "tweet text"
   python3 x-post.py --reply-to <tweet_id> "reply text"
+  python3 x-post.py --quote <tweet_id> "quote tweet text"
 
 Safety checks (enforced, not advisory):
   1. --reply-to: verifies target tweet is NOT by @xxx111god (prevents self-reply)
@@ -124,7 +125,7 @@ def upload_media(image_path):
         return None
 
 
-def post_tweet(text, reply_to=None, skip_checks=False, media_ids=None):
+def post_tweet(text, reply_to=None, quote_tweet_id=None, skip_checks=False, media_ids=None):
     oauth = OAuth1Session(
         API_KEY,
         client_secret=API_SECRET,
@@ -150,6 +151,8 @@ def post_tweet(text, reply_to=None, skip_checks=False, media_ids=None):
     payload = {"text": text}
     if reply_to:
         payload["reply"] = {"in_reply_to_tweet_id": str(reply_to)}
+    if quote_tweet_id:
+        payload["quote_tweet_id"] = str(quote_tweet_id)
     if media_ids:
         payload["media"] = {"media_ids": media_ids}
     
@@ -175,6 +178,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Post to X/Twitter via API v2")
     parser.add_argument("text", help="Tweet text")
     parser.add_argument("--reply-to", help="Tweet ID to reply to")
+    parser.add_argument("--quote", help="Tweet ID to quote (proper quote tweet, not just URL)")
     parser.add_argument("--image", help="Path to image file to attach")
     parser.add_argument("--dry-run", action="store_true", help="Print but don't post")
     parser.add_argument("--skip-checks", action="store_true", 
@@ -186,6 +190,8 @@ if __name__ == "__main__":
         print(f"  Text: {args.text}")
         if args.reply_to:
             print(f"  Reply to: {args.reply_to}")
+        if args.quote:
+            print(f"  Quote tweet: {args.quote}")
         if args.image:
             print(f"  Image: {args.image}")
     else:
@@ -196,4 +202,4 @@ if __name__ == "__main__":
                 media_ids = [media_id]
             else:
                 print("⚠️  Proceeding without image due to upload failure")
-        post_tweet(args.text, args.reply_to, args.skip_checks, media_ids)
+        post_tweet(args.text, args.reply_to, args.quote, args.skip_checks, media_ids)

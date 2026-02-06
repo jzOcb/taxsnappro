@@ -1,5 +1,5 @@
 """
-TaxForge CLI - Launch the tax preparation app
+TaxSnapPro CLI - Launch the tax preparation app
 """
 import subprocess
 import sys
@@ -8,9 +8,9 @@ import shutil
 from pathlib import Path
 
 
-__version__ = "0.9.31"
+__version__ = "1.0.1"
 
-RXCONFIG_CONTENT = '''"""Reflex config for TaxForge."""
+RXCONFIG_CONTENT = '''"""Reflex config for TaxSnapPro."""
 import reflex as rx
 
 config = rx.Config(
@@ -22,8 +22,8 @@ config = rx.Config(
 
 def setup_app_dir() -> Path:
     """Create app directory with necessary files."""
-    # Use ~/.taxforge as the app directory
-    app_dir = Path.home() / ".taxforge"
+    # Use ~/.taxsnappro as the app directory
+    app_dir = Path.home() / ".taxsnappro"
     app_dir.mkdir(exist_ok=True)
     
     # Create rxconfig.py
@@ -43,37 +43,83 @@ def setup_app_dir() -> Path:
     return app_dir
 
 
+def upgrade():
+    """Upgrade TaxSnapPro to the latest version."""
+    print("🔄 Checking for updates...")
+    
+    # Get current version
+    current = __version__
+    
+    # Upgrade via pip
+    result = subprocess.run(
+        [sys.executable, "-m", "pip", "install", "--upgrade", "taxsnappro"],
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        print(f"❌ Upgrade failed: {result.stderr}")
+        return 1
+    
+    # Check if actually upgraded
+    if "already satisfied" in result.stdout.lower() and "up-to-date" in result.stdout.lower():
+        print(f"✅ Already on latest version (v{current})")
+        return 0
+    
+    # Clear cached app directory so new code gets loaded
+    app_dir = Path.home() / ".taxsnappro"
+    aitax_dir = app_dir / "aitax"
+    if aitax_dir.exists():
+        shutil.rmtree(aitax_dir)
+    
+    # Get new version
+    result = subprocess.run(
+        [sys.executable, "-c", "import aitax; print(aitax.__version__)"],
+        capture_output=True,
+        text=True
+    )
+    new_version = result.stdout.strip() if result.returncode == 0 else "unknown"
+    
+    print(f"✅ Upgraded: v{current} → v{new_version}")
+    print("   Run 'taxsnappro' to start with the new version")
+    return 0
+
+
 def main():
-    """Main entry point for taxforge command."""
+    """Main entry point for taxsnappro command."""
     args = sys.argv[1:]
     
     if args and args[0] in ("--version", "-v"):
-        print(f"TaxForge v{__version__}")
+        print(f"TaxSnapPro v{__version__}")
         return 0
     
     if args and args[0] in ("--help", "-h"):
-        print(f"""TaxForge v{__version__} - AI-powered tax preparation
+        print(f"""TaxSnapPro v{__version__} - AI-powered tax preparation
 
 Usage:
-  taxforge [run]     Launch the web UI (default)
-  taxforge --version Show version
-  taxforge --help    Show this help
-  taxforge --reset   Reset app directory (clear cache)
+  taxsnappro [run]     Launch the web UI (default)
+  taxsnappro upgrade   Check for and install updates
+  taxsnappro --version Show version
+  taxsnappro --help    Show this help
+  taxsnappro --reset   Reset app directory (clear cache)
 
 After running, open http://localhost:3000 in your browser.
 Go to Settings to configure your Gemini API key first.
 """)
         return 0
     
+    if args and args[0] == "upgrade":
+        return upgrade()
+    
     if args and args[0] == "--reset":
-        app_dir = Path.home() / ".taxforge"
+        app_dir = Path.home() / ".taxsnappro"
         if app_dir.exists():
             shutil.rmtree(app_dir)
             print(f"✓ Removed {app_dir}")
         return 0
     
     # Setup app directory
-    print(f"🔨 TaxForge v{__version__}")
+    print(f"🔨 TaxSnapPro v{__version__}")
     print("   Setting up app directory...")
     
     try:
@@ -96,7 +142,7 @@ Go to Settings to configure your Gemini API key first.
         )
         return result.returncode
     except KeyboardInterrupt:
-        print("\n👋 TaxForge stopped")
+        print("\n👋 TaxSnapPro stopped")
         return 0
     except FileNotFoundError:
         print("Error: Reflex not installed. Run: pip install reflex")

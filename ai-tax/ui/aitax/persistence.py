@@ -1,5 +1,5 @@
 """
-TaxForge - Data Persistence
+TaxSnapPro - Data Persistence
 Save and load tax data to/from local JSON file.
 """
 import json
@@ -11,7 +11,7 @@ import base64
 import hashlib
 
 # Data directory
-DATA_DIR = Path.home() / ".taxforge"
+DATA_DIR = Path.home() / ".taxsnappro"
 DATA_FILE = DATA_DIR / "tax_data.json"
 BACKUP_DIR = DATA_DIR / "backups"
 
@@ -116,7 +116,7 @@ def save_state(state) -> bool:
         return True
         
     except Exception as e:
-        print(f"[TaxForge] Error saving state: {e}")
+        print(f"[TaxSnapPro] Error saving state: {e}")
         return False
 
 
@@ -132,13 +132,13 @@ def load_state(state) -> bool:
     """
     try:
         if not DATA_FILE.exists():
-            print("[TaxForge] No saved data found, starting fresh")
+            print("[TaxSnapPro] No saved data found, starting fresh")
             return False
         
         with open(DATA_FILE, 'r') as f:
             data = json.load(f)
         
-        print(f"[TaxForge] Loading saved data from {data.get('_saved_at', 'unknown')}")
+        print(f"[TaxSnapPro] Loading saved data from {data.get('_saved_at', 'unknown')}")
         
         # Restore fields
         for field in PERSIST_FIELDS:
@@ -153,14 +153,14 @@ def load_state(state) -> bool:
                 if hasattr(state, field):
                     setattr(state, field, value)
         
-        print(f"[TaxForge] Loaded: {len(data.get('w2_list', []))} W-2s, "
+        print(f"[TaxSnapPro] Loaded: {len(data.get('w2_list', []))} W-2s, "
               f"{len(data.get('form_1099_list', []))} 1099s, "
               f"{len(data.get('rental_properties', []))} rentals")
         
         return True
         
     except Exception as e:
-        print(f"[TaxForge] Error loading state: {e}")
+        print(f"[TaxSnapPro] Error loading state: {e}")
         return False
 
 
@@ -171,7 +171,7 @@ def clear_saved_data() -> bool:
             DATA_FILE.unlink()
         return True
     except Exception as e:
-        print(f"[TaxForge] Error clearing data: {e}")
+        print(f"[TaxSnapPro] Error clearing data: {e}")
         return False
 
 

@@ -1,0 +1,109 @@
+{
+  "collection_time": "2026-02-05T05:17:00Z",
+  "date": "2026-02-05",
+  "note": "NWS forecasts labeled 'Thursday' = Feb 6 (tomorrow). 'Tonight' = Feb 5 night. Open-Meteo Feb 5 values are for today.",
+  "forecasts": {
+    "NYC": {
+      "nws_high_today": "~27-30°F (Tonight 14°F, Thu 30°F - NWS grid point for Central Park area)",
+      "open_meteo_high": 27.3,
+      "open_meteo_low": 2.8,
+      "kalshi_implied_mode": "31-32°F (42¢)",
+      "discrepancy": "Open-Meteo says 27.3°F, Kalshi implies 31-32°F. POSSIBLE EDGE: market overpricing 31-32 bracket"
+    },
+    "LAX": {
+      "nws_high_today": "~78°F (Thu forecast)",
+      "open_meteo_high": 84.5,
+      "open_meteo_low": 59.2,
+      "kalshi_implied_mode": "81-82°F (38¢) and 83-84°F (33¢)",
+      "discrepancy": "Open-Meteo=84.5, NWS grid=78. HUGE discrepancy between sources. NWS grid may not be for exact LAX airport station. Open-Meteo coords are at airport."
+    },
+    "CHI": {
+      "nws_high_today": "~30°F (Thu forecast from grid)",
+      "open_meteo_high": 30.5,
+      "open_meteo_low": 15.9,
+      "kalshi_implied_mode": "31-32°F (45¢)",
+      "discrepancy": "Both sources ~30-31°F. Kalshi pricing 31-32 at 45¢ seems reasonable given uncertainty."
+    },
+    "BOS": {
+      "nws_high_today": "~29°F",
+      "open_meteo_high": 28.9,
+      "open_meteo_low": 8.9,
+      "kalshi_implied_mode": "31-32°F (37¢) but 29-30°F also high at 34¢",
+      "discrepancy": "NWS/Open-Meteo both say ~29°F. Kalshi implies 31-32 as mode. POTENTIAL EDGE: 29-30 bracket may be underpriced at 26-33¢"
+    },
+    "MIA": {
+      "nws_high_today": "~72°F",
+      "open_meteo_high": 75.3,
+      "open_meteo_low": 48.5,
+      "kalshi_implied_mode": "~73-76°F range",
+      "discrepancy": "NWS=72, OM=75.3. Moderate discrepancy between sources."
+    },
+    "DEN": {
+      "nws_high_today": "~63°F",
+      "open_meteo_high": 61.5,
+      "open_meteo_low": 34.2,
+      "kalshi_implied_mode": "~63-66°F range"
+    },
+    "DC": {
+      "nws_high_today": "~32°F",
+      "open_meteo_high": 30.3,
+      "open_meteo_low": 8.1,
+      "kalshi_implied_mode": "~33-36°F range"
+    },
+    "SFO": {
+      "nws_high_today": "~68°F",
+      "open_meteo_high": 72.8,
+      "open_meteo_low": 49.2,
+      "kalshi_implied_mode": "~69-72°F range"
+    },
+    "AUS": {
+      "nws_high_today": "~70°F",
+      "open_meteo_high": 68.8,
+      "open_meteo_low": 40.0,
+      "kalshi_implied_mode": "~67-70°F range"
+    },
+    "PHI": {
+      "nws_high_today": "~29°F",
+      "open_meteo_high": 28.3,
+      "open_meteo_low": 9.4,
+      "kalshi_implied_mode": "33-34°F (32¢) highest",
+      "discrepancy": "NWS/OM both ~28-29°F but Kalshi implies 33-34°F as mode. BIG DISCREPANCY - may reflect prior day data."
+    },
+    "SEA": {
+      "nws_high_today": "~59°F",
+      "open_meteo_high": 62.3,
+      "open_meteo_low": 45.2,
+      "kalshi_implied_mode": "58-59°F (35¢)"
+    },
+    "LV": {
+      "nws_high_today": "~73°F",
+      "open_meteo_high": 75.3,
+      "open_meteo_low": 45.6,
+      "kalshi_implied_mode": "73-74°F (38¢)"
+    },
+    "NOLA": {
+      "nws_high_today": "~54°F",
+      "open_meteo_high": 51.7,
+      "open_meteo_low": 37.3,
+      "kalshi_implied_mode": "53-54°F (41¢)"
+    },
+    "ATL": {
+      "nws_high_today": "~46°F",
+      "open_meteo_high": 43.6,
+      "open_meteo_low": 30.0,
+      "kalshi_implied_mode": "46-47°F (26¢) and 48-49 (25¢)"
+    },
+    "MIN": {
+      "nws_high_today": "~36°F",
+      "open_meteo_high": 34.1,
+      "open_meteo_low": 23.3,
+      "kalshi_implied_mode": "37-38°F (25¢)"
+    },
+    "PHX": {
+      "nws_high_today": "~81°F",
+      "open_meteo_high": 82.7,
+      "open_meteo_low": 60.4,
+      "kalshi_implied_mode": "81-82°F (45¢)"
+    }
+  }
+}

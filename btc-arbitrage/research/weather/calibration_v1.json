@@ -1,0 +1,161 @@
+{
+  "date": "2026-02-05",
+  "cities": {
+    "LAX": {
+      "nws_bias": 9,
+      "om_bias": 3,
+      "nws_abs_err": 9,
+      "om_abs_err": 3,
+      "avg_abs_err": 6.0,
+      "suggested_sigma": 6.0
+    },
+    "NYC": {
+      "nws_bias": 3,
+      "om_bias": 5,
+      "nws_abs_err": 3,
+      "om_abs_err": 5,
+      "avg_abs_err": 4.0,
+      "suggested_sigma": 4.0
+    },
+    "CHI": {
+      "nws_bias": -3,
+      "om_bias": -4,
+      "nws_abs_err": 3,
+      "om_abs_err": 4,
+      "avg_abs_err": 3.5,
+      "suggested_sigma": 3.5
+    },
+    "PHI": {
+      "nws_bias": 7,
+      "om_bias": 7,
+      "nws_abs_err": 7,
+      "om_abs_err": 7,
+      "avg_abs_err": 7.0,
+      "suggested_sigma": 7.0
+    },
+    "BOS": {
+      "nws_bias": 3,
+      "om_bias": 3,
+      "nws_abs_err": 3,
+      "om_abs_err": 3,
+      "avg_abs_err": 3.0,
+      "suggested_sigma": 3.0
+    },
+    "DEN": {
+      "nws_bias": -12,
+      "om_bias": -10,
+      "nws_abs_err": 12,
+      "om_abs_err": 10,
+      "avg_abs_err": 11.0,
+      "suggested_sigma": 11.0
+    },
+    "MIA": {
+      "nws_bias": 3,
+      "om_bias": 0,
+      "nws_abs_err": 3,
+      "om_abs_err": 0,
+      "avg_abs_err": 1.5,
+      "suggested_sigma": 3.0
+    },
+    "SFO": {
+      "nws_bias": -1,
+      "om_bias": -5,
+      "nws_abs_err": 1,
+      "om_abs_err": 5,
+      "avg_abs_err": 3.0,
+      "suggested_sigma": 3.0
+    },
+    "DC": {
+      "nws_bias": 7,
+      "om_bias": 8,
+      "nws_abs_err": 7,
+      "om_abs_err": 8,
+      "avg_abs_err": 7.5,
+      "suggested_sigma": 7.5
+    },
+    "AUS": {
+      "nws_bias": -5,
+      "om_bias": -4,
+      "nws_abs_err": 5,
+      "om_abs_err": 4,
+      "avg_abs_err": 4.5,
+      "suggested_sigma": 4.5
+    },
+    "SEA": {
+      "nws_bias": 3,
+      "om_bias": 0,
+      "nws_abs_err": 3,
+      "om_abs_err": 0,
+      "avg_abs_err": 1.5,
+      "suggested_sigma": 3.0
+    },
+    "LV": {
+      "nws_bias": 1,
+      "om_bias": -1,
+      "nws_abs_err": 1,
+      "om_abs_err": 1,
+      "avg_abs_err": 1.0,
+      "suggested_sigma": 3.0
+    },
+    "NOLA": {
+      "nws_bias": 7,
+      "om_bias": 9,
+      "nws_abs_err": 7,
+      "om_abs_err": 9,
+      "avg_abs_err": 8.0,
+      "suggested_sigma": 8.0
+    },
+    "PHX": {
+      "nws_bias": 4,
+      "om_bias": 2,
+      "nws_abs_err": 4,
+      "om_abs_err": 2,
+      "avg_abs_err": 3.0,
+      "suggested_sigma": 3.0
+    },
+    "ATL": {
+      "nws_bias": 11,
+      "om_bias": 13,
+      "nws_abs_err": 11,
+      "om_abs_err": 13,
+      "avg_abs_err": 12.0,
+      "suggested_sigma": 12.0
+    },
+    "MIN": {
+      "nws_bias": -11,
+      "om_bias": -9,
+      "nws_abs_err": 11,
+      "om_abs_err": 9,
+      "avg_abs_err": 10.0,
+      "suggested_sigma": 10.0
+    }
+  },
+  "reliable": [
+    "NYC",
+    "CHI",
+    "BOS",
+    "MIA",
+    "SFO",
+    "SEA",
+    "LV",
+    "PHX"
+  ],
+  "moderate": [
+    "LAX",
+    "PHI",
+    "AUS"
+  ],
+  "unreliable": [
+    "DEN",
+    "DC",
+    "NOLA",
+    "ATL",
+    "MIN"
+  ],
+  "notes": [
+    "Based on 1 day of data \u2014 need 7+ days for reliable calibration",
+    "NWS grid and Open-Meteo both have ~5.5\u00b0F MAE \u2014 need more sources",
+    "\u03c3 should be at least max(source_spread, historical_MAE, 3.0)",
+    "Station-specific bias corrections needed for DEN, ATL, MIN, DC, NOLA"
+  ]
+}

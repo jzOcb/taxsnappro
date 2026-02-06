@@ -1,0 +1,185 @@
+{
+  "collection_time": "2026-02-05T05:17:00Z",
+  "cities": {
+    "LAX": {
+      "series": "KXHIGHLAX",
+      "station": "Los Angeles Airport, CA",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">84": {"yes_bid": 4, "yes_ask": 5, "vol": 4633},
+        "<77": {"yes_bid": 2, "yes_ask": 3, "vol": 7517},
+        "83-84": {"yes_bid": 33, "yes_ask": 34, "vol": 9842},
+        "81-82": {"yes_bid": 38, "yes_ask": 39, "vol": 8638},
+        "79-80": {"yes_bid": 21, "yes_ask": 24, "vol": 4006},
+        "77-78": {"yes_bid": 4, "yes_ask": 5, "vol": 5225}
+      },
+      "implied_mode": "81-82 (38¢)"
+    },
+    "NYC": {
+      "series": "KXHIGHNY",
+      "station": "Central Park, New York",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">36": {"yes_bid": 1, "yes_ask": 2, "vol": 1745},
+        "<29": {"yes_bid": 3, "yes_ask": 6, "vol": 6662},
+        "35-36": {"yes_bid": 5, "yes_ask": 6, "vol": 1278},
+        "33-34": {"yes_bid": 14, "yes_ask": 15, "vol": 3422},
+        "31-32": {"yes_bid": 41, "yes_ask": 42, "vol": 7826},
+        "29-30": {"yes_bid": 32, "yes_ask": 33, "vol": 4795}
+      },
+      "implied_mode": "31-32 (42¢)"
+    },
+    "BOS": {
+      "series": "KXHIGHTBOS",
+      "station": "Boston (Logan Airport), MA",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">34": {"yes_bid": 3, "yes_ask": 5, "vol": 559},
+        "<27": {"yes_bid": 3, "yes_ask": 4, "vol": 24},
+        "33-34": {"yes_bid": 16, "yes_ask": 17, "vol": 443},
+        "31-32": {"yes_bid": 35, "yes_ask": 39, "vol": 868},
+        "29-30": {"yes_bid": 26, "yes_ask": 33, "vol": 1130},
+        "27-28": {"yes_bid": 6, "yes_ask": 11, "vol": 356}
+      },
+      "implied_mode": "31-32 (37¢)"
+    },
+    "CHI": {
+      "series": "KXHIGHCHI",
+      "station": "Chicago Midway, IL",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">36": {"yes_bid": 1, "yes_ask": 2, "vol": 986},
+        "<29": {"yes_bid": 5, "yes_ask": 6, "vol": 2880},
+        "35-36": {"yes_bid": 4, "yes_ask": 5, "vol": 1813},
+        "33-34": {"yes_bid": 18, "yes_ask": 19, "vol": 1364},
+        "31-32": {"yes_bid": 45, "yes_ask": 46, "vol": 5221},
+        "29-30": {"yes_bid": 27, "yes_ask": 28, "vol": 2263}
+      },
+      "implied_mode": "31-32 (45¢)"
+    },
+    "MIA": {
+      "series": "KXHIGHMIA",
+      "station": "Miami International Airport",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">76": {"yes_bid": "~13-18", "yes_ask": "~17-18", "vol": "~4000"}
+      }
+    },
+    "DEN": {
+      "series": "KXHIGHDEN",
+      "station": "Denver, CO",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">67": {"yes_bid": "~7-9", "vol": "~800"}
+      }
+    },
+    "DC": {
+      "series": "KXHIGHTDC",
+      "station": "Washington-National (DCA)",
+      "nws_source": "NWS Climatological Report (Daily)"
+    },
+    "SFO": {
+      "series": "KXHIGHTSFO",
+      "station": "San Francisco Airport",
+      "nws_source": "NWS Climatological Report (Daily)"
+    },
+    "AUS": {
+      "series": "KXHIGHAUS",
+      "station": "Austin Bergstrom",
+      "nws_source": "NWS Climatological Report (Daily)"
+    },
+    "PHI": {
+      "series": "KXHIGHPHIL",
+      "station": "Philadelphia International Airport",
+      "nws_source": "NWS Climatological Report (Daily)",
+      "feb05_brackets": {
+        ">34": {"yes_bid": 22, "yes_ask": 23, "vol": 2459},
+        "<27": {"yes_bid": 2, "yes_ask": 3, "vol": 3509},
+        "33-34": {"yes_bid": 32, "yes_ask": 33, "vol": 1566},
+        "31-32": {"yes_bid": 25, "yes_ask": 27, "vol": 2033},
+        "29-30": {"yes_bid": 7, "yes_ask": 8, "vol": 3441},
+        "27-28": {"yes_bid": 10, "yes_ask": 11, "vol": 2830}
+      }
+    },
+    "SEA": {
+      "series": "KXHIGHTSEA",
+      "station": "Seattle (SeaTac)",
+      "feb05_brackets": {
+        ">63": {"yes_bid": 3, "yes_ask": 4, "vol": 1695},
+        "<56": {"yes_bid": 7, "yes_ask": 8, "vol": 3554},
+        "62-63": {"yes_bid": 9, "yes_ask": 13, "vol": 3445},
+        "60-61": {"yes_bid": 13, "yes_ask": 16, "vol": 424},
+        "58-59": {"yes_bid": 35, "yes_ask": 37, "vol": 640},
+        "56-57": {"yes_bid": 27, "yes_ask": 30, "vol": 1417}
+      }
+    },
+    "LV": {
+      "series": "KXHIGHTLV",
+      "station": "Las Vegas",
+      "feb05_brackets": {
+        ">76": {"yes_bid": 7, "yes_ask": 8, "vol": 1737},
+        "<69": {"yes_bid": 1, "yes_ask": 2, "vol": 4086},
+        "75-76": {"yes_bid": 15, "yes_ask": 16, "vol": 366},
+        "73-74": {"yes_bid": 38, "yes_ask": 39, "vol": 553},
+        "71-72": {"yes_bid": 33, "yes_ask": 34, "vol": 1193},
+        "69-70": {"yes_bid": 2, "yes_ask": 3, "vol": 3694}
+      }
+    },
+    "NOLA": {
+      "series": "KXHIGHTNOLA",
+      "station": "New Orleans (MSY)",
+      "feb05_brackets": {
+        ">58": {"yes_bid": 4, "yes_ask": 5, "vol": 2740},
+        "<51": {"yes_bid": 2, "yes_ask": 3, "vol": 2948},
+        "57-58": {"yes_bid": 4, "yes_ask": 5, "vol": 2494},
+        "55-56": {"yes_bid": 32, "yes_ask": 33, "vol": 446},
+        "53-54": {"yes_bid": 41, "yes_ask": 42, "vol": 1235},
+        "51-52": {"yes_bid": 14, "yes_ask": 15, "vol": 2153}
+      }
+    },
+    "ATL": {
+      "series": "KXHIGHTATL",
+      "station": "Atlanta (Hartsfield)",
+      "feb05_brackets": {
+        ">49": {"yes_bid": 12, "yes_ask": 14, "vol": 548},
+        "<42": {"yes_bid": 2, "yes_ask": 3, "vol": 199},
+        "48-49": {"yes_bid": 25, "yes_ask": 27, "vol": 375},
+        "46-47": {"yes_bid": 26, "yes_ask": 30, "vol": 62},
+        "44-45": {"yes_bid": 17, "yes_ask": 18, "vol": 83},
+        "42-43": {"yes_bid": 4, "yes_ask": 11, "vol": 83}
+      }
+    },
+    "MIN": {
+      "series": "KXHIGHTMIN",
+      "station": "Minneapolis (MSP)",
+      "feb05_brackets": {
+        ">42": {"yes_bid": 2, "yes_ask": 3, "vol": 120},
+        "<35": {"yes_bid": 11, "yes_ask": 18, "vol": 57},
+        "41-42": {"yes_bid": 4, "yes_ask": 7, "vol": 0},
+        "39-40": {"yes_bid": 18, "yes_ask": 22, "vol": 16},
+        "37-38": {"yes_bid": 25, "yes_ask": 36, "vol": 0},
+        "35-36": {"yes_bid": 20, "yes_ask": 28, "vol": 91}
+      }
+    },
+    "PHX": {
+      "series": "KXHIGHTPHX",
+      "station": "Phoenix (Sky Harbor)",
+      "feb05_brackets": {
+        ">84": {"yes_bid": 4, "yes_ask": 9, "vol": 19},
+        "<77": {"yes_bid": 0, "yes_ask": 3, "vol": 665},
+        "83-84": {"yes_bid": 12, "yes_ask": 23, "vol": 77},
+        "81-82": {"yes_bid": 45, "yes_ask": 47, "vol": 614},
+        "79-80": {"yes_bid": 25, "yes_ask": 26, "vol": 63},
+        "77-78": {"yes_bid": 5, "yes_ask": 6, "vol": 1074}
+      }
+    }
+  },
+  "low_temp_series": {
+    "KXLOWTNYC": {"station": "New York City", "available": true},
+    "KXLOWTDEN": {"station": "Denver", "available": true}
+  },
+  "precipitation_series": {
+    "KXRAINNYC": {"available": true, "feb05": {"yes_bid": 5, "yes_ask": 6, "vol": 1578}},
+    "KXSNOWNYC": {"available": false, "note": "0 open markets found"}
+  }
+}

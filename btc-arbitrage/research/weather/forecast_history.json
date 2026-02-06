@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "city": "LAX",
+      "date": "2026-02-05",
+      "forecast_mu": 70.0,
+      "forecast_sigma": 12.1,
+      "sources": {
+        "nws_raw": 84.0,
+        "nws_adj": 75.0,
+        "om_raw": 65.9,
+        "om_adj": 62.900000000000006,
+        "metar_current": 68.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:37.693216+00:00"
+    },
+    {
+      "city": "NYC",
+      "date": "2026-02-05",
+      "forecast_mu": 26.0,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 30.0,
+        "nws_adj": 27.0,
+        "om_raw": 29.6,
+        "om_adj": 24.6,
+        "metar_current": 27.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:38.372052+00:00"
+    },
+    {
+      "city": "CHI",
+      "date": "2026-02-05",
+      "forecast_mu": 39.0,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 36.0,
+        "nws_adj": 39.0,
+        "om_raw": 35.1,
+        "om_adj": 39.1,
+        "metar_current": 28.9
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:39.034179+00:00"
+    },
+    {
+      "city": "PHI",
+      "date": "2026-02-05",
+      "forecast_mu": 23.5,
+      "forecast_sigma": 6.0,
+      "sources": {
+        "nws_raw": 31.0,
+        "nws_adj": 24.0,
+        "om_raw": 29.9,
+        "om_adj": 22.9,
+        "metar_current": 28.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:39.914408+00:00"
+    },
+    {
+      "city": "BOS",
+      "date": "2026-02-05",
+      "forecast_mu": 25.8,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 28.0,
+        "nws_adj": 25.0,
+        "om_raw": 30.0,
+        "om_adj": 27.0,
+        "metar_current": 27.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:40.583638+00:00"
+    },
+    {
+      "city": "MIA",
+      "date": "2026-02-05",
+      "forecast_mu": 64.8,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 67.0,
+        "nws_adj": 64.0,
+        "om_raw": 66.0,
+        "om_adj": 66.0,
+        "metar_current": 53.1
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:41.262975+00:00"
+    },
+    {
+      "city": "SFO",
+      "date": "2026-02-05",
+      "forecast_mu": 69.8,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 68.0,
+        "nws_adj": 69.0,
+        "om_raw": 66.0,
+        "om_adj": 71.0,
+        "metar_current": 63.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:41.898361+00:00"
+    },
+    {
+      "city": "AUS",
+      "date": "2026-02-05",
+      "forecast_mu": 85.5,
+      "forecast_sigma": 6.0,
+      "sources": {
+        "nws_raw": 80.0,
+        "nws_adj": 85.0,
+        "om_raw": 82.3,
+        "om_adj": 86.3,
+        "metar_current": 51.1
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:42.543523+00:00"
+    },
+    {
+      "city": "SEA",
+      "date": "2026-02-05",
+      "forecast_mu": 55.3,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 59.0,
+        "nws_adj": 56.0,
+        "om_raw": 54.2,
+        "om_adj": 54.2,
+        "metar_current": 50.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:43.236035+00:00"
+    },
+    {
+      "city": "LV",
+      "date": "2026-02-05",
+      "forecast_mu": 72.7,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 73.0,
+        "nws_adj": 72.0,
+        "om_raw": 72.8,
+        "om_adj": 73.8,
+        "metar_current": 68.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:43.979742+00:00"
+    },
+    {
+      "city": "PHX",
+      "date": "2026-02-05",
+      "forecast_mu": 78.4,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 81.0,
+        "nws_adj": 77.0,
+        "om_raw": 82.5,
+        "om_adj": 80.5,
+        "metar_current": 73.9
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T02:04:44.705039+00:00"
+    }
+  ]
+}

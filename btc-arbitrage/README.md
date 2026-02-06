@@ -2,6 +2,11 @@
 
 **Real-time arbitrage trading system for Kalshi KXBTC15M prediction markets**
 
+## 🔩 [IRON RULES](IRON_RULES.md) — READ FIRST
+
+Before writing any code, read `IRON_RULES.md`. Non-negotiable principles for this project.
+Core mandate: **Research → Data → Trade 正循环。永远不要跳过。**
+
 ## 📊 Project Overview
 
 This project explores arbitrage opportunities in Kalshi's 15-minute Bitcoin price prediction markets (KXBTC15M) by monitoring the delay between real-time BTC price movements and market price updates.

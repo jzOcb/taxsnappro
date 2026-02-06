@@ -58,11 +58,13 @@ MACRO = {
 # Mag7 + key stocks to track
 WATCHLIST = [
     "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA",  # Mag7
+    "TSM", "AMD", "LMND", "RKLB", "VOO",  # Jason's portfolio
     "PLTR", "CRM", "NOW", "WDAY",  # Software/AI
     "JPM", "GS", "WFC",  # Banks
     "WMT", "COST",  # Retail
     "NVO", "LLY", "MRK",  # Pharma
     "COIN", "MSTR",  # Crypto-adjacent
+    "OXY", "OPEN",  # Jason's smaller positions
 ]
 
 # Alert thresholds
@@ -149,6 +151,215 @@ def check_alerts(indices_data, sectors_data, macro_data, watchlist_data):
             alerts.append(f"⚠️ {symbol} {direction} {data['change_pct']:+.1f}% (${data['price']})")
     
     return alerts
+
+
+def compute_technicals(symbol, name, period="3mo"):
+    """Compute technical analysis: support, resistance, trend, RSI, moving averages."""
+    try:
+        t = yf.Ticker(symbol)
+        hist = t.history(period=period)
+        if hist.empty or len(hist) < 20:
+            return None
+
+        closes = hist['Close'].values
+        highs = hist['High'].values
+        lows = hist['Low'].values
+        volumes = hist['Volume'].values
+        current = closes[-1]
+
+        # --- Moving Averages ---
+        sma20 = float(closes[-20:].mean()) if len(closes) >= 20 else None
+        sma50 = float(closes[-50:].mean()) if len(closes) >= 50 else None
+        sma200 = float(closes[-200:].mean()) if len(closes) >= 200 else None
+        ema9 = None
+        if len(closes) >= 9:
+            ema = [float(closes[0])]
+            mult = 2.0 / (9 + 1)
+            for c in closes[1:]:
+                ema.append(float(c) * mult + ema[-1] * (1 - mult))
+            ema9 = ema[-1]
+
+        # --- RSI (14-day) ---
+        rsi = None
+        if len(closes) >= 15:
+            deltas = [closes[i] - closes[i-1] for i in range(1, len(closes))]
+            gains = [d if d > 0 else 0 for d in deltas[-14:]]
+            losses = [-d if d < 0 else 0 for d in deltas[-14:]]
+            avg_gain = sum(gains) / 14
+            avg_loss = sum(losses) / 14
+            if avg_loss > 0:
+                rs = avg_gain / avg_loss
+                rsi = 100 - (100 / (1 + rs))
+            else:
+                rsi = 100
+
+        # --- Support & Resistance (pivot-based + recent swing highs/lows) ---
+        # Find recent swing highs and lows (last 20 bars)
+        window = min(20, len(closes))
+        recent_closes = closes[-window:]
+        recent_highs = highs[-window:]
+        recent_lows = lows[-window:]
+
+        # Swing highs: local maxima
+        swing_highs = []
+        for i in range(1, len(recent_highs) - 1):
+            if recent_highs[i] > recent_highs[i-1] and recent_highs[i] > recent_highs[i+1]:
+                swing_highs.append(float(recent_highs[i]))
+
+        # Swing lows: local minima
+        swing_lows = []
+        for i in range(1, len(recent_lows) - 1):
+            if recent_lows[i] < recent_lows[i-1] and recent_lows[i] < recent_lows[i+1]:
+                swing_lows.append(float(recent_lows[i]))
+
+        # Key levels: 52-week high/low, recent swing levels
+        high_52w = float(max(highs)) if len(highs) >= 50 else float(max(recent_highs))
+        low_52w = float(min(lows)) if len(lows) >= 50 else float(min(recent_lows))
+
+        # Resistance = nearest swing highs above current price
+        resistance_levels = sorted([h for h in swing_highs if h > current])
+        resistance = resistance_levels[0] if resistance_levels else high_52w
+
+        # Support = nearest swing lows below current price
+        support_levels = sorted([l for l in swing_lows if l < current], reverse=True)
+        support = support_levels[0] if support_levels else low_52w
+
+        # Also add MA levels as support/resistance
+        ma_support = []
+        ma_resistance = []
+        for ma_val, ma_name in [(sma20, 'SMA20'), (sma50, 'SMA50'), (sma200, 'SMA200')]:
+            if ma_val:
+                if ma_val < current:
+                    ma_support.append((ma_val, ma_name))
+                else:
+                    ma_resistance.append((ma_val, ma_name))
+
+        # --- Trend determination ---
+        trend = "neutral"
+        trend_signals = 0
+        if sma20 and current > sma20:
+            trend_signals += 1
+        elif sma20:
+            trend_signals -= 1
+        if sma50 and current > sma50:
+            trend_signals += 1
+        elif sma50:
+            trend_signals -= 1
+        if sma20 and sma50 and sma20 > sma50:
+            trend_signals += 1  # golden cross tendency
+        elif sma20 and sma50:
+            trend_signals -= 1  # death cross tendency
+
+        if trend_signals >= 2:
+            trend = "bullish"
+        elif trend_signals <= -2:
+            trend = "bearish"
+
+        # --- Distance from key levels ---
+        dist_support_pct = ((current - support) / current * 100) if support else None
+        dist_resistance_pct = ((resistance - current) / current * 100) if resistance else None
+
+        return {
+            'symbol': symbol,
+            'name': name,
+            'price': round(float(current), 2),
+            'sma20': round(sma20, 2) if sma20 else None,
+            'sma50': round(sma50, 2) if sma50 else None,
+            'sma200': round(sma200, 2) if sma200 else None,
+            'ema9': round(ema9, 2) if ema9 else None,
+            'rsi': round(rsi, 1) if rsi else None,
+            'support': round(support, 2),
+            'resistance': round(resistance, 2),
+            'dist_support_pct': round(dist_support_pct, 1) if dist_support_pct else None,
+            'dist_resistance_pct': round(dist_resistance_pct, 1) if dist_resistance_pct else None,
+            'high_52w': round(high_52w, 2),
+            'low_52w': round(low_52w, 2),
+            'trend': trend,
+            'ma_support': [(round(v, 2), n) for v, n in ma_support],
+            'ma_resistance': [(round(v, 2), n) for v, n in ma_resistance],
+        }
+    except Exception as e:
+        return None
+
+
+def format_technicals(tech_results):
+    """Format technical analysis section."""
+    lines = []
+    lines.append("📐 技术面分析")
+    lines.append("")
+
+    for t in tech_results:
+        if not t:
+            continue
+
+        trend_emoji = {"bullish": "🟢↗", "bearish": "🔴↘", "neutral": "⚪→"}
+        te = trend_emoji.get(t['trend'], "⚪→")
+        trend_cn = {"bullish": "多头趋势", "bearish": "空头趋势", "neutral": "震荡"}
+        tc = trend_cn.get(t['trend'], "震荡")
+
+        lines.append(f"  {te} **{t['name']}** ({t['symbol']}) — {tc}")
+        lines.append(f"    价格: ${t['price']:,.2f} | RSI: {t['rsi'] if t['rsi'] else 'N/A'}")
+
+        # Support/Resistance
+        sup_str = f"${t['support']:,.2f}"
+        if t['dist_support_pct'] is not None:
+            sup_str += f" (-{t['dist_support_pct']:.1f}%)"
+        res_str = f"${t['resistance']:,.2f}"
+        if t['dist_resistance_pct'] is not None:
+            res_str += f" (+{t['dist_resistance_pct']:.1f}%)"
+        lines.append(f"    支撑: {sup_str} | 阻力: {res_str}")
+
+        # Moving averages
+        ma_parts = []
+        if t['ema9']:
+            pos = "上方" if t['price'] > t['ema9'] else "下方"
+            ma_parts.append(f"EMA9={t['ema9']:,.2f}({pos})")
+        if t['sma20']:
+            pos = "上方" if t['price'] > t['sma20'] else "下方"
+            ma_parts.append(f"SMA20={t['sma20']:,.2f}({pos})")
+        if t['sma50']:
+            pos = "上方" if t['price'] > t['sma50'] else "下方"
+            ma_parts.append(f"SMA50={t['sma50']:,.2f}({pos})")
+        if ma_parts:
+            lines.append(f"    均线: {' | '.join(ma_parts)}")
+
+        # RSI interpretation
+        if t['rsi']:
+            if t['rsi'] >= 70:
+                lines.append(f"    ⚠️ RSI {t['rsi']} — 超买区域，回调风险增加")
+            elif t['rsi'] <= 30:
+                lines.append(f"    💡 RSI {t['rsi']} — 超卖区域，反弹概率增加")
+
+        lines.append("")
+
+    return lines
+
+
+# Tickers for technical analysis
+TECH_ANALYSIS_TICKERS = {
+    # Indices
+    "^GSPC": "S&P 500",
+    "^IXIC": "Nasdaq",
+    "QQQ": "QQQ",
+    # Jason's large positions (>4% of portfolio)
+    "TSLA": "Tesla",           # 33.9% of portfolio
+    "NVDA": "NVIDIA",          # 8.5%
+    "AAPL": "Apple",           # 7.1%
+    "TSM": "TSM (台积电)",      # 6.3%
+    "LMND": "Lemonade",        # 4.5%
+    "AMZN": "Amazon",          # 4.2%
+    "VOO": "VOO (S&P ETF)",    # 4.0%
+    "AMD": "AMD",              # 3.8%
+    # Crypto exposure
+    "BTC-USD": "Bitcoin",
+    "ETH-USD": "Ethereum",
+    "COIN": "Coinbase",
+    "MSTR": "MicroStrategy",
+    # Other watchlist
+    "PLTR": "Palantir",
+    "GOOGL": "Google",         # 2.1% of portfolio
+    "RKLB": "Rocket Lab",
+}
 
 
 def generate_analysis(indices_data, sectors_data, macro_data, watchlist_data):
@@ -370,6 +581,15 @@ def format_report(indices_data, sectors_data, macro_data, watchlist_data, alerts
             for s, d in losers:
                 lines.append(f"  🔴 {s:6s} ${d['price']:>8.1f}  {d['change_pct']:+.1f}%")
     lines.append("")
+
+    # Technical Analysis
+    tech_results = []
+    for sym, name in TECH_ANALYSIS_TICKERS.items():
+        tech = compute_technicals(sym, name)
+        if tech:
+            tech_results.append(tech)
+    if tech_results:
+        lines.extend(format_technicals(tech_results))
 
     # Analysis & Outlook
     analysis, outlook = generate_analysis(indices_data, sectors_data, macro_data, watchlist_data)

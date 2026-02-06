@@ -123,10 +123,10 @@ class KalshiWebSocketClient:
             timestamp_ms = int(_time.time() * 1000)
             message = f"{timestamp_ms}GET/trade-api/ws/v2"
             signature = self._private_key.sign(
-                message.encode(),
+                message.encode('utf-8'),
                 padding.PSS(
                     mgf=padding.MGF1(hashes.SHA256()),
-                    salt_length=hashes.SHA256.digest_size
+                    salt_length=padding.PSS.DIGEST_LENGTH
                 ),
                 hashes.SHA256()
             )
@@ -140,25 +140,26 @@ class KalshiWebSocketClient:
             return {}
     
     async def connect(self):
-        """Establish WebSocket connection with RSA auth"""
+        """Establish WebSocket connection (auth optional for public channels)"""
         try:
             logger.info(f"Connecting to {self.WS_URL}...")
             
-            # Generate auth headers
+            # Generate FRESH auth headers for each connection attempt
             auth_headers = self._get_auth_headers()
-            if not auth_headers:
-                logger.error("No auth headers - cannot connect to Kalshi WebSocket")
-                return False
+            logger.info(f"Auth headers: KEY={auth_headers.get('KALSHI-ACCESS-KEY', 'NONE')[:15]}... TS={auth_headers.get('KALSHI-ACCESS-TIMESTAMP', 'NONE')}")
             
-            # Connect with timeout and auth
+            connect_kwargs = {
+                "ping_interval": 20,
+                "ping_timeout": 10,
+                "close_timeout": 5,
+            }
+            if auth_headers:
+                connect_kwargs["additional_headers"] = auth_headers
+            else:
+                logger.error("No auth headers generated!")
+            
             self.ws = await asyncio.wait_for(
-                websockets.connect(
-                    self.WS_URL,
-                    additional_headers=auth_headers,
-                    ping_interval=20,
-                    ping_timeout=10,
-                    close_timeout=5,
-                ),
+                websockets.connect(self.WS_URL, **connect_kwargs),
                 timeout=10.0
             )
             
@@ -176,7 +177,7 @@ class KalshiWebSocketClient:
     
     async def subscribe_market(self, ticker: str):
         """
-        Subscribe to orderbook updates for a specific market
+        Subscribe to ticker updates for a specific market
         
         Args:
             ticker: Market ticker (e.g., "KXBTC15M-26FEB0417-T106000")
@@ -186,19 +187,16 @@ class KalshiWebSocketClient:
             return False
         
         try:
-            # Subscription message format (based on typical WebSocket APIs)
+            # Official Kalshi WebSocket format (from docs.kalshi.com)
+            # ticker is a PUBLIC channel — no auth required
+            self._msg_id = getattr(self, '_msg_id', 0) + 1
             subscribe_msg = {
-                "type": "subscribe",
-                "channels": [
-                    {
-                        "name": "orderbook",
-                        "market_ticker": ticker
-                    },
-                    {
-                        "name": "ticker",
-                        "market_ticker": ticker
-                    }
-                ]
+                "id": self._msg_id,
+                "cmd": "subscribe",
+                "params": {
+                    "channels": ["ticker"],
+                    "market_tickers": [ticker]
+                }
             }
             
             await self.ws.send(json.dumps(subscribe_msg))
@@ -213,34 +211,40 @@ class KalshiWebSocketClient:
                 self.on_error(e)
             return False
     
-    async def subscribe_series(self, series_ticker: str = "KXBTC15M"):
+    async def subscribe_series(self, series_ticker = "KXBTC15M"):
         """
-        Subscribe to all active markets in a series
+        Subscribe to ticker updates for all markets.
+        Note: Kalshi ticker channel sends updates for ALL markets.
+        We filter by series in the message handler.
         
         Args:
-            series_ticker: Series ticker (e.g., "KXBTC15M")
+            series_ticker: Series ticker or list of tickers to filter for
         """
         if not self.ws:
             logger.error("Not connected")
             return False
         
+        # Support multiple series
+        if isinstance(series_ticker, (list, tuple)):
+            self._series_filters = list(series_ticker)
+        else:
+            self._series_filters = [series_ticker]
+        self._series_filter = self._series_filters[0]  # backward compat
+        
         try:
+            # Official Kalshi WebSocket format (from docs.kalshi.com)
+            # Subscribe to ticker channel (public, no auth needed)
+            self._msg_id = getattr(self, '_msg_id', 0) + 1
             subscribe_msg = {
-                "type": "subscribe",
-                "channels": [
-                    {
-                        "name": "orderbook",
-                        "series_ticker": series_ticker
-                    },
-                    {
-                        "name": "ticker",
-                        "series_ticker": series_ticker
-                    }
-                ]
+                "id": self._msg_id,
+                "cmd": "subscribe",
+                "params": {
+                    "channels": ["ticker"]
+                }
             }
             
             await self.ws.send(json.dumps(subscribe_msg))
-            logger.info(f"📡 Subscribed to series {series_ticker}")
+            logger.info(f"📡 Subscribed to ticker channel (filtering for {self._series_filters})")
             
             return True
             
@@ -251,35 +255,59 @@ class KalshiWebSocketClient:
             return False
     
     async def _handle_message(self, message: str):
-        """Process incoming WebSocket message"""
+        """Process incoming WebSocket message (official Kalshi format)"""
         try:
             data = json.loads(message)
             self.stats['messages_received'] += 1
             self.stats['last_message_time'] = time.time()
             
-            msg_type = data.get('type') or data.get('msg')
+            msg_type = data.get('type', '')
             
-            # Handle different message types
-            if msg_type == 'orderbook' or msg_type == 'orderbook_delta':
-                self.stats['orderbook_updates'] += 1
-                if self.on_orderbook:
-                    self.on_orderbook(data)
-            
-            elif msg_type == 'ticker' or msg_type == 'market_update':
+            # Official Kalshi message types
+            if msg_type == 'ticker':
+                # Ticker update: {"type": "ticker", "msg": {"market_ticker": "...", "yes_bid": 50, "yes_ask": 55, ...}}
+                msg = data.get('msg', {})
+                market_ticker = msg.get('market_ticker', '')
+                
+                # Filter by series if set (support multiple)
+                series_filters = getattr(self, '_series_filters', [])
+                if not series_filters:
+                    series_filters = [getattr(self, '_series_filter', '')]
+                if series_filters and series_filters[0]:
+                    if not any(sf in market_ticker for sf in series_filters):
+                        return
+                
                 self.stats['ticker_updates'] += 1
                 if self.on_ticker:
-                    self.on_ticker(data)
+                    # Pass the msg content with type info
+                    self.on_ticker(msg)
+            
+            elif msg_type == 'orderbook_snapshot':
+                self.stats['orderbook_updates'] += 1
+                if self.on_orderbook:
+                    self.on_orderbook(data.get('msg', {}))
+            
+            elif msg_type == 'orderbook_delta':
+                self.stats['orderbook_updates'] += 1
+                if self.on_orderbook:
+                    self.on_orderbook(data.get('msg', {}))
             
             elif msg_type == 'subscribed':
-                logger.info(f"✅ Subscription confirmed")
+                sid = data.get('msg', {}).get('sid', 'unknown')
+                logger.info(f"✅ Subscription confirmed (sid: {sid})")
             
             elif msg_type == 'error':
-                logger.error(f"❌ Server error: {data.get('message')}")
+                error_msg = data.get('msg', {})
+                logger.error(f"❌ Server error code={error_msg.get('code')}: {error_msg.get('msg')}")
                 self.stats['errors'] += 1
+            
+            elif msg_type == 'trade':
+                # Trade execution updates
+                pass
             
             else:
                 # Log unknown message types for debugging
-                logger.debug(f"Unknown message type: {msg_type}")
+                logger.debug(f"Unknown message type: {msg_type} | {data}")
         
         except json.JSONDecodeError as e:
             logger.error(f"Invalid JSON: {e}")
@@ -309,7 +337,11 @@ class KalshiWebSocketClient:
                 connected = await self.connect()
                 
                 if connected:
-                    # Resubscribe to previous markets
+                    # Resubscribe
+                    if getattr(self, '_initial_series', None):
+                        await self.subscribe_series(self._initial_series)
+                    elif getattr(self, '_initial_ticker', None):
+                        await self.subscribe_market(self._initial_ticker)
                     for ticker in list(self.subscribed_tickers):
                         await self.subscribe_market(ticker)
                     
@@ -328,15 +360,17 @@ class KalshiWebSocketClient:
             else:
                 await asyncio.sleep(1)
     
-    async def start(self, ticker: Optional[str] = None, series: Optional[str] = None):
+    async def start(self, ticker: Optional[str] = None, series = None):
         """
         Start WebSocket client
         
         Args:
             ticker: Specific market ticker to subscribe to
-            series: Series ticker to subscribe to (e.g., "KXBTC15M")
+            series: Series ticker or list of tickers (e.g., "KXBTC15M" or ["KXBTC15M", "KXBTC1H"])
         """
         self.running = True
+        self._initial_ticker = ticker
+        self._initial_series = series
         
         # Initial connection
         connected = await self.connect()
@@ -347,8 +381,14 @@ class KalshiWebSocketClient:
                 await self.subscribe_market(ticker)
             elif series:
                 await self.subscribe_series(series)
+            
+            # Start receiving messages (this blocks until disconnect)
+            try:
+                await self._receive_loop()
+            except Exception as e:
+                logger.error(f"Initial receive loop error: {e}")
         
-        # Start auto-reconnect loop
+        # If we get here, connection dropped — start auto-reconnect
         await self._reconnect_loop()
     
     async def stop(self):

@@ -3,17 +3,17 @@
     {
       "city": "LAX",
       "date": "2026-02-05",
-      "forecast_mu": 70.0,
-      "forecast_sigma": 12.1,
+      "forecast_mu": 61.2,
+      "forecast_sigma": 6.0,
       "sources": {
-        "nws_raw": 84.0,
-        "nws_adj": 75.0,
+        "nws_raw": 69.0,
+        "nws_adj": 60.0,
         "om_raw": 65.9,
         "om_adj": 62.900000000000006,
         "metar_current": 68.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:37.693216+00:00"
+      "timestamp": "2026-02-06T02:35:08.189817+00:00"
     },
     {
       "city": "NYC",
@@ -28,22 +28,22 @@
         "metar_current": 27.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:38.372052+00:00"
+      "timestamp": "2026-02-06T02:35:08.957803+00:00"
     },
     {
       "city": "CHI",
       "date": "2026-02-05",
-      "forecast_mu": 39.0,
+      "forecast_mu": 39.5,
       "forecast_sigma": 4.0,
       "sources": {
         "nws_raw": 36.0,
         "nws_adj": 39.0,
-        "om_raw": 35.1,
-        "om_adj": 39.1,
+        "om_raw": 36.2,
+        "om_adj": 40.2,
         "metar_current": 28.9
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:39.034179+00:00"
+      "timestamp": "2026-02-06T02:35:09.570700+00:00"
     },
     {
       "city": "PHI",
@@ -58,7 +58,7 @@
         "metar_current": 28.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:39.914408+00:00"
+      "timestamp": "2026-02-06T02:35:10.199737+00:00"
     },
     {
       "city": "BOS",
@@ -73,7 +73,7 @@
         "metar_current": 27.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:40.583638+00:00"
+      "timestamp": "2026-02-06T02:35:10.851910+00:00"
     },
     {
       "city": "MIA",
@@ -88,22 +88,22 @@
         "metar_current": 53.1
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:41.262975+00:00"
+      "timestamp": "2026-02-06T02:35:11.548967+00:00"
     },
     {
       "city": "SFO",
       "date": "2026-02-05",
-      "forecast_mu": 69.8,
-      "forecast_sigma": 4.0,
+      "forecast_mu": 68.0,
+      "forecast_sigma": 5.0,
       "sources": {
-        "nws_raw": 68.0,
-        "nws_adj": 69.0,
+        "nws_raw": 65.0,
+        "nws_adj": 66.0,
         "om_raw": 66.0,
         "om_adj": 71.0,
         "metar_current": 63.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:41.898361+00:00"
+      "timestamp": "2026-02-06T02:35:12.725034+00:00"
     },
     {
       "city": "AUS",
@@ -118,7 +118,7 @@
         "metar_current": 51.1
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:42.543523+00:00"
+      "timestamp": "2026-02-06T02:35:13.403584+00:00"
     },
     {
       "city": "SEA",
@@ -133,22 +133,22 @@
         "metar_current": 50.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:43.236035+00:00"
+      "timestamp": "2026-02-06T02:35:14.098826+00:00"
     },
     {
       "city": "LV",
       "date": "2026-02-05",
-      "forecast_mu": 72.7,
+      "forecast_mu": 72.1,
       "forecast_sigma": 4.0,
       "sources": {
-        "nws_raw": 73.0,
-        "nws_adj": 72.0,
+        "nws_raw": 72.0,
+        "nws_adj": 71.0,
         "om_raw": 72.8,
         "om_adj": 73.8,
         "metar_current": 68.0
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:43.979742+00:00"
+      "timestamp": "2026-02-06T02:35:14.986529+00:00"
     },
     {
       "city": "PHX",
@@ -163,7 +163,7 @@
         "metar_current": 73.9
       },
       "actual_high": null,
-      "timestamp": "2026-02-06T02:04:44.705039+00:00"
+      "timestamp": "2026-02-06T02:35:15.775367+00:00"
     }
   ]
 }

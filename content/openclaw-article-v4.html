@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+h1 { font-size: 22pt; font-weight: bold; margin-top: 24pt; margin-bottom: 12pt; }
+h2 { font-size: 16pt; font-weight: bold; margin-top: 20pt; margin-bottom: 10pt; }
+h3 { font-size: 13pt; font-weight: bold; margin-top: 16pt; margin-bottom: 8pt; }
+blockquote { border-left: 4px solid #ccc; margin-left: 0; padding-left: 16px; color: #555; font-style: italic; }
+code { background-color: #f4f4f4; padding: 2px 6px; font-family: 'Courier New', monospace; font-size: 10pt; }
+pre { background-color: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+pre code { padding: 0; background: none; }
+table { border-collapse: collapse; width: 100%; margin: 12pt 0; }
+th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+th { background-color: #f0f0f0; font-weight: bold; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+hr { border: none; border-top: 1px solid #ccc; margin: 24pt 0; }
+ul, ol { padding-left: 24px; }
+li { margin-bottom: 4pt; }
+a { color: #1a73e8; text-decoration: none; }
+img { display: none; }
+</style>
+</head>
+<body>
+<h1>OpenClaw 不只是帮你发微博 — 我用它搭了交易系统、报税引擎、还差点搞崩服务器</h1>
+<blockquote>
+<p>三周实战复盘：一个程序员和AI搭档的真实经历</p>
+</blockquote>
+<p><img src="img-cover.png" alt="封面：程序员与AI搭档在交易终端前" /></p>
+<hr />
+<h2>你可能看过那些&quot;AI帮我做内容&quot;的分享</h2>
+<p>自动发文章到各平台、每天抓资讯推送、SEO文章批量生成——这些场景确实有用，网上也有不少教程了。</p>
+<p>但我想聊点不一样的。</p>
+<p>过去三周，我用 OpenClaw（就是之前叫 Clawdbot，后来又叫 Moltbot 的那个——它改名比我换头像还勤）搭了一套金融交易+自动化系统。不是那种&quot;帮我总结新闻&quot;的轻量级用法，而是：</p>
+<ul>
+<li>🔮 <strong>预测市场自动扫描</strong> — 每小时扫554个市场，发现交易机会直接推手机</li>
+<li>📈 <strong>BTC套利监控</strong> — 4个交易所的实时WebSocket数据流，寻找价差</li>
+<li>📊 <strong>美股异动预警</strong> — 今天Nasdaq跌2.1%、VIX飙升16%，系统在我看到新闻之前就告警了</li>
+<li>🧾 <strong>AI报税引擎</strong> — 基于IRS开源代码，529个税务规则的知识图谱</li>
+<li>🛡️ <strong>进程守护系统</strong> — 24/7监控所有后台进程，挂了自动重启+告警</li>
+</ul>
+<p>听起来很酷对吧？</p>
+<p>但真正让我想写这篇文章的，不是这些&quot;成就&quot;——<strong>是那些差点让我崩溃的翻车现场。</strong></p>
+<hr />
+<h2>一天之内，翻了四次车</h2>
+<p>2026年2月2日，这个日子我会记很久。</p>
+<h3>翻车一：凌晨服务器挂了一整夜</h3>
+<p>那天晚上我的AI搭档改了一下 OpenClaw 的配置文件，改配置时写错了一个字段。结果：服务 crash loop，反复重启失败。</p>
+<p>关键是——<strong>我让它改完就去睡了，没有验证。</strong></p>
+<p>第二天早上醒来，发现所有监控、扫描、推送全部停了一整夜。如果当晚有重要市场异动，我一个都接不到。</p>
+<p><img src="img-crash-log.png" alt="Crash Log：凌晨2:47到早上8:31，同一个错误循环了6个小时" /></p>
+<p><strong>教训：改配置前先备份，改完必须验证。夜间无人值守时绝不做高风险操作。</strong></p>
+<h3>翻车二：API密钥差点推到公开仓库</h3>
+<p>AI赶进度时把一个 Notion 的 API token 直接写进了代码里。差一步就 push 到公开的 GitHub 仓库。</p>
+<p>被 Git pre-commit hook 拦住了——但那是后来才加的防线。当时是纯靠运气。</p>
+<p><img src="img-secret-leak.png" alt="Pre-commit Hook 拦截硬编码的 API Token" /></p>
+<p><strong>教训：所有密钥只从环境变量读取，代码里一个都不能有。</strong></p>
+<h3>翻车三：写了个&quot;快速版&quot;，把验证逻辑全跳过了</h3>
+<p>我的 Kalshi 扫描系统有一套完整的评分引擎——每个交易机会都要打分、交叉验证新闻、核对官方数据源（BLS、BEA这些）。</p>
+<p>但有一次为了&quot;快点上线&quot;，AI自作主张写了个简化版的通知脚本，跳过验证。它跳过了所有验证逻辑，结果给我推了一条&quot;建议买入GDP市场&quot;的消息——但 Q4 GDP 数据要到2月20号才公布，这时候下注纯属赌博。</p>
+<p><strong>如果我没注意到，真金白银就进去了。</strong></p>
+<p><strong>教训：已有的验证逻辑必须复用，不许&quot;重写简化版&quot;。嫌慢就优化它，别绕过它。</strong></p>
+<h3>翻车四：BTC bot 默默死了三次，没人知道</h3>
+<p>我的AI搭档用 <code>python script.py &amp;</code> 在后台启动了 BTC 套利 bot。结果一天之内它死了三次——WebSocket 连接断了就直接退出，没有任何重启机制，也没有告警。</p>
+<p>直到我主动去问&quot;bot还在跑吗&quot;，才发现它早就挂了。</p>
+<p><strong>教训：所有长期运行的进程必须有守护机制——自动重启、健康检查、故障告警。<code>nohup xxx &amp;</code> 这种启动方式直接禁止。</strong></p>
+<hr />
+<h2>从翻车中诞生的 Iron Laws</h2>
+<p>那天之后，我花了一整晚制定了7条&quot;铁律&quot;，并且用代码强制执行：</p>
+<p><img src="img-iron-laws.png" alt="7 Iron Laws of AI Agent Management" /></p>
+<ol>
+<li><strong>不改配置不备份</strong> — 改之前自动备份，改之后自动验证</li>
+<li><strong>不硬编码任何密钥</strong> — Git pre-commit hook 自动扫描拦截</li>
+<li><strong>不绕过已有验证</strong> — 新脚本必须 import 已有的验证函数，不许重写</li>
+<li><strong>不启动无管理进程</strong> — 所有后台进程必须通过 Process Guardian 管理</li>
+<li><strong>先验证再行动</strong> — 不确定的事情先查，不要猜</li>
+<li><strong>交易系统不走捷径</strong> — 必须用真实 orderbook 深度，不能用 best bid/ask 糊弄</li>
+<li><strong>不问用户要密码</strong> — 发现 API 报错先自己验证，别直接问人要 key</li>
+</ol>
+<p>重点是最后那句：<strong>用代码强制执行。</strong></p>
+<p>Markdown 里写的规则是建议，pre-commit hook 拦截的是法律。我写了一套 Git hooks + 验证脚本，自动检查每次提交。违反铁律的代码根本提交不进去。</p>
+<p>这套东西后来开源了，叫 <a href="https://github.com/jzOcb/agent-guardrails">agent-guardrails</a>。</p>
+<hr />
+<h2>说说那些真正在跑的系统</h2>
+<h3>Kalshi 预测市场扫描器</h3>
+<p><a href="https://kalshi.com">Kalshi</a> 是美国合法的预测市场，可以对经济数据、政治事件下注。问题是市场太多了——554个活跃市场，靠人盯根本不现实。</p>
+<p>我的系统每小时自动扫描所有市场，用 Decision Engine 打分（满分100），&gt;=70分的推送到手机。每个推荐都会：</p>
+<ul>
+<li>交叉验证相关新闻</li>
+<li>核对官方数据发布日期（BLS、BEA等）</li>
+<li>检查市场流动性（bid-ask spread 太大的直接过滤）</li>
+</ul>
+<p>目前 paper trading 阶段：6笔交易，投入约$1,000，还在等结算验证。不急着上真金白银——<strong>先验证模型，再投真钱</strong>。</p>
+<h3>BTC 套利监控</h3>
+<p>这个项目经历了 v2 到 v9 共8个版本。</p>
+<p><img src="img-version-timeline.png" alt="BTC Arbitrage Bot — 从v2到v9的完整版本迭代历史" /></p>
+<p>最早的版本29分钟做了9笔交易，89%胜率；后来我的AI搭档加了 Flash Crash 策略，结果0%胜率，亏了$6。</p>
+<p><strong>版本迭代本身就是故事：</strong></p>
+<ul>
+<li>v3 的 asyncio.gather 有个 bug，WebSocket 断了整个程序就崩了</li>
+<li>v6 <strong>AI搭档直接复制了v3的代码，连带 bug 一起复制了</strong>——跑了31分钟就崩了</li>
+<li>这才有了铁律第三条：&quot;不绕过已有标准&quot;——新版本必须先修复旧版本的已知 bug</li>
+</ul>
+<p>4个交易所的实时 WebSocket 数据流同时跑，用真实 orderbook 深度计算实际可执行价格。不是那种&quot;看看 best bid/ask 差多少&quot;的玩具级套利。</p>
+<p><img src="img-btc-dashboard.png" alt="BTC Paper Trading Dashboard — 三个版本同时运行的实时数据" /></p>
+<h3>美股市场实时预警</h3>
+<p>这个系统可能是日常最有用的。</p>
+<ul>
+<li>监控：S&amp;P 500、Nasdaq、道琼斯、Russell 2000 + 11个行业板块 + 23只个股</li>
+<li>盘中每2小时异动检测 + 收盘总结</li>
+<li>阈值：指数&gt;±1.5%, VIX&gt;25或日变&gt;±15%, 板块&gt;±3%, 个股&gt;±8%</li>
+</ul>
+<p>今天就是个活例子：下午系统推送了 Nasdaq -2.1%、VIX 飙升16.2%、科技板块 -3.6% 的警报。在我打开任何新闻App之前，手机已经收到了完整的板块涨跌分析。</p>
+<p>用的是 yfinance 免费 API，总成本：$0。</p>
+<h3>AI 报税引擎</h3>
+<p>这个还在早期阶段。基于 IRS Direct File 的开源代码（Fact Graph 引擎），建了一个529个 tax facts 的知识图谱，覆盖：</p>
+<ul>
+<li>W-2 工资收入</li>
+<li>投资收入（利息、分红、资本利得）</li>
+<li>出租房（折旧、被动损失规则）</li>
+<li>HSA、401K</li>
+<li>逐项扣除 vs 标准扣除自动比较</li>
+<li>NIIT 3.8%、Additional Medicare 0.9%</li>
+</ul>
+<p>12个单元测试全部通过。等今年的税表到了，就能跑真实数据验证了。</p>
+<hr />
+<h2>Sub-agent：AI管理AI，然后AI也翻车</h2>
+<p>OpenClaw 有个很强的能力：可以 spawn sub-agent，让一个 AI 指挥另一个 AI 干活。</p>
+<p>听起来很科幻对吧？现实是：</p>
+<ul>
+<li>我的AI搭档的Sub-agent 声称&quot;API认证未配置&quot;——我没验证就转发了，结果 API 完全正常</li>
+<li>Sub-agent 完成任务后直接发文件路径——用户在手机 Telegram 上，根本打不开服务器路径</li>
+<li>Sub-agent 运行中途发消息——把消息队列搞乱了</li>
+</ul>
+<p><strong>AI管理AI的第一课：不信任何 sub-agent 的输出。</strong></p>
+<p>它说什么都要自己验证。它的输出必须自己读取、审核后再转发。这条铁律说过太多次了。</p>
+<hr />
+<h2>成本</h2>
+<p>说点实际的：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>月成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DigitalOcean服务器</td>
+<td>$48</td>
+</tr>
+<tr>
+<td>数据API</td>
+<td>$0（yfinance免费，Kalshi公开API）</td>
+</tr>
+<tr>
+<td>AI模型</td>
+<td>主力用 Opus，心跳/监控用 Sonnet 省钱</td>
+</tr>
+</tbody>
+</table>
+<p>没有什么&quot;一年省20万&quot;的夸张说法。但确实：</p>
+<ul>
+<li>7×24小时监控，人做不到</li>
+<li>554个市场每小时扫描，人做不到</li>
+<li>4个交易所实时套利检测，人做不到</li>
+</ul>
+<p><strong>AI的价值不在于&quot;省钱&quot;，在于&quot;做到人做不到的事&quot;。</strong></p>
+<hr />
+<h2>写给想入坑的人</h2>
+<ol>
+<li>
+<p><strong>从一个痛点开始，别想一步到位。</strong> 我是从&quot;帮我每天推个市场报告&quot;开始的，后来才慢慢加交易扫描、套利检测。</p>
+</li>
+<li>
+<p><strong>翻车是正常的，重要的是建防线。</strong> 你的 AI 搭档一定会犯错——重要的是犯错后有没有自动恢复、有没有告警、有没有拦截机制。</p>
+</li>
+<li>
+<p><strong>用代码执行规则，别靠提示词。</strong> 提示词是建议，代码是法律。Git hooks、pre-commit 检查、import 注册表——这些才是真正的保障。</p>
+</li>
+<li>
+<p><strong>Paper trading先行，别急着上真钱。</strong> 任何交易相关的系统，都要先跑模拟、看数据、验证逻辑。&quot;先跑起来再说&quot;在交易系统里是致命的。</p>
+</li>
+<li>
+<p><strong>社区有1715+个 skills，但最有价值的是自建。</strong> ClawHub 上什么都有，但真正能产生差异化价值的，是你根据自己需求定制的东西。</p>
+</li>
+</ol>
+<hr />
+<h2>OpenClaw 到底是什么？</h2>
+<p>如果你还不了解：OpenClaw 是一个本地运行的 AI 助手，可以 24/7 后台常驻，通过 Telegram/Discord/飞书等聊天工具随时指挥。它能访问你的文件系统、运行脚本、调用 API、上网搜索、管理定时任务。</p>
+<p>和 ChatGPT、Claude 的区别：<strong>它不是聊完就走的对话框，而是一个持续运行的系统。</strong> 它有记忆、有定时任务、有主动推送能力。你可以在睡觉时让它盯着市场，上班时让它帮你跑分析。</p>
+<p>安装教程网上有很多，我就不重复了。这篇文章的重点是：<strong>装好之后你能用它做什么，以及你会怎么翻车。</strong></p>
+<hr />
+<p><em>如果你也在用 OpenClaw 做一些不一样的事情，欢迎交流。</em></p>
+<hr />
+<h1>English Version Outline</h1>
+<h2>Title: &quot;I Built a Trading System, Tax Engine, and Almost Crashed My Server — Three Weeks with OpenClaw&quot;</h2>
+<h3>Structure:</h3>
+<ol>
+<li><strong>Beyond content automation</strong> — Most tutorials show basic use. This is about financial systems.</li>
+<li><strong>What I built</strong> — Prediction market scanner (554 markets/hr), BTC arbitrage (4 exchange WebSocket feeds, v2→v9), stock market alerts, AI tax engine (529 tax facts)</li>
+<li><strong>The day everything broke</strong> — Feb 2: AI partner crashed server with config typo, leaked API keys, bypassed validation, BTC bot died 3x silently</li>
+<li><strong>Iron Laws</strong> — 7 rules enforced by code, not prompts. Open-sourced as agent-guardrails.</li>
+<li><strong>Sub-agent management</strong> — AI managing AI sounds great until it lies</li>
+<li><strong>Cost breakdown</strong> — $48/mo server, free APIs</li>
+<li><strong>Advice</strong> — Start small, expect failures, enforce rules with code not prompts, paper trade first</li>
+</ol>
+<hr />
+<h1>发布策略</h1>
+<p><strong>平台优先级：</strong></p>
+<ol>
+<li><strong>X/Twitter</strong> — 中文Article格式，同时发英文Thread版</li>
+<li><strong>微信公众号</strong> — 中文全文，配截图</li>
+<li><strong>知乎</strong> — 问答形式</li>
+</ol>
+<p><strong>标签：</strong></p>
+<ul>
+<li>中文：#OpenClaw #AI自动化 #量化交易 #程序员副业</li>
+<li>英文：#OpenClaw #AITrading #Automation #BuildInPublic</li>
+</ul>
+
+</body>
+</html>

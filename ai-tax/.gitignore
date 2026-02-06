@@ -3,6 +3,7 @@ direct-file/
 # === PII / Tax Data — NEVER COMMIT ===
 data/
 uploads/
+uploaded_files/
 *.pdf
 *.jpg
 *.jpeg
@@ -12,12 +13,14 @@ uploads/
 taxpayer_*.json
 return_*.json
 *.encrypted
+taxforge_data.json
 
 # === Secrets ===
 .env
 .env.*
 *.key
 *.pem
+api_key*
 
 # === Python ===
 __pycache__/
@@ -26,3 +29,15 @@ __pycache__/
 *.egg-info/
 venv/
 .venv/
+dist/
+build/
+
+# === Reflex ===
+.web/
+.states/
+
+# === IDE ===
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -71,11 +71,25 @@ cp scripts/pre-config-hook.sh /path/to/repo/.git/hooks/pre-commit
 
 ### For AI agents:
 
-**MANDATORY WORKFLOW when editing openclaw.json:**
+## ⛔ CRITICAL: DO NOT USE `gateway config.patch` DIRECTLY
 
-1. **Before ANY config change**, run:
+The `gateway` tool's `config.patch` action **bypasses all validation**. One wrong model name, one invalid field, and the gateway crashes. You go offline. Nobody can fix you remotely.
+
+**Use `safe-config-patch.sh` instead:**
+
+```bash
+# ✅ CORRECT: Validates before applying
+bash scripts/safe-config-patch.sh '{"agents":{"defaults":{"model":"anthropic/claude-opus-4-5"}}}'
+
+# ❌ WRONG: No validation, will crash on bad input  
+gateway config.patch raw='{"agents":{"defaults":{"model":"claude-opus-4.5"}}}'  # dots = crash
+```
+
+## MANDATORY WORKFLOW
+
+1. **Use the safe wrapper** (validates → backs up → applies → verifies):
    ```bash
-   bash /path/to/config-guard/scripts/config-guard.sh check ~/.clawdbot/clawdbot.json
+   bash /path/to/config-guard/scripts/safe-config-patch.sh '<json-patch>'
    ```
 
 2. **Never guess config field names or values.** If unsure:
@@ -83,15 +97,21 @@ cp scripts/pre-config-hook.sh /path/to/repo/.git/hooks/pre-commit
    - Use `gateway config.get` to see current values
    - Change ONE field at a time
 
-3. **After config changes**, verify:
+3. **For complex changes**, validate first:
    ```bash
-   bash /path/to/config-guard/scripts/config-guard.sh apply ~/.clawdbot/clawdbot.json --restart
+   bash /path/to/config-guard/scripts/config-guard.sh check ~/.openclaw/openclaw.json
    ```
 
 4. **If gateway dies**, rollback:
    ```bash
-   bash /path/to/config-guard/scripts/config-guard.sh rollback ~/.clawdbot/clawdbot.json
+   bash /path/to/config-guard/scripts/config-guard.sh rollback
    ```
+
+## Why This Matters
+
+On 2026-02-05, the agent used `gateway config.patch` to upgrade to Claude Opus 4.6. The model ID was wrong (`claude-opus-4-6-20260205` doesn't exist yet). Gateway kept crashing and falling back to 4.5. Human had to manually fix.
+
+**config-guard existed but was bypassed** because the agent used the raw gateway tool instead of the validated wrapper. This is exactly the failure mode this skill was designed to prevent.
 
 ## Checks Performed
 

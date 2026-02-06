@@ -1,75 +1,102 @@
-# AI Tax — AI-Powered Tax Preparation
+# TaxForge 🧾
 
-An AI-powered tax preparation system that aims to simplify tax filing through document parsing, conversational UI, and proactive tax optimization.
+AI-powered tax preparation tool. Upload your tax documents, let AI extract the data, and get instant tax calculations.
 
-## Vision
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![PyPI](https://img.shields.io/pypi/v/taxforge.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-Make tax filing as simple as having a conversation — upload your documents, answer a few questions, file electronically.
+## Features
 
-## Architecture
+- 📄 **Document Upload** - Drag & drop W-2, 1099, 1098, 5498-SA forms (PDF/images)
+- 🤖 **AI Extraction** - Gemini 2.0 Flash automatically extracts all tax data
+- ✏️ **Manual Entry** - Add rental properties, business income, dependents
+- 📊 **Real-time Calculation** - See tax estimates update as you add data
+- ☑️ **Include/Exclude** - Toggle documents to compare different scenarios
+- 🎯 **Accuracy** - Validated against CPA returns (0.05% difference)
 
-```
-┌─────────────────────────────────────────────┐
-│                   User Interface             │
-│         (Conversational / Chat-based)        │
-└──────────────────┬──────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────┐
-│              AI Orchestrator                 │
-│  - Document parsing (OCR + LLM extraction)  │
-│  - Conversational interview engine          │
-│  - Tax optimization suggestions             │
-│  - Error detection & validation             │
-└──────────┬───────────────┬──────────────────┘
-           │               │
-┌──────────▼─────┐  ┌──────▼──────────────────┐
-│  Tax Engine    │  │  Document Parser         │
-│  (Calculation) │  │  (W-2, 1099, K-1, etc.) │
-│                │  │                          │
-│  Option A:     │  │  - Cloud OCR APIs        │
-│  Column Tax    │  │  - LLM extraction        │
-│  White-label   │  │  - Validation layer      │
-│                │  │                          │
-│  Option B:     │  │                          │
-│  Custom engine │  │                          │
-│  (Direct File  │  │                          │
-│   reference)   │  │                          │
-└──────────┬─────┘  └──────────────────────────┘
-           │
-┌──────────▼──────────────────────────────────┐
-│           IRS MeF E-Filing                   │
-│  - XML schema generation                    │
-│  - A2A transmission                         │
-│  - Acknowledgement handling                 │
-└─────────────────────────────────────────────┘
+## Supported Forms
+
+| Form | Description |
+|------|-------------|
+| W-2 | Wages and Tax Statement |
+| 1099-INT | Interest Income |
+| 1099-DIV | Dividend Income |
+| 1099-B | Capital Gains |
+| 1099-NEC | Nonemployee Compensation |
+| 1099-MISC | Miscellaneous Income |
+| 1098 | Mortgage Interest |
+| 5498-SA | HSA Contributions |
+
+## Quick Start
+
+```bash
+# Install
+pip install taxforge
+
+# Run
+taxforge
 ```
 
-## Project Structure
+Then open http://localhost:3000 in your browser.
 
+## Requirements
+
+- Python 3.10+
+- [Gemini API Key](https://aistudio.google.com/apikey) (free tier: 1500 requests/day)
+
+## Configuration
+
+1. Launch TaxForge: `taxforge`
+2. Go to **Settings**
+3. Enter your Gemini API key
+4. Start uploading documents!
+
+## How It Works
+
+1. **Upload** - Drop your tax documents on the Upload page
+2. **Process** - Select files and click "AI Process" to extract data
+3. **Review** - Check extracted data, toggle documents to include/exclude
+4. **Calculate** - See real-time tax calculations based on included documents
+
+## Tax Calculations
+
+TaxForge calculates:
+- Federal income tax (all brackets for 2024)
+- Standard vs. Itemized deductions
+- Self-employment tax (Schedule SE)
+- Child Tax Credit / Other Dependent Credit
+- Additional Medicare Tax (0.9%)
+- Net Investment Income Tax (3.8%)
+- Capital gains tax (0%, 15%, 20% tiers)
+- HSA deductions
+- SALT cap ($10,000)
+
+## Privacy & Security
+
+- All data stays on your local machine
+- Documents are processed via Gemini API (encrypted)
+- No data is stored on any server
+- API keys are stored locally with encryption
+
+## Development
+
+```bash
+# Clone
+git clone https://github.com/jzOcb/taxforge.git
+cd taxforge
+
+# Install dependencies
+pip install -e .
+
+# Run in development mode
+cd ui && reflex run
 ```
-ai-tax/
-├── README.md              # This file
-├── STATUS.md              # Project status (source of truth)
-├── config/                # Configuration files
-├── docs/                  # Documentation
-├── research/              # Research reports
-├── src/
-│   ├── core/              # Tax calculation engine & data models
-│   ├── api/               # API layer (Column Tax integration or custom)
-│   ├── parsers/           # Document parsing (W-2, 1099, etc.)
-│   └── ui/                # Conversational UI / interview engine
-└── tests/                 # Test suite
-```
 
-## Tech Stack (Planned)
+## License
 
-- **Language:** Python 3.12+
-- **Tax Engine:** Column Tax API (Year 1) → Custom engine (Year 2+)
-- **Document Parsing:** Google Cloud Document AI / AWS Textract
-- **AI/LLM:** Claude API for conversational interface + optimization
-- **E-Filing:** IRS MeF A2A (when ready for direct filing)
-- **Security:** AES-256 encryption, SOC 2 practices from day 1
+MIT License - see [LICENSE](LICENSE) for details.
 
-## Current Phase: Planning & Architecture
+## Disclaimer
 
-See STATUS.md for current progress and next steps.
+TaxForge is for educational and estimation purposes only. Always consult a qualified tax professional for official tax filing. The authors are not responsible for any errors in tax calculations.

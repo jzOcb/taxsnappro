@@ -1,0 +1,1355 @@
+2026-02-05 14:08:04 [INFO] Fetched 28 Kalshi NBA markets
+2026-02-05 14:08:18 [INFO] Fetched 28 Kalshi NBA markets
+2026-02-05 14:10:20 [INFO] Fetched 28 Kalshi NBA markets
+2026-02-05 14:10:52 [INFO] ============================================================
+2026-02-05 14:10:52 [INFO] NBA Sharp Line Detection — Paper Trader
+2026-02-05 14:10:52 [INFO] ============================================================
+2026-02-05 14:10:52 [INFO] Config: min_edge=5¢, max_per_game=$50.0, max_exposure=$500.0, kelly=0.25
+2026-02-05 14:10:52 [INFO] State file: /home/clawdbot/clawd/btc-arbitrage/nba_trader_state.json
+2026-02-05 14:10:52 [INFO] Log file: /home/clawdbot/clawd/btc-arbitrage/logs/nba_trader_live.log
+2026-02-05 14:10:52 [INFO] Loaded state: bankroll=$1000.00, open_positions=0, total_pnl=$+0.00
+2026-02-05 14:10:52 [INFO] ============================================================
+2026-02-05 14:10:52 [INFO] SCAN CYCLE — 2026-02-05 14:10:52 UTC
+2026-02-05 14:10:52 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 14:10:52 [INFO] ============================================================
+2026-02-05 14:10:52 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 14:10:52 [INFO] Fetched 28 Kalshi NBA markets
+2026-02-05 14:10:52 [INFO] Found 14 Kalshi game events
+2026-02-05 14:10:52 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 14:10:55 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 14:10:58 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 14:11:01 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 14:11:05 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 14:11:05 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 14:11:05 [INFO] Matched 14 games
+2026-02-05 14:11:05 [INFO] 
+--- Detecting signals (min edge: {MIN_EDGE_CENTS}¢) ---
+2026-02-05 14:11:05 [INFO] No signals found this cycle
+2026-02-05 14:11:05 [INFO] 
+--- Game Overview ---
+2026-02-05 14:11:05 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 14:11:05 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 14:11:05 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 14:11:05 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 14:11:05 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 14:11:05 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 14:11:05 [ERROR] Scan error: 'game_status'
+2026-02-05 14:11:05 [ERROR] Traceback (most recent call last):
+  File "/home/clawdbot/clawd/btc-arbitrage/src/nba_paper_trader.py", line 969, in main
+    run_scan(state)
+  File "/home/clawdbot/clawd/btc-arbitrage/src/nba_paper_trader.py", line 922, in run_scan
+    f"[{eg['game_status']}] — "
+        ~~^^^^^^^^^^^^^^^
+KeyError: 'game_status'
+
+2026-02-05 14:11:05 [INFO] Sleeping 7200s until next scan... (NBA hours: False)
+2026-02-05 14:12:01 [INFO] ============================================================
+2026-02-05 14:12:01 [INFO] NBA Sharp Line Detection — Paper Trader
+2026-02-05 14:12:01 [INFO] ============================================================
+2026-02-05 14:12:01 [INFO] Config: min_edge=5¢, max_per_game=$50.0, max_exposure=$500.0, kelly=0.25
+2026-02-05 14:12:01 [INFO] State file: /home/clawdbot/clawd/btc-arbitrage/nba_trader_state.json
+2026-02-05 14:12:01 [INFO] Log file: /home/clawdbot/clawd/btc-arbitrage/logs/nba_trader_live.log
+2026-02-05 14:12:01 [INFO] Loaded state: bankroll=$1000.00, open_positions=0, total_pnl=$+0.00
+2026-02-05 14:12:01 [INFO] ============================================================
+2026-02-05 14:12:01 [INFO] SCAN CYCLE — 2026-02-05 14:12:01 UTC
+2026-02-05 14:12:01 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 14:12:01 [INFO] ============================================================
+2026-02-05 14:12:01 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 14:12:01 [INFO] Fetched 28 Kalshi NBA markets
+2026-02-05 14:12:01 [INFO] Found 14 Kalshi game events
+2026-02-05 14:12:01 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 14:12:04 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 14:12:07 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 14:12:09 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 14:12:14 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 14:12:14 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 14:12:14 [INFO] Matched 14 games
+2026-02-05 14:12:14 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 14:12:14 [INFO] No signals found this cycle
+2026-02-05 14:12:14 [INFO] 
+--- Game Overview ---
+2026-02-05 14:12:14 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 14:12:14 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 14:12:14 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 14:12:14 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 14:12:14 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 14:12:14 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 14:12:14 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 14:12:14 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +205 home -250 — Fair: away=31.5¢ home=68.5¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 14:12:14 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=24¢
+2026-02-05 14:12:14 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -278 home +225 — Fair: away=70.5¢ home=29.5¢ — Kalshi: San Antonio=72¢, Dallas=28¢
+2026-02-05 14:12:14 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +130 home -155 — Fair: away=41.7¢ home=58.3¢ — Kalshi: Houston=60¢, Charlotte=42¢
+2026-02-05 14:12:14 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +295 home -375 — Fair: away=24.3¢ home=75.7¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 14:12:14 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +380 home -500 — Fair: away=20.0¢ home=80.0¢ — Kalshi: Orlando=80¢, Brooklyn=20¢
+2026-02-05 14:12:14 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +550 home -800 — Fair: away=14.8¢ home=85.2¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 14:12:14 [INFO] 
+Scan complete. Next scan in 2 hours
+2026-02-05 14:12:14 [INFO] Sleeping 7200s until next scan... (NBA hours: False)
+2026-02-05 14:30:24 [INFO] Received SIGTERM — shutting down gracefully...
+2026-02-05 14:30:24 [INFO] Received SIGTERM — shutting down gracefully...
+2026-02-05 14:30:25 [INFO] Shutdown: saving final state...
+2026-02-05 14:30:25 [INFO] Final state: bankroll=$1000.00, pnl=$+0.00, open=0, W/L=0/0
+2026-02-05 14:30:25 [INFO] NBA Paper Trader stopped.
+2026-02-05 14:30:34 [INFO] Shutdown: saving final state...
+2026-02-05 14:30:34 [INFO] Final state: bankroll=$1000.00, pnl=$+0.00, open=0, W/L=0/0
+2026-02-05 14:30:34 [INFO] NBA Paper Trader stopped.
+2026-02-05 14:32:54 [INFO] ============================================================
+2026-02-05 14:32:54 [INFO] NBA Sharp Line Detection — Paper Trader
+2026-02-05 14:32:54 [INFO] ============================================================
+2026-02-05 14:32:54 [INFO] Config: min_edge=5¢, max_per_game=$50.0, max_exposure=$500.0, kelly=0.25
+2026-02-05 14:32:54 [INFO] State file: /home/clawdbot/clawd/btc-arbitrage/nba_trader_state.json
+2026-02-05 14:32:54 [INFO] Log file: /home/clawdbot/clawd/btc-arbitrage/logs/nba_trader_live.log
+2026-02-05 14:32:54 [INFO] Loaded state: bankroll=$1000.00, open_positions=0, total_pnl=$+0.00
+2026-02-05 14:32:54 [INFO] ============================================================
+2026-02-05 14:32:54 [INFO] SCAN CYCLE — 2026-02-05 14:32:54 UTC
+2026-02-05 14:32:54 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 14:32:54 [INFO] ============================================================
+2026-02-05 14:32:54 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 14:32:54 [INFO] Fetched 28 Kalshi NBA markets
+2026-02-05 14:32:54 [INFO] Found 14 Kalshi game events
+2026-02-05 14:32:54 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 14:32:57 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 14:33:00 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 14:33:03 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 14:33:07 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 14:33:07 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 14:33:07 [INFO] Matched 14 games
+2026-02-05 14:33:07 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 14:33:07 [INFO] No signals found this cycle
+2026-02-05 14:33:07 [INFO] 
+--- Game Overview ---
+2026-02-05 14:33:07 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 14:33:07 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 14:33:07 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 14:33:07 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 14:33:07 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 14:33:07 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 14:33:07 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 14:33:07 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +195 home -238 — Fair: away=32.5¢ home=67.5¢ — Kalshi: Phoenix=66¢, Golden State=33¢
+2026-02-05 14:33:07 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=24¢
+2026-02-05 14:33:07 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -265 home +215 — Fair: away=69.6¢ home=30.4¢ — Kalshi: San Antonio=72¢, Dallas=28¢
+2026-02-05 14:33:07 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +130 home -155 — Fair: away=41.7¢ home=58.3¢ — Kalshi: Houston=59¢, Charlotte=42¢
+2026-02-05 14:33:07 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +295 home -375 — Fair: away=24.3¢ home=75.7¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 14:33:07 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +350 home -455 — Fair: away=21.3¢ home=78.7¢ — Kalshi: Orlando=80¢, Brooklyn=22¢
+2026-02-05 14:33:07 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +550 home -800 — Fair: away=14.8¢ home=85.2¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 14:33:07 [INFO] 
+Scan complete. Next scan in 2 hours
+2026-02-05 14:33:07 [INFO] Sleeping 7200s until next scan... (NBA hours: False)
+2026-02-05 16:07:49 [INFO] Received SIGTERM — shutting down gracefully...
+2026-02-05 16:07:57 [INFO] Shutdown: saving final state...
+2026-02-05 16:07:57 [INFO] Final state: bankroll=$1000.00, pnl=$+0.00, open=0, W/L=0/0
+2026-02-05 16:07:57 [INFO] NBA Paper Trader stopped.
+2026-02-05 16:10:18 [INFO] ============================================================
+2026-02-05 16:10:18 [INFO] NBA Sharp Line Detection — Paper Trader
+2026-02-05 16:10:18 [INFO] ============================================================
+2026-02-05 16:10:18 [INFO] Config: min_edge=5¢, max_per_game=$50.0, max_exposure=$500.0, kelly=0.25
+2026-02-05 16:10:18 [INFO] State file: /home/clawdbot/clawd/btc-arbitrage/nba_trader_state.json
+2026-02-05 16:10:18 [INFO] Log file: /home/clawdbot/clawd/btc-arbitrage/logs/nba_trader_live.log
+2026-02-05 16:10:18 [INFO] Loaded state: bankroll=$1000.00, open_positions=0, total_pnl=$+0.00
+2026-02-05 16:10:18 [INFO] ============================================================
+2026-02-05 16:10:18 [INFO] SCAN CYCLE — 2026-02-05 16:10:18 UTC
+2026-02-05 16:10:18 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 16:10:18 [INFO] ============================================================
+2026-02-05 16:10:18 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 16:10:18 [ERROR] Kalshi API error: 429 Client Error: Too Many Requests for url: https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBAGAME&limit=100&status=open
+2026-02-05 16:10:18 [INFO] Fetched 0 Kalshi NBA markets
+2026-02-05 16:10:18 [WARNING] No Kalshi markets found
+2026-02-05 16:10:18 [INFO] Sleeping 7200s until next scan... (NBA hours: False)
+2026-02-05 18:10:18 [INFO] ============================================================
+2026-02-05 18:10:18 [INFO] SCAN CYCLE — 2026-02-05 18:10:18 UTC
+2026-02-05 18:10:18 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 18:10:18 [INFO] ============================================================
+2026-02-05 18:10:18 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 18:10:18 [INFO] Fetched 32 Kalshi NBA markets
+2026-02-05 18:10:18 [INFO] Found 16 Kalshi game events
+2026-02-05 18:10:18 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 18:10:21 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 18:10:24 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 18:10:27 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 18:10:31 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 18:10:31 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 18:10:31 [INFO] Matched 16 games
+2026-02-05 18:10:31 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 18:10:31 [INFO] No signals found this cycle
+2026-02-05 18:10:31 [INFO] 
+--- Game Overview ---
+2026-02-05 18:10:31 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 18:10:31 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 18:10:31 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 18:10:31 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 18:10:31 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 18:10:31 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 18:10:31 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 18:10:31 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 18:10:31 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 18:10:31 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 18:10:31 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=26¢
+2026-02-05 18:10:31 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -270 home +220 — Fair: away=70.0¢ home=30.0¢ — Kalshi: San Antonio=72¢, Dallas=28¢
+2026-02-05 18:10:31 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +142 home -170 — Fair: away=39.6¢ home=60.4¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-05 18:10:31 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 18:10:31 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +295 home -375 — Fair: away=24.3¢ home=75.7¢ — Kalshi: Orlando=78¢, Brooklyn=24¢
+2026-02-05 18:10:31 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 18:10:31 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 18:10:31 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 18:40:31 [INFO] ============================================================
+2026-02-05 18:40:31 [INFO] SCAN CYCLE — 2026-02-05 18:40:31 UTC
+2026-02-05 18:40:31 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 18:40:31 [INFO] ============================================================
+2026-02-05 18:40:31 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 18:40:31 [INFO] Fetched 32 Kalshi NBA markets
+2026-02-05 18:40:31 [INFO] Found 16 Kalshi game events
+2026-02-05 18:40:31 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 18:40:34 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 18:40:37 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 18:40:40 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 18:40:44 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 18:40:44 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 18:40:44 [INFO] Matched 16 games
+2026-02-05 18:40:44 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 18:40:44 [INFO] No signals found this cycle
+2026-02-05 18:40:44 [INFO] 
+--- Game Overview ---
+2026-02-05 18:40:44 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 18:40:44 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 18:40:44 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 18:40:44 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 18:40:44 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 18:40:44 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 18:40:44 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 18:40:44 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 18:40:44 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 18:40:44 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 18:40:44 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=26¢
+2026-02-05 18:40:44 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -270 home +220 — Fair: away=70.0¢ home=30.0¢ — Kalshi: San Antonio=72¢, Dallas=28¢
+2026-02-05 18:40:44 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +142 home -170 — Fair: away=39.6¢ home=60.4¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-05 18:40:44 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 18:40:44 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +295 home -375 — Fair: away=24.3¢ home=75.7¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 18:40:44 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=13¢, Detroit=88¢
+2026-02-05 18:40:44 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 18:40:44 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 19:10:44 [INFO] ============================================================
+2026-02-05 19:10:44 [INFO] SCAN CYCLE — 2026-02-05 19:10:44 UTC
+2026-02-05 19:10:44 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 19:10:44 [INFO] ============================================================
+2026-02-05 19:10:44 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 19:10:44 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 19:10:44 [INFO] Found 18 Kalshi game events
+2026-02-05 19:10:44 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 19:10:47 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 19:10:51 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 19:10:53 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 19:10:57 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 19:10:57 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 19:10:57 [INFO] Matched 18 games
+2026-02-05 19:10:57 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 19:10:57 [DEBUG]   KXNBAGAME-26FEB07DALSAS-SAS: volume 1 < 50, skip
+2026-02-05 19:10:57 [DEBUG]   KXNBAGAME-26FEB07DALSAS-DAL: volume 31 < 50, skip
+2026-02-05 19:10:57 [INFO] No signals found this cycle
+2026-02-05 19:10:57 [INFO] 
+--- Game Overview ---
+2026-02-05 19:10:57 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 19:10:57 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -305 home +245 — Fair: away=72.2¢ home=27.8¢ — Kalshi: San Antonio=78¢, Dallas=22¢
+2026-02-05 19:10:57 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 19:10:57 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 19:10:57 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 19:10:57 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 19:10:57 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 19:10:57 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 19:10:57 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 19:10:57 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 19:10:57 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 19:10:57 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 19:10:57 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 19:10:57 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -305 home +245 — Fair: away=72.2¢ home=27.8¢ — Kalshi: San Antonio=72¢, Dallas=26¢
+2026-02-05 19:10:57 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=39¢
+2026-02-05 19:10:57 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 19:10:57 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +295 home -375 — Fair: away=24.3¢ home=75.7¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 19:10:57 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 19:10:57 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 19:10:57 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 19:19:45 [INFO] ============================================================
+2026-02-05 19:19:45 [INFO] NBA Sharp Line Detection — Paper Trader
+2026-02-05 19:19:45 [INFO] ============================================================
+2026-02-05 19:19:45 [INFO] Config: min_edge=5¢, max_per_game=$50.0, max_exposure=$500.0, kelly=0.25
+2026-02-05 19:19:45 [INFO] State file: /home/clawdbot/clawd/btc-arbitrage/nba_trader_state.json
+2026-02-05 19:19:45 [INFO] Log file: /home/clawdbot/clawd/btc-arbitrage/logs/nba_trader_live.log
+2026-02-05 19:19:45 [INFO] Loaded state: bankroll=$1000.00, open_positions=0, total_pnl=$+0.00
+2026-02-05 19:19:45 [INFO] ============================================================
+2026-02-05 19:19:45 [INFO] SCAN CYCLE — 2026-02-05 19:19:45 UTC
+2026-02-05 19:19:45 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 19:19:45 [INFO] ============================================================
+2026-02-05 19:19:45 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 19:19:45 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 19:19:45 [INFO] Found 18 Kalshi game events
+2026-02-05 19:19:45 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 19:19:48 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 19:19:51 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 19:19:54 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 19:19:58 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 19:19:58 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 19:19:58 [INFO] Matched 18 games
+2026-02-05 19:19:58 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 19:19:58 [DEBUG]   KXNBAGAME-26FEB07DALSAS-SAS: volume 10 < 50, skip
+2026-02-05 19:19:58 [INFO] 
+🎯 Found 1 signal(s):
+2026-02-05 19:19:58 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 20.0¢ (bid 16¢ / ask 24¢) vs Fair: 72.2¢ — Edge: 52.2¢ (52.2%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 19:19:58 [INFO] 
+--- Executing paper trades ---
+2026-02-05 19:19:58 [INFO]   📊 PAPER TRADE: BUY_YES 208x KXNBAGAME-26FEB07DALSAS-DAL @ 24¢ (cost $49.92) — edge 52.2¢ (fair=72.2¢ vs kalshi=20.0¢) — San Antonio Spurs @ Dallas Mavericks
+2026-02-05 19:19:58 [INFO] Opened 1 new position(s)
+2026-02-05 19:19:58 [INFO] 
+--- Game Overview ---
+2026-02-05 19:19:58 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 19:19:58 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -305 home +245 — Fair: away=72.2¢ home=27.8¢ — Kalshi: San Antonio=76¢, Dallas=20¢
+2026-02-05 19:19:58 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 19:19:58 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 19:19:58 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 19:19:58 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 19:19:58 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 19:19:58 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 19:19:58 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 19:19:58 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 19:19:58 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 19:19:58 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 19:19:58 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 19:19:58 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -305 home +245 — Fair: away=72.2¢ home=27.8¢ — Kalshi: San Antonio=72¢, Dallas=27¢
+2026-02-05 19:19:58 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Houston=62¢, Charlotte=40¢
+2026-02-05 19:19:58 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 19:19:58 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 19:19:58 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 19:19:58 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 19:19:58 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 19:40:57 [INFO] ============================================================
+2026-02-05 19:40:57 [INFO] SCAN CYCLE — 2026-02-05 19:40:57 UTC
+2026-02-05 19:40:57 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 0 | W/L: 0/0
+2026-02-05 19:40:57 [INFO] ============================================================
+2026-02-05 19:40:57 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 19:40:58 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 19:40:58 [INFO] Found 18 Kalshi game events
+2026-02-05 19:40:58 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 19:41:01 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 19:41:04 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 19:41:07 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 19:41:11 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 19:41:11 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 19:41:11 [INFO] Matched 18 games
+2026-02-05 19:41:11 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 19:41:11 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 19:41:11 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 78.5¢ (bid 76¢ / ask 81¢) vs Fair: 27.8¢ — Edge: 50.7¢ (50.7%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 19:41:11 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.0¢ (bid 16¢ / ask 22¢) vs Fair: 72.2¢ — Edge: 53.2¢ (53.2%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 19:41:11 [INFO] 
+--- Executing paper trades ---
+2026-02-05 19:41:11 [INFO]   📊 PAPER TRADE: BUY_NO 208x KXNBAGAME-26FEB07DALSAS-SAS @ 24¢ (cost $49.92) — edge 50.7¢ (fair=27.8¢ vs kalshi=78.5¢) — San Antonio Spurs @ Dallas Mavericks
+2026-02-05 19:41:11 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 19:41:11 [INFO] Opened 1 new position(s)
+2026-02-05 19:41:11 [INFO] 
+--- Game Overview ---
+2026-02-05 19:41:11 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 19:41:11 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -305 home +245 — Fair: away=72.2¢ home=27.8¢ — Kalshi: San Antonio=78¢, Dallas=19¢
+2026-02-05 19:41:11 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 19:41:11 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 19:41:11 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 19:41:11 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 19:41:11 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 19:41:11 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 19:41:11 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 19:41:11 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 19:41:11 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 19:41:11 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 19:41:11 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=26¢
+2026-02-05 19:41:11 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -305 home +245 — Fair: away=72.2¢ home=27.8¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 19:41:11 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Houston=62¢, Charlotte=39¢
+2026-02-05 19:41:11 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 19:41:11 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Orlando=77¢, Brooklyn=23¢
+2026-02-05 19:41:11 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 19:41:11 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 19:41:11 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 19:49:58 [INFO] ============================================================
+2026-02-05 19:49:58 [INFO] SCAN CYCLE — 2026-02-05 19:49:58 UTC
+2026-02-05 19:49:58 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 19:49:58 [INFO] ============================================================
+2026-02-05 19:49:58 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 19:49:58 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 19:49:58 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 19:49:58 [INFO] Found 18 Kalshi game events
+2026-02-05 19:49:58 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 19:50:02 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 19:50:06 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 19:50:08 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 19:50:13 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 19:50:13 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 19:50:13 [INFO] Matched 18 games
+2026-02-05 19:50:13 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 19:50:13 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 19:50:13 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 78.5¢ (bid 76¢ / ask 81¢) vs Fair: 26.6¢ — Edge: 51.9¢ (51.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 19:50:13 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.0¢ (bid 16¢ / ask 22¢) vs Fair: 73.4¢ — Edge: 54.4¢ (54.4%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 19:50:13 [INFO] 
+--- Executing paper trades ---
+2026-02-05 19:50:13 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 19:50:13 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 19:50:13 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 19:50:13 [INFO] 
+--- Game Overview ---
+2026-02-05 19:50:13 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 19:50:13 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=78¢, Dallas=19¢
+2026-02-05 19:50:13 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 19:50:13 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 19:50:13 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 19:50:13 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 19:50:13 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 19:50:13 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 19:50:13 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 19:50:13 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 19:50:13 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 19:50:13 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 19:50:13 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=26¢
+2026-02-05 19:50:13 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 19:50:13 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Houston=62¢, Charlotte=40¢
+2026-02-05 19:50:13 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 19:50:13 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Orlando=77¢, Brooklyn=23¢
+2026-02-05 19:50:13 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 19:50:13 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 19:50:13 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 20:11:11 [INFO] ============================================================
+2026-02-05 20:11:11 [INFO] SCAN CYCLE — 2026-02-05 20:11:11 UTC
+2026-02-05 20:11:11 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 20:11:11 [INFO] ============================================================
+2026-02-05 20:11:11 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 20:11:11 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 20:11:11 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 20:11:11 [INFO] Found 18 Kalshi game events
+2026-02-05 20:11:11 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 20:11:14 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 20:11:18 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 20:11:20 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 20:11:24 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 20:11:24 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 20:11:24 [INFO] Matched 18 games
+2026-02-05 20:11:24 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 20:11:24 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 20:11:24 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 79.0¢ (bid 76¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 52.4¢ (52.3%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 20:11:24 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 17.5¢ (bid 14¢ / ask 21¢) vs Fair: 73.4¢ — Edge: 55.9¢ (55.9%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 20:11:24 [INFO] 
+--- Executing paper trades ---
+2026-02-05 20:11:24 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 20:11:24 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 20:11:24 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 20:11:24 [INFO] 
+--- Game Overview ---
+2026-02-05 20:11:24 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 20:11:24 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=79¢, Dallas=18¢
+2026-02-05 20:11:24 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 20:11:24 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 20:11:24 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 20:11:24 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 20:11:24 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 20:11:24 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 20:11:24 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 20:11:24 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 20:11:24 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 20:11:24 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 20:11:24 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=76¢, Chicago=26¢
+2026-02-05 20:11:24 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 20:11:24 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Houston=62¢, Charlotte=40¢
+2026-02-05 20:11:24 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 20:11:24 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 20:11:24 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 20:11:24 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 20:11:24 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 20:20:13 [INFO] ============================================================
+2026-02-05 20:20:13 [INFO] SCAN CYCLE — 2026-02-05 20:20:13 UTC
+2026-02-05 20:20:13 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 20:20:13 [INFO] ============================================================
+2026-02-05 20:20:13 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 20:20:13 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 20:20:13 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 20:20:13 [INFO] Found 18 Kalshi game events
+2026-02-05 20:20:13 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 20:20:16 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 20:20:19 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 20:20:22 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 20:20:26 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 20:20:26 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 20:20:26 [INFO] Matched 18 games
+2026-02-05 20:20:26 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 20:20:26 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 20:20:26 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 80.0¢ (bid 78¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 53.4¢ (53.3%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 20:20:26 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 17.0¢ (bid 14¢ / ask 20¢) vs Fair: 73.4¢ — Edge: 56.4¢ (56.4%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 20:20:26 [INFO] 
+--- Executing paper trades ---
+2026-02-05 20:20:26 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 20:20:26 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 20:20:26 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 20:20:26 [INFO] 
+--- Game Overview ---
+2026-02-05 20:20:26 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 20:20:26 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=80¢, Dallas=17¢
+2026-02-05 20:20:26 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 20:20:26 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 20:20:26 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 20:20:26 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 20:20:26 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 20:20:26 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 20:20:26 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 20:20:26 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 20:20:26 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 20:20:26 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 20:20:26 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 20:20:26 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 20:20:26 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Houston=62¢, Charlotte=40¢
+2026-02-05 20:20:26 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 20:20:26 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +300 home -380 — Fair: away=24.0¢ home=76.0¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 20:20:26 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 20:20:26 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 20:20:26 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 20:50:26 [INFO] ============================================================
+2026-02-05 20:50:26 [INFO] SCAN CYCLE — 2026-02-05 20:50:26 UTC
+2026-02-05 20:50:26 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 20:50:26 [INFO] ============================================================
+2026-02-05 20:50:26 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 20:50:26 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 20:50:26 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 20:50:26 [INFO] Found 18 Kalshi game events
+2026-02-05 20:50:26 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 20:50:29 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 20:50:32 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 20:50:35 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 20:50:39 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 20:50:39 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 20:50:39 [INFO] Matched 18 games
+2026-02-05 20:50:39 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 20:50:39 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 20:50:39 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 81.0¢ (bid 80¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 54.4¢ (54.4%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 20:50:39 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 18.0¢ (bid 16¢ / ask 20¢) vs Fair: 73.4¢ — Edge: 55.4¢ (55.4%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 20:50:39 [INFO] 
+--- Executing paper trades ---
+2026-02-05 20:50:39 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 20:50:39 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 20:50:39 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 20:50:39 [INFO] 
+--- Game Overview ---
+2026-02-05 20:50:39 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 20:50:39 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=81¢, Dallas=18¢
+2026-02-05 20:50:39 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 20:50:39 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 20:50:39 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 20:50:39 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 20:50:39 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 20:50:39 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 20:50:39 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 20:50:39 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 20:50:39 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +150 home -180 — Fair: away=38.4¢ home=61.6¢ — Kalshi: Philadelphia=38¢, Los Angeles L=62¢
+2026-02-05 20:50:39 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 20:50:39 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 20:50:39 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 20:50:39 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +145 home -175 — Fair: away=39.1¢ home=60.9¢ — Kalshi: Houston=60¢, Charlotte=40¢
+2026-02-05 20:50:39 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 20:50:39 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +300 home -380 — Fair: away=24.0¢ home=76.0¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 20:50:39 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=14¢, Detroit=88¢
+2026-02-05 20:50:39 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 20:50:39 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 21:20:39 [INFO] ============================================================
+2026-02-05 21:20:39 [INFO] SCAN CYCLE — 2026-02-05 21:20:39 UTC
+2026-02-05 21:20:39 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 21:20:39 [INFO] ============================================================
+2026-02-05 21:20:39 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 21:20:39 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 21:20:39 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 21:20:39 [INFO] Found 18 Kalshi game events
+2026-02-05 21:20:39 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 21:20:42 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 21:20:45 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 21:20:48 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 21:20:52 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 21:20:52 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 21:20:52 [INFO] Matched 18 games
+2026-02-05 21:20:52 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 21:20:52 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 21:20:52 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 81.0¢ (bid 80¢ / ask 82¢) vs Fair: 25.9¢ — Edge: 55.1¢ (55.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 21:20:52 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 18.5¢ (bid 17¢ / ask 20¢) vs Fair: 74.1¢ — Edge: 55.6¢ (55.6%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 21:20:52 [INFO] 
+--- Executing paper trades ---
+2026-02-05 21:20:52 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 21:20:52 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 21:20:52 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 21:20:52 [INFO] 
+--- Game Overview ---
+2026-02-05 21:20:52 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 21:20:52 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -340 home +270 — Fair: away=74.1¢ home=25.9¢ — Kalshi: San Antonio=81¢, Dallas=18¢
+2026-02-05 21:20:52 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 21:20:52 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 21:20:52 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 21:20:52 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 21:20:52 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 21:20:52 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 21:20:52 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 21:20:52 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 21:20:52 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +142 home -170 — Fair: away=39.6¢ home=60.4¢ — Kalshi: Philadelphia=40¢, Los Angeles L=62¢
+2026-02-05 21:20:52 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +200 home -245 — Fair: away=31.9¢ home=68.1¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 21:20:52 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +260 home -325 — Fair: away=26.6¢ home=73.4¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 21:20:52 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -340 home +270 — Fair: away=74.1¢ home=25.9¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 21:20:52 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=40¢
+2026-02-05 21:20:52 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=24¢, Atlanta=76¢
+2026-02-05 21:20:52 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +300 home -380 — Fair: away=24.0¢ home=76.0¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 21:20:52 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=12¢, Detroit=88¢
+2026-02-05 21:20:52 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 21:20:52 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 21:50:52 [INFO] ============================================================
+2026-02-05 21:50:52 [INFO] SCAN CYCLE — 2026-02-05 21:50:52 UTC
+2026-02-05 21:50:52 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 21:50:52 [INFO] ============================================================
+2026-02-05 21:50:52 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 21:50:52 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 21:50:52 [INFO] Fetched 36 Kalshi NBA markets
+2026-02-05 21:50:52 [INFO] Found 18 Kalshi game events
+2026-02-05 21:50:52 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 21:50:55 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 21:50:58 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 21:51:01 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 21:51:06 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 21:51:06 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 21:51:06 [INFO] Matched 18 games
+2026-02-05 21:51:06 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 21:51:06 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 21:51:06 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 81.0¢ (bid 80¢ / ask 82¢) vs Fair: 25.9¢ — Edge: 55.1¢ (55.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 21:51:06 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 18.5¢ (bid 17¢ / ask 20¢) vs Fair: 74.1¢ — Edge: 55.6¢ (55.6%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 21:51:06 [INFO] 
+--- Executing paper trades ---
+2026-02-05 21:51:06 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 21:51:06 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 21:51:06 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 21:51:06 [INFO] 
+--- Game Overview ---
+2026-02-05 21:51:06 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 21:51:06 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -340 home +270 — Fair: away=74.1¢ home=25.9¢ — Kalshi: San Antonio=81¢, Dallas=18¢
+2026-02-05 21:51:06 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 21:51:06 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 21:51:06 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 21:51:06 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 21:51:06 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 21:51:06 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 21:51:06 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 21:51:06 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 21:51:06 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +136 home -162 — Fair: away=40.7¢ home=59.3¢ — Kalshi: Philadelphia=40¢, Los Angeles L=60¢
+2026-02-05 21:51:06 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +190 home -230 — Fair: away=33.1¢ home=66.9¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 21:51:06 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 21:51:06 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -340 home +270 — Fair: away=74.1¢ home=25.9¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 21:51:06 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=40¢
+2026-02-05 21:51:06 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=26¢, Atlanta=74¢
+2026-02-05 21:51:06 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +300 home -380 — Fair: away=24.0¢ home=76.0¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 21:51:06 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=12¢, Detroit=88¢
+2026-02-05 21:51:06 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 21:51:06 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 21:59:22 [INFO] Received SIGTERM — shutting down gracefully...
+2026-02-05 21:59:26 [INFO] Shutdown: saving final state...
+2026-02-05 21:59:26 [INFO] Final state: bankroll=$1000.00, pnl=$+0.00, open=1, W/L=0/0
+2026-02-05 21:59:26 [INFO] NBA Paper Trader stopped.
+2026-02-05 22:00:18 [INFO] ============================================================
+2026-02-05 22:00:18 [INFO] NBA Sharp Line Detection — Paper Trader
+2026-02-05 22:00:18 [INFO] ============================================================
+2026-02-05 22:00:18 [INFO] Config: min_edge=5¢, max_per_game=$50.0, max_exposure=$500.0, kelly=0.25
+2026-02-05 22:00:18 [INFO] State file: /home/clawdbot/clawd/btc-arbitrage/nba_trader_state.json
+2026-02-05 22:00:18 [INFO] Log file: /home/clawdbot/clawd/btc-arbitrage/logs/nba_trader_live.log
+2026-02-05 22:00:18 [INFO] Loaded state: bankroll=$1000.00, open_positions=1, total_pnl=$+0.00
+2026-02-05 22:00:18 [INFO] ============================================================
+2026-02-05 22:00:18 [INFO] SCAN CYCLE — 2026-02-05 22:00:18 UTC
+2026-02-05 22:00:18 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 22:00:18 [INFO] ============================================================
+2026-02-05 22:00:18 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 22:00:18 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 22:00:19 [ERROR] Kalshi API error: 429 Client Error: Too Many Requests for url: https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBAGAME&limit=100&status=open
+2026-02-05 22:00:19 [INFO] Fetched 0 Kalshi NBA markets
+2026-02-05 22:00:19 [WARNING] No Kalshi markets found
+2026-02-05 22:00:19 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 22:30:19 [INFO] ============================================================
+2026-02-05 22:30:19 [INFO] SCAN CYCLE — 2026-02-05 22:30:19 UTC
+2026-02-05 22:30:19 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 22:30:19 [INFO] ============================================================
+2026-02-05 22:30:19 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 22:30:19 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 22:30:19 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-05 22:30:19 [INFO] Found 24 Kalshi game events
+2026-02-05 22:30:19 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 22:30:22 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 22:30:25 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 22:30:28 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 22:30:32 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 22:30:32 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 22:30:32 [INFO] Matched 24 games
+2026-02-05 22:30:32 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 22:30:32 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 22:30:32 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 81.0¢ (bid 80¢ / ask 82¢) vs Fair: 25.9¢ — Edge: 55.1¢ (55.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 22:30:32 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.5¢ (bid 19¢ / ask 20¢) vs Fair: 74.1¢ — Edge: 54.6¢ (54.6%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 22:30:32 [INFO] 
+--- Executing paper trades ---
+2026-02-05 22:30:32 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 22:30:32 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 22:30:32 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 22:30:32 [INFO] 
+--- Game Overview ---
+2026-02-05 22:30:32 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-05 22:30:32 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-05 22:30:32 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 22:30:32 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-05 22:30:32 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-05 22:30:32 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-05 22:30:32 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 22:30:32 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -340 home +270 — Fair: away=74.1¢ home=25.9¢ — Kalshi: San Antonio=81¢, Dallas=20¢
+2026-02-05 22:30:32 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 22:30:32 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 22:30:32 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 22:30:32 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 22:30:32 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 22:30:32 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 22:30:32 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 22:30:32 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 22:30:32 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +136 home -162 — Fair: away=40.7¢ home=59.3¢ — Kalshi: Philadelphia=40¢, Los Angeles L=60¢
+2026-02-05 22:30:32 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +190 home -230 — Fair: away=33.1¢ home=66.9¢ — Kalshi: Phoenix=68¢, Golden State=32¢
+2026-02-05 22:30:32 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 22:30:32 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -340 home +270 — Fair: away=74.1¢ home=25.9¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 22:30:32 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-05 22:30:32 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +275 home -345 — Fair: away=25.6¢ home=74.4¢ — Kalshi: Utah=26¢, Atlanta=74¢
+2026-02-05 22:30:32 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 22:30:32 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=12¢, Detroit=88¢
+2026-02-05 22:30:32 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 22:30:32 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 23:00:32 [INFO] ============================================================
+2026-02-05 23:00:32 [INFO] SCAN CYCLE — 2026-02-05 23:00:32 UTC
+2026-02-05 23:00:32 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 23:00:32 [INFO] ============================================================
+2026-02-05 23:00:32 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 23:00:32 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 23:00:32 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-05 23:00:32 [INFO] Found 24 Kalshi game events
+2026-02-05 23:00:32 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 23:00:35 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 23:00:38 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 23:00:41 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 23:00:45 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 23:00:45 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 23:00:45 [INFO] Matched 24 games
+2026-02-05 23:00:45 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 23:00:45 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 23:00:45 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 80.5¢ (bid 79¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 23:00:45 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.5¢ (bid 19¢ / ask 20¢) vs Fair: 73.4¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 23:00:45 [INFO] 
+--- Executing paper trades ---
+2026-02-05 23:00:45 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 23:00:45 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 23:00:45 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 23:00:45 [INFO] 
+--- Game Overview ---
+2026-02-05 23:00:45 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-05 23:00:45 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-05 23:00:45 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 23:00:45 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-05 23:00:45 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-05 23:00:45 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-05 23:00:45 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 23:00:45 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=80¢, Dallas=20¢
+2026-02-05 23:00:45 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 23:00:45 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 23:00:45 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 23:00:45 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 23:00:45 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 23:00:45 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 23:00:45 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 23:00:45 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 23:00:45 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +136 home -162 — Fair: away=40.7¢ home=59.3¢ — Kalshi: Philadelphia=40¢, Los Angeles L=60¢
+2026-02-05 23:00:45 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +190 home -230 — Fair: away=33.1¢ home=66.9¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-05 23:00:45 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +260 home -325 — Fair: away=26.6¢ home=73.4¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 23:00:45 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 23:00:45 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-05 23:00:45 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Utah=26¢, Atlanta=74¢
+2026-02-05 23:00:45 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +285 home -360 — Fair: away=24.9¢ home=75.1¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-05 23:00:45 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=12¢, Detroit=88¢
+2026-02-05 23:00:45 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 23:00:45 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-05 23:30:45 [INFO] ============================================================
+2026-02-05 23:30:45 [INFO] SCAN CYCLE — 2026-02-05 23:30:45 UTC
+2026-02-05 23:30:45 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-05 23:30:45 [INFO] ============================================================
+2026-02-05 23:30:45 [INFO] 
+--- Checking 1 open positions ---
+2026-02-05 23:30:45 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-05 23:30:45 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-05 23:30:45 [INFO] Found 24 Kalshi game events
+2026-02-05 23:30:45 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-05 23:30:48 [INFO]   20260204: 7 games (7 with odds)
+2026-02-05 23:30:51 [INFO]   20260205: 8 games (8 with odds)
+2026-02-05 23:30:53 [INFO]   20260206: 6 games (0 with odds)
+2026-02-05 23:30:58 [INFO]   20260207: 10 games (0 with odds)
+2026-02-05 23:30:58 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-05 23:30:58 [INFO] Matched 24 games
+2026-02-05 23:30:58 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-05 23:30:58 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-05 23:30:58 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 80.5¢ (bid 79¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 23:30:58 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.5¢ (bid 19¢ / ask 20¢) vs Fair: 73.4¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-05 23:30:58 [INFO] 
+--- Executing paper trades ---
+2026-02-05 23:30:58 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 23:30:58 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-05 23:30:58 [INFO] No new positions opened (limits/duplicates)
+2026-02-05 23:30:58 [INFO] 
+--- Game Overview ---
+2026-02-05 23:30:58 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-05 23:30:58 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-05 23:30:58 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 23:30:58 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-05 23:30:58 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-05 23:30:58 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-05 23:30:58 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-05 23:30:58 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=80¢, Dallas=20¢
+2026-02-05 23:30:58 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-05 23:30:58 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-05 23:30:58 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-05 23:30:58 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-05 23:30:58 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-05 23:30:58 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-05 23:30:58 [INFO]   Miami Heat @ Boston Celtics — NO ODDS
+2026-02-05 23:30:58 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-05 23:30:58 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +136 home -162 — Fair: away=40.7¢ home=59.3¢ — Kalshi: Philadelphia=40¢, Los Angeles L=60¢
+2026-02-05 23:30:58 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-05 23:30:58 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-05 23:30:58 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-05 23:30:58 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-05 23:30:58 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +270 home -340 — Fair: away=25.9¢ home=74.1¢ — Kalshi: Utah=26¢, Atlanta=74¢
+2026-02-05 23:30:58 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +300 home -380 — Fair: away=24.0¢ home=76.0¢ — Kalshi: Orlando=76¢, Brooklyn=24¢
+2026-02-05 23:30:58 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +600 home -900 — Fair: away=13.7¢ home=86.3¢ — Kalshi: Washington=12¢, Detroit=88¢
+2026-02-05 23:30:58 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-05 23:30:58 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-06 00:00:58 [INFO] ============================================================
+2026-02-06 00:00:58 [INFO] SCAN CYCLE — 2026-02-06 00:00:58 UTC
+2026-02-06 00:00:58 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-06 00:00:58 [INFO] ============================================================
+2026-02-06 00:00:58 [INFO] 
+--- Checking 1 open positions ---
+2026-02-06 00:00:58 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-06 00:00:58 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-06 00:00:58 [INFO] Found 24 Kalshi game events
+2026-02-06 00:00:58 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-06 00:01:01 [INFO]   20260205: 8 games (8 with odds)
+2026-02-06 00:01:04 [INFO]   20260206: 6 games (1 with odds)
+2026-02-06 00:01:08 [INFO]   20260207: 10 games (0 with odds)
+2026-02-06 00:01:10 [INFO]   20260208: 4 games (0 with odds)
+2026-02-06 00:01:10 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-06 00:01:10 [INFO] Matched 24 games
+2026-02-06 00:01:10 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-06 00:01:10 [INFO] 
+🎯 Found 2 signal(s):
+2026-02-06 00:01:10 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 80.5¢ (bid 79¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 00:01:10 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.5¢ (bid 19¢ / ask 20¢) vs Fair: 73.4¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 00:01:10 [INFO] 
+--- Executing paper trades ---
+2026-02-06 00:01:10 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 00:01:10 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 00:01:10 [INFO] No new positions opened (limits/duplicates)
+2026-02-06 00:01:10 [INFO] 
+--- Game Overview ---
+2026-02-06 00:01:10 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-06 00:01:10 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-06 00:01:10 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-06 00:01:10 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-06 00:01:10 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-06 00:01:10 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-06 00:01:10 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-06 00:01:10 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=80¢, Dallas=20¢
+2026-02-06 00:01:10 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-06 00:01:10 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-06 00:01:10 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-06 00:01:10 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-06 00:01:10 [INFO]   Indiana Pacers @ Milwaukee Bucks — NO ODDS
+2026-02-06 00:01:10 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves — NO ODDS
+2026-02-06 00:01:10 [INFO]   Miami Heat @ Boston Celtics [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Miami=32¢, Boston=69¢
+2026-02-06 00:01:10 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-06 00:01:10 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +136 home -162 — Fair: away=40.7¢ home=59.3¢ — Kalshi: Philadelphia=40¢, Los Angeles L=60¢
+2026-02-06 00:01:10 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-06 00:01:10 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-06 00:01:10 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-06 00:01:10 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-06 00:01:10 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Utah=26¢, Atlanta=74¢
+2026-02-06 00:01:10 [INFO]   Brooklyn Nets @ Orlando Magic [Scheduled] — DK: away +310 home -395 — Fair: away=23.4¢ home=76.6¢ — Kalshi: Orlando=78¢, Brooklyn=22¢
+2026-02-06 00:01:10 [INFO]   Washington Wizards @ Detroit Pistons [Scheduled] — DK: away +750 home -1200 — Fair: away=11.3¢ home=88.7¢ — Kalshi: Washington=10¢, Detroit=90¢
+2026-02-06 00:01:10 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-06 00:01:10 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-06 00:31:10 [INFO] ============================================================
+2026-02-06 00:31:10 [INFO] SCAN CYCLE — 2026-02-06 00:31:10 UTC
+2026-02-06 00:31:10 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 1 | W/L: 0/0
+2026-02-06 00:31:10 [INFO] ============================================================
+2026-02-06 00:31:10 [INFO] 
+--- Checking 1 open positions ---
+2026-02-06 00:31:10 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-06 00:31:10 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-06 00:31:10 [INFO] Found 24 Kalshi game events
+2026-02-06 00:31:10 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-06 00:31:13 [INFO]   20260205: 8 games (8 with odds)
+2026-02-06 00:31:16 [INFO]   20260206: 6 games (3 with odds)
+2026-02-06 00:31:20 [INFO]   20260207: 10 games (0 with odds)
+2026-02-06 00:31:21 [INFO]   20260208: 4 games (0 with odds)
+2026-02-06 00:31:21 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-06 00:31:21 [INFO] Matched 24 games
+2026-02-06 00:31:21 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-06 00:31:21 [INFO] 
+🎯 Found 4 signal(s):
+2026-02-06 00:31:21 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 79.5¢ (bid 77¢ / ask 82¢) vs Fair: 26.6¢ — Edge: 52.9¢ (52.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 00:31:21 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 19.5¢ (bid 19¢ / ask 20¢) vs Fair: 73.4¢ — Edge: 53.9¢ (53.8%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 00:31:21 [INFO]   → BUY_NO KXNBAGAME-26FEB05WASDET-WAS — Kalshi: 25.5¢ (bid 25¢ / ask 26¢) vs Fair: 11.3¢ — Edge: 14.2¢ (14.2%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 00:31:21 [INFO]   → BUY_YES KXNBAGAME-26FEB05WASDET-DET — Kalshi: 74.5¢ (bid 74¢ / ask 75¢) vs Fair: 88.7¢ — Edge: 14.2¢ (14.2%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 00:31:21 [INFO] 
+--- Executing paper trades ---
+2026-02-06 00:31:21 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 00:31:21 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 00:31:21 [INFO]   📊 PAPER TRADE: BUY_NO 66x KXNBAGAME-26FEB05WASDET-WAS @ 75¢ (cost $49.50) — edge 14.2¢ (fair=11.3¢ vs kalshi=25.5¢) — Washington Wizards @ Detroit Pistons
+2026-02-06 00:31:21 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 00:31:21 [INFO] Opened 1 new position(s)
+2026-02-06 00:31:21 [INFO] 
+--- Game Overview ---
+2026-02-06 00:31:21 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-06 00:31:21 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-06 00:31:21 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-06 00:31:21 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-06 00:31:21 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-06 00:31:21 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-06 00:31:21 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-06 00:31:21 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=80¢, Dallas=20¢
+2026-02-06 00:31:21 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-06 00:31:21 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-06 00:31:21 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-06 00:31:21 [INFO]   LA Clippers @ Sacramento Kings — NO ODDS
+2026-02-06 00:31:21 [INFO]   Indiana Pacers @ Milwaukee Bucks [Scheduled] — DK: away -102 home -118 — Fair: away=48.3¢ home=51.7¢ — Kalshi: Milwaukee=52¢, Indiana=50¢
+2026-02-06 00:31:21 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves [Scheduled] — DK: away +370 home -485 — Fair: away=20.4¢ home=79.6¢ — Kalshi: New Orleans=20¢, Minnesota=80¢
+2026-02-06 00:31:21 [INFO]   Miami Heat @ Boston Celtics [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Miami=32¢, Boston=70¢
+2026-02-06 00:31:21 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-06 00:31:21 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +130 home -155 — Fair: away=41.7¢ home=58.3¢ — Kalshi: Philadelphia=42¢, Los Angeles L=58¢
+2026-02-06 00:31:21 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-06 00:31:21 [INFO]   Chicago Bulls @ Toronto Raptors [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=74¢, Chicago=26¢
+2026-02-06 00:31:21 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -325 home +260 — Fair: away=73.4¢ home=26.6¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-06 00:31:21 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-06 00:31:21 [INFO]   Utah Jazz @ Atlanta Hawks [Scheduled] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Utah=26¢, Atlanta=74¢
+2026-02-06 00:31:21 [INFO]   Brooklyn Nets @ Orlando Magic [In Progress] — DK: away +310 home -395 — Fair: away=23.4¢ home=76.6¢ — Kalshi: Orlando=82¢, Brooklyn=18¢
+2026-02-06 00:31:21 [INFO]   Washington Wizards @ Detroit Pistons [In Progress] — DK: away +750 home -1200 — Fair: away=11.3¢ home=88.7¢ — Kalshi: Washington=26¢, Detroit=74¢
+2026-02-06 00:31:21 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-06 00:31:21 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-06 01:01:21 [INFO] ============================================================
+2026-02-06 01:01:21 [INFO] SCAN CYCLE — 2026-02-06 01:01:21 UTC
+2026-02-06 01:01:21 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 2 | W/L: 0/0
+2026-02-06 01:01:21 [INFO] ============================================================
+2026-02-06 01:01:21 [INFO] 
+--- Checking 2 open positions ---
+2026-02-06 01:01:22 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-06 01:01:22 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-06 01:01:22 [INFO] Found 24 Kalshi game events
+2026-02-06 01:01:22 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-06 01:01:25 [INFO]   20260205: 8 games (8 with odds)
+2026-02-06 01:01:27 [INFO]   20260206: 6 games (4 with odds)
+2026-02-06 01:01:32 [INFO]   20260207: 10 games (0 with odds)
+2026-02-06 01:01:33 [INFO]   20260208: 4 games (0 with odds)
+2026-02-06 01:01:33 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-06 01:01:33 [INFO] Matched 24 games
+2026-02-06 01:01:33 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-06 01:01:33 [INFO] 
+🎯 Found 8 signal(s):
+2026-02-06 01:01:33 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 78.5¢ (bid 77¢ / ask 80¢) vs Fair: 27.4¢ — Edge: 51.1¢ (51.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 01:01:33 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 20.5¢ (bid 19¢ / ask 22¢) vs Fair: 72.6¢ — Edge: 52.1¢ (52.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 01:01:33 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHITOR-TOR — Kalshi: 83.5¢ (bid 83¢ / ask 84¢) vs Fair: 72.6¢ — Edge: 10.9¢ (10.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 01:01:33 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHITOR-CHI — Kalshi: 17.5¢ (bid 17¢ / ask 18¢) vs Fair: 27.4¢ — Edge: 9.9¢ (9.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 01:01:33 [INFO]   → BUY_NO KXNBAGAME-26FEB05BKNORL-ORL — Kalshi: 96.5¢ (bid 96¢ / ask 97¢) vs Fair: 76.6¢ — Edge: 19.9¢ (19.9%) — Brooklyn Nets @ Orlando Magic (In Progress)
+2026-02-06 01:01:33 [INFO]   → BUY_YES KXNBAGAME-26FEB05BKNORL-BKN — Kalshi: 4.5¢ (bid 4¢ / ask 5¢) vs Fair: 23.4¢ — Edge: 18.9¢ (18.9%) — Brooklyn Nets @ Orlando Magic (In Progress)
+2026-02-06 01:01:33 [INFO]   → BUY_NO KXNBAGAME-26FEB05WASDET-WAS — Kalshi: 42.5¢ (bid 42¢ / ask 43¢) vs Fair: 11.3¢ — Edge: 31.2¢ (31.2%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 01:01:33 [INFO]   → BUY_YES KXNBAGAME-26FEB05WASDET-DET — Kalshi: 57.0¢ (bid 56¢ / ask 58¢) vs Fair: 88.7¢ — Edge: 31.7¢ (31.7%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 01:01:33 [INFO] 
+--- Executing paper trades ---
+2026-02-06 01:01:33 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 01:01:33 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 01:01:33 [INFO]   📊 PAPER TRADE: BUY_NO 184x KXNBAGAME-26FEB05CHITOR-TOR @ 17¢ (cost $31.28) — edge 10.9¢ (fair=72.6¢ vs kalshi=83.5¢) — Chicago Bulls @ Toronto Raptors
+2026-02-06 01:01:33 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 01:01:33 [INFO]   📊 PAPER TRADE: BUY_NO 1250x KXNBAGAME-26FEB05BKNORL-ORL @ 4¢ (cost $50.00) — edge 19.9¢ (fair=76.6¢ vs kalshi=96.5¢) — Brooklyn Nets @ Orlando Magic
+2026-02-06 01:01:33 [INFO]   Already have position in KXNBAGAME-26FEB05BKNORL, skip
+2026-02-06 01:01:33 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 01:01:33 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 01:01:33 [INFO] Opened 2 new position(s)
+2026-02-06 01:01:33 [INFO] 
+--- Game Overview ---
+2026-02-06 01:01:33 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-06 01:01:33 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-06 01:01:33 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-06 01:01:33 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-06 01:01:33 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-06 01:01:33 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-06 01:01:33 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-06 01:01:33 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=78¢, Dallas=20¢
+2026-02-06 01:01:33 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-06 01:01:33 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-06 01:01:33 [INFO]   Memphis Grizzlies @ Portland Trail Blazers — NO ODDS
+2026-02-06 01:01:33 [INFO]   LA Clippers @ Sacramento Kings [Scheduled] — DK: away -155 home +130 — Fair: away=58.3¢ home=41.7¢ — Kalshi: Sacramento=42¢, Los Angeles C=60¢
+2026-02-06 01:01:33 [INFO]   Indiana Pacers @ Milwaukee Bucks [Scheduled] — DK: away -102 home -118 — Fair: away=48.3¢ home=51.7¢ — Kalshi: Milwaukee=52¢, Indiana=48¢
+2026-02-06 01:01:33 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves [Scheduled] — DK: away +380 home -500 — Fair: away=20.0¢ home=80.0¢ — Kalshi: New Orleans=20¢, Minnesota=80¢
+2026-02-06 01:01:33 [INFO]   Miami Heat @ Boston Celtics [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Miami=32¢, Boston=70¢
+2026-02-06 01:01:33 [INFO]   New York Knicks @ Detroit Pistons — NO ODDS
+2026-02-06 01:01:33 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +130 home -155 — Fair: away=41.7¢ home=58.3¢ — Kalshi: Philadelphia=42¢, Los Angeles L=58¢
+2026-02-06 01:01:33 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-06 01:01:33 [INFO]   Chicago Bulls @ Toronto Raptors [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=84¢, Chicago=18¢
+2026-02-06 01:01:33 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-06 01:01:33 [INFO]   Charlotte Hornets @ Houston Rockets [Scheduled] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=62¢, Charlotte=38¢
+2026-02-06 01:01:33 [INFO]   Utah Jazz @ Atlanta Hawks [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Utah=30¢, Atlanta=72¢
+2026-02-06 01:01:33 [INFO]   Brooklyn Nets @ Orlando Magic [In Progress] — DK: away +310 home -395 — Fair: away=23.4¢ home=76.6¢ — Kalshi: Orlando=96¢, Brooklyn=4¢
+2026-02-06 01:01:33 [INFO]   Washington Wizards @ Detroit Pistons [In Progress] — DK: away +750 home -1200 — Fair: away=11.3¢ home=88.7¢ — Kalshi: Washington=42¢, Detroit=57¢
+2026-02-06 01:01:33 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-06 01:01:33 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-06 01:31:33 [INFO] ============================================================
+2026-02-06 01:31:33 [INFO] SCAN CYCLE — 2026-02-06 01:31:33 UTC
+2026-02-06 01:31:33 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 4 | W/L: 0/0
+2026-02-06 01:31:33 [INFO] ============================================================
+2026-02-06 01:31:33 [INFO] 
+--- Checking 4 open positions ---
+2026-02-06 01:31:34 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-06 01:31:34 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-06 01:31:34 [INFO] Found 24 Kalshi game events
+2026-02-06 01:31:34 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-06 01:31:37 [INFO]   20260205: 8 games (8 with odds)
+2026-02-06 01:31:40 [INFO]   20260206: 6 games (6 with odds)
+2026-02-06 01:31:44 [INFO]   20260207: 10 games (0 with odds)
+2026-02-06 01:31:46 [INFO]   20260208: 4 games (0 with odds)
+2026-02-06 01:31:46 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-06 01:31:46 [INFO] Matched 24 games
+2026-02-06 01:31:46 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-06 01:31:46 [DEBUG]   KXNBAGAME-26FEB07MEMPOR-MEM: volume 15 < 50, skip
+2026-02-06 01:31:46 [INFO] 
+🎯 Found 12 signal(s):
+2026-02-06 01:31:46 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 78.5¢ (bid 77¢ / ask 80¢) vs Fair: 27.4¢ — Edge: 51.1¢ (51.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 01:31:46 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 20.5¢ (bid 17¢ / ask 24¢) vs Fair: 72.6¢ — Edge: 52.1¢ (52.1%) — San Antonio Spurs @ Dallas Mavericks (Scheduled)
+2026-02-06 01:31:46 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHITOR-TOR — Kalshi: 86.5¢ (bid 86¢ / ask 87¢) vs Fair: 72.6¢ — Edge: 13.9¢ (13.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHITOR-CHI — Kalshi: 13.5¢ (bid 13¢ / ask 14¢) vs Fair: 27.4¢ — Edge: 13.9¢ (13.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHAHOU-HOU — Kalshi: 44.5¢ (bid 44¢ / ask 45¢) vs Fair: 62.2¢ — Edge: 17.7¢ (17.8%) — Charlotte Hornets @ Houston Rockets (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHAHOU-CHA — Kalshi: 56.0¢ (bid 55¢ / ask 57¢) vs Fair: 37.8¢ — Edge: 18.2¢ (18.2%) — Charlotte Hornets @ Houston Rockets (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_NO KXNBAGAME-26FEB05UTAATL-UTA — Kalshi: 59.0¢ (bid 58¢ / ask 60¢) vs Fair: 27.4¢ — Edge: 31.6¢ (31.6%) — Utah Jazz @ Atlanta Hawks (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_YES KXNBAGAME-26FEB05UTAATL-ATL — Kalshi: 44.0¢ (bid 43¢ / ask 45¢) vs Fair: 72.6¢ — Edge: 28.6¢ (28.6%) — Utah Jazz @ Atlanta Hawks (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_NO KXNBAGAME-26FEB05BKNORL-ORL — Kalshi: 94.5¢ (bid 94¢ / ask 95¢) vs Fair: 76.6¢ — Edge: 17.9¢ (17.9%) — Brooklyn Nets @ Orlando Magic (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_YES KXNBAGAME-26FEB05BKNORL-BKN — Kalshi: 5.5¢ (bid 5¢ / ask 6¢) vs Fair: 23.4¢ — Edge: 17.9¢ (17.9%) — Brooklyn Nets @ Orlando Magic (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_NO KXNBAGAME-26FEB05WASDET-WAS — Kalshi: 21.0¢ (bid 20¢ / ask 22¢) vs Fair: 11.3¢ — Edge: 9.7¢ (9.7%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 01:31:46 [INFO]   → BUY_YES KXNBAGAME-26FEB05WASDET-DET — Kalshi: 79.5¢ (bid 79¢ / ask 80¢) vs Fair: 88.7¢ — Edge: 9.2¢ (9.2%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 01:31:46 [INFO] 
+--- Executing paper trades ---
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 01:31:46 [INFO]   📊 PAPER TRADE: BUY_YES 111x KXNBAGAME-26FEB05CHAHOU-HOU @ 45¢ (cost $49.95) — edge 17.7¢ (fair=62.2¢ vs kalshi=44.5¢) — Charlotte Hornets @ Houston Rockets
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05CHAHOU, skip
+2026-02-06 01:31:46 [INFO]   📊 PAPER TRADE: BUY_NO 119x KXNBAGAME-26FEB05UTAATL-UTA @ 42¢ (cost $49.98) — edge 31.6¢ (fair=27.4¢ vs kalshi=59.0¢) — Utah Jazz @ Atlanta Hawks
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05UTAATL, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05BKNORL, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05BKNORL, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 01:31:46 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 01:31:46 [INFO] Opened 2 new position(s)
+2026-02-06 01:31:46 [INFO] 
+--- Game Overview ---
+2026-02-06 01:31:46 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-06 01:31:46 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-06 01:31:46 [INFO]   Memphis Grizzlies @ Portland Trail Blazers [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Portland=67¢, Memphis=32¢
+2026-02-06 01:31:46 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-06 01:31:46 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-06 01:31:46 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-06 01:31:46 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-06 01:31:46 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=78¢, Dallas=20¢
+2026-02-06 01:31:46 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-06 01:31:46 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-06 01:31:46 [INFO]   Memphis Grizzlies @ Portland Trail Blazers [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Portland=70¢, Memphis=30¢
+2026-02-06 01:31:46 [INFO]   LA Clippers @ Sacramento Kings [Scheduled] — DK: away -166 home +140 — Fair: away=60.0¢ home=40.0¢ — Kalshi: Sacramento=40¢, Los Angeles C=62¢
+2026-02-06 01:31:46 [INFO]   Indiana Pacers @ Milwaukee Bucks [Scheduled] — DK: away -118 home -102 — Fair: away=51.7¢ home=48.3¢ — Kalshi: Milwaukee=49¢, Indiana=52¢
+2026-02-06 01:31:46 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves [Scheduled] — DK: away +380 home -500 — Fair: away=20.0¢ home=80.0¢ — Kalshi: New Orleans=20¢, Minnesota=80¢
+2026-02-06 01:31:46 [INFO]   Miami Heat @ Boston Celtics [Scheduled] — DK: away +215 home -265 — Fair: away=30.4¢ home=69.6¢ — Kalshi: Miami=32¢, Boston=70¢
+2026-02-06 01:31:46 [INFO]   New York Knicks @ Detroit Pistons [Scheduled] — DK: away +102 home -122 — Fair: away=47.4¢ home=52.6¢ — Kalshi: New York=48¢, Detroit=52¢
+2026-02-06 01:31:46 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +130 home -155 — Fair: away=41.7¢ home=58.3¢ — Kalshi: Philadelphia=42¢, Los Angeles L=58¢
+2026-02-06 01:31:46 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-06 01:31:46 [INFO]   Chicago Bulls @ Toronto Raptors [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=86¢, Chicago=14¢
+2026-02-06 01:31:46 [INFO]   San Antonio Spurs @ Dallas Mavericks [Scheduled] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=74¢, Dallas=26¢
+2026-02-06 01:31:46 [INFO]   Charlotte Hornets @ Houston Rockets [In Progress] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=44¢, Charlotte=56¢
+2026-02-06 01:31:46 [INFO]   Utah Jazz @ Atlanta Hawks [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Utah=59¢, Atlanta=44¢
+2026-02-06 01:31:46 [INFO]   Brooklyn Nets @ Orlando Magic [In Progress] — DK: away +310 home -395 — Fair: away=23.4¢ home=76.6¢ — Kalshi: Orlando=94¢, Brooklyn=6¢
+2026-02-06 01:31:46 [INFO]   Washington Wizards @ Detroit Pistons [In Progress] — DK: away +750 home -1200 — Fair: away=11.3¢ home=88.7¢ — Kalshi: Washington=21¢, Detroit=80¢
+2026-02-06 01:31:46 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-06 01:31:46 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-06 02:01:46 [INFO] ============================================================
+2026-02-06 02:01:46 [INFO] SCAN CYCLE — 2026-02-06 02:01:46 UTC
+2026-02-06 02:01:46 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 6 | W/L: 0/0
+2026-02-06 02:01:46 [INFO] ============================================================
+2026-02-06 02:01:46 [INFO] 
+--- Checking 6 open positions ---
+2026-02-06 02:01:46 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-06 02:01:47 [INFO] Fetched 48 Kalshi NBA markets
+2026-02-06 02:01:47 [INFO] Found 24 Kalshi game events
+2026-02-06 02:01:47 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-06 02:01:50 [INFO]   20260205: 8 games (8 with odds)
+2026-02-06 02:01:52 [INFO]   20260206: 6 games (6 with odds)
+2026-02-06 02:01:56 [INFO]   20260207: 10 games (0 with odds)
+2026-02-06 02:01:58 [INFO]   20260208: 4 games (0 with odds)
+2026-02-06 02:01:58 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-06 02:01:58 [INFO] Matched 24 games
+2026-02-06 02:01:58 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-06 02:01:58 [DEBUG]   KXNBAGAME-26FEB07MEMPOR-MEM: volume 29 < 50, skip
+2026-02-06 02:01:58 [INFO] 
+🎯 Found 13 signal(s):
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 78.0¢ (bid 76¢ / ask 80¢) vs Fair: 27.4¢ — Edge: 50.6¢ (50.6%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_YES KXNBAGAME-26FEB07DALSAS-DAL — Kalshi: 18.0¢ (bid 16¢ / ask 20¢) vs Fair: 72.6¢ — Edge: 54.6¢ (54.6%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHITOR-TOR — Kalshi: 80.5¢ (bid 80¢ / ask 81¢) vs Fair: 72.6¢ — Edge: 7.9¢ (7.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHITOR-CHI — Kalshi: 19.5¢ (bid 19¢ / ask 20¢) vs Fair: 27.4¢ — Edge: 7.9¢ (7.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB05SASDAL-SAS — Kalshi: 79.5¢ (bid 79¢ / ask 80¢) vs Fair: 72.6¢ — Edge: 6.9¢ (6.9%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_YES KXNBAGAME-26FEB05SASDAL-DAL — Kalshi: 20.5¢ (bid 20¢ / ask 21¢) vs Fair: 27.4¢ — Edge: 6.9¢ (6.9%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHAHOU-HOU — Kalshi: 35.5¢ (bid 35¢ / ask 36¢) vs Fair: 62.2¢ — Edge: 26.7¢ (26.8%) — Charlotte Hornets @ Houston Rockets (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHAHOU-CHA — Kalshi: 65.5¢ (bid 65¢ / ask 66¢) vs Fair: 37.8¢ — Edge: 27.7¢ (27.8%) — Charlotte Hornets @ Houston Rockets (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB05UTAATL-UTA — Kalshi: 33.5¢ (bid 33¢ / ask 34¢) vs Fair: 27.4¢ — Edge: 6.1¢ (6.1%) — Utah Jazz @ Atlanta Hawks (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_YES KXNBAGAME-26FEB05UTAATL-ATL — Kalshi: 67.5¢ (bid 67¢ / ask 68¢) vs Fair: 72.6¢ — Edge: 5.1¢ (5.1%) — Utah Jazz @ Atlanta Hawks (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB05BKNORL-ORL — Kalshi: 99.0¢ (bid 98¢ / ask 100¢) vs Fair: 76.6¢ — Edge: 22.4¢ (22.4%) — Brooklyn Nets @ Orlando Magic (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_NO KXNBAGAME-26FEB05WASDET-WAS — Kalshi: 61.5¢ (bid 61¢ / ask 62¢) vs Fair: 11.3¢ — Edge: 50.2¢ (50.2%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 02:01:58 [INFO]   → BUY_YES KXNBAGAME-26FEB05WASDET-DET — Kalshi: 38.5¢ (bid 38¢ / ask 39¢) vs Fair: 88.7¢ — Edge: 50.2¢ (50.2%) — Washington Wizards @ Detroit Pistons (In Progress)
+2026-02-06 02:01:58 [INFO] 
+--- Executing paper trades ---
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 02:01:58 [INFO]   📊 PAPER TRADE: BUY_NO 96x KXNBAGAME-26FEB05SASDAL-SAS @ 21¢ (cost $20.16) — edge 6.9¢ (fair=72.6¢ vs kalshi=79.5¢) — San Antonio Spurs @ Dallas Mavericks
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05SASDAL, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05CHAHOU, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05CHAHOU, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05UTAATL, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05UTAATL, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05BKNORL, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 02:01:58 [INFO]   Already have position in KXNBAGAME-26FEB05WASDET, skip
+2026-02-06 02:01:58 [INFO] Opened 1 new position(s)
+2026-02-06 02:01:58 [INFO] 
+--- Game Overview ---
+2026-02-06 02:01:58 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-06 02:01:58 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-06 02:01:58 [INFO]   Memphis Grizzlies @ Portland Trail Blazers [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Portland=67¢, Memphis=32¢
+2026-02-06 02:01:58 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-06 02:01:58 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-06 02:01:58 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-06 02:01:58 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-06 02:01:58 [INFO]   San Antonio Spurs @ Dallas Mavericks [In Progress] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=78¢, Dallas=18¢
+2026-02-06 02:01:58 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-06 02:01:58 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-06 02:01:58 [INFO]   Memphis Grizzlies @ Portland Trail Blazers [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Portland=72¢, Memphis=29¢
+2026-02-06 02:01:58 [INFO]   LA Clippers @ Sacramento Kings [Scheduled] — DK: away -166 home +140 — Fair: away=60.0¢ home=40.0¢ — Kalshi: Sacramento=40¢, Los Angeles C=62¢
+2026-02-06 02:01:58 [INFO]   Indiana Pacers @ Milwaukee Bucks [Scheduled] — DK: away -118 home -102 — Fair: away=51.7¢ home=48.3¢ — Kalshi: Milwaukee=49¢, Indiana=51¢
+2026-02-06 02:01:58 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves [Scheduled] — DK: away +380 home -500 — Fair: away=20.0¢ home=80.0¢ — Kalshi: New Orleans=20¢, Minnesota=80¢
+2026-02-06 02:01:58 [INFO]   Miami Heat @ Boston Celtics [Scheduled] — DK: away +215 home -265 — Fair: away=30.4¢ home=69.6¢ — Kalshi: Miami=32¢, Boston=70¢
+2026-02-06 02:01:58 [INFO]   New York Knicks @ Detroit Pistons [Scheduled] — DK: away +105 home -125 — Fair: away=46.8¢ home=53.2¢ — Kalshi: New York=50¢, Detroit=50¢
+2026-02-06 02:01:58 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +130 home -155 — Fair: away=41.7¢ home=58.3¢ — Kalshi: Philadelphia=42¢, Los Angeles L=58¢
+2026-02-06 02:01:58 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-06 02:01:58 [INFO]   Chicago Bulls @ Toronto Raptors [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=80¢, Chicago=20¢
+2026-02-06 02:01:58 [INFO]   San Antonio Spurs @ Dallas Mavericks [In Progress] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=80¢, Dallas=20¢
+2026-02-06 02:01:58 [INFO]   Charlotte Hornets @ Houston Rockets [In Progress] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=36¢, Charlotte=66¢
+2026-02-06 02:01:58 [INFO]   Utah Jazz @ Atlanta Hawks [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Utah=34¢, Atlanta=68¢
+2026-02-06 02:01:58 [INFO]   Brooklyn Nets @ Orlando Magic [In Progress] — DK: away +310 home -395 — Fair: away=23.4¢ home=76.6¢ — Kalshi: Orlando=99¢, Brooklyn=0¢
+2026-02-06 02:01:58 [INFO]   Washington Wizards @ Detroit Pistons [In Progress] — DK: away +750 home -1200 — Fair: away=11.3¢ home=88.7¢ — Kalshi: Washington=62¢, Detroit=38¢
+2026-02-06 02:01:58 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-06 02:01:58 [INFO] Sleeping 1800s until next scan... (NBA hours: True)
+2026-02-06 02:31:58 [INFO] ============================================================
+2026-02-06 02:31:58 [INFO] SCAN CYCLE — 2026-02-06 02:31:58 UTC
+2026-02-06 02:31:58 [INFO] Bankroll: $1000.00 | P/L: $+0.00 | Open: 7 | W/L: 0/0
+2026-02-06 02:31:58 [INFO] ============================================================
+2026-02-06 02:31:58 [INFO] 
+--- Checking 7 open positions ---
+2026-02-06 02:31:58 [INFO] 
+--- Fetching Kalshi NBA markets ---
+2026-02-06 02:31:58 [INFO] Fetched 46 Kalshi NBA markets
+2026-02-06 02:31:58 [INFO] Found 23 Kalshi game events
+2026-02-06 02:31:58 [INFO] 
+--- Fetching ESPN/DraftKings odds ---
+2026-02-06 02:32:02 [INFO]   20260205: 8 games (8 with odds)
+2026-02-06 02:32:04 [INFO]   20260206: 6 games (6 with odds)
+2026-02-06 02:32:09 [INFO]   20260207: 10 games (0 with odds)
+2026-02-06 02:32:10 [INFO]   20260208: 4 games (0 with odds)
+2026-02-06 02:32:10 [INFO] 
+--- Matching Kalshi ↔ ESPN games ---
+2026-02-06 02:32:10 [INFO] Matched 23 games
+2026-02-06 02:32:10 [INFO] 
+--- Detecting signals (min edge: 5c) ---
+2026-02-06 02:32:10 [DEBUG]   KXNBAGAME-26FEB07MEMPOR-MEM: volume 42 < 50, skip
+2026-02-06 02:32:10 [DEBUG]   KXNBAGAME-26FEB07DALSAS-DAL: spread 12¢ > 8¢, skip
+2026-02-06 02:32:10 [INFO] 
+🎯 Found 11 signal(s):
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB07DALSAS-SAS — Kalshi: 79.0¢ (bid 76¢ / ask 82¢) vs Fair: 27.4¢ — Edge: 51.6¢ (51.6%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB06NYKDET-NYK — Kalshi: 52.5¢ (bid 52¢ / ask 53¢) vs Fair: 46.8¢ — Edge: 5.7¢ (5.8%) — New York Knicks @ Detroit Pistons (Scheduled)
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHITOR-TOR — Kalshi: 97.5¢ (bid 97¢ / ask 98¢) vs Fair: 72.6¢ — Edge: 24.9¢ (24.9%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHITOR-CHI — Kalshi: 2.0¢ (bid 1¢ / ask 3¢) vs Fair: 27.4¢ — Edge: 25.4¢ (25.4%) — Chicago Bulls @ Toronto Raptors (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB05SASDAL-SAS — Kalshi: 88.0¢ (bid 87¢ / ask 89¢) vs Fair: 72.6¢ — Edge: 15.4¢ (15.4%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_YES KXNBAGAME-26FEB05SASDAL-DAL — Kalshi: 12.5¢ (bid 12¢ / ask 13¢) vs Fair: 27.4¢ — Edge: 14.9¢ (14.9%) — San Antonio Spurs @ Dallas Mavericks (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_YES KXNBAGAME-26FEB05CHAHOU-HOU — Kalshi: 33.5¢ (bid 33¢ / ask 34¢) vs Fair: 62.2¢ — Edge: 28.7¢ (28.7%) — Charlotte Hornets @ Houston Rockets (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB05CHAHOU-CHA — Kalshi: 66.5¢ (bid 66¢ / ask 67¢) vs Fair: 37.8¢ — Edge: 28.7¢ (28.7%) — Charlotte Hornets @ Houston Rockets (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB05UTAATL-UTA — Kalshi: 46.5¢ (bid 46¢ / ask 47¢) vs Fair: 27.4¢ — Edge: 19.1¢ (19.1%) — Utah Jazz @ Atlanta Hawks (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_YES KXNBAGAME-26FEB05UTAATL-ATL — Kalshi: 53.5¢ (bid 53¢ / ask 54¢) vs Fair: 72.6¢ — Edge: 19.1¢ (19.1%) — Utah Jazz @ Atlanta Hawks (In Progress)
+2026-02-06 02:32:10 [INFO]   → BUY_NO KXNBAGAME-26FEB05BKNORL-ORL — Kalshi: 99.5¢ (bid 99¢ / ask 100¢) vs Fair: 76.6¢ — Edge: 22.9¢ (22.9%) — Brooklyn Nets @ Orlando Magic (In Progress)
+2026-02-06 02:32:10 [INFO] 
+--- Executing paper trades ---
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB07DALSAS, skip
+2026-02-06 02:32:10 [INFO]   📊 PAPER TRADE: BUY_NO 52x KXNBAGAME-26FEB06NYKDET-NYK @ 48¢ (cost $24.96) — edge 5.7¢ (fair=46.8¢ vs kalshi=52.5¢) — New York Knicks @ Detroit Pistons
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05CHITOR, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05SASDAL, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05SASDAL, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05CHAHOU, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05CHAHOU, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05UTAATL, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05UTAATL, skip
+2026-02-06 02:32:10 [INFO]   Already have position in KXNBAGAME-26FEB05BKNORL, skip
+2026-02-06 02:32:10 [INFO] Opened 1 new position(s)
+2026-02-06 02:32:10 [INFO] 
+--- Game Overview ---
+2026-02-06 02:32:10 [INFO]   Golden State Warriors @ Los Angeles Lakers — NO ODDS
+2026-02-06 02:32:10 [INFO]   Cleveland Cavaliers @ Sacramento Kings — NO ODDS
+2026-02-06 02:32:10 [INFO]   Memphis Grizzlies @ Portland Trail Blazers [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Portland=67¢, Memphis=33¢
+2026-02-06 02:32:10 [INFO]   Philadelphia 76ers @ Phoenix Suns — NO ODDS
+2026-02-06 02:32:10 [INFO]   Denver Nuggets @ Chicago Bulls — NO ODDS
+2026-02-06 02:32:10 [INFO]   Charlotte Hornets @ Atlanta Hawks — NO ODDS
+2026-02-06 02:32:10 [INFO]   Utah Jazz @ Orlando Magic — NO ODDS
+2026-02-06 02:32:10 [INFO]   San Antonio Spurs @ Dallas Mavericks [In Progress] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=79¢, Dallas=24¢
+2026-02-06 02:32:10 [INFO]   Washington Wizards @ Brooklyn Nets — NO ODDS
+2026-02-06 02:32:10 [INFO]   Houston Rockets @ Oklahoma City Thunder — NO ODDS
+2026-02-06 02:32:10 [INFO]   Memphis Grizzlies @ Portland Trail Blazers [Scheduled] — DK: away +225 home -278 — Fair: away=29.5¢ home=70.5¢ — Kalshi: Portland=71¢, Memphis=29¢
+2026-02-06 02:32:10 [INFO]   LA Clippers @ Sacramento Kings [Scheduled] — DK: away -166 home +140 — Fair: away=60.0¢ home=40.0¢ — Kalshi: Sacramento=38¢, Los Angeles C=62¢
+2026-02-06 02:32:10 [INFO]   Indiana Pacers @ Milwaukee Bucks [Scheduled] — DK: away -118 home -102 — Fair: away=51.7¢ home=48.3¢ — Kalshi: Milwaukee=49¢, Indiana=51¢
+2026-02-06 02:32:10 [INFO]   New Orleans Pelicans @ Minnesota Timberwolves [Scheduled] — DK: away +380 home -500 — Fair: away=20.0¢ home=80.0¢ — Kalshi: New Orleans=21¢, Minnesota=80¢
+2026-02-06 02:32:10 [INFO]   Miami Heat @ Boston Celtics [Scheduled] — DK: away +215 home -265 — Fair: away=30.4¢ home=69.6¢ — Kalshi: Miami=30¢, Boston=70¢
+2026-02-06 02:32:10 [INFO]   New York Knicks @ Detroit Pistons [Scheduled] — DK: away +105 home -125 — Fair: away=46.8¢ home=53.2¢ — Kalshi: New York=52¢, Detroit=50¢
+2026-02-06 02:32:10 [INFO]   Philadelphia 76ers @ Los Angeles Lakers [Scheduled] — DK: away +120 home -142 — Fair: away=43.7¢ home=56.3¢ — Kalshi: Philadelphia=42¢, Los Angeles L=56¢
+2026-02-06 02:32:10 [INFO]   Golden State Warriors @ Phoenix Suns [Scheduled] — DK: away +180 home -218 — Fair: away=34.3¢ home=65.7¢ — Kalshi: Phoenix=66¢, Golden State=34¢
+2026-02-06 02:32:10 [INFO]   Chicago Bulls @ Toronto Raptors [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Toronto=98¢, Chicago=2¢
+2026-02-06 02:32:10 [INFO]   San Antonio Spurs @ Dallas Mavericks [In Progress] — DK: away -310 home +250 — Fair: away=72.6¢ home=27.4¢ — Kalshi: San Antonio=88¢, Dallas=12¢
+2026-02-06 02:32:10 [INFO]   Charlotte Hornets @ Houston Rockets [In Progress] — DK: away +154 home -185 — Fair: away=37.8¢ home=62.2¢ — Kalshi: Houston=34¢, Charlotte=66¢
+2026-02-06 02:32:10 [INFO]   Utah Jazz @ Atlanta Hawks [In Progress] — DK: away +250 home -310 — Fair: away=27.4¢ home=72.6¢ — Kalshi: Utah=46¢, Atlanta=54¢
+2026-02-06 02:32:10 [INFO]   Brooklyn Nets @ Orlando Magic [In Progress] — DK: away +310 home -395 — Fair: away=23.4¢ home=76.6¢ — Kalshi: Orlando=100¢, Brooklyn=0¢
+2026-02-06 02:32:10 [INFO] 
+Scan complete. Next scan in 30 min
+2026-02-06 02:32:10 [INFO] Sleeping 1800s until next scan... (NBA hours: True)

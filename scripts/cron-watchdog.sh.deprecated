@@ -1,0 +1,183 @@
+#!/bin/bash
+# Cron Watchdog v2 — per-job health detection
+# Run via system crontab every 10 minutes
+# Reads cron state from DISK (no OpenClaw API dependency)
+# Checks EACH enabled job — if overdue by 2x interval, alert via Telegram
+# If majority stale, restart gateway
+# Also checks paper trader processes
+
+JOBS_FILE="/home/clawdbot/.openclaw/cron/jobs.json"
+LOG_FILE="/home/clawdbot/clawd/logs/cron-watchdog.log"
+COOLDOWN_FILE="/tmp/cron-watchdog-cooldown"
+BOT_TOKEN="7391346583:AAHoXuebz21gds-FqZAlQh5kbSHFcXHaN5w"
+CHAT_ID="6978208486"
+
+mkdir -p /home/clawdbot/clawd/logs
+
+log() {
+    echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) $1" >> "$LOG_FILE"
+}
+
+# Trim log
+if [ -f "$LOG_FILE" ] && [ "$(wc -l < "$LOG_FILE" 2>/dev/null)" -gt 1000 ]; then
+    tail -500 "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
+fi
+
+send_telegram() {
+    local msg="$1"
+    curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+        -d "chat_id=${CHAT_ID}" \
+        -d "text=${msg}" \
+        -d "parse_mode=HTML" > /dev/null 2>&1
+}
+
+# Cooldown: don't spam alerts more than once per 30 min
+check_cooldown() {
+    if [ -f "$COOLDOWN_FILE" ]; then
+        local last=$(cat "$COOLDOWN_FILE" 2>/dev/null)
+        local now=$(date +%s)
+        local diff=$((now - last))
+        if [ "$diff" -lt 1800 ]; then
+            return 1  # still in cooldown
+        fi
+    fi
+    return 0  # OK to alert
+}
+
+set_cooldown() {
+    date +%s > "$COOLDOWN_FILE"
+}
+
+# Check jobs file exists
+if [ ! -f "$JOBS_FILE" ]; then
+    log "WARN: Jobs file not found: $JOBS_FILE"
+    exit 1
+fi
+
+# Per-job health check — read from disk
+RESULT=$(python3 -c "
+import json, sys, time
+
+with open('$JOBS_FILE') as f:
+    data = json.load(f)
+
+jobs = data.get('jobs', [])
+now_ms = int(time.time() * 1000)
+
+stale = []
+healthy = 0
+total = 0
+
+for j in jobs:
+    if not j.get('enabled', True):
+        continue
+    total += 1
+    
+    name = j.get('name', j.get('id', '?'))
+    sched = j.get('schedule', {})
+    state = j.get('state', {})
+    next_run = state.get('nextRunAtMs', 0)
+    last_run = state.get('lastRunAtMs', 0)
+    kind = sched.get('kind', '')
+    
+    # Determine expected interval
+    if kind == 'every':
+        interval_ms = sched.get('everyMs', 0)
+    elif kind == 'cron':
+        interval_ms = 86400000  # daily as max
+    elif kind == 'at':
+        healthy += 1
+        continue
+    else:
+        healthy += 1
+        continue
+    
+    if interval_ms == 0:
+        healthy += 1
+        continue
+    
+    # Check: nextRunAtMs overdue by >2x interval
+    if next_run > 0 and next_run < now_ms:
+        overdue_ms = now_ms - next_run
+        threshold_ms = interval_ms * 2
+        if overdue_ms > threshold_ms:
+            overdue_min = int(overdue_ms / 60000)
+            stale.append(f'{name} ({overdue_min}min overdue)')
+            continue
+    
+    # Check: has lastRun but no nextRun scheduled
+    if last_run > 0 and next_run == 0:
+        gap_ms = now_ms - last_run
+        if gap_ms > interval_ms * 3:
+            gap_min = int(gap_ms / 60000)
+            stale.append(f'{name} (no next run, {gap_min}min since last)')
+            continue
+    
+    healthy += 1
+
+if stale:
+    print(f'STALE|{len(stale)}|{total}|{chr(10).join(stale)}')
+else:
+    print(f'OK|0|{total}|all healthy')
+" 2>/dev/null)
+
+STATUS=$(echo "$RESULT" | head -1 | cut -d'|' -f1)
+STALE_COUNT=$(echo "$RESULT" | head -1 | cut -d'|' -f2)
+TOTAL=$(echo "$RESULT" | head -1 | cut -d'|' -f3)
+DETAILS=$(echo "$RESULT" | cut -d'|' -f4-)
+
+# Check paper trader processes
+TRADERS_DOWN=""
+for v in v10 v11 v12; do
+    if ! pgrep -f "realtime_paper_trader_${v}" > /dev/null 2>&1; then
+        TRADERS_DOWN="${TRADERS_DOWN} ${v}"
+    fi
+done
+
+# Build alert if needed
+ALERT=""
+
+if [ "$STATUS" = "STALE" ]; then
+    log "ALERT: ${STALE_COUNT}/${TOTAL} jobs stale"
+    ALERT="⚠️ <b>Cron Watchdog Alert</b>
+${STALE_COUNT}/${TOTAL} jobs overdue:
+${DETAILS}"
+    
+    # Restart gateway if majority stale
+    if [ "$STALE_COUNT" -gt "$(( TOTAL / 2 ))" ]; then
+        ALERT="${ALERT}
+
+🔄 Majority stale — restarting gateway..."
+        log "Restarting gateway (${STALE_COUNT}/${TOTAL} stale)"
+        GATEWAY_PID=$(pgrep -f "openclaw.*gateway" | head -1)
+        if [ -n "$GATEWAY_PID" ]; then
+            kill -USR1 "$GATEWAY_PID"
+            log "Sent SIGUSR1 to PID $GATEWAY_PID"
+        fi
+    fi
+else
+    log "OK: ${TOTAL} jobs healthy"
+fi
+
+if [ -n "$TRADERS_DOWN" ]; then
+    TRADER_MSG="⚠️ Paper traders DOWN:${TRADERS_DOWN}"
+    log "ALERT:${TRADER_MSG}"
+    if [ -n "$ALERT" ]; then
+        ALERT="${ALERT}
+
+${TRADER_MSG}"
+    else
+        ALERT="${TRADER_MSG}"
+    fi
+fi
+
+# Send alert (with cooldown)
+if [ -n "$ALERT" ]; then
+    if check_cooldown; then
+        send_telegram "$ALERT"
+        set_cooldown
+        log "Alert sent to Telegram"
+    else
+        log "Alert suppressed (cooldown)"
+    fi
+fi

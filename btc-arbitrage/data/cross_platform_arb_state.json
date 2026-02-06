@@ -1,0 +1,29 @@
+{
+  "timestamp": 1770215946.5078225,
+  "scan_count": 1,
+  "kalshi_markets_found": 1,
+  "polymarket_markets_found": 0,
+  "opportunities_found": 0,
+  "kalshi_markets": [
+    {
+      "platform": "Kalshi",
+      "ticker": "KXBTC15M-26FEB040945-45",
+      "question": "BTC price up in next 15 mins?",
+      "yes_price": 0.63,
+      "no_price": 0.37,
+      "strike_price": 45.0,
+      "market_type": "15min",
+      "volume": 19374,
+      "end_time": "2026-02-04T14:45:00Z"
+    }
+  ],
+  "polymarket_markets": [],
+  "opportunities": [],
+  "paper_trader_summary": {
+    "initial_balance": 1000.0,
+    "current_balance": 1000.0,
+    "total_trades": 0,
+    "open_positions": 0,
+    "total_pnl": 0.0
+  }
+}

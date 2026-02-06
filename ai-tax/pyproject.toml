@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taxforge"
+version = "0.9.31"
+description = "AI-powered tax preparation assistant"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "TaxForge Team"}
+]
+keywords = ["tax", "ai", "tax-preparation", "irs", "1040"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "reflex>=0.6.0",
+    "httpx>=0.25.0",
+    "cryptography>=41.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "build",
+    "twine",
+]
+
+[project.scripts]
+taxforge = "aitax.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/taxforge/taxforge"
+
+[tool.setuptools.packages.find]
+where = ["ui"]
+
+[tool.setuptools]
+package-dir = {"" = "ui"}
+
+[tool.setuptools.package-data]
+aitax = ["*.py"]

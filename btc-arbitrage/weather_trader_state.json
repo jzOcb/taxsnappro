@@ -1,0 +1,191 @@
+{
+  "bankroll": 1000.0,
+  "total_pnl": 2347.7599999999993,
+  "total_trades": 23,
+  "wins": 10,
+  "losses": 13,
+  "positions": [],
+  "settled_trades": [],
+  "daily_exposure": {
+    "LAX_2026-02-05": 49.99,
+    "NYC_2026-02-05": 50.0,
+    "CHI_2026-02-05": 49.98,
+    "PHI_2026-02-05": 49.14,
+    "BOS_2026-02-05": 49.4,
+    "DEN_2026-02-05": 50.0,
+    "MIA_2026-02-05": 49.68,
+    "SFO_2026-02-05": 49.31,
+    "DC_2026-02-05": 49.98,
+    "AUS_2026-02-05": 49.95,
+    "SEA_2026-02-05": 49.94,
+    "LV_2026-02-05": 49.84,
+    "NOLA_2026-02-05": 49.45,
+    "PHX_2026-02-05": 50.0,
+    "ATL_2026-02-05": 30.34,
+    "MIN_2026-02-05": 49.98
+  },
+  "forecasts": {
+    "LAX": {
+      "mu": 80.4,
+      "sigma": 5.8,
+      "sources": {
+        "nws": 78.0,
+        "openmeteo": 83.8
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:34.540591+00:00"
+    },
+    "NYC": {
+      "mu": 29.1,
+      "sigma": 2.8,
+      "sources": {
+        "nws": 30.0,
+        "openmeteo": 27.9
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:35.010900+00:00"
+    },
+    "CHI": {
+      "mu": 30.2,
+      "sigma": 3.0,
+      "sources": {
+        "nws": 30.0,
+        "openmeteo": 30.5
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:35.476619+00:00"
+    },
+    "PHI": {
+      "mu": 28.9,
+      "sigma": 2.8,
+      "sources": {
+        "nws": 29.0,
+        "openmeteo": 28.7
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:35.941157+00:00"
+    },
+    "BOS": {
+      "mu": 29.2,
+      "sigma": 2.8,
+      "sources": {
+        "nws": 29.0,
+        "openmeteo": 29.4
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:36.413481+00:00"
+    },
+    "DEN": {
+      "mu": 62.3,
+      "sigma": 4.0,
+      "sources": {
+        "nws": 63.0,
+        "openmeteo": 61.4
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:36.886096+00:00"
+    },
+    "MIA": {
+      "mu": 73.3,
+      "sigma": 3.1,
+      "sources": {
+        "nws": 72.0,
+        "openmeteo": 75.1
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:37.360564+00:00"
+    },
+    "SFO": {
+      "mu": 69.7,
+      "sigma": 4.2,
+      "sources": {
+        "nws": 68.0,
+        "openmeteo": 72.2
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:37.867175+00:00"
+    },
+    "DC": {
+      "mu": 31.4,
+      "sigma": 2.8,
+      "sources": {
+        "nws": 32.0,
+        "openmeteo": 30.6
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:38.332635+00:00"
+    },
+    "AUS": {
+      "mu": 69.5,
+      "sigma": 2.5,
+      "sources": {
+        "nws": 70.0,
+        "openmeteo": 68.7
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:38.814734+00:00"
+    },
+    "SEA": {
+      "mu": 60.3,
+      "sigma": 3.1,
+      "sources": {
+        "nws": 59.0,
+        "openmeteo": 62.1
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:39.291985+00:00"
+    },
+    "LV": {
+      "mu": 73.9,
+      "sigma": 2.5,
+      "sources": {
+        "nws": 73.0,
+        "openmeteo": 75.2
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:39.763153+00:00"
+    },
+    "NOLA": {
+      "mu": 53.1,
+      "sigma": 2.5,
+      "sources": {
+        "nws": 54.0,
+        "openmeteo": 51.7
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:40.240933+00:00"
+    },
+    "PHX": {
+      "mu": 81.7,
+      "sigma": 2.0,
+      "sources": {
+        "nws": 81.0,
+        "openmeteo": 82.7
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:40.715976+00:00"
+    },
+    "ATL": {
+      "mu": 45.1,
+      "sigma": 2.8,
+      "sources": {
+        "nws": 46.0,
+        "openmeteo": 43.8
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:41.215511+00:00"
+    },
+    "MIN": {
+      "mu": 35.2,
+      "sigma": 4.0,
+      "sources": {
+        "nws": 36.0,
+        "openmeteo": 34.0
+      },
+      "source_count": 2,
+      "timestamp": "2026-02-05T05:30:41.708539+00:00"
+    }
+  },
+  "started_at": "2026-02-05T05:30:34.064021+00:00",
+  "last_update": "2026-02-05T06:00:13.149038+00:00"
+}

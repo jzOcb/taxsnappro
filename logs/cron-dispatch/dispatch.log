@@ -1,0 +1,503 @@
+2026-02-05T01:27:50Z [test] TEST sent
+2026-02-05T01:27:50Z [btc-30min] START
+2026-02-05T01:27:51Z [btc-30min] SENT: 245 bytes
+2026-02-05T01:27:55Z [kalshi-hourly] START
+2026-02-05T01:30:01Z [x-auto-poster] START
+2026-02-05T01:30:01Z [btc-30min] START
+2026-02-05T01:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T01:30:02Z [btc-30min] SENT: 245 bytes
+2026-02-05T01:32:38Z [kalshi-hourly] START
+2026-02-05T01:34:57Z [kalshi-hourly] START
+2026-02-05T01:36:28Z [kalshi-hourly] SENT
+2026-02-05T01:39:24Z [btc-30min] START
+2026-02-05T01:39:25Z [btc-30min] SENT: 263 bytes
+2026-02-05T01:40:01Z [x-auto-poster] START
+2026-02-05T01:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T01:49:49Z [kalshi-hourly] START
+2026-02-05T01:50:02Z [x-auto-poster] START
+2026-02-05T01:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T01:51:20Z [kalshi-hourly] SENT
+2026-02-05T02:00:01Z [x-auto-poster] START
+2026-02-05T02:00:02Z [btc-30min] START
+2026-02-05T02:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T02:00:03Z [btc-30min] SENT: 257 bytes
+2026-02-05T02:10:01Z [x-auto-poster] START
+2026-02-05T02:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T02:15:01Z [kalshi-hourly] START
+2026-02-05T02:17:12Z [kalshi-hourly] SENT
+2026-02-05T02:20:01Z [x-auto-poster] START
+2026-02-05T02:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T02:30:01Z [x-auto-poster] START
+2026-02-05T02:30:02Z [btc-30min] START
+2026-02-05T02:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T02:30:03Z [btc-30min] SENT: 260 bytes
+2026-02-05T02:40:02Z [x-auto-poster] START
+2026-02-05T02:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T02:50:02Z [x-auto-poster] START
+2026-02-05T02:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T03:00:02Z [x-auto-poster] START
+2026-02-05T03:00:02Z [btc-30min] START
+2026-02-05T03:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T03:00:04Z [btc-30min] SENT: 260 bytes
+2026-02-05T03:05:32Z [btc-30min] START
+2026-02-05T03:05:33Z [btc-30min] SENT: 312 bytes
+2026-02-05T03:05:35Z [btc-30min] START
+2026-02-05T03:05:36Z [btc-30min] SENT: 312 bytes
+2026-02-05T03:10:01Z [x-auto-poster] START
+2026-02-05T03:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T03:15:02Z [kalshi-hourly] START
+2026-02-05T03:17:11Z [kalshi-hourly] SENT
+2026-02-05T03:20:01Z [x-auto-poster] START
+2026-02-05T03:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T03:30:01Z [x-auto-poster] START
+2026-02-05T03:30:01Z [btc-30min] START
+2026-02-05T03:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T03:30:02Z [btc-30min] SENT: 315 bytes
+2026-02-05T03:40:01Z [x-auto-poster] START
+2026-02-05T03:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T03:50:02Z [x-auto-poster] START
+2026-02-05T03:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T04:00:02Z [btc-30min] START
+2026-02-05T04:00:02Z [x-auto-poster] START
+2026-02-05T04:00:02Z [market-alert] START
+2026-02-05T04:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T04:00:03Z [btc-30min] SENT: 320 bytes
+2026-02-05T04:00:28Z [market-alert] SENT: alert + full report
+2026-02-05T04:10:01Z [x-auto-poster] START
+2026-02-05T04:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T04:15:01Z [kalshi-hourly] START
+2026-02-05T04:17:15Z [kalshi-hourly] SENT
+2026-02-05T04:20:01Z [x-auto-poster] START
+2026-02-05T04:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T04:30:02Z [btc-30min] START
+2026-02-05T04:30:02Z [x-auto-poster] START
+2026-02-05T04:30:03Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T04:30:04Z [btc-30min] SENT: 320 bytes
+2026-02-05T04:40:01Z [x-auto-poster] START
+2026-02-05T04:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T04:50:01Z [x-auto-poster] START
+2026-02-05T04:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T05:00:02Z [btc-30min] START
+2026-02-05T05:00:02Z [x-auto-poster] START
+2026-02-05T05:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T05:00:03Z [btc-30min] SENT: 320 bytes
+2026-02-05T05:10:02Z [x-auto-poster] START
+2026-02-05T05:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T05:15:02Z [kalshi-hourly] START
+2026-02-05T05:17:13Z [kalshi-hourly] SENT
+2026-02-05T05:20:01Z [x-auto-poster] START
+2026-02-05T05:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T05:30:02Z [x-auto-poster] START
+2026-02-05T05:30:02Z [btc-30min] START
+2026-02-05T05:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T05:30:03Z [btc-30min] SENT: 320 bytes
+2026-02-05T05:32:38Z [btc-30min] START
+2026-02-05T05:32:39Z [btc-30min] SENT: 467 bytes
+2026-02-05T05:34:21Z [test] TEST sent
+2026-02-05T05:34:21Z [btc-30min] START
+2026-02-05T05:34:22Z [btc-30min] SENT: 413 bytes
+2026-02-05T05:40:02Z [x-auto-poster] START
+2026-02-05T05:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T05:50:01Z [x-auto-poster] START
+2026-02-05T05:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T06:00:01Z [btc-30min] START
+2026-02-05T06:00:01Z [x-auto-poster] START
+2026-02-05T06:00:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T06:00:03Z [btc-30min] SENT: 412 bytes
+2026-02-05T06:10:02Z [x-auto-poster] START
+2026-02-05T06:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T06:15:01Z [kalshi-hourly] START
+2026-02-05T06:17:08Z [kalshi-hourly] SENT
+2026-02-05T06:20:01Z [x-auto-poster] START
+2026-02-05T06:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T06:30:01Z [x-auto-poster] START
+2026-02-05T06:30:01Z [btc-30min] START
+2026-02-05T06:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T06:30:03Z [btc-30min] SENT: 415 bytes
+2026-02-05T06:40:01Z [x-auto-poster] START
+2026-02-05T06:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T06:50:02Z [x-auto-poster] START
+2026-02-05T06:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T07:00:02Z [x-auto-poster] START
+2026-02-05T07:00:02Z [btc-30min] START
+2026-02-05T07:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T07:00:03Z [btc-30min] SENT: 415 bytes
+2026-02-05T07:10:02Z [x-auto-poster] START
+2026-02-05T07:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T07:15:02Z [kalshi-hourly] START
+2026-02-05T07:17:09Z [kalshi-hourly] SENT
+2026-02-05T07:20:01Z [x-auto-poster] START
+2026-02-05T07:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T07:30:01Z [btc-30min] START
+2026-02-05T07:30:01Z [x-auto-poster] START
+2026-02-05T07:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T07:30:03Z [btc-30min] SENT: 415 bytes
+2026-02-05T07:40:01Z [x-auto-poster] START
+2026-02-05T07:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T07:50:02Z [x-auto-poster] START
+2026-02-05T07:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T08:00:01Z [market-alert] START
+2026-02-05T08:00:01Z [x-auto-poster] START
+2026-02-05T08:00:01Z [btc-30min] START
+2026-02-05T08:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T08:00:03Z [btc-30min] SENT: 415 bytes
+2026-02-05T08:00:21Z [market-alert] SENT: alert + full report
+2026-02-05T08:10:02Z [x-auto-poster] START
+2026-02-05T08:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T08:15:01Z [kalshi-hourly] START
+2026-02-05T08:17:06Z [kalshi-hourly] SENT
+2026-02-05T08:20:01Z [x-auto-poster] START
+2026-02-05T08:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T08:30:01Z [x-auto-poster] START
+2026-02-05T08:30:01Z [btc-30min] START
+2026-02-05T08:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T08:30:02Z [btc-30min] SENT: 415 bytes
+2026-02-05T08:40:01Z [x-auto-poster] START
+2026-02-05T08:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T08:50:02Z [x-auto-poster] START
+2026-02-05T08:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T09:00:02Z [x-auto-poster] START
+2026-02-05T09:00:02Z [btc-30min] START
+2026-02-05T09:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T09:00:03Z [btc-30min] SENT: 415 bytes
+2026-02-05T09:10:01Z [x-auto-poster] START
+2026-02-05T09:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T09:15:01Z [kalshi-hourly] START
+2026-02-05T09:17:05Z [kalshi-hourly] SENT
+2026-02-05T09:20:02Z [x-auto-poster] START
+2026-02-05T09:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T09:30:01Z [btc-30min] START
+2026-02-05T09:30:01Z [x-auto-poster] START
+2026-02-05T09:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T09:30:03Z [btc-30min] SENT: 415 bytes
+2026-02-05T09:40:01Z [x-auto-poster] START
+2026-02-05T09:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T09:50:01Z [x-auto-poster] START
+2026-02-05T09:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T10:00:02Z [x-auto-poster] START
+2026-02-05T10:00:02Z [btc-30min] START
+2026-02-05T10:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T10:00:03Z [btc-30min] SENT: 411 bytes
+2026-02-05T10:10:01Z [x-auto-poster] START
+2026-02-05T10:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T10:15:01Z [kalshi-hourly] START
+2026-02-05T10:17:04Z [kalshi-hourly] SENT
+2026-02-05T10:20:01Z [x-auto-poster] START
+2026-02-05T10:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T10:30:01Z [btc-30min] START
+2026-02-05T10:30:02Z [x-auto-poster] START
+2026-02-05T10:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T10:30:03Z [btc-30min] SENT: 411 bytes
+2026-02-05T10:40:02Z [x-auto-poster] START
+2026-02-05T10:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T10:50:02Z [x-auto-poster] START
+2026-02-05T10:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T11:00:01Z [btc-30min] START
+2026-02-05T11:00:01Z [x-auto-poster] START
+2026-02-05T11:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T11:00:03Z [btc-30min] SENT: 411 bytes
+2026-02-05T11:10:01Z [x-auto-poster] START
+2026-02-05T11:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T11:15:01Z [kalshi-hourly] START
+2026-02-05T11:17:04Z [kalshi-hourly] SENT
+2026-02-05T11:20:02Z [x-auto-poster] START
+2026-02-05T11:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T11:30:01Z [x-auto-poster] START
+2026-02-05T11:30:01Z [btc-30min] START
+2026-02-05T11:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T11:30:02Z [btc-30min] SENT: 411 bytes
+2026-02-05T11:40:01Z [x-auto-poster] START
+2026-02-05T11:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T11:50:01Z [x-auto-poster] START
+2026-02-05T11:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T12:00:02Z [btc-30min] START
+2026-02-05T12:00:02Z [market-alert] START
+2026-02-05T12:00:02Z [x-auto-poster] START
+2026-02-05T12:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T12:00:03Z [btc-30min] SENT: 411 bytes
+2026-02-05T12:00:21Z [market-alert] SENT: alert + full report
+2026-02-05T12:10:02Z [x-auto-poster] START
+2026-02-05T12:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T12:15:01Z [kalshi-hourly] START
+2026-02-05T12:17:07Z [kalshi-hourly] SENT
+2026-02-05T12:20:01Z [x-auto-poster] START
+2026-02-05T12:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T12:30:01Z [btc-30min] START
+2026-02-05T12:30:01Z [x-auto-poster] START
+2026-02-05T12:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T12:30:03Z [btc-30min] SENT: 411 bytes
+2026-02-05T12:40:01Z [x-auto-poster] START
+2026-02-05T12:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T12:50:01Z [x-auto-poster] START
+2026-02-05T12:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T13:00:02Z [x-auto-poster] START
+2026-02-05T13:00:02Z [btc-30min] START
+2026-02-05T13:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T13:00:03Z [btc-30min] SENT: 438 bytes
+2026-02-05T13:10:01Z [x-auto-poster] START
+2026-02-05T13:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T13:15:01Z [kalshi-hourly] START
+2026-02-05T13:17:07Z [kalshi-hourly] SENT
+2026-02-05T13:20:01Z [x-auto-poster] START
+2026-02-05T13:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T13:30:01Z [btc-30min] START
+2026-02-05T13:30:02Z [x-auto-poster] START
+2026-02-05T13:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T13:30:03Z [btc-30min] SENT: 442 bytes
+2026-02-05T13:40:02Z [x-auto-poster] START
+2026-02-05T13:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T13:50:01Z [x-auto-poster] START
+2026-02-05T13:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T14:00:02Z [btc-30min] START
+2026-02-05T14:00:02Z [x-auto-poster] START
+2026-02-05T14:00:03Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T14:00:04Z [btc-30min] SENT: 413 bytes
+2026-02-05T14:10:01Z [x-auto-poster] START
+2026-02-05T14:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T14:15:02Z [kalshi-hourly] START
+2026-02-05T14:16:54Z [kalshi-hourly] SENT
+2026-02-05T14:20:02Z [x-auto-poster] START
+2026-02-05T14:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T14:25:02Z [market-report-premarket] START
+2026-02-05T14:25:13Z [market-report-premarket] SENT: 美股盘前报告
+2026-02-05T14:30:02Z [x-auto-poster] START
+2026-02-05T14:30:02Z [btc-30min] START
+2026-02-05T14:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T14:30:04Z [btc-30min] SENT: 414 bytes
+2026-02-05T14:31:55Z [btc-30min] START
+2026-02-05T14:31:56Z [btc-30min] SENT: 382 bytes
+2026-02-05T14:31:59Z [btc-30min] START
+2026-02-05T14:32:00Z [btc-30min] SENT: 386 bytes
+2026-02-05T14:33:29Z [btc-30min] START
+2026-02-05T14:33:30Z [btc-30min] SENT: 417 bytes
+2026-02-05T14:40:01Z [x-auto-poster] START
+2026-02-05T14:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T14:50:01Z [x-auto-poster] START
+2026-02-05T14:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T15:00:02Z [btc-30min] START
+2026-02-05T15:00:02Z [x-auto-poster] START
+2026-02-05T15:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T15:00:03Z [btc-30min] SENT: 458 bytes
+2026-02-05T15:03:37Z [btc-30min] START
+2026-02-05T15:03:38Z [btc-30min] SENT: 459 bytes
+2026-02-05T15:10:02Z [x-auto-poster] START
+2026-02-05T15:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T15:15:01Z [kalshi-hourly] START
+2026-02-05T15:17:02Z [kalshi-hourly] SENT
+2026-02-05T15:20:02Z [x-auto-poster] START
+2026-02-05T15:20:03Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T15:30:02Z [btc-30min] START
+2026-02-05T15:30:02Z [x-auto-poster] START
+2026-02-05T15:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T15:30:03Z [btc-30min] SENT: 463 bytes
+2026-02-05T15:40:02Z [x-auto-poster] START
+2026-02-05T15:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T15:50:01Z [x-auto-poster] START
+2026-02-05T15:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T16:00:01Z [btc-30min] START
+2026-02-05T16:00:01Z [x-auto-poster] START
+2026-02-05T16:00:01Z [market-alert] START
+2026-02-05T16:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T16:00:04Z [btc-30min] SENT: 462 bytes
+2026-02-05T16:00:23Z [market-alert] SENT: alert + full report
+2026-02-05T16:10:02Z [x-auto-poster] START
+2026-02-05T16:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T16:15:01Z [kalshi-hourly] START
+2026-02-05T16:16:54Z [kalshi-hourly] SENT
+2026-02-05T16:20:01Z [x-auto-poster] START
+2026-02-05T16:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T16:30:02Z [x-auto-poster] START
+2026-02-05T16:30:02Z [btc-30min] START
+2026-02-05T16:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T16:30:03Z [btc-30min] SENT: 458 bytes
+2026-02-05T16:32:49Z [test] TEST sent
+2026-02-05T16:40:01Z [x-auto-poster] START
+2026-02-05T16:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T16:50:01Z [x-auto-poster] START
+2026-02-05T16:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T17:00:01Z [market-report-midday] START
+2026-02-05T17:00:01Z [btc-30min] START
+2026-02-05T17:00:01Z [x-auto-poster] START
+2026-02-05T17:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T17:00:04Z [btc-30min] SENT: 481 bytes
+2026-02-05T17:00:13Z [market-report-midday] SENT: 美股午间报告
+2026-02-05T17:10:01Z [x-auto-poster] START
+2026-02-05T17:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T17:15:01Z [kalshi-hourly] START
+2026-02-05T17:17:09Z [kalshi-hourly] SENT
+2026-02-05T17:20:01Z [x-auto-poster] START
+2026-02-05T17:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T17:30:02Z [btc-30min] START
+2026-02-05T17:30:02Z [x-auto-poster] START
+2026-02-05T17:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T17:30:03Z [btc-30min] SENT: 481 bytes
+2026-02-05T17:40:01Z [x-auto-poster] START
+2026-02-05T17:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T17:50:02Z [x-auto-poster] START
+2026-02-05T17:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T18:00:02Z [x-auto-poster] START
+2026-02-05T18:00:02Z [btc-30min] START
+2026-02-05T18:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T18:00:03Z [btc-30min] SENT: 490 bytes
+2026-02-05T18:10:01Z [x-auto-poster] START
+2026-02-05T18:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T18:15:01Z [kalshi-hourly] START
+2026-02-05T18:17:07Z [kalshi-hourly] SENT
+2026-02-05T18:20:01Z [x-auto-poster] START
+2026-02-05T18:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T18:30:01Z [btc-30min] START
+2026-02-05T18:30:01Z [x-auto-poster] START
+2026-02-05T18:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T18:30:03Z [btc-30min] SENT: 491 bytes
+2026-02-05T18:40:02Z [x-auto-poster] START
+2026-02-05T18:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T18:50:01Z [x-auto-poster] START
+2026-02-05T18:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T19:00:01Z [x-auto-poster] START
+2026-02-05T19:00:01Z [btc-30min] START
+2026-02-05T19:00:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T19:00:02Z [btc-30min] SENT: 491 bytes
+2026-02-05T19:10:01Z [x-auto-poster] START
+2026-02-05T19:10:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T19:15:01Z [kalshi-hourly] START
+2026-02-05T19:17:10Z [kalshi-hourly] SENT
+2026-02-05T19:20:01Z [x-auto-poster] START
+2026-02-05T19:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T19:30:02Z [x-auto-poster] START
+2026-02-05T19:30:02Z [btc-30min] START
+2026-02-05T19:30:03Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T19:30:05Z [btc-30min] SENT: 491 bytes
+2026-02-05T19:40:01Z [x-auto-poster] START
+2026-02-05T19:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T19:50:01Z [x-auto-poster] START
+2026-02-05T19:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T20:00:01Z [market-alert] START
+2026-02-05T20:00:01Z [x-auto-poster] START
+2026-02-05T20:00:01Z [btc-30min] START
+2026-02-05T20:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T20:00:04Z [btc-30min] SENT: 493 bytes
+2026-02-05T20:00:23Z [market-alert] SENT: alert + full report
+2026-02-05T20:10:02Z [x-auto-poster] START
+2026-02-05T20:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T20:15:01Z [kalshi-hourly] START
+2026-02-05T20:17:07Z [kalshi-hourly] SENT
+2026-02-05T20:20:02Z [x-auto-poster] START
+2026-02-05T20:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T20:30:02Z [x-auto-poster] START
+2026-02-05T20:30:02Z [btc-30min] START
+2026-02-05T20:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T20:30:03Z [btc-30min] SENT: 493 bytes
+2026-02-05T20:40:01Z [x-auto-poster] START
+2026-02-05T20:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T20:50:02Z [x-auto-poster] START
+2026-02-05T20:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T21:00:02Z [x-auto-poster] START
+2026-02-05T21:00:02Z [btc-30min] START
+2026-02-05T21:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T21:00:04Z [btc-30min] SENT: 494 bytes
+2026-02-05T21:05:02Z [market-report-close] START
+2026-02-05T21:05:19Z [market-report-close] SENT: 美股收盘报告
+2026-02-05T21:10:02Z [x-auto-poster] START
+2026-02-05T21:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T21:15:01Z [kalshi-hourly] START
+2026-02-05T21:17:08Z [kalshi-hourly] SENT
+2026-02-05T21:20:02Z [x-auto-poster] START
+2026-02-05T21:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T21:30:01Z [x-auto-poster] START
+2026-02-05T21:30:02Z [btc-30min] START
+2026-02-05T21:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T21:30:03Z [btc-30min] SENT: 493 bytes
+2026-02-05T21:40:01Z [x-auto-poster] START
+2026-02-05T21:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T21:50:01Z [x-auto-poster] START
+2026-02-05T21:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T22:00:02Z [x-auto-poster] START
+2026-02-05T22:00:02Z [btc-30min] START
+2026-02-05T22:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T22:00:04Z [btc-30min] SENT: 401 bytes
+2026-02-05T22:10:01Z [x-auto-poster] START
+2026-02-05T22:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T22:15:01Z [kalshi-hourly] START
+2026-02-05T22:17:07Z [kalshi-hourly] SENT
+2026-02-05T22:20:01Z [x-auto-poster] START
+2026-02-05T22:20:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T22:30:01Z [btc-30min] START
+2026-02-05T22:30:01Z [x-auto-poster] START
+2026-02-05T22:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T22:30:03Z [btc-30min] SENT: 495 bytes
+2026-02-05T22:40:02Z [x-auto-poster] START
+2026-02-05T22:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T22:50:02Z [x-auto-poster] START
+2026-02-05T22:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T23:00:02Z [x-auto-poster] START
+2026-02-05T23:00:02Z [btc-30min] START
+2026-02-05T23:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T23:00:03Z [btc-30min] SENT: 495 bytes
+2026-02-05T23:10:01Z [x-auto-poster] START
+2026-02-05T23:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T23:15:01Z [kalshi-hourly] START
+2026-02-05T23:17:08Z [kalshi-hourly] SENT
+2026-02-05T23:20:02Z [x-auto-poster] START
+2026-02-05T23:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T23:30:01Z [x-auto-poster] START
+2026-02-05T23:30:01Z [btc-30min] START
+2026-02-05T23:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T23:30:03Z [btc-30min] SENT: 493 bytes
+2026-02-05T23:40:02Z [x-auto-poster] START
+2026-02-05T23:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-05T23:50:02Z [x-auto-poster] START
+2026-02-05T23:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T00:00:02Z [market-alert] START
+2026-02-06T00:00:03Z [x-auto-poster] START
+2026-02-06T00:00:03Z [btc-30min] START
+2026-02-06T00:00:03Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T00:00:04Z [btc-30min] SENT: 479 bytes
+2026-02-06T00:00:30Z [market-alert] SENT: alert + full report
+2026-02-06T00:10:02Z [x-auto-poster] START
+2026-02-06T00:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T00:15:02Z [kalshi-hourly] START
+2026-02-06T00:17:07Z [kalshi-hourly] SENT
+2026-02-06T00:20:02Z [x-auto-poster] START
+2026-02-06T00:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T00:30:02Z [x-auto-poster] START
+2026-02-06T00:30:02Z [btc-30min] START
+2026-02-06T00:30:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T00:30:04Z [btc-30min] SENT: 479 bytes
+2026-02-06T00:40:02Z [x-auto-poster] START
+2026-02-06T00:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T00:50:01Z [x-auto-poster] START
+2026-02-06T00:50:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T01:00:01Z [btc-30min] START
+2026-02-06T01:00:02Z [x-auto-poster] START
+2026-02-06T01:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T01:00:03Z [btc-30min] SENT: 480 bytes
+2026-02-06T01:10:02Z [x-auto-poster] START
+2026-02-06T01:10:03Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T01:15:01Z [kalshi-hourly] START
+2026-02-06T01:17:04Z [kalshi-hourly] SENT
+2026-02-06T01:20:02Z [x-auto-poster] START
+2026-02-06T01:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T01:30:01Z [btc-30min] START
+2026-02-06T01:30:01Z [x-auto-poster] START
+2026-02-06T01:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T01:30:03Z [btc-30min] SENT: 480 bytes
+2026-02-06T01:40:02Z [x-auto-poster] START
+2026-02-06T01:40:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T01:50:01Z [x-auto-poster] START
+2026-02-06T01:50:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T02:00:02Z [x-auto-poster] START
+2026-02-06T02:00:02Z [btc-30min] START
+2026-02-06T02:00:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T02:00:03Z [btc-30min] SENT: 479 bytes
+2026-02-06T02:10:02Z [x-auto-poster] START
+2026-02-06T02:10:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T02:15:02Z [kalshi-hourly] START
+2026-02-06T02:17:07Z [kalshi-hourly] SENT
+2026-02-06T02:20:02Z [x-auto-poster] START
+2026-02-06T02:20:02Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T02:30:01Z [x-auto-poster] START
+2026-02-06T02:30:01Z [btc-30min] START
+2026-02-06T02:30:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.
+2026-02-06T02:30:03Z [btc-30min] SENT: 480 bytes
+2026-02-06T02:40:01Z [x-auto-poster] START
+2026-02-06T02:40:01Z [x-auto-poster] QUEUE EMPTY or ERROR: Queue empty, nothing to post.

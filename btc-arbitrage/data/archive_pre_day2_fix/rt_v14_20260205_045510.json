@@ -1,0 +1,32 @@
+{
+  "version": "v14",
+  "duration_min": 0,
+  "pnl": 0,
+  "signals": [],
+  "trades": [],
+  "flash_crashes": [],
+  "websocket_mode": "WebSocket",
+  "complete": false,
+  "v14_config": {
+    "min_ev": 0.1,
+    "vol_regime_btc": 0.005,
+    "vol_regime_eth": 0.008,
+    "atr_stop_multiplier": 2.0,
+    "atr_stop_floor_btc": 0.15,
+    "atr_stop_floor_eth": 0.1,
+    "flash_sniper_sl_pct": 0.15
+  },
+  "ev_log_summary": {
+    "total_decisions": 0,
+    "entries": 0,
+    "skips": 0,
+    "recent_decisions": []
+  },
+  "technical_indicators": {
+    "btc_bootstrapped": true,
+    "eth_bootstrapped": true,
+    "final_btc_atr": 0.0015927094922856206,
+    "final_btc_rsi": 43.07554256940361,
+    "final_btc_ema_trend": "bearish"
+  }
+}

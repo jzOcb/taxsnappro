@@ -1,0 +1,4283 @@
+{
+  "duration_min": 480,
+  "pnl": -7.229999999999997,
+  "signals": [
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 316
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 407
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 625
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 646
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 1307
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 1339
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 1528
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 2166
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 2186
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 2284
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 2326
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 2449
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 2562
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 3171
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 3896
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 3918
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 4903
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 4958
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 5207
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 5216
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 5320
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 5694
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 5718
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 5838
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 5853
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 5996
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 6048
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 6202
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 6205
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 6759
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 6791
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 7536
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 7546
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 7968
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 8524
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 8597
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 8956
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 9364
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 9370
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 9563
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 9569
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 9742
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 10389
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 10598
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 10611
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 11116
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 11239
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 11457
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 11499
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 12198
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 12240
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 12388
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 12396
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 13000
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 13079
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 13920
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 13942
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 14308
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 14724
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 15627
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 15772
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 15958
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 16139
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 16536
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 16685
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 16707
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 16960
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 17492
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 17560
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 18313
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 18421
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 18524
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 18531
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 18852
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 19233
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 20106
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 20311
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 20423
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 20595
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 21141
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 22061
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 22080
+    },
+    {
+      "type": "steam_follow",
+      "market": "eth_15m",
+      "time": 22258
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.61,
+      "theoretical_entry": 0.62,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770255956.0821207,
+      "ticker": "KXBTC15M-26FEB042100-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.61,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.0,
+      "exit": 0.56,
+      "theoretical_exit": 0.56,
+      "slippage_exit": 0.0,
+      "pnl": -0.49999999999999933,
+      "close_time": 1770256136.495132,
+      "exit_fill": {
+        "vwap": 0.56,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 1,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.6,
+      "theoretical_entry": 0.6,
+      "slippage_entry": 0.0,
+      "time": 1770256047.2650208,
+      "ticker": "KXETH15M-26FEB042100-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.6,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.0,
+      "exit": 0.4600000000000001,
+      "theoretical_exit": 0.45999999999999996,
+      "slippage_exit": 1.1102230246251565e-16,
+      "pnl": -0.6999999999999995,
+      "close_time": 1770256137.5316324,
+      "exit_fill": {
+        "vwap": 0.4600000000000001,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      }
+    },
+    {
+      "id": 2,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.745,
+      "theoretical_entry": 0.74,
+      "slippage_entry": 0.0050000000000000044,
+      "time": 1770256265.7207296,
+      "ticker": "KXBTC15M-26FEB042100-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.745,
+        "levels": 2,
+        "slippage": 0.0050000000000000044,
+        "partial": false
+      },
+      "max_profit": -0.015000000000000013,
+      "exit": 0.53,
+      "theoretical_exit": 0.53,
+      "slippage_exit": 0.0,
+      "pnl": -2.1499999999999995,
+      "close_time": 1770256341.92933,
+      "exit_fill": {
+        "vwap": 0.53,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 3,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.44000000000000006,
+      "theoretical_entry": 0.4,
+      "slippage_entry": 0.040000000000000036,
+      "time": 1770256285.7912579,
+      "ticker": "KXETH15M-26FEB042100-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.44000000000000006,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": 0.30999999999999994,
+      "exit": 0.67,
+      "theoretical_exit": 0.71,
+      "slippage_exit": -0.039999999999999925,
+      "pnl": 1.15,
+      "close_time": 1770256367.006112,
+      "exit_fill": {
+        "vwap": 0.67,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 5,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.72,
+      "theoretical_entry": 0.72,
+      "slippage_entry": 0.0,
+      "time": 1770256978.8784928,
+      "ticker": "KXETH15M-26FEB042115-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.72,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.050000000000000044,
+      "exit": 0.73,
+      "theoretical_exit": 0.72,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": 0.050000000000000044,
+      "close_time": 1770257008.9746263,
+      "exit_fill": {
+        "vwap": 0.73,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 4,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.44000000000000006,
+      "theoretical_entry": 0.38,
+      "slippage_entry": 0.06000000000000005,
+      "time": 1770256946.786189,
+      "ticker": "KXBTC15M-26FEB042115-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.44000000000000006,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": 0.41999999999999993,
+      "exit": 0.79,
+      "theoretical_exit": 0.81,
+      "slippage_exit": -0.020000000000000018,
+      "pnl": 3.5,
+      "close_time": 1770257066.1005235,
+      "exit_fill": {
+        "vwap": 0.79,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 6,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.86,
+      "theoretical_entry": 0.85,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770257168.2738373,
+      "ticker": "KXBTC15M-26FEB042115-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.86,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.040000000000000036,
+      "exit": 0.8,
+      "theoretical_exit": 0.76,
+      "slippage_exit": 0.040000000000000036,
+      "pnl": -0.5999999999999994,
+      "close_time": 1770257348.620181,
+      "exit_fill": {
+        "vwap": 0.8,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 7,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.61,
+      "theoretical_entry": 0.61,
+      "slippage_entry": 0.0,
+      "time": 1770257806.2595263,
+      "ticker": "KXBTC15M-26FEB042130-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.61,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.22999999999999998,
+      "exit": 0.68,
+      "theoretical_exit": 0.6799999999999999,
+      "slippage_exit": 1.1102230246251565e-16,
+      "pnl": 0.7000000000000006,
+      "close_time": 1770257836.3882155,
+      "exit_fill": {
+        "vwap": 0.68,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 8,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.8299999999999998,
+      "theoretical_entry": 0.84,
+      "slippage_entry": -0.01000000000000012,
+      "time": 1770257826.3284035,
+      "ticker": "KXETH15M-26FEB042130-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.8299999999999998,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      },
+      "max_profit": 0.01000000000000012,
+      "exit": 0.55,
+      "theoretical_exit": 0.5700000000000001,
+      "slippage_exit": -0.020000000000000018,
+      "pnl": -1.399999999999999,
+      "close_time": 1770257840.4321246,
+      "exit_fill": {
+        "vwap": 0.55,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 10,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.63,
+      "theoretical_entry": 0.63,
+      "slippage_entry": 0.0,
+      "time": 1770257966.6703377,
+      "ticker": "KXETH15M-26FEB042130-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.08999999999999997,
+      "exit": 0.59,
+      "theoretical_exit": 0.6,
+      "slippage_exit": -0.010000000000000009,
+      "pnl": -0.20000000000000018,
+      "close_time": 1770257985.7875922,
+      "exit_fill": {
+        "vwap": 0.59,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 9,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.5,
+      "theoretical_entry": 0.49,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770257924.5656235,
+      "ticker": "KXBTC15M-26FEB042130-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.5,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.22999999999999998,
+      "exit": 0.66,
+      "theoretical_exit": 0.67,
+      "slippage_exit": -0.010000000000000009,
+      "pnl": 1.6000000000000003,
+      "close_time": 1770257986.8239849,
+      "exit_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 11,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.82,
+      "theoretical_entry": 0.8,
+      "slippage_entry": 0.019999999999999907,
+      "time": 1770258088.9782073,
+      "ticker": "KXBTC15M-26FEB042130-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.82,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.07000000000000006,
+      "exit": 0.89,
+      "theoretical_exit": 0.89,
+      "slippage_exit": 0.0,
+      "pnl": 0.7000000000000006,
+      "close_time": 1770258269.385339,
+      "exit_fill": {
+        "vwap": 0.89,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 12,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.24,
+      "theoretical_entry": 0.24,
+      "slippage_entry": 0.0,
+      "time": 1770258202.2170274,
+      "ticker": "KXETH15M-26FEB042130-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.24,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.030000000000000027,
+      "exit": 0.13,
+      "theoretical_exit": 0.09999999999999998,
+      "slippage_exit": 0.030000000000000027,
+      "pnl": -0.5499999999999999,
+      "close_time": 1770258325.5286674,
+      "exit_fill": {
+        "vwap": 0.13,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 13,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.49000000000000005,
+      "theoretical_entry": 0.49,
+      "slippage_entry": 5.551115123125783e-17,
+      "time": 1770258811.1657023,
+      "ticker": "KXBTC15M-26FEB042145-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.49000000000000005,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": 0.009999999999999953,
+      "exit": 0.33,
+      "theoretical_exit": 0.32999999999999996,
+      "slippage_exit": 5.551115123125783e-17,
+      "pnl": -1.6000000000000003,
+      "close_time": 1770258907.3979328,
+      "exit_fill": {
+        "vwap": 0.33,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 15,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.75,
+      "theoretical_entry": 0.74,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770259558.3128219,
+      "ticker": "KXETH15M-26FEB042200-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.75,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.18999999999999995,
+      "exit": 0.8800000000000001,
+      "theoretical_exit": 0.89,
+      "slippage_exit": -0.009999999999999898,
+      "pnl": 0.6500000000000006,
+      "close_time": 1770259695.684394,
+      "exit_fill": {
+        "vwap": 0.8800000000000001,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 14,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.66,
+      "theoretical_entry": 0.6599999999999999,
+      "slippage_entry": 1.1102230246251565e-16,
+      "time": 1770259536.220464,
+      "ticker": "KXBTC15M-26FEB042200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.20999999999999996,
+      "exit": 0.95,
+      "theoretical_exit": 0.87,
+      "slippage_exit": 0.07999999999999996,
+      "pnl": 2.8999999999999995,
+      "close_time": 1770259716.753355,
+      "exit_fill": {
+        "vwap": 0.95,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 16,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.79,
+      "theoretical_entry": 0.79,
+      "slippage_entry": 0.0,
+      "time": 1770260542.8599234,
+      "ticker": "KXBTC15M-26FEB042215-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.79,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.020000000000000018,
+      "exit": 0.66,
+      "theoretical_exit": 0.64,
+      "slippage_exit": 0.020000000000000018,
+      "pnl": -1.3,
+      "close_time": 1770260714.299259,
+      "exit_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 17,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.35,
+      "theoretical_entry": 0.35,
+      "slippage_entry": 0.0,
+      "time": 1770260597.9972413,
+      "ticker": "KXETH15M-26FEB042215-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.35,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.07000000000000006,
+      "exit": 0.36,
+      "theoretical_exit": 0.37,
+      "slippage_exit": -0.010000000000000009,
+      "pnl": 0.050000000000000044,
+      "close_time": 1770260726.3652608,
+      "exit_fill": {
+        "vwap": 0.36,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 18,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.32,
+      "theoretical_entry": 0.31,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770260847.5622015,
+      "ticker": "KXETH15M-26FEB042215-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.32,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.07,
+      "exit": 0.37,
+      "theoretical_exit": 0.34,
+      "slippage_exit": 0.02999999999999997,
+      "pnl": 0.24999999999999994,
+      "close_time": 1770260893.7453072,
+      "exit_fill": {
+        "vwap": 0.37,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 19,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.35,
+      "theoretical_entry": 0.37,
+      "slippage_entry": -0.020000000000000018,
+      "time": 1770260856.615728,
+      "ticker": "KXBTC15M-26FEB042215-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.35,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.020000000000000018,
+      "exit": 0.22199999999999998,
+      "theoretical_exit": 0.19999999999999996,
+      "slippage_exit": 0.02200000000000002,
+      "pnl": -1.28,
+      "close_time": 1770260895.7853634,
+      "exit_fill": {
+        "vwap": 0.22199999999999998,
+        "levels": 2,
+        "slippage": 0.018000000000000016,
+        "partial": false
+      }
+    },
+    {
+      "id": 20,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.72,
+      "theoretical_entry": 0.72,
+      "slippage_entry": 0.0,
+      "time": 1770260959.904751,
+      "ticker": "KXETH15M-26FEB042215-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.72,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.20000000000000007,
+      "exit": 0.78,
+      "theoretical_exit": 0.85,
+      "slippage_exit": -0.06999999999999995,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770261088.19233,
+      "exit_fill": {
+        "vwap": 0.78,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 21,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.55,
+      "theoretical_entry": 0.55,
+      "slippage_entry": 0.0,
+      "time": 1770261334.5077744,
+      "ticker": "KXBTC15M-26FEB042230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.55,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.1499999999999999,
+      "exit": 0.66,
+      "theoretical_exit": 0.6599999999999999,
+      "slippage_exit": 1.1102230246251565e-16,
+      "pnl": 1.0999999999999999,
+      "close_time": 1770261398.7315378,
+      "exit_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 22,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.73,
+      "theoretical_entry": 0.73,
+      "slippage_entry": 0.0,
+      "time": 1770261358.5947015,
+      "ticker": "KXETH15M-26FEB042230-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.73,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.10999999999999999,
+      "exit": 0.79,
+      "theoretical_exit": 0.79,
+      "slippage_exit": 0.0,
+      "pnl": 0.30000000000000027,
+      "close_time": 1770261408.782066,
+      "exit_fill": {
+        "vwap": 0.79,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 24,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.24,
+      "theoretical_entry": 0.24,
+      "slippage_entry": 0.0,
+      "time": 1770261492.9735036,
+      "ticker": "KXETH15M-26FEB042230-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.24,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.16000000000000003,
+      "exit": 0.34,
+      "theoretical_exit": 0.33,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": 0.5000000000000002,
+      "close_time": 1770261567.1766505,
+      "exit_fill": {
+        "vwap": 0.34,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 23,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.37,
+      "theoretical_entry": 0.36,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770261477.9093928,
+      "ticker": "KXBTC15M-26FEB042230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.37,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.20999999999999996,
+      "exit": 0.53,
+      "theoretical_exit": 0.5,
+      "slippage_exit": 0.030000000000000027,
+      "pnl": 1.6000000000000003,
+      "close_time": 1770261574.2222993,
+      "exit_fill": {
+        "vwap": 0.53,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 26,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.72,
+      "theoretical_entry": 0.72,
+      "slippage_entry": 0.0,
+      "time": 1770261688.4677157,
+      "ticker": "KXETH15M-26FEB042230-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.72,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.020000000000000018,
+      "exit": 0.58,
+      "theoretical_exit": 0.58,
+      "slippage_exit": 0.0,
+      "pnl": -0.7000000000000001,
+      "close_time": 1770261715.5698779,
+      "exit_fill": {
+        "vwap": 0.58,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 25,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.74,
+      "theoretical_entry": 0.74,
+      "slippage_entry": 0.0,
+      "time": 1770261636.3410747,
+      "ticker": "KXBTC15M-26FEB042230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.74,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.010000000000000009,
+      "exit": 0.58,
+      "theoretical_exit": 0.58,
+      "slippage_exit": 0.0,
+      "pnl": -1.6000000000000003,
+      "close_time": 1770261718.6072135,
+      "exit_fill": {
+        "vwap": 0.58,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 28,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.4600000000000001,
+      "theoretical_entry": 0.45999999999999996,
+      "slippage_entry": 1.1102230246251565e-16,
+      "time": 1770261844.8432467,
+      "ticker": "KXETH15M-26FEB042230-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.4600000000000001,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": -0.02000000000000013,
+      "exit": 0.33,
+      "theoretical_exit": 0.32999999999999996,
+      "slippage_exit": 5.551115123125783e-17,
+      "pnl": -0.6500000000000004,
+      "close_time": 1770261892.9906292,
+      "exit_fill": {
+        "vwap": 0.33,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 27,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.39,
+      "theoretical_entry": 0.4,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770261841.8031993,
+      "ticker": "KXBTC15M-26FEB042230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.39,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.030000000000000027,
+      "exit": 0.23000000000000004,
+      "theoretical_exit": 0.21999999999999997,
+      "slippage_exit": 0.010000000000000064,
+      "pnl": -1.5999999999999996,
+      "close_time": 1770261903.0703228,
+      "exit_fill": {
+        "vwap": 0.23000000000000004,
+        "levels": 1,
+        "slippage": 2.7755575615628914e-17,
+        "partial": false
+      }
+    },
+    {
+      "id": 29,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.51,
+      "theoretical_entry": 0.5700000000000001,
+      "slippage_entry": -0.06000000000000005,
+      "time": 1770262398.783514,
+      "ticker": "KXETH15M-26FEB042245-45",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.51,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.07000000000000006,
+      "exit": 0.48,
+      "theoretical_exit": 0.48,
+      "slippage_exit": 0.0,
+      "pnl": -0.15000000000000013,
+      "close_time": 1770262464.0020025,
+      "exit_fill": {
+        "vwap": 0.48,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 30,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.68,
+      "theoretical_entry": 0.63,
+      "slippage_entry": 0.050000000000000044,
+      "time": 1770262430.8914053,
+      "ticker": "KXBTC15M-26FEB042245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.68,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.01000000000000012,
+      "exit": 0.51,
+      "theoretical_exit": 0.51,
+      "slippage_exit": 0.0,
+      "pnl": -1.7000000000000004,
+      "close_time": 1770262577.2403755,
+      "exit_fill": {
+        "vwap": 0.51,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 31,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.63,
+      "theoretical_entry": 0.59,
+      "slippage_entry": 0.040000000000000036,
+      "time": 1770263176.1053603,
+      "ticker": "KXETH15M-26FEB042300-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.030000000000000027,
+      "exit": 0.52,
+      "theoretical_exit": 0.5,
+      "slippage_exit": 0.020000000000000018,
+      "pnl": -0.5499999999999999,
+      "close_time": 1770263230.2923877,
+      "exit_fill": {
+        "vwap": 0.52,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 32,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.65,
+      "theoretical_entry": 0.64,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770263186.1632135,
+      "ticker": "KXBTC15M-26FEB042300-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.65,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.020000000000000018,
+      "exit": 0.4,
+      "theoretical_exit": 0.6,
+      "slippage_exit": -0.19999999999999996,
+      "pnl": -2.5,
+      "close_time": 1770263366.5919137,
+      "exit_fill": {
+        "vwap": 0.4,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 33,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.44000000000000006,
+      "theoretical_entry": 0.41,
+      "slippage_entry": 0.030000000000000082,
+      "time": 1770263607.9404943,
+      "ticker": "KXETH15M-26FEB042300-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.44000000000000006,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": -0.040000000000000036,
+      "exit": 0.25,
+      "theoretical_exit": 0.27,
+      "slippage_exit": -0.020000000000000018,
+      "pnl": -0.9500000000000003,
+      "close_time": 1770263616.9935207,
+      "exit_fill": {
+        "vwap": 0.25,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 34,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.63,
+      "theoretical_entry": 0.63,
+      "slippage_entry": 0.0,
+      "time": 1770264163.7594745,
+      "ticker": "KXETH15M-26FEB042315-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.21999999999999997,
+      "exit": 0.76,
+      "theoretical_exit": 0.77,
+      "slippage_exit": -0.010000000000000009,
+      "pnl": 0.65,
+      "close_time": 1770264322.3107657,
+      "exit_fill": {
+        "vwap": 0.76,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 35,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.72,
+      "theoretical_entry": 0.72,
+      "slippage_entry": 0.0,
+      "time": 1770264236.9727135,
+      "ticker": "KXBTC15M-26FEB042315-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.72,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.20000000000000007,
+      "exit": 0.9099999999999999,
+      "theoretical_exit": 0.92,
+      "slippage_exit": -0.01000000000000012,
+      "pnl": 1.8999999999999995,
+      "close_time": 1770264417.5247264,
+      "exit_fill": {
+        "vwap": 0.9099999999999999,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 36,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.28,
+      "theoretical_entry": 0.25,
+      "slippage_entry": 0.030000000000000027,
+      "time": 1770264595.775013,
+      "ticker": "KXETH15M-26FEB042315-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.28,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.009999999999999953,
+      "exit": 0.38,
+      "theoretical_exit": 0.02,
+      "slippage_exit": 0.36,
+      "pnl": 0.4999999999999999,
+      "close_time": 1770264607.8389316,
+      "exit_fill": {
+        "vwap": 0.38,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 38,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.66,
+      "theoretical_entry": 0.6599999999999999,
+      "slippage_entry": 1.1102230246251565e-16,
+      "time": 1770265010.5063143,
+      "ticker": "KXETH15M-26FEB042330-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.10999999999999999,
+      "exit": 0.652,
+      "theoretical_exit": 0.72,
+      "slippage_exit": -0.06799999999999995,
+      "pnl": -0.040000000000000036,
+      "close_time": 1770265061.678103,
+      "exit_fill": {
+        "vwap": 0.652,
+        "levels": 2,
+        "slippage": 0.008000000000000007,
+        "partial": false
+      }
+    },
+    {
+      "id": 37,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.57,
+      "theoretical_entry": 0.56,
+      "slippage_entry": 0.009999999999999898,
+      "time": 1770265004.451895,
+      "ticker": "KXBTC15M-26FEB042330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.57,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.040000000000000036,
+      "exit": 0.4,
+      "theoretical_exit": 0.38,
+      "slippage_exit": 0.020000000000000018,
+      "pnl": -1.6999999999999993,
+      "close_time": 1770265083.7557657,
+      "exit_fill": {
+        "vwap": 0.4,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 39,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.7,
+      "theoretical_entry": 0.67,
+      "slippage_entry": 0.029999999999999916,
+      "time": 1770265202.9383137,
+      "ticker": "KXETH15M-26FEB042330-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.7,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.10000000000000009,
+      "exit": 0.74,
+      "theoretical_exit": 0.73,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": 0.20000000000000018,
+      "close_time": 1770265278.1831403,
+      "exit_fill": {
+        "vwap": 0.74,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 40,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.799,
+      "theoretical_entry": 0.79,
+      "slippage_entry": 0.009000000000000008,
+      "time": 1770265208.997937,
+      "ticker": "KXBTC15M-26FEB042330-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.799,
+        "levels": 2,
+        "slippage": 0.009000000000000008,
+        "partial": false
+      },
+      "max_profit": 0.10099999999999998,
+      "exit": 0.78,
+      "theoretical_exit": 0.78,
+      "slippage_exit": 0.0,
+      "pnl": -0.19000000000000017,
+      "close_time": 1770265389.4799378,
+      "exit_fill": {
+        "vwap": 0.78,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 41,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.29,
+      "theoretical_entry": 0.29000000000000004,
+      "slippage_entry": -5.551115123125783e-17,
+      "time": 1770265382.4290113,
+      "ticker": "KXETH15M-26FEB042330-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.29,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.04999999999999999,
+      "exit": 0.16,
+      "theoretical_exit": 0.16000000000000003,
+      "slippage_exit": -2.7755575615628914e-17,
+      "pnl": -0.6499999999999999,
+      "close_time": 1770265500.8061056,
+      "exit_fill": {
+        "vwap": 0.16,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 42,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.59,
+      "theoretical_entry": 0.5800000000000001,
+      "slippage_entry": 0.009999999999999898,
+      "time": 1770266029.6973727,
+      "ticker": "KXBTC15M-26FEB042345-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.59,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.050000000000000044,
+      "exit": 0.6,
+      "theoretical_exit": 0.6,
+      "slippage_exit": 0.0,
+      "pnl": 0.10000000000000009,
+      "close_time": 1770266157.9806943,
+      "exit_fill": {
+        "vwap": 0.6,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 43,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.4779999999999999,
+      "theoretical_entry": 0.43,
+      "slippage_entry": 0.04799999999999993,
+      "time": 1770266238.1380847,
+      "ticker": "KXBTC15M-26FEB042345-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.4779999999999999,
+        "levels": 2,
+        "slippage": 0.007999999999999952,
+        "partial": false
+      },
+      "max_profit": 0.2720000000000001,
+      "exit": 0.57,
+      "theoretical_exit": 0.57,
+      "slippage_exit": 0.0,
+      "pnl": 0.9200000000000003,
+      "close_time": 1770266358.5316045,
+      "exit_fill": {
+        "vwap": 0.57,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 44,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.8400000000000001,
+      "theoretical_entry": 0.84,
+      "slippage_entry": 1.1102230246251565e-16,
+      "time": 1770266251.206732,
+      "ticker": "KXETH15M-26FEB042345-45",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.8400000000000001,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      },
+      "max_profit": 0.07999999999999996,
+      "exit": 0.8699999999999999,
+      "theoretical_exit": 0.87,
+      "slippage_exit": -1.1102230246251565e-16,
+      "pnl": 0.14999999999999902,
+      "close_time": 1770266367.5827425,
+      "exit_fill": {
+        "vwap": 0.8699999999999999,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 45,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.538,
+      "theoretical_entry": 0.51,
+      "slippage_entry": 0.028000000000000025,
+      "time": 1770266756.2200148,
+      "ticker": "KXBTC15M-26FEB050000-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.538,
+        "levels": 2,
+        "slippage": 0.018000000000000016,
+        "partial": false
+      },
+      "max_profit": 0.03200000000000003,
+      "exit": 0.48,
+      "theoretical_exit": 0.48,
+      "slippage_exit": 0.0,
+      "pnl": -0.5800000000000005,
+      "close_time": 1770266936.690493,
+      "exit_fill": {
+        "vwap": 0.48,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 46,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.65,
+      "theoretical_entry": 0.65,
+      "slippage_entry": 0.0,
+      "time": 1770266879.521842,
+      "ticker": "KXETH15M-26FEB050000-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.65,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.12,
+      "exit": 0.74,
+      "theoretical_exit": 0.72,
+      "slippage_exit": 0.020000000000000018,
+      "pnl": 0.44999999999999984,
+      "close_time": 1770267001.9030328,
+      "exit_fill": {
+        "vwap": 0.74,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 47,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.338,
+      "theoretical_entry": 0.33,
+      "slippage_entry": 0.008000000000000007,
+      "time": 1770267097.1053214,
+      "ticker": "KXETH15M-26FEB050000-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.338,
+        "levels": 2,
+        "slippage": 0.008000000000000007,
+        "partial": false
+      },
+      "max_profit": -0.028000000000000025,
+      "exit": 0.18,
+      "theoretical_exit": 0.18,
+      "slippage_exit": 0.0,
+      "pnl": -0.7900000000000001,
+      "close_time": 1770267151.3395789,
+      "exit_fill": {
+        "vwap": 0.18,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 48,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.64,
+      "theoretical_entry": 0.5900000000000001,
+      "slippage_entry": 0.04999999999999993,
+      "time": 1770267139.2683978,
+      "ticker": "KXBTC15M-26FEB050000-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.64,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.31999999999999995,
+      "exit": 0.96,
+      "theoretical_exit": 0.96,
+      "slippage_exit": 0.0,
+      "pnl": 3.1999999999999993,
+      "close_time": 1770267319.72449,
+      "exit_fill": {
+        "vwap": 0.96,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 50,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.688,
+      "theoretical_entry": 0.68,
+      "slippage_entry": 0.007999999999999896,
+      "time": 1770267879.7298496,
+      "ticker": "KXETH15M-26FEB050015-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.688,
+        "levels": 2,
+        "slippage": 0.007999999999999896,
+        "partial": false
+      },
+      "max_profit": 0.08200000000000007,
+      "exit": 0.74,
+      "theoretical_exit": 0.73,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": 0.26000000000000023,
+      "close_time": 1770267907.8388367,
+      "exit_fill": {
+        "vwap": 0.74,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 49,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.55,
+      "theoretical_entry": 0.54,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770267838.599131,
+      "ticker": "KXBTC15M-26FEB050015-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.55,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.10999999999999999,
+      "exit": 0.6,
+      "theoretical_exit": 0.62,
+      "slippage_exit": -0.020000000000000018,
+      "pnl": 0.49999999999999933,
+      "close_time": 1770267962.0035534,
+      "exit_fill": {
+        "vwap": 0.6,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 52,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.38,
+      "theoretical_entry": 0.38,
+      "slippage_entry": 0.0,
+      "time": 1770268036.1886065,
+      "ticker": "KXETH15M-26FEB050015-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.38,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.09999999999999998,
+      "exit": 0.41,
+      "theoretical_exit": 0.41000000000000003,
+      "slippage_exit": -5.551115123125783e-17,
+      "pnl": 0.14999999999999986,
+      "close_time": 1770268099.367604,
+      "exit_fill": {
+        "vwap": 0.41,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 51,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.64,
+      "theoretical_entry": 0.64,
+      "slippage_entry": 0.0,
+      "time": 1770268028.1369348,
+      "ticker": "KXBTC15M-26FEB050015-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.64,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.25,
+      "exit": 0.82,
+      "theoretical_exit": 0.8200000000000001,
+      "slippage_exit": -1.1102230246251565e-16,
+      "pnl": 1.7999999999999994,
+      "close_time": 1770268151.5027769,
+      "exit_fill": {
+        "vwap": 0.82,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 53,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.57,
+      "theoretical_entry": 0.57,
+      "slippage_entry": 0.0,
+      "time": 1770268640.3086917,
+      "ticker": "KXBTC15M-26FEB050030-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.57,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.009999999999999898,
+      "exit": 0.37,
+      "theoretical_exit": 0.37,
+      "slippage_exit": 0.0,
+      "pnl": -1.9999999999999996,
+      "close_time": 1770268688.4610212,
+      "exit_fill": {
+        "vwap": 0.37,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 54,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.8299999999999998,
+      "theoretical_entry": 0.83,
+      "slippage_entry": -1.1102230246251565e-16,
+      "time": 1770268719.532532,
+      "ticker": "KXETH15M-26FEB050030-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.8299999999999998,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      },
+      "max_profit": 0.13000000000000012,
+      "exit": 0.96,
+      "theoretical_exit": 0.96,
+      "slippage_exit": 0.0,
+      "pnl": 0.6500000000000006,
+      "close_time": 1770268899.9185944,
+      "exit_fill": {
+        "vwap": 0.96,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 55,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.82,
+      "theoretical_entry": 0.8200000000000001,
+      "slippage_entry": -1.1102230246251565e-16,
+      "time": 1770269559.7411332,
+      "ticker": "KXETH15M-26FEB050045-45",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.82,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.009999999999999898,
+      "exit": 0.6460000000000001,
+      "theoretical_exit": 0.6699999999999999,
+      "slippage_exit": -0.0239999999999998,
+      "pnl": -0.8699999999999991,
+      "close_time": 1770269651.040235,
+      "exit_fill": {
+        "vwap": 0.6460000000000001,
+        "levels": 2,
+        "slippage": 0.0039999999999998925,
+        "partial": false
+      }
+    },
+    {
+      "id": 56,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.37,
+      "theoretical_entry": 0.34,
+      "slippage_entry": 0.02999999999999997,
+      "time": 1770269581.8428323,
+      "ticker": "KXBTC15M-26FEB050045-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.37,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.09000000000000002,
+      "exit": 0.63,
+      "theoretical_exit": 0.46,
+      "slippage_exit": 0.16999999999999998,
+      "pnl": 2.6,
+      "close_time": 1770269762.3085177,
+      "exit_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 57,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.21000000000000002,
+      "theoretical_entry": 0.20999999999999996,
+      "slippage_entry": 5.551115123125783e-17,
+      "time": 1770269948.6152303,
+      "ticker": "KXETH15M-26FEB050045-45",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.21000000000000002,
+        "levels": 1,
+        "slippage": 2.7755575615628914e-17,
+        "partial": false
+      },
+      "max_profit": -0.020000000000000073,
+      "exit": 0.02,
+      "theoretical_exit": 0.030000000000000027,
+      "slippage_exit": -0.010000000000000026,
+      "pnl": -0.9500000000000002,
+      "close_time": 1770270062.896932,
+      "exit_fill": {
+        "vwap": 0.02,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 58,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.65,
+      "theoretical_entry": 0.65,
+      "slippage_entry": 0.0,
+      "time": 1770270364.3119555,
+      "ticker": "KXBTC15M-26FEB050100-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.65,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.25,
+      "exit": 0.85,
+      "theoretical_exit": 0.85,
+      "slippage_exit": 0.0,
+      "pnl": 1.9999999999999996,
+      "close_time": 1770270519.6200366,
+      "exit_fill": {
+        "vwap": 0.85,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 59,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.64,
+      "theoretical_entry": 0.64,
+      "slippage_entry": 0.0,
+      "time": 1770271267.678167,
+      "ticker": "KXETH15M-26FEB050115-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.64,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.030000000000000027,
+      "exit": 0.5,
+      "theoretical_exit": 0.47,
+      "slippage_exit": 0.030000000000000027,
+      "pnl": -0.7000000000000001,
+      "close_time": 1770271285.7411878,
+      "exit_fill": {
+        "vwap": 0.5,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 60,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.7,
+      "theoretical_entry": 0.71,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770271411.9319255,
+      "ticker": "KXBTC15M-26FEB050115-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.7,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.029999999999999916,
+      "exit": 0.34,
+      "theoretical_exit": 0.34,
+      "slippage_exit": 0.0,
+      "pnl": -3.599999999999999,
+      "close_time": 1770271449.033222,
+      "exit_fill": {
+        "vwap": 0.34,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 61,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.794,
+      "theoretical_entry": 0.81,
+      "slippage_entry": -0.016000000000000014,
+      "time": 1770271598.2736464,
+      "ticker": "KXBTC15M-26FEB050115-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.794,
+        "levels": 2,
+        "slippage": 0.014000000000000012,
+        "partial": false
+      },
+      "max_profit": -0.02400000000000002,
+      "exit": 0.48,
+      "theoretical_exit": 0.48,
+      "slippage_exit": 0.0,
+      "pnl": -3.1400000000000006,
+      "close_time": 1770271635.4187737,
+      "exit_fill": {
+        "vwap": 0.48,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 62,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.75,
+      "theoretical_entry": 0.71,
+      "slippage_entry": 0.040000000000000036,
+      "time": 1770271779.6670837,
+      "ticker": "KXBTC15M-26FEB050115-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.75,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.07999999999999996,
+      "exit": 0.75,
+      "theoretical_exit": 0.75,
+      "slippage_exit": 0.0,
+      "pnl": 0.0,
+      "close_time": 1770271825.786058,
+      "exit_fill": {
+        "vwap": 0.75,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 63,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.5,
+      "theoretical_entry": 0.5,
+      "slippage_entry": 0.0,
+      "time": 1770272176.3213093,
+      "ticker": "KXBTC15M-26FEB050130-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.5,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.20999999999999996,
+      "exit": 0.63,
+      "theoretical_exit": 0.63,
+      "slippage_exit": 0.0,
+      "pnl": 1.3,
+      "close_time": 1770272262.5531604,
+      "exit_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 65,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.72,
+      "theoretical_entry": 0.72,
+      "slippage_entry": 0.0,
+      "time": 1770272346.7499824,
+      "ticker": "KXETH15M-26FEB050130-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.72,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.050000000000000044,
+      "exit": 0.7,
+      "theoretical_exit": 0.73,
+      "slippage_exit": -0.030000000000000027,
+      "pnl": -0.10000000000000009,
+      "close_time": 1770272380.871679,
+      "exit_fill": {
+        "vwap": 0.7,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 64,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.4699999999999999,
+      "theoretical_entry": 0.47,
+      "slippage_entry": -5.551115123125783e-17,
+      "time": 1770272325.6777432,
+      "ticker": "KXBTC15M-26FEB050130-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.4699999999999999,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": 0.2800000000000001,
+      "exit": 0.71,
+      "theoretical_exit": 0.71,
+      "slippage_exit": 0.0,
+      "pnl": 2.4000000000000004,
+      "close_time": 1770272453.0829544,
+      "exit_fill": {
+        "vwap": 0.71,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 66,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.257,
+      "theoretical_entry": 0.25,
+      "slippage_entry": 0.007000000000000006,
+      "time": 1770272600.3475382,
+      "ticker": "KXBTC15M-26FEB050130-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.257,
+        "levels": 2,
+        "slippage": 0.007000000000000006,
+        "partial": false
+      },
+      "max_profit": 0.04299999999999998,
+      "exit": 0.07,
+      "theoretical_exit": 0.07,
+      "slippage_exit": 0.0,
+      "pnl": -1.87,
+      "close_time": 1770272739.6457653,
+      "exit_fill": {
+        "vwap": 0.07,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 67,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.73,
+      "theoretical_entry": 0.73,
+      "slippage_entry": 0.0,
+      "time": 1770273132.2370243,
+      "ticker": "KXETH15M-26FEB050145-45",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.73,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.09999999999999998,
+      "exit": 0.75,
+      "theoretical_exit": 0.75,
+      "slippage_exit": 0.0,
+      "pnl": 0.10000000000000009,
+      "close_time": 1770273238.5697234,
+      "exit_fill": {
+        "vwap": 0.75,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 68,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.79,
+      "theoretical_entry": 0.79,
+      "slippage_entry": 0.0,
+      "time": 1770273200.4537373,
+      "ticker": "KXBTC15M-26FEB050145-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.79,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.13,
+      "exit": 0.8800000000000001,
+      "theoretical_exit": 0.88,
+      "slippage_exit": 1.1102230246251565e-16,
+      "pnl": 0.9000000000000008,
+      "close_time": 1770273320.7803013,
+      "exit_fill": {
+        "vwap": 0.8800000000000001,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 69,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.52,
+      "theoretical_entry": 0.51,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770273953.698208,
+      "ticker": "KXBTC15M-26FEB050200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.52,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.020000000000000018,
+      "exit": 0.34,
+      "theoretical_exit": 0.34,
+      "slippage_exit": 0.0,
+      "pnl": -1.7999999999999998,
+      "close_time": 1770274024.878346,
+      "exit_fill": {
+        "vwap": 0.34,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 70,
+      "dir": "NO",
+      "size": 5,
+      "entry": 0.8400000000000001,
+      "theoretical_entry": 0.85,
+      "slippage_entry": -0.009999999999999898,
+      "time": 1770274060.9741366,
+      "ticker": "KXETH15M-26FEB050200-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.8400000000000001,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      },
+      "max_profit": 0.07999999999999996,
+      "exit": 0.8699999999999999,
+      "theoretical_exit": 0.5800000000000001,
+      "slippage_exit": 0.2899999999999998,
+      "pnl": 0.14999999999999902,
+      "close_time": 1770274072.0308776,
+      "exit_fill": {
+        "vwap": 0.8699999999999999,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 71,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.32,
+      "theoretical_entry": 0.29,
+      "slippage_entry": 0.030000000000000027,
+      "time": 1770274164.2150803,
+      "ticker": "KXETH15M-26FEB050200-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.32,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.03999999999999998,
+      "exit": 0.1,
+      "theoretical_exit": 0.17,
+      "slippage_exit": -0.07,
+      "pnl": -1.1,
+      "close_time": 1770274185.3396456,
+      "exit_fill": {
+        "vwap": 0.1,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 72,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.38,
+      "theoretical_entry": 0.4,
+      "slippage_entry": -0.020000000000000018,
+      "time": 1770274171.2715805,
+      "ticker": "KXBTC15M-26FEB050200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.38,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.020000000000000018,
+      "exit": 0.24,
+      "theoretical_exit": 0.23,
+      "slippage_exit": 0.009999999999999981,
+      "pnl": -1.4000000000000001,
+      "close_time": 1770274284.5905254,
+      "exit_fill": {
+        "vwap": 0.24,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 73,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.24,
+      "theoretical_entry": 0.24,
+      "slippage_entry": 0.0,
+      "time": 1770274491.951562,
+      "ticker": "KXBTC15M-26FEB050200-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.24,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.32000000000000006,
+      "exit": 0.42000000000000004,
+      "theoretical_exit": 0.55,
+      "slippage_exit": -0.13,
+      "pnl": 1.8000000000000005,
+      "close_time": 1770274672.3443925,
+      "exit_fill": {
+        "vwap": 0.42000000000000004,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      }
+    },
+    {
+      "id": 74,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.86,
+      "theoretical_entry": 0.78,
+      "slippage_entry": 0.07999999999999996,
+      "time": 1770274873.7083883,
+      "ticker": "KXETH15M-26FEB050215-15",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.86,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.07999999999999996,
+      "exit": 0.89,
+      "theoretical_exit": 0.89,
+      "slippage_exit": 0.0,
+      "pnl": 0.15000000000000013,
+      "close_time": 1770274947.8797748,
+      "exit_fill": {
+        "vwap": 0.89,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 75,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.7,
+      "theoretical_entry": 0.7,
+      "slippage_entry": 0.0,
+      "time": 1770275746.1541834,
+      "ticker": "KXBTC15M-26FEB050230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.7,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.0,
+      "exit": 0.43,
+      "theoretical_exit": 0.43000000000000005,
+      "slippage_exit": -5.551115123125783e-17,
+      "pnl": -2.6999999999999997,
+      "close_time": 1770275802.3152049,
+      "exit_fill": {
+        "vwap": 0.43,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 76,
+      "dir": "YES",
+      "size": 10,
+      "entry": 0.66,
+      "theoretical_entry": 0.66,
+      "slippage_entry": 0.0,
+      "time": 1770275951.6406267,
+      "ticker": "KXBTC15M-26FEB050230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.12,
+      "exit": 0.64,
+      "theoretical_exit": 0.63,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": -0.20000000000000018,
+      "close_time": 1770276081.0081835,
+      "exit_fill": {
+        "vwap": 0.64,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 77,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.82,
+      "theoretical_entry": 0.82,
+      "slippage_entry": 0.0,
+      "time": 1770276062.916554,
+      "ticker": "KXETH15M-26FEB050230-30",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.82,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.039999999999999925,
+      "exit": 0.66,
+      "theoretical_exit": 0.65,
+      "slippage_exit": 0.010000000000000009,
+      "pnl": -0.7999999999999996,
+      "close_time": 1770276081.5046313,
+      "exit_fill": {
+        "vwap": 0.66,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 78,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.201,
+      "theoretical_entry": 0.20999999999999996,
+      "slippage_entry": -0.008999999999999952,
+      "time": 1770276234.7886481,
+      "ticker": "KXBTC15M-26FEB050230-30",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.201,
+        "levels": 2,
+        "slippage": 0.0010000000000000009,
+        "partial": false
+      },
+      "max_profit": -0.030999999999999972,
+      "exit": 0.040999999999999995,
+      "theoretical_exit": 0.040000000000000036,
+      "slippage_exit": 0.0009999999999999593,
+      "pnl": -1.6000000000000003,
+      "close_time": 1770276311.0081942,
+      "exit_fill": {
+        "vwap": 0.040999999999999995,
+        "levels": 2,
+        "slippage": 0.009000000000000008,
+        "partial": false
+      }
+    },
+    {
+      "id": 79,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.8100000000000002,
+      "theoretical_entry": 0.81,
+      "slippage_entry": 1.1102230246251565e-16,
+      "time": 1770276780.7584653,
+      "ticker": "KXBTC15M-26FEB050245-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.8100000000000002,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      },
+      "max_profit": 0.039999999999999813,
+      "exit": 0.8299999999999998,
+      "theoretical_exit": 0.83,
+      "slippage_exit": -1.1102230246251565e-16,
+      "pnl": 0.19999999999999685,
+      "close_time": 1770276961.234595,
+      "exit_fill": {
+        "vwap": 0.8299999999999998,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 80,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.63,
+      "theoretical_entry": 0.62,
+      "slippage_entry": 0.010000000000000009,
+      "time": 1770277701.5711384,
+      "ticker": "KXETH15M-26FEB050300-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.63,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": -0.030000000000000027,
+      "exit": 0.4699999999999999,
+      "theoretical_exit": 0.47,
+      "slippage_exit": -5.551115123125783e-17,
+      "pnl": -0.8000000000000005,
+      "close_time": 1770277724.7201657,
+      "exit_fill": {
+        "vwap": 0.4699999999999999,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      }
+    },
+    {
+      "id": 81,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.58,
+      "theoretical_entry": 0.5900000000000001,
+      "slippage_entry": -0.01000000000000012,
+      "time": 1770277720.6764684,
+      "ticker": "KXBTC15M-26FEB050300-00",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.58,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.28,
+      "exit": 0.8100000000000002,
+      "theoretical_exit": 0.81,
+      "slippage_exit": 1.1102230246251565e-16,
+      "pnl": 2.300000000000002,
+      "close_time": 1770277859.0921555,
+      "exit_fill": {
+        "vwap": 0.8100000000000002,
+        "levels": 1,
+        "slippage": 1.1102230246251565e-16,
+        "partial": false
+      }
+    },
+    {
+      "id": 82,
+      "dir": "YES",
+      "size": 5,
+      "entry": 0.42000000000000004,
+      "theoretical_entry": 0.41,
+      "slippage_entry": 0.010000000000000064,
+      "time": 1770277898.1855533,
+      "ticker": "KXETH15M-26FEB050300-00",
+      "open": false,
+      "market_type": "eth_15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 5,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.42000000000000004,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      },
+      "max_profit": 0.02999999999999997,
+      "exit": 0.49000000000000005,
+      "theoretical_exit": 0.38,
+      "slippage_exit": 0.11000000000000004,
+      "pnl": 0.35000000000000003,
+      "close_time": 1770278078.6283565,
+      "exit_fill": {
+        "vwap": 0.49000000000000005,
+        "levels": 1,
+        "slippage": 5.551115123125783e-17,
+        "partial": false
+      }
+    }
+  ],
+  "flash_crashes": [
+    {
+      "time": 1770255956.048991,
+      "market_type": "15m",
+      "max_k": 0.45,
+      "current_k": 0.38,
+      "drop_pct": 0.15555555555555556,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257166.2325351,
+      "market_type": "15m",
+      "max_k": 0.24,
+      "current_k": 0.15,
+      "drop_pct": 0.375,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257167.2334065,
+      "market_type": "15m",
+      "max_k": 0.24,
+      "current_k": 0.15,
+      "drop_pct": 0.375,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257168.2345996,
+      "market_type": "15m",
+      "max_k": 0.24,
+      "current_k": 0.15,
+      "drop_pct": 0.375,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257754.1365092,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257755.1375751,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257756.1384163,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257757.1399057,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257758.1413436,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257759.142414,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257760.143249,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.36,
+      "drop_pct": 0.30769230769230776,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257761.145027,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.37,
+      "drop_pct": 0.2884615384615385,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257762.146758,
+      "market_type": "15m",
+      "max_k": 0.52,
+      "current_k": 0.37,
+      "drop_pct": 0.2884615384615385,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257778.1715653,
+      "market_type": "eth_15m",
+      "max_k": 0.32,
+      "current_k": 0.24,
+      "drop_pct": 0.25000000000000006,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257779.173469,
+      "market_type": "eth_15m",
+      "max_k": 0.32,
+      "current_k": 0.24,
+      "drop_pct": 0.25000000000000006,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257780.1760643,
+      "market_type": "eth_15m",
+      "max_k": 0.32,
+      "current_k": 0.24,
+      "drop_pct": 0.25000000000000006,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257781.179536,
+      "market_type": "eth_15m",
+      "max_k": 0.32,
+      "current_k": 0.24,
+      "drop_pct": 0.25000000000000006,
+      "window_sec": 10
+    },
+    {
+      "time": 1770257826.2939875,
+      "market_type": "eth_15m",
+      "max_k": 0.28,
+      "current_k": 0.16,
+      "drop_pct": 0.4285714285714286,
+      "window_sec": 10
+    },
+    {
+      "time": 1770261334.4742274,
+      "market_type": "15m",
+      "max_k": 0.55,
+      "current_k": 0.45,
+      "drop_pct": 0.18181818181818185,
+      "window_sec": 10
+    },
+    {
+      "time": 1770261358.5572977,
+      "market_type": "eth_15m",
+      "max_k": 0.33,
+      "current_k": 0.27,
+      "drop_pct": 0.1818181818181818,
+      "window_sec": 10
+    },
+    {
+      "time": 1770261844.8105977,
+      "market_type": "eth_15m",
+      "max_k": 0.65,
+      "current_k": 0.54,
+      "drop_pct": 0.1692307692307692,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262777.5056162,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.29,
+      "drop_pct": 0.19444444444444448,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262778.5082214,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.29,
+      "drop_pct": 0.19444444444444448,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262779.510538,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.29,
+      "drop_pct": 0.19444444444444448,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262781.513047,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.27,
+      "drop_pct": 0.24999999999999992,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262782.5142405,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.28,
+      "drop_pct": 0.22222222222222213,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262783.5154476,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.28,
+      "drop_pct": 0.22222222222222213,
+      "window_sec": 10
+    },
+    {
+      "time": 1770262784.516703,
+      "market_type": "eth_15m",
+      "max_k": 0.36,
+      "current_k": 0.28,
+      "drop_pct": 0.22222222222222213,
+      "window_sec": 10
+    },
+    {
+      "time": 1770264163.7262132,
+      "market_type": "eth_15m",
+      "max_k": 0.45,
+      "current_k": 0.37,
+      "drop_pct": 0.1777777777777778,
+      "window_sec": 10
+    },
+    {
+      "time": 1770264236.9310048,
+      "market_type": "15m",
+      "max_k": 0.42,
+      "current_k": 0.28,
+      "drop_pct": 0.33333333333333326,
+      "window_sec": 10
+    },
+    {
+      "time": 1770265010.4709368,
+      "market_type": "eth_15m",
+      "max_k": 0.48,
+      "current_k": 0.34,
+      "drop_pct": 0.2916666666666666,
+      "window_sec": 10
+    },
+    {
+      "time": 1770268028.099413,
+      "market_type": "15m",
+      "max_k": 0.43,
+      "current_k": 0.36,
+      "drop_pct": 0.16279069767441862,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271578.1987743,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.21,
+      "drop_pct": 0.16000000000000003,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271579.200597,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271580.2022448,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271581.2046402,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271582.206833,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271583.209272,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271584.2108586,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271585.2125955,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770271586.214089,
+      "market_type": "15m",
+      "max_k": 0.25,
+      "current_k": 0.19,
+      "drop_pct": 0.24,
+      "window_sec": 10
+    },
+    {
+      "time": 1770274060.932422,
+      "market_type": "eth_15m",
+      "max_k": 0.26,
+      "current_k": 0.15,
+      "drop_pct": 0.42307692307692313,
+      "window_sec": 10
+    },
+    {
+      "time": 1770276780.7189047,
+      "market_type": "15m",
+      "max_k": 0.26,
+      "current_k": 0.19,
+      "drop_pct": 0.2692307692307693,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277545.1096127,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.53,
+      "drop_pct": 0.1587301587301587,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277546.112374,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.53,
+      "drop_pct": 0.1587301587301587,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277547.1150475,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.53,
+      "drop_pct": 0.1587301587301587,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277548.117182,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.53,
+      "drop_pct": 0.1587301587301587,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277549.1203783,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.53,
+      "drop_pct": 0.1587301587301587,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277550.1223269,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.53,
+      "drop_pct": 0.1587301587301587,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277551.1252923,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.51,
+      "drop_pct": 0.19047619047619047,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277552.1275246,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.51,
+      "drop_pct": 0.19047619047619047,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277553.1295278,
+      "market_type": "15m",
+      "max_k": 0.63,
+      "current_k": 0.51,
+      "drop_pct": 0.19047619047619047,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277705.5842905,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277706.5884485,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277707.5915785,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277708.5956552,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277709.5986197,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277710.6101158,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277711.613267,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277712.617008,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277713.6207745,
+      "market_type": "15m",
+      "max_k": 0.61,
+      "current_k": 0.49,
+      "drop_pct": 0.19672131147540983,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277715.6264527,
+      "market_type": "15m",
+      "max_k": 0.49,
+      "current_k": 0.41,
+      "drop_pct": 0.16326530612244902,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277716.6297188,
+      "market_type": "15m",
+      "max_k": 0.49,
+      "current_k": 0.41,
+      "drop_pct": 0.16326530612244902,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277717.6327538,
+      "market_type": "15m",
+      "max_k": 0.49,
+      "current_k": 0.41,
+      "drop_pct": 0.16326530612244902,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277718.635964,
+      "market_type": "15m",
+      "max_k": 0.49,
+      "current_k": 0.41,
+      "drop_pct": 0.16326530612244902,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277719.6394935,
+      "market_type": "15m",
+      "max_k": 0.49,
+      "current_k": 0.41,
+      "drop_pct": 0.16326530612244902,
+      "window_sec": 10
+    },
+    {
+      "time": 1770277720.6421535,
+      "market_type": "15m",
+      "max_k": 0.49,
+      "current_k": 0.41,
+      "drop_pct": 0.16326530612244902,
+      "window_sec": 10
+    }
+  ],
+  "websocket_mode": "REST",
+  "complete": true
+}

@@ -1,0 +1,26 @@
+/* TaxForge Responsive Grid Layout */
+
+/* Two-column responsive grid */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Stack columns on small screens */
+@media (max-width: 900px) {
+    .responsive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Full-width column item */
+.grid-column {
+    min-width: 0;
+}
+
+/* Ensure cards stretch to fill grid cells */
+.grid-column > div {
+    height: 100%;
+}

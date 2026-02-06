@@ -1,0 +1,182 @@
+{
+  "duration_min": 44,
+  "pnl": 1.349999999999999,
+  "signals": [
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 122
+    },
+    {
+      "type": "steam_follow",
+      "market": "15m",
+      "time": 1989
+    }
+  ],
+  "trades": [
+    {
+      "id": 0,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.79,
+      "theoretical_entry": 0.8,
+      "slippage_entry": -0.010000000000000009,
+      "time": 1770242518.4523745,
+      "ticker": "KXBTC15M-26FEB041715-15",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.79,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      },
+      "max_profit": 0.16999999999999993,
+      "exit": 0.96,
+      "theoretical_exit": 0.96,
+      "slippage_exit": 0.0,
+      "pnl": 1.6999999999999993,
+      "close_time": 1770242698.7785165,
+      "exit_fill": {
+        "vwap": 0.96,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    },
+    {
+      "id": 1,
+      "dir": "NO",
+      "size": 10,
+      "entry": 0.805,
+      "theoretical_entry": 0.8,
+      "slippage_entry": 0.0050000000000000044,
+      "time": 1770244385.904519,
+      "ticker": "KXBTC15M-26FEB041745-45",
+      "open": false,
+      "market_type": "15m",
+      "strategy": "steam_follow",
+      "sizing_decision": {
+        "method": "fixed",
+        "base_size": 10,
+        "calculated_size": 10,
+        "strategy_trades": 0,
+        "win_rate": 0,
+        "win_loss_ratio": 0,
+        "kelly_fraction": 0
+      },
+      "entry_fill": {
+        "vwap": 0.805,
+        "levels": 2,
+        "slippage": 0.0050000000000000044,
+        "partial": false
+      },
+      "max_profit": 0.05499999999999994,
+      "exit": 0.77,
+      "theoretical_exit": 0.77,
+      "slippage_exit": 0.0,
+      "pnl": -0.3500000000000003,
+      "close_time": 1770244518.186474,
+      "exit_fill": {
+        "vwap": 0.77,
+        "levels": 1,
+        "slippage": 0.0,
+        "partial": false
+      }
+    }
+  ],
+  "flash_crashes": [
+    {
+      "time": 1770242518.420852,
+      "market_type": "15m",
+      "max_k": 0.24,
+      "current_k": 0.2,
+      "drop_pct": 0.1666666666666666,
+      "window_sec": 10
+    },
+    {
+      "time": 1770242542.495301,
+      "market_type": "eth_15m",
+      "max_k": 0.19,
+      "current_k": 0.15,
+      "drop_pct": 0.21052631578947373,
+      "window_sec": 10
+    },
+    {
+      "time": 1770242543.4972115,
+      "market_type": "eth_15m",
+      "max_k": 0.19,
+      "current_k": 0.15,
+      "drop_pct": 0.21052631578947373,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244381.8622174,
+      "market_type": "eth_15m",
+      "max_k": 0.17,
+      "current_k": 0.14,
+      "drop_pct": 0.1764705882352941,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244382.8632536,
+      "market_type": "eth_15m",
+      "max_k": 0.17,
+      "current_k": 0.14,
+      "drop_pct": 0.1764705882352941,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244383.8655694,
+      "market_type": "eth_15m",
+      "max_k": 0.17,
+      "current_k": 0.14,
+      "drop_pct": 0.1764705882352941,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244384.867674,
+      "market_type": "15m",
+      "max_k": 0.29,
+      "current_k": 0.23,
+      "drop_pct": 0.20689655172413784,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244384.867979,
+      "market_type": "eth_15m",
+      "max_k": 0.17,
+      "current_k": 0.14,
+      "drop_pct": 0.1764705882352941,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244385.8690016,
+      "market_type": "15m",
+      "max_k": 0.29,
+      "current_k": 0.2,
+      "drop_pct": 0.3103448275862068,
+      "window_sec": 10
+    },
+    {
+      "time": 1770244385.9049442,
+      "market_type": "eth_15m",
+      "max_k": 0.17,
+      "current_k": 0.14,
+      "drop_pct": 0.1764705882352941,
+      "window_sec": 10
+    }
+  ],
+  "websocket_mode": "WebSocket",
+  "complete": false
+}

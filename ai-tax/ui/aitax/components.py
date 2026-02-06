@@ -12,6 +12,7 @@ COLORS = {
     "bg_card": "white",              # Pure white cards
     "bg_hover": "#f1f5f9",           # Hover state
     "bg_input": "#f8fafc",           # Input background
+    "bg_subtle": "#f1f5f9",          # Subtle background (same as hover)
     
     # Text
     "text_primary": "#1e293b",       # Dark navy text

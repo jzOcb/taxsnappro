@@ -279,11 +279,11 @@
       "settled_at": "2026-02-06T04:15:03.625649+00:00"
     }
   ],
-  "signals_seen": 87,
+  "signals_seen": 91,
   "trades_taken": 10,
   "wins": 1,
   "losses": 5,
-  "last_scan": "2026-02-06T04:45:16.413293+00:00",
+  "last_scan": "2026-02-06T05:15:28.414645+00:00",
   "daily_stats": {
     "2026-02-05": {
       "scans": 14,
@@ -291,9 +291,9 @@
       "trades": 17
     },
     "2026-02-06": {
-      "scans": 11,
-      "signals": 70,
-      "trades": 70
+      "scans": 12,
+      "signals": 74,
+      "trades": 74
     }
   }
 }

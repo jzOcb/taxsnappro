@@ -16,7 +16,7 @@ from .document_extractor import (
     REQUEST_DELAY_SECONDS
 )
 from .persistence import save_state, load_state, clear_saved_data
-from .form_generator import generate_form_1040_pdf, get_tax_data_from_state
+from .irs_form_filler import fill_form_1040, get_tax_data_for_1040
 import asyncio
 import base64
 
@@ -1162,14 +1162,36 @@ class TaxAppState(rx.State):
         return round(tax, 2)
     
     def generate_return(self):
-        """Generate tax return PDF."""
+        """Generate official IRS Form 1040 PDF."""
         self._recalculate()
         self.return_status = "complete"
         self.return_generated = True
         
-        # Generate PDF
-        tax_data = get_tax_data_from_state(self)
-        pdf_bytes = generate_form_1040_pdf(tax_data)
+        # Ensure IRS form template exists
+        irs_forms_dir = Path.home() / ".taxsnappro" / "irs_forms"
+        irs_forms_dir.mkdir(parents=True, exist_ok=True)
+        template_path = irs_forms_dir / "f1040.pdf"
+        
+        if not template_path.exists():
+            # Download from IRS
+            import httpx
+            print("[TaxSnapPro] Downloading IRS Form 1040 template...")
+            try:
+                resp = httpx.get("https://www.irs.gov/pub/irs-pdf/f1040.pdf", timeout=30)
+                resp.raise_for_status()
+                template_path.write_bytes(resp.content)
+                print("[TaxSnapPro] Form 1040 template downloaded")
+            except Exception as e:
+                self.error_message = f"Failed to download Form 1040: {e}"
+                return
+        
+        # Generate filled Form 1040
+        tax_data = get_tax_data_for_1040(self)
+        try:
+            pdf_bytes = fill_form_1040(tax_data, template_path=str(template_path))
+        except Exception as e:
+            self.error_message = f"Failed to fill Form 1040: {e}"
+            return
         
         # Store as base64 for download
         self.generated_pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
@@ -1182,7 +1204,7 @@ class TaxAppState(rx.State):
         else:
             result_text = f"Estimated Amount Owed: ${abs(refund_or_owed):,.2f}"
         
-        self.success_message = f"✅ Form 1040 generated! {result_text}"
+        self.success_message = f"✅ IRS Form 1040 generated! {result_text}"
     
     def close_return_summary(self):
         """Close the return summary modal."""

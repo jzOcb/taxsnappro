@@ -164,6 +164,171 @@
       },
       "actual_high": null,
       "timestamp": "2026-02-06T04:37:17.982602+00:00"
+    },
+    {
+      "city": "LAX",
+      "date": "2026-02-06",
+      "forecast_mu": 60.6,
+      "forecast_sigma": 6.0,
+      "sources": {
+        "nws_raw": 69.0,
+        "nws_adj": 60.0,
+        "om_raw": 64.5,
+        "om_adj": 61.5,
+        "metar_current": 63.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:40.536540+00:00"
+    },
+    {
+      "city": "NYC",
+      "date": "2026-02-06",
+      "forecast_mu": 25.9,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 30.0,
+        "nws_adj": 27.0,
+        "om_raw": 29.4,
+        "om_adj": 24.4,
+        "metar_current": 25.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:41.212040+00:00"
+    },
+    {
+      "city": "CHI",
+      "date": "2026-02-06",
+      "forecast_mu": 39.6,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 36.0,
+        "nws_adj": 39.0,
+        "om_raw": 36.5,
+        "om_adj": 40.5,
+        "metar_current": 28.9
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:41.880089+00:00"
+    },
+    {
+      "city": "PHI",
+      "date": "2026-02-06",
+      "forecast_mu": 23.7,
+      "forecast_sigma": 6.0,
+      "sources": {
+        "nws_raw": 31.0,
+        "nws_adj": 24.0,
+        "om_raw": 30.2,
+        "om_adj": 23.2,
+        "metar_current": 25.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:42.698336+00:00"
+    },
+    {
+      "city": "BOS",
+      "date": "2026-02-06",
+      "forecast_mu": 25.7,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 28.0,
+        "nws_adj": 25.0,
+        "om_raw": 29.8,
+        "om_adj": 26.8,
+        "metar_current": 23.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:43.343083+00:00"
+    },
+    {
+      "city": "MIA",
+      "date": "2026-02-06",
+      "forecast_mu": 64.9,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 67.0,
+        "nws_adj": 64.0,
+        "om_raw": 66.1,
+        "om_adj": 66.1,
+        "metar_current": 48.9
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:44.111260+00:00"
+    },
+    {
+      "city": "SFO",
+      "date": "2026-02-06",
+      "forecast_mu": 68.1,
+      "forecast_sigma": 5.1,
+      "sources": {
+        "nws_raw": 65.0,
+        "nws_adj": 66.0,
+        "om_raw": 66.1,
+        "om_adj": 71.1,
+        "metar_current": 59.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:45.103275+00:00"
+    },
+    {
+      "city": "AUS",
+      "date": "2026-02-06",
+      "forecast_mu": 85.5,
+      "forecast_sigma": 6.0,
+      "sources": {
+        "nws_raw": 80.0,
+        "nws_adj": 85.0,
+        "om_raw": 82.3,
+        "om_adj": 86.3,
+        "metar_current": 42.1
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:45.776671+00:00"
+    },
+    {
+      "city": "SEA",
+      "date": "2026-02-06",
+      "forecast_mu": 55.6,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 59.0,
+        "nws_adj": 56.0,
+        "om_raw": 55.0,
+        "om_adj": 55.0,
+        "metar_current": 46.9
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:46.458655+00:00"
+    },
+    {
+      "city": "LV",
+      "date": "2026-02-06",
+      "forecast_mu": 72.1,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 72.0,
+        "nws_adj": 71.0,
+        "om_raw": 72.8,
+        "om_adj": 73.8,
+        "metar_current": 61.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:47.114647+00:00"
+    },
+    {
+      "city": "PHX",
+      "date": "2026-02-06",
+      "forecast_mu": 78.4,
+      "forecast_sigma": 4.0,
+      "sources": {
+        "nws_raw": 81.0,
+        "nws_adj": 77.0,
+        "om_raw": 82.5,
+        "om_adj": 80.5,
+        "metar_current": 70.0
+      },
+      "actual_high": null,
+      "timestamp": "2026-02-06T05:07:47.772694+00:00"
     }
   ]
 }

@@ -1,6 +1,6 @@
 """TaxSnapPro - AI-powered tax preparation"""
 
-__version__ = "1.0.4"
+__version__ = "1.1.0"
 
 # Export app for Reflex
 from .aitax import app

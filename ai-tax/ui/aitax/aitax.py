@@ -96,120 +96,169 @@ def api_modal() -> rx.Component:
 
 # ============== Return Summary Modal ==============
 def return_summary_modal() -> rx.Component:
-    """Tax return summary modal."""
-    return rx.dialog.root(
-        rx.dialog.content(
-            rx.dialog.title(
-                rx.hstack(
-                    rx.icon("file-check", size=24, color=COLORS["success"]),
-                    rx.text("Tax Return Summary", font_weight="600"),
-                    spacing="2",
-                ),
+    """Tax return summary modal using rx.cond pattern."""
+    return rx.cond(
+        TaxAppState.show_return_summary,
+        rx.box(
+            # Backdrop
+            rx.box(
+                position="fixed",
+                top="0",
+                left="0",
+                right="0",
+                bottom="0",
+                background="rgba(0,0,0,0.5)",
+                z_index="200",
+                on_click=TaxAppState.close_return_summary,
             ),
-            rx.dialog.description(
+            # Modal content
+            rx.box(
                 rx.vstack(
-                    # Filing info
+                    # Header
                     rx.hstack(
-                        rx.text("Filing Status:", color=COLORS["text_muted"]),
-                        rx.text(TaxAppState.filing_status.replace("_", " ").title(), font_weight="500"),
-                        width="100%",
-                        justify="between",
-                    ),
-                    rx.divider(),
-                    
-                    # Income summary
-                    rx.text("Income", font_weight="600", color=COLORS["text_primary"]),
-                    rx.hstack(
-                        rx.text("Adjusted Gross Income:", color=COLORS["text_muted"]),
-                        rx.text(f"${TaxAppState.adjusted_gross_income:,.2f}", font_weight="500"),
-                        width="100%",
-                        justify="between",
-                    ),
-                    rx.divider(),
-                    
-                    # Deductions
-                    rx.text("Deductions", font_weight="600", color=COLORS["text_primary"]),
-                    rx.hstack(
-                        rx.text("Total Deductions:", color=COLORS["text_muted"]),
-                        rx.text(f"${TaxAppState.total_deductions:,.2f}", font_weight="500"),
-                        width="100%",
-                        justify="between",
-                    ),
-                    rx.hstack(
-                        rx.text("Taxable Income:", color=COLORS["text_muted"]),
-                        rx.text(f"${TaxAppState.taxable_income:,.2f}", font_weight="500"),
-                        width="100%",
-                        justify="between",
-                    ),
-                    rx.divider(),
-                    
-                    # Tax calculation
-                    rx.text("Tax Calculation", font_weight="600", color=COLORS["text_primary"]),
-                    rx.hstack(
-                        rx.text("Total Tax:", color=COLORS["text_muted"]),
-                        rx.text(f"${TaxAppState.total_tax:,.2f}", font_weight="500", color=COLORS["danger"]),
-                        width="100%",
-                        justify="between",
-                    ),
-                    rx.hstack(
-                        rx.text("Total Withholding:", color=COLORS["text_muted"]),
-                        rx.text(f"${TaxAppState.total_withholding:,.2f}", font_weight="500", color=COLORS["success"]),
-                        width="100%",
-                        justify="between",
-                    ),
-                    rx.divider(),
-                    
-                    # Result
-                    rx.hstack(
-                        rx.cond(
-                            TaxAppState.is_refund,
-                            rx.hstack(
-                                rx.icon("trending-up", color=COLORS["success"]),
-                                rx.text("Estimated Refund:", font_weight="600"),
-                                rx.text(f"+${TaxAppState.refund_or_owed:,.2f}", 
-                                       font_size="24px", font_weight="700", color=COLORS["success"]),
-                                spacing="2",
-                            ),
-                            rx.hstack(
-                                rx.icon("trending-down", color=COLORS["danger"]),
-                                rx.text("Amount Owed:", font_weight="600"),
-                                rx.text(f"${abs(TaxAppState.refund_or_owed):,.2f}", 
-                                       font_size="24px", font_weight="700", color=COLORS["danger"]),
-                                spacing="2",
-                            ),
+                        rx.hstack(
+                            rx.icon("file-check", size=24, color=COLORS["success"]),
+                            rx.text("Tax Return Summary", color=COLORS["text_primary"], 
+                                   font_size="20px", font_weight="600"),
+                            spacing="3",
                         ),
+                        rx.spacer(),
+                        rx.icon("x", size=20, color=COLORS["text_muted"], cursor="pointer",
+                               on_click=TaxAppState.close_return_summary, 
+                               _hover={"color": COLORS["text_primary"]}),
                         width="100%",
-                        justify="center",
-                        padding="16px",
-                        background=COLORS["bg_subtle"],
-                        border_radius="8px",
                     ),
                     
-                    spacing="3",
-                    width="100%",
-                    padding="16px 0",
-                ),
-            ),
-            rx.flex(
-                rx.button(
-                    rx.icon("download", size=16),
-                    "Download Form 1040 PDF",
-                    on_click=rx.download(
-                        data=rx.Var.create(f"data:application/pdf;base64,") + TaxAppState.generated_pdf_base64,
-                        filename="Form_1040_2024.pdf",
+                    rx.divider(),
+                    
+                    # Content
+                    rx.vstack(
+                        # Filing info
+                        rx.hstack(
+                            rx.text("Filing Status:", color=COLORS["text_muted"]),
+                            rx.text(TaxAppState.filing_status.replace("_", " ").title(), font_weight="500"),
+                            width="100%",
+                            justify="between",
+                        ),
+                        
+                        rx.divider(),
+                        
+                        # Income
+                        rx.text("Income", font_weight="600", color=COLORS["text_primary"]),
+                        rx.hstack(
+                            rx.text("Adjusted Gross Income:", color=COLORS["text_muted"]),
+                            rx.text(TaxAppState.adjusted_gross_income.to(str) + "", font_weight="500"),
+                            width="100%",
+                            justify="between",
+                        ),
+                        
+                        rx.divider(),
+                        
+                        # Deductions
+                        rx.text("Deductions", font_weight="600", color=COLORS["text_primary"]),
+                        rx.hstack(
+                            rx.text("Total Deductions:", color=COLORS["text_muted"]),
+                            rx.text(TaxAppState.total_deductions.to(str) + "", font_weight="500"),
+                            width="100%",
+                            justify="between",
+                        ),
+                        rx.hstack(
+                            rx.text("Taxable Income:", color=COLORS["text_muted"]),
+                            rx.text(TaxAppState.taxable_income.to(str) + "", font_weight="500"),
+                            width="100%",
+                            justify="between",
+                        ),
+                        
+                        rx.divider(),
+                        
+                        # Tax
+                        rx.text("Tax Calculation", font_weight="600", color=COLORS["text_primary"]),
+                        rx.hstack(
+                            rx.text("Total Tax:", color=COLORS["text_muted"]),
+                            rx.text(TaxAppState.total_tax.to(str) + "", font_weight="500", color=COLORS["error"]),
+                            width="100%",
+                            justify="between",
+                        ),
+                        rx.hstack(
+                            rx.text("Total Withholding:", color=COLORS["text_muted"]),
+                            rx.text(TaxAppState.total_withholding.to(str) + "", font_weight="500", color=COLORS["success"]),
+                            width="100%",
+                            justify="between",
+                        ),
+                        
+                        rx.divider(),
+                        
+                        # Result box
+                        rx.box(
+                            rx.cond(
+                                TaxAppState.is_refund,
+                                rx.hstack(
+                                    rx.icon("trending-up", color=COLORS["success"]),
+                                    rx.text("Estimated Refund: ", font_weight="600"),
+                                    rx.text(TaxAppState.refund_or_owed.to(str), 
+                                           font_size="20px", font_weight="700", color=COLORS["success"]),
+                                    spacing="2",
+                                    justify="center",
+                                ),
+                                rx.hstack(
+                                    rx.icon("trending-down", color=COLORS["error"]),
+                                    rx.text("Amount Owed: ", font_weight="600"),
+                                    rx.text(TaxAppState.refund_or_owed.to(str), 
+                                           font_size="20px", font_weight="700", color=COLORS["error"]),
+                                    spacing="2",
+                                    justify="center",
+                                ),
+                            ),
+                            width="100%",
+                            padding="16px",
+                            background=COLORS["bg_subtle"],
+                            border_radius="8px",
+                            text_align="center",
+                        ),
+                        
+                        spacing="3",
+                        width="100%",
                     ),
-                    color_scheme="indigo",
+                    
+                    rx.divider(),
+                    
+                    # Footer buttons
+                    rx.hstack(
+                        rx.button(
+                            rx.icon("download", size=16),
+                            "Download PDF",
+                            on_click=rx.download(
+                                data="data:application/pdf;base64," + TaxAppState.generated_pdf_base64,
+                                filename="Form_1040_2024.pdf",
+                            ),
+                            color_scheme="indigo",
+                        ),
+                        rx.button(
+                            "Close",
+                            on_click=TaxAppState.close_return_summary,
+                            variant="soft",
+                        ),
+                        justify="end",
+                        spacing="3",
+                        width="100%",
+                    ),
+                    
+                    spacing="4",
+                    padding="24px",
+                    width="100%",
                 ),
-                rx.dialog.close(
-                    rx.button("Close", variant="soft"),
-                ),
-                justify="end",
-                spacing="3",
+                position="fixed",
+                top="50%",
+                left="50%",
+                transform="translate(-50%, -50%)",
+                background="white",
+                border_radius="12px",
+                box_shadow="0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                z_index="201",
+                width="90%",
+                max_width="500px",
             ),
-            style={"max_width": "500px"},
         ),
-        open=TaxAppState.show_return_summary,
-        on_open_change=lambda _: TaxAppState.close_return_summary(),
     )
 
 
@@ -218,6 +267,7 @@ def dashboard_page() -> rx.Component:
     """Main dashboard page."""
     return page_container(
         api_modal(),
+        return_summary_modal(),
         rx.vstack(
             # Header
             rx.hstack(

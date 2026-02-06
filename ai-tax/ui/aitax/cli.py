@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 
 
-__version__ = "1.0.4"
+__version__ = "1.1.0"
 
 RXCONFIG_CONTENT = '''"""Reflex config for TaxSnapPro."""
 import reflex as rx
@@ -50,9 +50,9 @@ def upgrade():
     # Get current version
     current = __version__
     
-    # Upgrade via pip
+    # Clear pip cache and upgrade
     result = subprocess.run(
-        [sys.executable, "-m", "pip", "install", "--upgrade", "taxsnappro"],
+        [sys.executable, "-m", "pip", "install", "--upgrade", "--no-cache-dir", "taxsnappro"],
         capture_output=True,
         text=True
     )
@@ -61,26 +61,25 @@ def upgrade():
         print(f"❌ Upgrade failed: {result.stderr}")
         return 1
     
-    # Check if actually upgraded
-    if "already satisfied" in result.stdout.lower() and "up-to-date" in result.stdout.lower():
-        print(f"✅ Already on latest version (v{current})")
-        return 0
-    
     # Clear cached app directory so new code gets loaded
     app_dir = Path.home() / ".taxsnappro"
     aitax_dir = app_dir / "aitax"
     if aitax_dir.exists():
         shutil.rmtree(aitax_dir)
     
-    # Get new version
+    # Get new version from fresh subprocess (avoids module cache)
     result = subprocess.run(
-        [sys.executable, "-c", "import aitax; print(aitax.__version__)"],
+        [sys.executable, "-c", "import importlib.util; spec = importlib.util.find_spec('aitax'); import aitax; print(aitax.__version__)"],
         capture_output=True,
-        text=True
+        text=True,
+        env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"}
     )
     new_version = result.stdout.strip() if result.returncode == 0 else "unknown"
     
-    print(f"✅ Upgraded: v{current} → v{new_version}")
+    if new_version == current:
+        print(f"✅ Already on latest version (v{current})")
+    else:
+        print(f"✅ Upgraded: v{current} → v{new_version}")
     print("   Run 'taxsnappro' to start with the new version")
     return 0
 

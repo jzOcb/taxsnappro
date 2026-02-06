@@ -373,6 +373,82 @@ job_x_auto_poster() {
 }
 
 # ═══════════════════════════════════════════════
+# X Content Stage 1 - Data Collection
+# ═══════════════════════════════════════════════
+job_x_content_collect() {
+    log "START"
+    local today=$(date -u +%Y-%m-%d)
+    local output_file="/home/clawdbot/clawd/x-content-data-${today}.md"
+    
+    # Run collector
+    bash /home/clawdbot/clawd/scripts/collect-daily-work.sh "$output_file" 2>&1 || true
+    
+    if [[ -f "$output_file" ]]; then
+        local commit_count=$(grep -c "^  - [0-9a-f]" "$output_file" 2>/dev/null || echo 0)
+        local log_count=$(grep -c "^\- \[" "$output_file" 2>/dev/null || echo 0)
+        log "COLLECTED: $commit_count commits, $log_count log entries → $output_file"
+        
+        # Also save as JSON for Stage 2
+        python3 << PYEOF
+import json
+from datetime import datetime, timezone
+
+with open("$output_file") as f:
+    content = f.read()
+
+data = {
+    "collected_at": datetime.now(timezone.utc).isoformat(),
+    "date": "$today",
+    "work_summary": content,
+    "commit_count": $commit_count,
+    "log_count": $log_count
+}
+
+with open("/home/clawdbot/clawd/x-content-data.json", "w") as f:
+    json.dump(data, f, indent=2)
+print("JSON saved")
+PYEOF
+        log "JSON saved to x-content-data.json"
+    else
+        log "ERROR: collection failed"
+    fi
+}
+
+# ═══════════════════════════════════════════════
+# X Content Stage 2 - Trigger AI Generation
+# Uses OpenClaw gateway API to spawn content writing session
+# ═══════════════════════════════════════════════
+job_x_content_trigger() {
+    log "START"
+    
+    # Check if data was collected today
+    local today=$(date -u +%Y-%m-%d)
+    local data_file="/home/clawdbot/clawd/x-content-data.json"
+    
+    if [[ ! -f "$data_file" ]]; then
+        log "ERROR: no data file, skipping"
+        return
+    fi
+    
+    local collected_date=$(python3 -c "import json; print(json.load(open('$data_file')).get('date',''))" 2>/dev/null)
+    if [[ "$collected_date" != "$today" ]]; then
+        log "WARN: data file is from $collected_date, not today"
+    fi
+    
+    # Read work summary and send via Telegram as a trigger message
+    # The main session will pick this up in heartbeat or the user can respond
+    local summary=$(python3 -c "
+import json
+d = json.load(open('$data_file'))
+print(f\"📝 Daily Work Collected ({d.get('commit_count',0)} commits, {d.get('log_count',0)} log entries)\")
+print('Ready for X content generation. Reply if you want me to write posts now.')
+" 2>/dev/null)
+    
+    send_telegram "$summary" ""
+    log "TRIGGER SENT"
+}
+
+# ═══════════════════════════════════════════════
 # MAIN DISPATCHER
 # ═══════════════════════════════════════════════
 case "$JOB" in
@@ -397,12 +473,18 @@ case "$JOB" in
     x-auto-poster)
         job_x_auto_poster
         ;;
+    x-content-collect)
+        job_x_content_collect
+        ;;
+    x-content-trigger)
+        job_x_content_trigger
+        ;;
     test)
         send_telegram "🧪 Cron dispatcher test — $(date -u +%H:%M:%S\ UTC)" ""
         log "TEST sent"
         ;;
     *)
-        echo "Usage: cron-dispatcher.sh {btc-30min|kalshi-hourly|market-alert|market-report-premarket|market-report-midday|market-report-close|x-auto-poster|test}"
+        echo "Usage: cron-dispatcher.sh {btc-30min|kalshi-hourly|market-alert|market-report-premarket|market-report-midday|market-report-close|x-auto-poster|x-content-collect|x-content-trigger|test}"
         exit 1
         ;;
 esac

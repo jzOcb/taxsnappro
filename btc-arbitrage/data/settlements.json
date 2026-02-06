@@ -1110,5 +1110,21 @@
     "settlement_result": "no",
     "brti_proxy_at_check": 64916.416666666664,
     "volume": 36406
+  },
+  {
+    "timestamp": "2026-02-06T04:01:52.238419",
+    "ticker": "KXBTC15M-26FEB052300-00",
+    "close_time": "2026-02-06T04:00:00Z",
+    "settlement_result": "no",
+    "brti_proxy_at_check": 63980.565,
+    "volume": 36495
+  },
+  {
+    "timestamp": "2026-02-06T04:31:53.855855",
+    "ticker": "KXBTC15M-26FEB052330-30",
+    "close_time": "2026-02-06T04:30:00Z",
+    "settlement_result": "yes",
+    "brti_proxy_at_check": 64788.52666666667,
+    "volume": 60318
   }
 ]

@@ -1,35 +1,35 @@
 {
   "version": "2.0",
-  "last_update": "2026-02-06T03:07:15.348870+00:00",
-  "uptime_seconds": 18422.883487462997,
-  "cycle_count": 300,
-  "scan_count": 27,
-  "data_points_logged": 7687,
-  "signals_generated": 680,
+  "last_update": "2026-02-06T04:46:25.041764+00:00",
+  "uptime_seconds": 24372.576380252838,
+  "cycle_count": 404,
+  "scan_count": 36,
+  "data_points_logged": 9954,
+  "signals_generated": 906,
   "paper_trading": {
-    "total_trades": 22,
-    "open_trades": 3,
-    "closed_trades": 19,
-    "wins": 7,
-    "losses": 12,
-    "win_rate": 0.3684210526315789,
-    "total_pnl": -6.899999999999986,
-    "current_exposure": 300.0
+    "total_trades": 29,
+    "open_trades": 6,
+    "closed_trades": 23,
+    "wins": 10,
+    "losses": 13,
+    "win_rate": 0.43478260869565216,
+    "total_pnl": 5.200000000000015,
+    "current_exposure": 600.0
   },
   "market_scan": {
     "pm_markets_found": 0,
     "kalshi_markets_found": 0,
-    "valid_pairs": 24,
-    "last_scan": 1770346708.7180235
+    "valid_pairs": 21,
+    "last_scan": 1770352745.599715
   },
   "active_pairs": {
     "weather:Atlanta:2026-02-06": {
       "pm_title": "Highest temperature in Atlanta on February 6?",
-      "pm_price": 0.015,
+      "pm_price": 0.012,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXHIGHTATL-26FEB06",
-      "kalshi_price": 0.305,
+      "kalshi_price": 0.325,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 95,
@@ -37,8 +37,8 @@
         "PM=7-bracket, K=6 binary. Same city+date."
       ],
       "match_warnings": [],
-      "spread": -0.29,
-      "last_update": 1770347207.702825
+      "spread": -0.313,
+      "last_update": 1770353160.9832458
     },
     "weather:Chicago:2026-02-05": {
       "pm_title": "Highest temperature in Chicago on February 5?",
@@ -55,7 +55,7 @@
       ],
       "match_warnings": [],
       "spread": -0.01,
-      "last_update": 1770347208.9073937
+      "last_update": 1770353162.1889863
     },
     "weather:NYC:2026-02-05": {
       "pm_title": "Highest temperature in NYC on February 5?",
@@ -72,15 +72,15 @@
       ],
       "match_warnings": [],
       "spread": -0.01,
-      "last_update": 1770347210.0990667
+      "last_update": 1770353163.3770325
     },
     "weather:Chicago:2026-02-06": {
       "pm_title": "Highest temperature in Chicago on February 6?",
-      "pm_price": 0.0025,
+      "pm_price": 0.004,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXHIGHCHI-26FEB06",
-      "kalshi_price": 0.045,
+      "kalshi_price": 0.025,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 95,
@@ -88,8 +88,8 @@
         "PM=7-bracket, K=6 binary. Same city+date."
       ],
       "match_warnings": [],
-      "spread": -0.042499999999999996,
-      "last_update": 1770347211.30237
+      "spread": -0.021,
+      "last_update": 1770353164.5811193
     },
     "weather:Seattle:2026-02-05": {
       "pm_title": "Highest temperature in Seattle on February 5?",
@@ -106,7 +106,7 @@
       ],
       "match_warnings": [],
       "spread": 0.989,
-      "last_update": 1770347212.5087354
+      "last_update": 1770353165.7789602
     },
     "weather:Seattle:2026-02-06": {
       "pm_title": "Highest temperature in Seattle on February 6?",
@@ -114,7 +114,7 @@
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXHIGHTSEA-26FEB06",
-      "kalshi_price": 0.035,
+      "kalshi_price": 0.045,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 95,
@@ -122,8 +122,8 @@
         "PM=7-bracket, K=6 binary. Same city+date."
       ],
       "match_warnings": [],
-      "spread": -0.029500000000000005,
-      "last_update": 1770347213.7105153
+      "spread": -0.0395,
+      "last_update": 1770353166.9796104
     },
     "weather:Miami:2026-02-06": {
       "pm_title": "Highest temperature in Miami on February 6?",
@@ -140,7 +140,7 @@
       ],
       "match_warnings": [],
       "spread": -0.022000000000000002,
-      "last_update": 1770347214.904943
+      "last_update": 1770353168.1740344
     },
     "weather:Atlanta:2026-02-05": {
       "pm_title": "Highest temperature in Atlanta on February 5?",
@@ -157,15 +157,15 @@
       ],
       "match_warnings": [],
       "spread": -0.01,
-      "last_update": 1770347216.1000626
+      "last_update": 1770353169.3789563
     },
     "weather:NYC:2026-02-06": {
       "pm_title": "Highest temperature in NYC on February 6?",
-      "pm_price": 0.33,
+      "pm_price": 0.29,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXHIGHNY-26FEB06",
-      "kalshi_price": 0.095,
+      "kalshi_price": 0.115,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 95,
@@ -173,12 +173,12 @@
         "PM=7-bracket, K=6 binary. Same city+date."
       ],
       "match_warnings": [],
-      "spread": 0.23500000000000001,
-      "last_update": 1770347217.3102815
+      "spread": 0.175,
+      "last_update": 1770353170.5794275
     },
     "crypto:BTC:2026-02-06": {
       "pm_title": "Bitcoin above ___ on February 6?",
-      "pm_price": 0.0065,
+      "pm_price": 0.0075,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXBTCD-26FEB0617",
@@ -190,12 +190,12 @@
         "PM=11 thresholds, K=50 markets. PM=noon ET, K=5pm EST"
       ],
       "match_warnings": [],
-      "spread": -0.0035000000000000005,
-      "last_update": 1770347218.510584
+      "spread": -0.0025000000000000005,
+      "last_update": 1770353171.7795076
     },
     "crypto:ETH:2026-02-06": {
       "pm_title": "Ethereum above ___ on February 6?",
-      "pm_price": 0.015,
+      "pm_price": 0.016,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXETHD-26FEB0617",
@@ -207,16 +207,16 @@
         "PM=11 thresholds, K=50 markets. PM=noon ET, K=5pm EST"
       ],
       "match_warnings": [],
-      "spread": 0.004999999999999999,
-      "last_update": 1770347219.7119038
+      "spread": 0.006,
+      "last_update": 1770353172.9823806
     },
     "nba:HOU@OKC:2026-02-07": {
       "pm_title": "Rockets vs. Thunder",
-      "pm_price": 0.49,
+      "pm_price": 0.435,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB07HOUOKC",
-      "kalshi_price": 0.52,
+      "kalshi_price": 0.555,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -224,8 +224,8 @@
         "PM=moneyline, K=moneyline. Rockets vs. Thunder"
       ],
       "match_warnings": [],
-      "spread": -0.030000000000000027,
-      "last_update": 1770347220.9129012
+      "spread": -0.12000000000000005,
+      "last_update": 1770353174.1819346
     },
     "nba:MEM@POR:2026-02-06": {
       "pm_title": "Grizzlies vs. Trail Blazers",
@@ -242,15 +242,15 @@
       ],
       "match_warnings": [],
       "spread": -0.41,
-      "last_update": 1770347222.1177535
+      "last_update": 1770353175.3841383
     },
     "nba:LAC@SAC:2026-02-06": {
       "pm_title": "Clippers vs. Kings",
-      "pm_price": 0.605,
+      "pm_price": 0.615,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB06LACSAC",
-      "kalshi_price": 0.385,
+      "kalshi_price": 0.395,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -259,15 +259,15 @@
       ],
       "match_warnings": [],
       "spread": 0.21999999999999997,
-      "last_update": 1770347223.3091667
+      "last_update": 1770353176.5824242
     },
     "nba:IND@MIL:2026-02-06": {
       "pm_title": "Pacers vs. Bucks",
-      "pm_price": 0.515,
+      "pm_price": 0.525,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB06INDMIL",
-      "kalshi_price": 0.485,
+      "kalshi_price": 0.48,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -275,16 +275,16 @@
         "PM=moneyline, K=moneyline. Pacers vs. Bucks"
       ],
       "match_warnings": [],
-      "spread": 0.030000000000000027,
-      "last_update": 1770347224.5139947
+      "spread": 0.04500000000000004,
+      "last_update": 1770353177.8483243
     },
     "nba:NYK@DET:2026-02-06": {
       "pm_title": "Knicks vs. Pistons",
-      "pm_price": 0.5,
+      "pm_price": 0.525,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB06NYKDET",
-      "kalshi_price": 0.51,
+      "kalshi_price": 0.525,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -292,8 +292,8 @@
         "PM=moneyline, K=moneyline. Knicks vs. Pistons"
       ],
       "match_warnings": [],
-      "spread": -0.010000000000000009,
-      "last_update": 1770347225.715521
+      "spread": 0.0,
+      "last_update": 1770353178.9840667
     },
     "nba:MIA@BOS:2026-02-06": {
       "pm_title": "Heat vs. Celtics",
@@ -301,7 +301,7 @@
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB06MIABOS",
-      "kalshi_price": 0.305,
+      "kalshi_price": 0.31,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -309,16 +309,16 @@
         "PM=moneyline, K=moneyline. Heat vs. Celtics"
       ],
       "match_warnings": [],
-      "spread": 0.0,
-      "last_update": 1770347226.9097729
+      "spread": -0.0050000000000000044,
+      "last_update": 1770353180.1888566
     },
     "nba:PHI@LAL:2026-02-05": {
       "pm_title": "76ers vs. Lakers",
-      "pm_price": 0.445,
+      "pm_price": 0.815,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB05PHILAL",
-      "kalshi_price": 0.445,
+      "kalshi_price": 0.685,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -326,16 +326,16 @@
         "PM=moneyline, K=moneyline. 76ers vs. Lakers"
       ],
       "match_warnings": [],
-      "spread": 0.0,
-      "last_update": 1770347228.1129158
+      "spread": 0.1299999999999999,
+      "last_update": 1770353181.423112
     },
     "nba:GSW@PHX:2026-02-05": {
       "pm_title": "Warriors vs. Suns",
-      "pm_price": 0.345,
+      "pm_price": 0.505,
       "pm_threshold": null,
       "pm_settlement": null,
       "kalshi_title": "KXNBAGAME-26FEB05GSWPHX",
-      "kalshi_price": 0.655,
+      "kalshi_price": 0.635,
       "kalshi_threshold": null,
       "kalshi_settlement": null,
       "match_score": 92,
@@ -343,59 +343,8 @@
         "PM=moneyline, K=moneyline. Warriors vs. Suns"
       ],
       "match_warnings": [],
-      "spread": -0.31000000000000005,
-      "last_update": 1770347229.306619
-    },
-    "nba:SAS@DAL:2026-02-05": {
-      "pm_title": "Spurs vs. Mavericks",
-      "pm_price": 0.885,
-      "pm_threshold": null,
-      "pm_settlement": null,
-      "kalshi_title": "KXNBAGAME-26FEB05SASDAL",
-      "kalshi_price": 0.905,
-      "kalshi_threshold": null,
-      "kalshi_settlement": null,
-      "match_score": 92,
-      "match_reasons": [
-        "PM=moneyline, K=moneyline. Spurs vs. Mavericks"
-      ],
-      "match_warnings": [],
-      "spread": -0.020000000000000018,
-      "last_update": 1770347230.508193
-    },
-    "nba:CHA@HOU:2026-02-05": {
-      "pm_title": "Hornets vs. Rockets",
-      "pm_price": 0.925,
-      "pm_threshold": null,
-      "pm_settlement": null,
-      "kalshi_title": "KXNBAGAME-26FEB05CHAHOU",
-      "kalshi_price": 0.025,
-      "kalshi_threshold": null,
-      "kalshi_settlement": null,
-      "match_score": 92,
-      "match_reasons": [
-        "PM=moneyline, K=moneyline. Hornets vs. Rockets"
-      ],
-      "match_warnings": [],
-      "spread": 0.9,
-      "last_update": 1770347231.714432
-    },
-    "nba:UTA@ATL:2026-02-05": {
-      "pm_title": "Jazz vs. Hawks",
-      "pm_price": 0.325,
-      "pm_threshold": null,
-      "pm_settlement": null,
-      "kalshi_title": "KXNBAGAME-26FEB05UTAATL",
-      "kalshi_price": 0.01,
-      "kalshi_threshold": null,
-      "kalshi_settlement": null,
-      "match_score": 92,
-      "match_reasons": [
-        "PM=moneyline, K=moneyline. Jazz vs. Hawks"
-      ],
-      "match_warnings": [],
-      "spread": 0.315,
-      "last_update": 1770347232.9135807
+      "spread": -0.13,
+      "last_update": 1770353182.5857732
     },
     "trump_say:weekly:2026-02-08": {
       "pm_title": "What will Trump say this week (February 8)?",
@@ -412,7 +361,7 @@
       ],
       "match_warnings": [],
       "spread": 0.0050000000000000044,
-      "last_update": 1770347234.1237476
+      "last_update": 1770353183.7858667
     },
     "soccer:premier_league:winner": {
       "pm_title": "English Premier League Winner ",
@@ -429,49 +378,49 @@
       ],
       "match_warnings": [],
       "spread": -0.0085,
-      "last_update": 1770347235.3179443
+      "last_update": 1770353185.0050824
     }
   },
   "spread_stats": {
     "weather:Atlanta:2026-02-06": {
-      "mean": -0.28506166666666666,
-      "stdev": 0.03608655560649548,
-      "count": 300,
-      "min": -0.33099999999999996,
+      "mean": -0.2946361386138614,
+      "stdev": 0.03603830373257299,
+      "count": 404,
+      "min": -0.3525,
       "max": -0.1675
     },
     "weather:Chicago:2026-02-05": {
       "mean": -0.01,
       "stdev": 0.0,
-      "count": 300,
+      "count": 404,
       "min": -0.01,
       "max": -0.01
     },
     "weather:NYC:2026-02-05": {
       "mean": -0.01,
       "stdev": 0.0,
-      "count": 289,
+      "count": 393,
       "min": -0.01,
       "max": -0.01
     },
     "weather:Chicago:2026-02-06": {
-      "mean": -0.036675,
-      "stdev": 0.01120418019518402,
-      "count": 300,
+      "mean": -0.03448762376237624,
+      "stdev": 0.011571113399635553,
+      "count": 404,
       "min": -0.0625,
-      "max": -0.022500000000000003
+      "max": -0.02
     },
     "weather:Seattle:2026-02-05": {
-      "mean": 0.9790116666666667,
-      "stdev": 0.021130048755827188,
-      "count": 300,
+      "mean": 0.9815829207920792,
+      "stdev": 0.018718362698638462,
+      "count": 404,
       "min": 0.92,
       "max": 0.989
     },
     "weather:Seattle:2026-02-06": {
-      "mean": -0.04239122807017544,
-      "stdev": 0.024788764497600906,
-      "count": 285,
+      "mean": -0.03978020565552699,
+      "stdev": 0.02174358286561544,
+      "count": 389,
       "min": -0.152,
       "max": -0.029500000000000005
     },
@@ -483,100 +432,100 @@
       "max": -0.01
     },
     "weather:Atlanta:2026-02-05": {
-      "mean": -0.01590526315789474,
-      "stdev": 0.004604973622159607,
-      "count": 285,
+      "mean": -0.014326478149100257,
+      "stdev": 0.004729687244478012,
+      "count": 389,
       "min": -0.02,
       "max": -0.01
     },
     "weather:NYC:2026-02-06": {
-      "mean": 0.24886666666666668,
-      "stdev": 0.03771547532714829,
-      "count": 300,
-      "min": 0.17,
+      "mean": 0.23266089108910892,
+      "stdev": 0.04645135511754312,
+      "count": 404,
+      "min": 0.13,
       "max": 0.29500000000000004
     },
     "crypto:BTC:2026-02-06": {
-      "mean": 0.008206666666666666,
-      "stdev": 0.00863515151543604,
-      "count": 300,
-      "min": -0.004,
+      "mean": 0.005259900990099009,
+      "stdev": 0.008982366292271485,
+      "count": 404,
+      "min": -0.0045000000000000005,
       "max": 0.027499999999999997
     },
     "crypto:ETH:2026-02-06": {
-      "mean": 0.01597923875432526,
-      "stdev": 0.007148201850554491,
-      "count": 289,
-      "min": 0.004999999999999999,
+      "mean": 0.013857506361323154,
+      "stdev": 0.007572021600130449,
+      "count": 393,
+      "min": 0.0025000000000000005,
       "max": 0.031
     },
     "nba:HOU@OKC:2026-02-07": {
-      "mean": -0.022859649122807038,
-      "stdev": 0.007882139277807875,
-      "count": 285,
-      "min": -0.040000000000000036,
+      "mean": -0.028508997429305936,
+      "stdev": 0.020426207298733127,
+      "count": 389,
+      "min": -0.12000000000000005,
       "max": -0.010000000000000009
     },
     "nba:MEM@POR:2026-02-06": {
-      "mean": -0.37246350364963504,
-      "stdev": 0.033695584815092924,
-      "count": 274,
+      "mean": -0.3827910052910053,
+      "stdev": 0.03322539732845828,
+      "count": 378,
       "min": -0.43,
       "max": -0.33
     },
     "nba:IND@MIL:2026-02-06": {
-      "mean": -0.02094736842105265,
-      "stdev": 0.03456694925396897,
-      "count": 285,
+      "mean": -0.0046915167095115725,
+      "stdev": 0.04008409272646664,
+      "count": 389,
       "min": -0.06000000000000005,
-      "max": 0.03500000000000003
+      "max": 0.04500000000000004
     },
     "nba:NYK@DET:2026-02-06": {
-      "mean": -0.010192982456140337,
-      "stdev": 0.006598224783908683,
-      "count": 285,
+      "mean": -0.008226221079691507,
+      "stdev": 0.006759127571537415,
+      "count": 389,
       "min": -0.024999999999999967,
       "max": 0.010000000000000009
     },
     "nba:MIA@BOS:2026-02-06": {
-      "mean": -0.007526315789473691,
-      "stdev": 0.007383139488235535,
-      "count": 285,
+      "mean": -0.005938303341902319,
+      "stdev": 0.006948358717460513,
+      "count": 389,
       "min": -0.020000000000000018,
       "max": 0.010000000000000009
     },
     "nba:PHI@LAL:2026-02-05": {
-      "mean": 0.004824561403508772,
-      "stdev": 0.007421236199311401,
-      "count": 285,
-      "min": -0.010000000000000009,
-      "max": 0.020000000000000018
+      "mean": 0.007107969151670945,
+      "stdev": 0.03564651286771136,
+      "count": 389,
+      "min": -0.125,
+      "max": 0.1299999999999999
     },
     "nba:GSW@PHX:2026-02-05": {
-      "mean": -0.3204379562043796,
-      "stdev": 0.015851583303995092,
-      "count": 274,
-      "min": -0.35000000000000003,
-      "max": -0.30000000000000004
+      "mean": -0.28306878306878314,
+      "stdev": 0.11928823185458239,
+      "count": 378,
+      "min": -0.43,
+      "max": 0.23999999999999994
     },
     "nba:SAS@DAL:2026-02-05": {
-      "mean": -0.0074561403508772,
-      "stdev": 0.012675625627583637,
-      "count": 285,
-      "min": -0.050000000000000044,
-      "max": 0.020000000000000018
+      "mean": -0.0009302325581395393,
+      "stdev": 0.04511573473462963,
+      "count": 344,
+      "min": -0.08499999999999996,
+      "max": 0.16999999999999993
     },
     "nba:CHA@HOU:2026-02-05": {
-      "mean": -0.06972627737226275,
-      "stdev": 0.3026709819858429,
-      "count": 274,
+      "mean": 0.011796296296296315,
+      "stdev": 0.40491605497198313,
+      "count": 297,
       "min": -0.24,
-      "max": 0.9
+      "max": 0.9895
     },
     "nba:UTA@ATL:2026-02-05": {
-      "mean": 0.003526315789473682,
-      "stdev": 0.07426828632960739,
-      "count": 285,
+      "mean": 0.004615384615384613,
+      "stdev": 0.07639136748115606,
+      "count": 286,
       "min": -0.10000000000000003,
       "max": 0.315
     },
@@ -604,28 +553,28 @@
     "trump_say:weekly:2026-02-08": {
       "mean": 0.0050000000000000044,
       "stdev": 0.0,
-      "count": 289,
+      "count": 393,
       "min": 0.0050000000000000044,
       "max": 0.0050000000000000044
     },
     "soccer:premier_league:winner": {
       "mean": -0.0085,
       "stdev": 0.0,
-      "count": 300,
+      "count": 404,
       "min": -0.0085,
       "max": -0.0085
     },
     "weather:Miami:2026-02-06": {
-      "mean": -0.0365341726618705,
-      "stdev": 0.007064280761014615,
-      "count": 278,
+      "mean": -0.03257722513089005,
+      "stdev": 0.008845639205976375,
+      "count": 382,
       "min": -0.042499999999999996,
       "max": -0.022000000000000002
     },
     "nba:LAC@SAC:2026-02-06": {
-      "mean": 0.20063380281690138,
-      "stdev": 0.017123447850450092,
-      "count": 142,
+      "mean": 0.20786585365853655,
+      "stdev": 0.015669360870329684,
+      "count": 246,
       "min": 0.16999999999999998,
       "max": 0.21999999999999997
     }
@@ -640,7 +589,7 @@
       "size_usd": 100.0,
       "pm_title": "Bulls vs. Raptors",
       "kalshi_title": "KXNBAGAME-26FEB05CHITOR",
-      "age_min": 37.63864955107371
+      "age_min": 136.8001977642377
     },
     {
       "trade_id": "XP2-0021",
@@ -651,7 +600,7 @@
       "size_usd": 100.0,
       "pm_title": "Hornets vs. Rockets",
       "kalshi_title": "KXNBAGAME-26FEB05CHAHOU",
-      "age_min": 19.91426941951116
+      "age_min": 119.07581763267517
     },
     {
       "trade_id": "XP2-0022",
@@ -662,7 +611,40 @@
       "size_usd": 100.0,
       "pm_title": "Jazz vs. Hawks",
       "kalshi_title": "KXNBAGAME-26FEB05UTAATL",
-      "age_min": 8.776679396629333
+      "age_min": 107.93822760979334
+    },
+    {
+      "trade_id": "XP2-0023",
+      "pair_id": "nba:SAS@DAL:2026-02-05",
+      "direction": "YES",
+      "entry_price": 0.725,
+      "entry_time": 1770347363.9108765,
+      "size_usd": 100.0,
+      "pm_title": "Spurs vs. Mavericks",
+      "kalshi_title": "KXNBAGAME-26FEB05SASDAL",
+      "age_min": 97.01884808540345
+    },
+    {
+      "trade_id": "XP2-0028",
+      "pair_id": "nba:HOU@OKC:2026-02-07",
+      "direction": "NO",
+      "entry_price": 0.54,
+      "entry_time": 1770352070.9612195,
+      "size_usd": 100.0,
+      "pm_title": "Rockets vs. Thunder",
+      "kalshi_title": "KXNBAGAME-26FEB07HOUOKC",
+      "age_min": 18.56800903479258
+    },
+    {
+      "trade_id": "XP2-0029",
+      "pair_id": "nba:PHI@LAL:2026-02-05",
+      "direction": "YES",
+      "entry_price": 0.685,
+      "entry_time": 1770353075.166401,
+      "size_usd": 100.0,
+      "pm_title": "76ers vs. Lakers",
+      "kalshi_title": "KXNBAGAME-26FEB05PHILAL",
+      "age_min": 1.8312560121218364
     }
   ]
 }

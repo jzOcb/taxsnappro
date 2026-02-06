@@ -16,7 +16,9 @@ from .document_extractor import (
     REQUEST_DELAY_SECONDS
 )
 from .persistence import save_state, load_state, clear_saved_data
+from .form_generator import generate_form_1040_pdf, get_tax_data_from_state
 import asyncio
+import base64
 
 
 class FilingStatus(str, Enum):
@@ -223,6 +225,8 @@ class TaxAppState(rx.State):
     # ===== Return State =====
     return_status: str = "not_started"
     return_generated: bool = False
+    show_return_summary: bool = False
+    generated_pdf_base64: str = ""
     
     # ===== Methods =====
     
@@ -1158,12 +1162,39 @@ class TaxAppState(rx.State):
         return round(tax, 2)
     
     def generate_return(self):
-        """Generate tax return."""
-        self.processing = True
-        self.return_status = "review"
+        """Generate tax return PDF."""
+        self._recalculate()
+        self.return_status = "complete"
         self.return_generated = True
-        self.success_message = "Tax return generated!"
-        self.processing = False
+        
+        # Generate PDF
+        tax_data = get_tax_data_from_state(self)
+        pdf_bytes = generate_form_1040_pdf(tax_data)
+        
+        # Store as base64 for download
+        self.generated_pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
+        self.show_return_summary = True
+        
+        # Build summary
+        refund_or_owed = self.total_withholding - self.total_tax
+        if refund_or_owed >= 0:
+            result_text = f"Estimated Refund: ${refund_or_owed:,.2f}"
+        else:
+            result_text = f"Estimated Amount Owed: ${abs(refund_or_owed):,.2f}"
+        
+        self.success_message = f"✅ Form 1040 generated! {result_text}"
+    
+    def close_return_summary(self):
+        """Close the return summary modal."""
+        self.show_return_summary = False
+    
+    def download_pdf(self):
+        """Trigger PDF download."""
+        if self.generated_pdf_base64:
+            return rx.download(
+                data=f"data:application/pdf;base64,{self.generated_pdf_base64}",
+                filename=f"Form_1040_{self.tax_year}.pdf"
+            )
     
     def clear_all(self):
         """Clear all data."""
@@ -1205,6 +1236,8 @@ class TaxAppState(rx.State):
         self.is_refund = True
         self.return_status = "not_started"
         self.return_generated = False
+        self.show_return_summary = False
+        self.generated_pdf_base64 = ""
         self.error_message = ""
         self.success_message = ""
         # Also clear persisted data

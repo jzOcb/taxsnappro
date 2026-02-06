@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 
 
-__version__ = "1.0.1"
+__version__ = "1.0.4"
 
 RXCONFIG_CONTENT = '''"""Reflex config for TaxSnapPro."""
 import reflex as rx

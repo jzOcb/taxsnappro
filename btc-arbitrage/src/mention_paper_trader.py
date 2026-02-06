@@ -941,7 +941,7 @@ def estimate_yes_probability(market: dict) -> float:
             return prob
         else:
             # V2 couldn't estimate - skip this market
-            logger.info(f"V2 system skipped {keyword} (no confident estimate)")
+            log.info(f"V2 system skipped {keyword} (no confident estimate)")
             return None
     
     # =========================================================================
@@ -965,17 +965,17 @@ def estimate_yes_probability(market: dict) -> float:
         volume = market.get("volume", 0)
         
         if HAS_DYNAMIC_PROB:
-            logger.info(f"🤖 Using legacy LLM for {series_ticker} ({keyword})")
+            log.info(f"🤖 Using legacy LLM for {series_ticker} ({keyword})")
             dynamic_prob = get_dynamic_probability(market)
             if dynamic_prob is not None:
-                logger.info(f"🤖 LLM estimated {keyword}: {dynamic_prob:.0f}%")
+                log.info(f"🤖 LLM estimated {keyword}: {dynamic_prob:.0f}%")
                 return dynamic_prob
             else:
-                logger.info(f"🤖 LLM uncertain about {keyword}, skipping")
+                log.info(f"🤖 LLM uncertain about {keyword}, skipping")
         
         # No model = don't trade
         if volume > 50000:
-            logger.warning(f"⚠️ HIGH VOLUME NO MODEL: {series_ticker} ({volume:,} vol)")
+            log.warning(f"⚠️ HIGH VOLUME NO MODEL: {series_ticker} ({volume:,} vol)")
         return None
 
 
@@ -1179,7 +1179,7 @@ def _estimate_entertainment(market: dict, keyword: str) -> float:
     if not model:
         volume = market.get("volume", 0)
         if volume > 50000:
-            logger.warning(f"⚠️ HIGH VOLUME NO MODEL: entertainment/{series_ticker} ({volume:,} vol)")
+            log.warning(f"⚠️ HIGH VOLUME NO MODEL: entertainment/{series_ticker} ({volume:,} vol)")
         return None  # None = don't trade (not gambling)
     
     high_prob = model.get('high_prob', {})

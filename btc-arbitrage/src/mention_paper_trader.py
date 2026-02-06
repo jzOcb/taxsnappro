@@ -41,7 +41,19 @@ from typing import Optional, Dict, List, Tuple
 
 import requests
 
-# Dynamic LLM-based probability estimation for unknown series
+# V2 Three-layer probability system
+try:
+    from mention_probability_v2 import (
+        estimate_mention_probability, 
+        record_outcome, 
+        should_trade,
+        get_calibration_stats
+    )
+    HAS_V2_PROB = True
+except ImportError:
+    HAS_V2_PROB = False
+
+# Legacy dynamic probability (fallback)
 try:
     from dynamic_probability import get_dynamic_probability
     HAS_DYNAMIC_PROB = True
@@ -876,12 +888,65 @@ def estimate_yes_probability(market: dict) -> float:
     Estimate the true probability that YES resolves.
     Returns probability in 0-100 scale (cents).
 
-    Multi-series model: routes to different probability estimation
-    depending on series_type.
+    V2: Uses three-layer probability system:
+    1. Static tiered word model
+    2. LLM dynamic estimation
+    3. Calibration adjustment
+    
+    Falls back to legacy series-specific models if V2 unavailable.
     """
-    series_type = market.get("series_type", "unknown")
     keyword = market.get("keyword", "").lower().strip()
-
+    series_type = market.get("series_type", "unknown")
+    
+    # =========================================================================
+    # V2 THREE-LAYER SYSTEM (preferred)
+    # =========================================================================
+    if HAS_V2_PROB:
+        # Determine speaker from series type
+        if "trump" in series_type:
+            speaker = "trump"
+        elif "press" in series_type:
+            speaker = "press_secretary"
+        elif "biden" in series_type:
+            speaker = "biden"
+        else:
+            speaker = "unknown"
+        
+        # Determine event type
+        if "sotu" in series_type:
+            event_type = "sotu"
+        elif "weekly" in series_type:
+            event_type = "weekly"
+        elif "rally" in series_type or "event" in series_type:
+            event_type = "rally"
+        else:
+            event_type = "speech"
+        
+        # Get market price for blending
+        yes_bid = market.get("yes_bid", 50)
+        yes_ask = market.get("yes_ask", 50)
+        market_yes = (yes_bid + yes_ask) / 2
+        
+        prob, metadata = estimate_mention_probability(
+            word=keyword,
+            speaker=speaker,
+            event_type=event_type,
+            market_price=market_yes,
+            series_type=series_type
+        )
+        
+        if prob is not None:
+            # Store metadata for later analysis
+            market["_v2_metadata"] = metadata
+            return prob
+        else:
+            # V2 couldn't estimate - skip this market
+            logger.info(f"V2 system skipped {keyword} (no confident estimate)")
+            return None
+    
+    # =========================================================================
+    # LEGACY FALLBACK (if V2 not available)
+    # =========================================================================
     if series_type == 'trump_sotu':
         return _estimate_sotu(market, keyword)
     elif series_type in ('trump_weekly', 'trump_monthly', 'trump_event', 'trump_nickname'):
@@ -900,7 +965,7 @@ def estimate_yes_probability(market: dict) -> float:
         volume = market.get("volume", 0)
         
         if HAS_DYNAMIC_PROB:
-            logger.info(f"🤖 Using LLM for {series_ticker} ({keyword})")
+            logger.info(f"🤖 Using legacy LLM for {series_ticker} ({keyword})")
             dynamic_prob = get_dynamic_probability(market)
             if dynamic_prob is not None:
                 logger.info(f"🤖 LLM estimated {keyword}: {dynamic_prob:.0f}%")
@@ -908,12 +973,10 @@ def estimate_yes_probability(market: dict) -> float:
             else:
                 logger.info(f"🤖 LLM uncertain about {keyword}, skipping")
         
-        # No static model AND no dynamic estimate = don't trade
+        # No model = don't trade
         if volume > 50000:
-            logger.warning(f"⚠️ HIGH VOLUME NO MODEL: {series_ticker} ({volume:,} vol) - build model to trade")
-        else:
-            logger.debug(f"Skipping {series_ticker}: no probability model")
-        return None  # None = don't trade
+            logger.warning(f"⚠️ HIGH VOLUME NO MODEL: {series_ticker} ({volume:,} vol)")
+        return None
 
 
 def _estimate_trump_speech(market: dict, keyword: str, series_type: str) -> float:
@@ -1623,6 +1686,29 @@ def settle_position(state: dict, market_id: str, result: str):
 
     log.info(f"{emoji} SETTLED [{series_type}]: {pos['description']}")
     log.info(f"   Result={result.upper()} | Side={side} | PnL=${pnl:+.2f} | Payout=${payout:.2f} | Cost=${cost:.2f}")
+
+    # Record for V2 calibration learning
+    if HAS_V2_PROB:
+        try:
+            # Get our predicted probability from position metadata
+            predicted = pos.get("fair_yes", 50)  # Our estimate at entry
+            actual_yes = (result.lower() == "yes")
+            
+            # Get tier from V2 metadata if available
+            v2_meta = pos.get("_v2_metadata", {})
+            tier = v2_meta.get("layers", {}).get("static", {}).get("tier", 0)
+            
+            record_outcome(
+                word=pos["keyword"],
+                tier=tier,
+                predicted=predicted,
+                actual_yes=actual_yes,
+                series_type=series_type,
+                event_type=pos.get("event_type", "speech")
+            )
+            log.info(f"   📊 Calibration recorded: predicted={predicted:.0f}% actual={'YES' if actual_yes else 'NO'}")
+        except Exception as e:
+            log.warning(f"   ⚠️ Calibration recording failed: {e}")
 
     del state["positions"][market_id]
 

@@ -150,7 +150,25 @@ bash scripts/subagent-complete.sh <session_key>
 - Default for new cron agentTurn: **Haiku** unless task clearly needs reasoning
 - **Never use Opus in cron jobs** — too expensive for automated tasks
 
-### 11. Data Security: Vault Architecture
+### 11. Config Changes: Use Validated Wrapper
+**2026-02-05 incident:** Agent used `gateway config.patch` directly to upgrade model. Wrong model ID (`claude-opus-4-6-20260205` doesn't exist). Gateway kept crashing. config-guard existed but was bypassed.
+
+**The problem:** `gateway config.patch` is a raw tool with NO validation. Bad input = gateway crash = agent offline.
+
+**MANDATORY:**
+```bash
+# ✅ CORRECT: Validates before applying
+bash scripts/safe-config-patch.sh '{"agents":{"defaults":{"model":"anthropic/claude-opus-4-5"}}}'
+
+# ❌ WRONG: No validation, crashes on bad input
+gateway config.patch raw='...'
+```
+
+**Why:** config-guard has semantic checks (model name format, required fields, critical field diff). But it only works if you call it. The raw gateway tool bypasses everything.
+
+**OpenClaw limitation:** No `config:pre-apply` hook exists yet. Validation is manual. Use the wrapper.
+
+### 12. Data Security: Vault Architecture
 **Sensitive data NEVER enters LLM context directly.**
 
 **Vault directory:** `~/.openclaw/workspace/vault/` (chmod 700)

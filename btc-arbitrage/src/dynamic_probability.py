@@ -16,11 +16,11 @@ from typing import Optional, Dict, Tuple
 from datetime import datetime
 import hashlib
 
-# Use OpenAI API for LLM calls (gpt-4o-mini for cost efficiency)
+# Use Gemini API for LLM calls (gemini-2.0-flash for cost efficiency)
 import requests
 
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
-HAS_LLM = bool(OPENAI_API_KEY)
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+HAS_LLM = bool(GEMINI_API_KEY)
 
 logger = logging.getLogger(__name__)
 
@@ -115,28 +115,26 @@ Return ONLY one of these:
 Your response (just the number or UNCERTAIN):"""
 
     try:
-        # Use OpenAI API with gpt-4o-mini for cost efficiency
+        # Use Gemini API with gemini-2.0-flash for cost efficiency
         response = requests.post(
-            "https://api.openai.com/v1/chat/completions",
-            headers={
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
-                "Content-Type": "application/json"
-            },
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}",
+            headers={"Content-Type": "application/json"},
             json={
-                "model": "gpt-4o-mini",
-                "messages": [{"role": "user", "content": prompt}],
-                "max_tokens": 50,
-                "temperature": 0.3  # Lower temperature for more consistent estimates
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {
+                    "maxOutputTokens": 50,
+                    "temperature": 0.3
+                }
             },
             timeout=30
         )
         
         if response.status_code != 200:
-            logger.error(f"OpenAI API error: {response.status_code} - {response.text[:200]}")
+            logger.error(f"Gemini API error: {response.status_code} - {response.text[:200]}")
             return None
         
         data = response.json()
-        result = data["choices"][0]["message"]["content"].strip()
+        result = data["candidates"][0]["content"]["parts"][0]["text"].strip()
         
         if result.upper() == "UNCERTAIN":
             logger.info(f"LLM uncertain about {keyword} in {event_title}")

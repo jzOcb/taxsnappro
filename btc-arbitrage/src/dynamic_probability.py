@@ -31,6 +31,10 @@ CACHE_TTL_SECONDS = 3600  # 1 hour cache
 # Calibration database path
 CALIBRATION_DB = "/home/clawdbot/clawd/btc-arbitrage/data/probability_calibration.jsonl"
 
+# Rate limiting for Gemini API (avoid 429 errors)
+_last_api_call = 0
+API_CALL_INTERVAL = 1.5  # seconds between calls
+
 
 def _cache_key(market: dict) -> str:
     """Generate cache key from market details."""
@@ -115,6 +119,14 @@ Return ONLY one of these:
 Your response (just the number or UNCERTAIN):"""
 
     try:
+        # Rate limit to avoid 429 errors
+        import time
+        global _last_api_call
+        elapsed = time.time() - _last_api_call
+        if elapsed < API_CALL_INTERVAL:
+            time.sleep(API_CALL_INTERVAL - elapsed)
+        _last_api_call = time.time()
+        
         # Use Gemini API with gemini-2.0-flash for cost efficiency
         response = requests.post(
             f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}",
